@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://xicx1vr1g113"]
+
+[ext_resource type="Texture2D" uid="uid://0xbl5ph6hjsw" path="res://old-dark-castle-interior-tileset.png" id="1_jtrss"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_viqp5"]
+size = Vector2(32, 17)
+
+[node name="Floor" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jtrss")
+region_enabled = true
+region_rect = Rect2(368, 151.782, 32, 24.2089)
+
+[node name="FloorCollision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_viqp5")

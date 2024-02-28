@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwswaw56eqs6b"]
+
+[ext_resource type="PackedScene" uid="uid://xicx1vr1g113" path="res://Util/floor.tscn" id="1_j6243"]
+[ext_resource type="PackedScene" uid="uid://v3fb0628e85t" path="res://Character/player.tscn" id="2_h15nw"]
+
+[node name="Sandbox" type="Node2D"]
+texture_filter = 1
+
+[node name="Floor" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(17, 270)
+
+[node name="Floor2" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(49, 270)
+
+[node name="Floor3" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(81, 270)
+
+[node name="Floor4" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(113, 270)
+
+[node name="Floor5" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(146, 226)
+
+[node name="Floor6" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(16, 190)
+
+[node name="Floor7" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(178, 226)
+
+[node name="Floor8" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(210, 226)
+
+[node name="Floor9" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(274, 226)
+
+[node name="Floor10" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(306, 226)
+
+[node name="Floor11" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(242, 226)
+
+[node name="Floor12" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(402, 226)
+
+[node name="Floor13" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(338, 226)
+
+[node name="Floor14" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(370, 226)
+
+[node name="Player" parent="." instance=ExtResource("2_h15nw")]
+position = Vector2(80, 246)
+jump_velocity = -400.0
