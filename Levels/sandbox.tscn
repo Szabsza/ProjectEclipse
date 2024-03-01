@@ -50,6 +50,3 @@ position = Vector2(370, 226)
 
 [node name="Player" parent="." instance=ExtResource("2_h15nw")]
 position = Vector2(80, 246)
-speed = 300.0
-dash_speed = 1.0
-dash_velocity = 500.0

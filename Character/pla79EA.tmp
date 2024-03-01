@@ -1,4 +1,4 @@
-[gd_scene load_steps=156 format=3 uid="uid://v3fb0628e85t"]
+[gd_scene load_steps=152 format=3 uid="uid://v3fb0628e85t"]
 
 [ext_resource type="Script" path="res://Character/Player.gd" id="1_2j2uu"]
 [ext_resource type="Texture2D" uid="uid://bqhhvrdng2ow0" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/idle/idle_1.png" id="1_3ot7f"]
@@ -126,7 +126,6 @@
 [ext_resource type="Script" path="res://Character/States/FallingState.gd" id="124_ht07t"]
 [ext_resource type="Script" path="res://Character/States/IdlingState.gd" id="125_8wtnd"]
 [ext_resource type="Script" path="res://Character/States/RunningState.gd" id="126_noisj"]
-[ext_resource type="Script" path="res://Character/RollingState.gd" id="126_ydudj"]
 [ext_resource type="Script" path="res://Character/StateLabel.gd" id="127_eofrr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x75ob"]
@@ -353,9 +352,6 @@ animation = &"idle"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8g0wo"]
 animation = &"jump"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tosc3"]
-animation = &"roll"
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0n7er"]
 animation = &"run"
 
@@ -369,33 +365,29 @@ animation = &"run"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_a3vle"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_21pd8"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7ryhi"]
-
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_0le0i"]
 states/End/position = Vector2(987.333, 167.753)
-states/Start/position = Vector2(220.939, 616.636)
+states/Start/position = Vector2(188.272, 433.97)
 states/fall/node = SubResource("AnimationNodeAnimation_kmsiv")
-states/fall/position = Vector2(436, 646.247)
+states/fall/position = Vector2(403.333, 463.58)
 states/idle/node = SubResource("AnimationNodeAnimation_xkcsv")
-states/idle/position = Vector2(340.667, 471.58)
+states/idle/position = Vector2(308, 288.913)
 states/jump/node = SubResource("AnimationNodeAnimation_8g0wo")
-states/jump/position = Vector2(665.333, 617.868)
-states/roll/node = SubResource("AnimationNodeAnimation_tosc3")
-states/roll/position = Vector2(458.626, 325.58)
+states/jump/position = Vector2(632.667, 435.201)
 states/run/node = SubResource("AnimationNodeAnimation_0n7er")
-states/run/position = Vector2(554, 473.21)
-transitions = ["jump", "fall", SubResource("AnimationNodeStateMachineTransition_4o5ba"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_puimu"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_qw3re"), "run", "jump", SubResource("AnimationNodeStateMachineTransition_yfn5k"), "fall", "idle", SubResource("AnimationNodeStateMachineTransition_a3vle"), "run", "roll", SubResource("AnimationNodeStateMachineTransition_21pd8"), "roll", "idle", SubResource("AnimationNodeStateMachineTransition_7ryhi")]
-graph_offset = Vector2(-2.70728, 190.247)
+states/run/position = Vector2(521.333, 290.543)
+transitions = ["jump", "fall", SubResource("AnimationNodeStateMachineTransition_4o5ba"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_puimu"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_qw3re"), "run", "jump", SubResource("AnimationNodeStateMachineTransition_yfn5k"), "fall", "idle", SubResource("AnimationNodeStateMachineTransition_a3vle")]
+graph_offset = Vector2(0, 190.247)
 
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
 script = ExtResource("1_2j2uu")
+dash_speed = null
+dash_velocity = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, -45)
-texture = ExtResource("11_ycaq6")
+texture = ExtResource("12_4gjus")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.5)
@@ -426,7 +418,6 @@ script = ExtResource("124_ht07t")
 script = ExtResource("125_8wtnd")
 
 [node name="Rolling" type="Node" parent="CharacterStateMachine"]
-script = ExtResource("126_ydudj")
 
 [node name="Running" type="Node" parent="CharacterStateMachine"]
 script = ExtResource("126_noisj")
@@ -439,5 +430,3 @@ offset_bottom = -22.0
 text = "State: "
 script = ExtResource("127_eofrr")
 state_machine = NodePath("../CharacterStateMachine")
-
-[node name="Camera2D" type="Camera2D" parent="."]
