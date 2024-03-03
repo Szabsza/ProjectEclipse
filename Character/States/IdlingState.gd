@@ -22,6 +22,9 @@ func state_input(event: InputEvent):
 	if event.is_action_pressed("dash"):
 		perform_dash()
 	
+	if event.is_action_pressed("attack"):
+		perform_attack()
+
 
 func perform_jump():
 	player.velocity.y = jump_velocity
@@ -40,6 +43,10 @@ func perform_dash():
 		player.velocity.x = move_toward(player.velocity.x - 300, -1 * dash_velocity, dash_speed)
 	
 	next_state = states["Rolling"]
+
+
+func perform_attack():
+	next_state = states["Attacking"]
 
 
 func on_enter():

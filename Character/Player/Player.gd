@@ -4,9 +4,11 @@ class_name Player extends CharacterBody2D
 @onready var animation_tree : AnimationTree = $AnimationTree
 @onready var state_machine : CharacterStateMachine = $CharacterStateMachine
 
-var is_facing_left = false
-var is_facing_right = true
+var is_facing_left : bool = false
+var is_facing_right : bool = true
  
+var facing_direction_locked : bool = false
+
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var direction : Vector2
 
@@ -31,11 +33,17 @@ func update_animation():
 	
 
 func update_facing_direction():
-	if direction.x < 0:
-		sprite.flip_h = true
-		is_facing_right = false
-		is_facing_left = true
-	elif direction.x > 0:
-		sprite.flip_h = false
-		is_facing_right = true
-		is_facing_left = false
+	if not facing_direction_locked:
+		if direction.x < 0:
+			sprite.scale.x = -1
+			is_facing_right = false
+			is_facing_left = true
+		elif direction.x > 0:
+			sprite.scale.x = 1
+			is_facing_right = true
+			is_facing_left = false
+			
+
+func take_damage(amount):
+	#print("dmg taken: ", amount)
+	pass
