@@ -791,7 +791,7 @@ script = ExtResource("1_8wcef")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, -45)
-texture = ExtResource("67_0ejla")
+texture = ExtResource("19_tu4u1")
 
 [node name="HurtBox" type="Area2D" parent="Sprite2D"]
 visible = false

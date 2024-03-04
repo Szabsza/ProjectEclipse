@@ -17,8 +17,7 @@ func on_enter():
 
 
 func state_process(delta):
-	#player.velocity.x = move_toward(player.velocity.x, attacking_direction * 100.0, 3)
-	player.velocity.x = move_toward(player.velocity.x + 25 * attacking_direction, attacking_direction, 1)	
+	player.velocity.x = move_toward(player.velocity.x, attacking_direction * 400, 300)	
 
 func on_exit():
 	player.facing_direction_locked = false
