@@ -5,6 +5,7 @@ class_name RunningState extends State
 @export var dash_velocity : float = 500
 @export var run_speed : float = 200.0
 @export var minimum_run_speed : float = 0.005
+@export var run_acceleration : float = 0.25
 
 const RUN_ANIMATION : String = "run"
 
@@ -48,6 +49,7 @@ func perform_attack():
 
 func on_enter():
 	playback.travel(RUN_ANIMATION)
+	player.has_double_jumped = false
 
 
 func on_exit():

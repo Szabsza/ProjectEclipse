@@ -6,7 +6,7 @@ class_name Player extends CharacterBody2D
 
 var is_facing_left : bool = false
 var is_facing_right : bool = true
- 
+var has_double_jumped : bool = false
 var facing_direction_locked : bool = false
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")

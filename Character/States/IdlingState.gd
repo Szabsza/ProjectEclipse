@@ -4,6 +4,7 @@ class_name IdlingState extends State
 @export var run_speed : float = 200.0
 @export var dash_speed : float = 1.0
 @export var dash_velocity : float = 500
+@export var run_acceleration : float = 0.25
 
 const IDLE_ANIMATION : String = "idle"
 
@@ -32,6 +33,7 @@ func perform_jump():
 
 
 func perform_run():
+	#player.velocity.x = lerp(player.velocity.x, player.direction.x * run_speed, run_acceleration)
 	player.velocity.x = player.direction.x * run_speed
 	next_state = states["Running"]
 	
@@ -51,6 +53,7 @@ func perform_attack():
 
 func on_enter():
 	playback.travel(IDLE_ANIMATION)
+	player.has_double_jumped = false
 
 
 func on_exit():

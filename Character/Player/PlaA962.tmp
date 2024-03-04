@@ -1,4 +1,4 @@
-[gd_scene load_steps=193 format=3 uid="uid://v3fb0628e85t"]
+[gd_scene load_steps=192 format=3 uid="uid://v3fb0628e85t"]
 
 [ext_resource type="Script" path="res://Character/Player/Player.gd" id="1_8wcef"]
 [ext_resource type="Texture2D" uid="uid://c8ktilt4ey03q" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/3_atk/3_atk_26.png" id="2_2l6g5"]
@@ -164,10 +164,6 @@ height = 56.0
 radius = 17.0
 height = 56.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b2om6"]
-radius = 34.0
-height = 84.0
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_af6o4"]
 radius = 7.0
 height = 37.0
@@ -258,18 +254,6 @@ tracks/6/keys = {
 "update": 1,
 "values": [true]
 }
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Sprite2D/HitBoxH/CollisionShape2D:disabled")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
 
 [sub_resource type="Animation" id="Animation_80mli"]
 resource_name = "attack_chain_a"
@@ -352,7 +336,7 @@ tracks/1/path = NodePath("Sprite2D/HitBoxC/CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.25, 0.4),
+"times": PackedFloat32Array(0.25, 0.45),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -652,18 +636,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [ExtResource("98_rvalp"), ExtResource("99_ohygg"), ExtResource("101_6jte3"), ExtResource("102_rqwoo"), ExtResource("103_uqvn0"), ExtResource("104_ayypr"), ExtResource("105_7bdax")]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D/HitBoxH/CollisionShape2D:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.1, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hv4ek"]
 _data = {
@@ -791,7 +763,7 @@ script = ExtResource("1_8wcef")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, -45)
-texture = ExtResource("19_tu4u1")
+texture = ExtResource("105_7bdax")
 
 [node name="HurtBox" type="Area2D" parent="Sprite2D"]
 visible = false
@@ -867,15 +839,6 @@ position = Vector2(84, 41)
 shape = SubResource("CapsuleShape2D_7usyr")
 disabled = true
 
-[node name="HitBoxH" type="Area2D" parent="Sprite2D"]
-visible = false
-script = ExtResource("4_3g8wa")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HitBoxH"]
-position = Vector2(41, 29)
-shape = SubResource("CapsuleShape2D_b2om6")
-disabled = true
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2(0, -0.5)
@@ -936,4 +899,3 @@ state_machine = NodePath("../CharacterStateMachine")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Attacking" method="_on_animation_tree_animation_finished"]
-[connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/JumpAttacking" method="_on_animation_tree_animation_finished"]
