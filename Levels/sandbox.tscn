@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://xicx1vr1g113" path="res://Util/floor.tscn" id="1_j6243"]
 [ext_resource type="PackedScene" uid="uid://v3fb0628e85t" path="res://Character/Player/Player.tscn" id="2_h15nw"]
-[ext_resource type="PackedScene" uid="uid://dse50ogb1ndlt" path="res://Character/Enemies/Dummy/dummy.tscn" id="3_kscw5"]
+[ext_resource type="PackedScene" uid="uid://dse50ogb1ndlt" path="res://Character/Enemies/Monk/Monk.tscn" id="3_kscw5"]
 
 [node name="Sandbox" type="Node2D"]
 texture_filter = 1
@@ -49,11 +49,74 @@ position = Vector2(338, 226)
 [node name="Floor14" parent="." instance=ExtResource("1_j6243")]
 position = Vector2(370, 226)
 
-[node name="Dummy" parent="." instance=ExtResource("3_kscw5")]
+[node name="Floor15" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(434, 226)
+
+[node name="Floor16" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(466, 226)
+
+[node name="Floor17" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(467, 208)
+
+[node name="Floor18" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(468, 191)
+
+[node name="Floor19" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(501, 191)
+
+[node name="Floor20" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(533, 191)
+
+[node name="Floor21" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(565, 191)
+
+[node name="Floor22" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(-18, 190)
+
+[node name="Floor23" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(-15, 270)
+
+[node name="Floor24" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(-15, 252)
+
+[node name="Floor25" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(-15, 235)
+
+[node name="Floor26" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(-52, 190)
+
+[node name="Floor27" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(-86, 190)
+
+[node name="Floor28" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(-119, 190)
+
+[node name="Floor29" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(-151, 190)
+
+[node name="Floor30" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(-184, 190)
+
+[node name="Floor31" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(-184, 172)
+
+[node name="Floor32" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(-184, 154)
+
+[node name="Floor33" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(-184, 136)
+
+[node name="Floor34" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(-216, 136)
+
+[node name="Floor35" parent="." instance=ExtResource("1_j6243")]
+position = Vector2(-247, 136)
+
+[node name="Monk" parent="." instance=ExtResource("3_kscw5")]
 position = Vector2(253, 202)
+
+[node name="Monk2" parent="." instance=ExtResource("3_kscw5")]
+position = Vector2(183, 202)
 
 [node name="Player" parent="." instance=ExtResource("2_h15nw")]
 position = Vector2(80, 246)
-
-[node name="Dummy2" parent="." instance=ExtResource("3_kscw5")]
-position = Vector2(183, 202)

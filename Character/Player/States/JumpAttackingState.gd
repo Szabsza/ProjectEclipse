@@ -6,9 +6,9 @@ var attacking_direction : int
 
 
 func on_enter():
-	player.facing_direction_locked = true
+	character.facing_direction_locked = true
 	
-	if player.is_facing_right:
+	if character.is_facing_right:
 		attacking_direction = 1
 	else:
 		attacking_direction = -1
@@ -17,10 +17,10 @@ func on_enter():
 
 
 func state_process(delta):
-	player.velocity.x = move_toward(player.velocity.x, attacking_direction * 400, 300)	
+	character.velocity.x = move_toward(character.velocity.x, attacking_direction * 400, 300)	
 
 func on_exit():
-	player.facing_direction_locked = false
+	character.facing_direction_locked = false
 
 
 func _on_animation_tree_animation_finished(anim_name):

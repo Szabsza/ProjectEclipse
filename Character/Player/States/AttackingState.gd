@@ -14,25 +14,25 @@ const ATTACK_C_ANIMATION : String = "attack_chain_c"
 var attacking_direction : int
 
 func on_enter():
-	player.facing_direction_locked = true
+	character.facing_direction_locked = true
 	
-	if player.is_facing_right:
+	if character.is_facing_right:
 		attacking_direction = 1
 	else:
 		attacking_direction = -1
 		
 	playback.travel(ATTACK_A_ANIMATION)
-	player.velocity.x = attacking_direction * attack_move_speed
+	character.velocity.x = attacking_direction * attack_move_speed
 
 
 func state_process(delta):
-	if not player.is_on_floor():
+	if not character.is_on_floor():
 		next_state = states["Falling"]
 
 
 func on_exit():
-	player.velocity.x = 0
-	player.facing_direction_locked = false
+	character.velocity.x = 0
+	character.facing_direction_locked = false
 
 
 func state_input(event: InputEvent):
@@ -42,24 +42,24 @@ func state_input(event: InputEvent):
 
 func _on_animation_tree_animation_finished(anim_name):
 	if anim_name == ATTACK_A_ANIMATION:
-		player.velocity.x = attacking_direction * attack_move_speed
+		character.velocity.x = attacking_direction * attack_move_speed
 		if timer.is_stopped():
 			playback.travel(ATTACK_A_FINISH_ANIMATION)
 		else:
-			player.velocity.x = 0
+			character.velocity.x = 0
 			playback.travel(ATTACK_B_ANIMATION)
 	
 	if anim_name == ATTACK_A_FINISH_ANIMATION:
-		player.velocity.x = 0
+		character.velocity.x = 0
 		if idlling_timer.is_stopped():
 			next_state = states["Idling"]
 	
 	if anim_name == ATTACK_B_ANIMATION:
-		player.velocity.x = 0
+		character.velocity.x = 0
 		if timer.is_stopped():
 			playback.travel(ATTACK_B_FINISH_ANIMATION)
 		else:
-			player.velocity.x = attacking_direction * 10
+			character.velocity.x = attacking_direction * 10
 			playback.travel(ATTACK_C_ANIMATION)
 	
 	if anim_name == ATTACK_B_FINISH_ANIMATION:
@@ -67,6 +67,6 @@ func _on_animation_tree_animation_finished(anim_name):
 			next_state = states["Idling"]
 	
 	if anim_name == ATTACK_C_ANIMATION:
-		player.velocity.x = 0
+		character.velocity.x = 0
 		if idlling_timer.is_stopped():
 			next_state = states["Idling"]

@@ -10,12 +10,12 @@ class_name RunningState extends State
 const RUN_ANIMATION : String = "run"
 
 func state_process(delta):
-	if player.velocity.y > 0 and not player.is_on_floor():
+	if character.velocity.y > 0 and not character.is_on_floor():
 		next_state = states["Falling"]
-	elif player.direction.x == 0:
+	elif character.direction.x == 0:
 		next_state = states["Idling"]
 	
-	player.velocity.x = player.direction.x * run_speed
+	character.velocity.x = character.direction.x * run_speed
 
 
 func state_input(event: InputEvent):
@@ -30,15 +30,15 @@ func state_input(event: InputEvent):
 	
 
 func perform_jump():
-	player.velocity.y = jump_velocity
+	character.velocity.y = jump_velocity
 	next_state = states["Jumping"]
 
 
 func perform_dash():
-	if player.is_facing_right:
-		player.velocity.x = move_toward(300, 1 * dash_velocity, dash_speed)
+	if character.is_facing_right:
+		character.velocity.x = move_toward(300, 1 * dash_velocity, dash_speed)
 	else:
-		player.velocity.x = move_toward(-300, -1 * dash_velocity, dash_speed)
+		character.velocity.x = move_toward(-300, -1 * dash_velocity, dash_speed)
 	
 	next_state = states["Rolling"]
 
@@ -49,7 +49,7 @@ func perform_attack():
 
 func on_enter():
 	playback.travel(RUN_ANIMATION)
-	player.has_double_jumped = false
+	character.has_double_jumped = false
 
 
 func on_exit():

@@ -1,6 +1,6 @@
 class_name State extends Node
 
-var player : Player
+var character : CharacterBody2D
 var states : Dictionary
 var playback : AnimationNodeStateMachinePlayback
 var next_state : State

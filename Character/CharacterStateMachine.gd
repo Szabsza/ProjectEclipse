@@ -1,14 +1,14 @@
 class_name CharacterStateMachine extends Node
 
-var player : Player
+var character : CharacterBody2D
 var animation_tree : AnimationTree
 
 var current_state : State
 var states : Dictionary
 
-func setup(player : Player, animation_tree : AnimationTree):
-	if (player != null):
-		self.player = player
+func setup(character : CharacterBody2D, animation_tree : AnimationTree):
+	if (character != null):
+		self.character = character
 	
 	if (animation_tree != null):
 		self.animation_tree = animation_tree
@@ -16,7 +16,7 @@ func setup(player : Player, animation_tree : AnimationTree):
 	for child in get_children():
 		if (child is State):
 			states[child.name] = child
-			child.player = self.player
+			child.character = self.character
 			child.playback = animation_tree["parameters/playback"]
 	
 	for child in get_children():

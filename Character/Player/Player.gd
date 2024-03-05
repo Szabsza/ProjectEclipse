@@ -13,6 +13,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var direction : Vector2
 
 func _ready():
+	collision_layer = 4
+	collision_mask = 1
 	animation_tree.active = true
 	state_machine.setup(self, animation_tree)
 

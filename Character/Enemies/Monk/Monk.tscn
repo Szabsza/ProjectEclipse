@@ -1,0 +1,142 @@
+[gd_scene load_steps=30 format=3 uid="uid://dse50ogb1ndlt"]
+
+[ext_resource type="Texture2D" uid="uid://c28n3av3fly8c" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/idle/idle_2.png" id="1_6otmi"]
+[ext_resource type="Script" path="res://Character/Enemies/Monk/Monk.gd" id="1_a8mv2"]
+[ext_resource type="Texture2D" uid="uid://oq1h8g1kc5ru" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/take_hit/take_hit_6.png" id="2_3mip6"]
+[ext_resource type="Texture2D" uid="uid://m2yhkps6mx8u" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/idle/idle_1.png" id="2_kc5ld"]
+[ext_resource type="Texture2D" uid="uid://c6uh2g2r7qhx7" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/idle/idle_3.png" id="3_33crn"]
+[ext_resource type="Script" path="res://Character/HurtBox.gd" id="3_f6ga6"]
+[ext_resource type="Texture2D" uid="uid://bxocmfve6bxgo" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/idle/idle_4.png" id="4_31w2m"]
+[ext_resource type="Script" path="res://Character/Enemies/Monk/PlayerDetectionArea.gd" id="4_qtx4k"]
+[ext_resource type="Texture2D" uid="uid://oesgrml0toxs" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/idle/idle_5.png" id="5_voruv"]
+[ext_resource type="Texture2D" uid="uid://fe0whk3jrytg" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/idle/idle_6.png" id="6_dc30h"]
+[ext_resource type="Texture2D" uid="uid://cxcqxy8rj833i" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/take_hit/take_hit_1.png" id="10_gdlob"]
+[ext_resource type="Texture2D" uid="uid://ckem6i4j2icgd" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/take_hit/take_hit_2.png" id="11_7tcog"]
+[ext_resource type="Texture2D" uid="uid://ccdw08h2gdul1" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/take_hit/take_hit_3.png" id="12_adxyl"]
+[ext_resource type="Texture2D" uid="uid://bturmfbk1pv1f" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/take_hit/take_hit_4.png" id="13_gctn8"]
+[ext_resource type="Texture2D" uid="uid://8wkn0wat4rrj" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/take_hit/take_hit_5.png" id="14_8e3cv"]
+[ext_resource type="Script" path="res://Character/CharacterStateMachine.gd" id="15_afh3l"]
+[ext_resource type="Script" path="res://Character/Enemies/Monk/IdlingState.gd" id="16_dvk46"]
+[ext_resource type="Script" path="res://Character/Enemies/Monk/ChasingState.gd" id="17_j1b61"]
+[ext_resource type="Script" path="res://Character/Player/StateLabel.gd" id="19_cqdes"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vtans"]
+radius = 6.0
+height = 36.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eng4h"]
+size = Vector2(168, 36)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8buvg"]
+radius = 9.0
+height = 34.0
+
+[sub_resource type="Animation" id="Animation_lb1d5"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_holji"]
+resource_name = "hit"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("10_gdlob"), ExtResource("11_7tcog"), ExtResource("12_adxyl"), ExtResource("13_gctn8"), ExtResource("14_8e3cv"), ExtResource("2_3mip6")]
+}
+
+[sub_resource type="Animation" id="Animation_d44i7"]
+resource_name = "idle"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_kc5ld"), ExtResource("1_6otmi"), ExtResource("3_33crn"), ExtResource("4_31w2m"), ExtResource("5_voruv"), ExtResource("6_dc30h")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nrws0"]
+_data = {
+"RESET": SubResource("Animation_lb1d5"),
+"hit": SubResource("Animation_holji"),
+"idle": SubResource("Animation_d44i7")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2qvqu"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pf1o3"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_okbl2"]
+states/idle/node = SubResource("AnimationNodeAnimation_2qvqu")
+states/idle/position = Vector2(398.667, 101.111)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_pf1o3")]
+
+[node name="Monk" type="CharacterBody2D"]
+script = ExtResource("1_a8mv2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -40)
+texture = ExtResource("1_6otmi")
+
+[node name="HurtBox" type="Area2D" parent="Sprite2D"]
+script = ExtResource("3_f6ga6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HurtBox"]
+position = Vector2(0, 40)
+shape = SubResource("CapsuleShape2D_vtans")
+
+[node name="PlayerDetectionArea" type="Area2D" parent="Sprite2D"]
+script = ExtResource("4_qtx4k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/PlayerDetectionArea"]
+position = Vector2(45, 40)
+shape = SubResource("RectangleShape2D_eng4h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CapsuleShape2D_8buvg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nrws0")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nrws0")
+}
+tree_root = SubResource("AnimationNodeStateMachine_okbl2")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="CharacterStateMachine" type="Node" parent="."]
+script = ExtResource("15_afh3l")
+
+[node name="Idling" type="Node" parent="CharacterStateMachine"]
+script = ExtResource("16_dvk46")
+
+[node name="Chasing" type="Node" parent="CharacterStateMachine"]
+script = ExtResource("17_j1b61")
+
+[node name="StateLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
+offset_left = -40.0
+offset_top = -55.0
+offset_right = 42.0
+offset_bottom = -32.0
+text = "State: "
+script = ExtResource("19_cqdes")
+state_machine = NodePath("../CharacterStateMachine")
