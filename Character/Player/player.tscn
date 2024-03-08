@@ -807,7 +807,7 @@ states/roll/position = Vector2(444.626, 548.58)
 states/run/node = SubResource("AnimationNodeAnimation_0n7er")
 states/run/position = Vector2(554, 473.21)
 transitions = ["jump", "fall", SubResource("AnimationNodeStateMachineTransition_4o5ba"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_puimu"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_qw3re"), "run", "jump", SubResource("AnimationNodeStateMachineTransition_yfn5k"), "fall", "idle", SubResource("AnimationNodeStateMachineTransition_a3vle"), "run", "roll", SubResource("AnimationNodeStateMachineTransition_21pd8"), "roll", "idle", SubResource("AnimationNodeStateMachineTransition_7ryhi"), "idle", "attack_chain_a", SubResource("AnimationNodeStateMachineTransition_s1pcx"), "attack_chain_a", "attack_chain_a_finish", SubResource("AnimationNodeStateMachineTransition_c3ibt"), "attack_chain_a_finish", "idle", SubResource("AnimationNodeStateMachineTransition_y0hdu"), "attack_chain_a", "attack_chain_b", SubResource("AnimationNodeStateMachineTransition_klvi0"), "attack_chain_b", "attack_chain_b_finish", SubResource("AnimationNodeStateMachineTransition_34n6o"), "attack_chain_b_finish", "idle", SubResource("AnimationNodeStateMachineTransition_uofoh"), "attack_chain_b", "attack_chain_c", SubResource("AnimationNodeStateMachineTransition_kcb34"), "attack_chain_c", "idle", SubResource("AnimationNodeStateMachineTransition_ws4n5"), "run", "attack_chain_a", SubResource("AnimationNodeStateMachineTransition_pt0se"), "jump", "jump_attack", SubResource("AnimationNodeStateMachineTransition_ulgnq"), "jump_attack", "fall", SubResource("AnimationNodeStateMachineTransition_vqgkp")]
-graph_offset = Vector2(-2.70728, -104.633)
+graph_offset = Vector2(-2.70728, 112.967)
 
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
@@ -957,6 +957,7 @@ script = ExtResource("132_p6pfp")
 state_machine = NodePath("../CharacterStateMachine")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -99)
 
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/JumpAttacking" method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Attacking" method="_on_animation_tree_animation_finished"]

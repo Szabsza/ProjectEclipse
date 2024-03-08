@@ -1,6 +1,10 @@
 class_name PlayerDetectionArea extends Area2D
 
 var enemy : CharacterBody2D
+var is_able_to_see_player : bool = false
+
+var player_position : Vector2 = Vector2.ZERO
+var player : Player
 
 func setup(enemy):
 	self.enemy = enemy
@@ -13,6 +17,12 @@ func _init():
 
 func _ready():
 	connect("body_entered", self._on_body_entered)
+	connect("body_exited", self._on_body_exited)
+
+
+func _physics_process(delta):
+	if is_able_to_see_player:
+		player_position = player.position
 
 
 func _on_body_entered(character : Node2D):
@@ -20,5 +30,14 @@ func _on_body_entered(character : Node2D):
 		return
 	
 	if character is Player:
-		enemy.state_machine.current_state = enemy.state_machine.states["Chasing"]
+		player = character
+		is_able_to_see_player = true
+
+
+func _on_body_exited(character : Node2D):
+	if character == null:
+		return
 	
+	if character is Player:
+		player = null
+		is_able_to_see_player = false

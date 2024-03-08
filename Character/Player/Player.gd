@@ -47,5 +47,4 @@ func update_facing_direction():
 			
 
 func take_damage(amount):
-	#print("dmg taken: ", amount)
 	pass

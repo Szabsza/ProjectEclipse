@@ -7,20 +7,20 @@ var current_state : State
 var states : Dictionary
 
 func setup(character : CharacterBody2D, animation_tree : AnimationTree):
-	if (character != null):
+	if character != null:
 		self.character = character
 	
-	if (animation_tree != null):
+	if animation_tree != null:
 		self.animation_tree = animation_tree
 		
 	for child in get_children():
-		if (child is State):
+		if child is State:
 			states[child.name] = child
 			child.character = self.character
 			child.playback = animation_tree["parameters/playback"]
 	
 	for child in get_children():
-		if (child is State):
+		if child is State:
 			child.states = self.states
 			
 	switch_state(states["Idling"])
