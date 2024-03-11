@@ -818,6 +818,7 @@ position = Vector2(-1, -45)
 texture = ExtResource("110_3gqgb")
 
 [node name="HurtBox" type="Area2D" parent="Sprite2D"]
+visible = false
 script = ExtResource("3_yxkmg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HurtBox"]

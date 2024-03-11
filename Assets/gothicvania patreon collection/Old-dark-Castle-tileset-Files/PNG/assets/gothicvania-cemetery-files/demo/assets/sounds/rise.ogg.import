@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://oa8h6wrjkep3"
+path="res://.godot/imported/rise.ogg-664b8d21e89571cc335a8303a22f5fcd.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/demo/assets/sounds/rise.ogg"
+dest_files=["res://.godot/imported/rise.ogg-664b8d21e89571cc335a8303a22f5fcd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
