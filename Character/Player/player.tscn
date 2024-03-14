@@ -1,4 +1,4 @@
-[gd_scene load_steps=193 format=3 uid="uid://v3fb0628e85t"]
+[gd_scene load_steps=195 format=3 uid="uid://v3fb0628e85t"]
 
 [ext_resource type="Script" path="res://Character/Player/Player.gd" id="1_8wcef"]
 [ext_resource type="Texture2D" uid="uid://c8ktilt4ey03q" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/3_atk/3_atk_26.png" id="2_2l6g5"]
@@ -809,7 +809,16 @@ states/run/position = Vector2(554, 473.21)
 transitions = ["jump", "fall", SubResource("AnimationNodeStateMachineTransition_4o5ba"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_puimu"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_qw3re"), "run", "jump", SubResource("AnimationNodeStateMachineTransition_yfn5k"), "fall", "idle", SubResource("AnimationNodeStateMachineTransition_a3vle"), "run", "roll", SubResource("AnimationNodeStateMachineTransition_21pd8"), "roll", "idle", SubResource("AnimationNodeStateMachineTransition_7ryhi"), "idle", "attack_chain_a", SubResource("AnimationNodeStateMachineTransition_s1pcx"), "attack_chain_a", "attack_chain_a_finish", SubResource("AnimationNodeStateMachineTransition_c3ibt"), "attack_chain_a_finish", "idle", SubResource("AnimationNodeStateMachineTransition_y0hdu"), "attack_chain_a", "attack_chain_b", SubResource("AnimationNodeStateMachineTransition_klvi0"), "attack_chain_b", "attack_chain_b_finish", SubResource("AnimationNodeStateMachineTransition_34n6o"), "attack_chain_b_finish", "idle", SubResource("AnimationNodeStateMachineTransition_uofoh"), "attack_chain_b", "attack_chain_c", SubResource("AnimationNodeStateMachineTransition_kcb34"), "attack_chain_c", "idle", SubResource("AnimationNodeStateMachineTransition_ws4n5"), "run", "attack_chain_a", SubResource("AnimationNodeStateMachineTransition_pt0se"), "jump", "jump_attack", SubResource("AnimationNodeStateMachineTransition_ulgnq"), "jump_attack", "fall", SubResource("AnimationNodeStateMachineTransition_vqgkp")]
 graph_offset = Vector2(-2.70728, 112.967)
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="Gradient" id="Gradient_s1wsq"]
+offsets = PackedFloat32Array(0, 0.689737)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_afbri"]
+gradient = SubResource("Gradient_s1wsq")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 texture_filter = 1
 script = ExtResource("1_8wcef")
 
@@ -949,6 +958,7 @@ one_shot = true
 wait_time = 0.15
 
 [node name="StateLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
+visible = false
 offset_left = -40.0
 offset_top = -55.0
 offset_right = 42.0
@@ -959,6 +969,13 @@ state_machine = NodePath("../CharacterStateMachine")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -99)
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.352941, 0.262745, 0.188235, 1)
+energy = 0.5
+texture = SubResource("GradientTexture2D_afbri")
 
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/JumpAttacking" method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Attacking" method="_on_animation_tree_animation_finished"]

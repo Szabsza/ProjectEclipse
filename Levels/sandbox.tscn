@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cwswaw56eqs6b"]
 
 [ext_resource type="PackedScene" uid="uid://xicx1vr1g113" path="res://Util/floor.tscn" id="1_j6243"]
-[ext_resource type="PackedScene" uid="uid://v3fb0628e85t" path="res://Character/Player/player.tscn" id="2_h15nw"]
+[ext_resource type="PackedScene" uid="uid://v3fb0628e85t" path="res://Character/Player/Player.tscn" id="2_h15nw"]
 [ext_resource type="PackedScene" uid="uid://dse50ogb1ndlt" path="res://Character/Enemies/Monk/Monk.tscn" id="3_kscw5"]
 
 [node name="Sandbox" type="Node2D"]

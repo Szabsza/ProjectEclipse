@@ -243,7 +243,7 @@ script = ExtResource("1_a8mv2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -40)
-texture = ExtResource("3_33crn")
+texture = ExtResource("5_voruv")
 
 [node name="HurtBox" type="Area2D" parent="Sprite2D"]
 script = ExtResource("3_f6ga6")
