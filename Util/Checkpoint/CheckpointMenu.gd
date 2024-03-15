@@ -1,6 +1,6 @@
 class_name CheckpointMenu extends Control
 
-@onready var name_label : Label = $MarginContainer/VBoxContainer/Name 
+@onready var name_label : Label = $MarginContainer/VBoxContainer/Name
 
 var checkpoint_name : String = ""
 

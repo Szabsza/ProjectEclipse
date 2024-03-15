@@ -21,10 +21,10 @@ func _ready():
 
 func _physics_process(delta):
 	direction = Input.get_vector("left", "right", "up", "down")
-		
+			
 	if not is_on_floor():
 		velocity.y += gravity * delta
-	
+		
 	move_and_slide()
 	update_animation()
 	update_facing_direction()

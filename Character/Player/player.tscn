@@ -1,4 +1,4 @@
-[gd_scene load_steps=195 format=3 uid="uid://v3fb0628e85t"]
+[gd_scene load_steps=196 format=3 uid="uid://v3fb0628e85t"]
 
 [ext_resource type="Script" path="res://Character/Player/Player.gd" id="1_8wcef"]
 [ext_resource type="Texture2D" uid="uid://c8ktilt4ey03q" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/3_atk/3_atk_26.png" id="2_2l6g5"]
@@ -132,6 +132,7 @@
 [ext_resource type="Script" path="res://Character/Player/States/JumpAttackingState.gd" id="130_otwpi"]
 [ext_resource type="Script" path="res://Character/Player/States/AttackingState.gd" id="130_y2uni"]
 [ext_resource type="Script" path="res://Character/Player/StateLabel.gd" id="132_p6pfp"]
+[ext_resource type="Script" path="res://Character/Player/InteractingState.gd" id="132_s2gqo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tm3yw"]
 radius = 11.0
@@ -956,6 +957,9 @@ one_shot = true
 
 [node name="IdlingTimer" type="Timer" parent="CharacterStateMachine/Attacking"]
 wait_time = 0.15
+
+[node name="Interacting" type="Node" parent="CharacterStateMachine"]
+script = ExtResource("132_s2gqo")
 
 [node name="StateLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
 visible = false

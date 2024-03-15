@@ -42,12 +42,14 @@ func _process(delta):
 		
 		
 func _input(event : InputEvent):
-	if event.is_action_pressed("interact") && is_interactable:
+	if event.is_action_pressed("interact") && is_interactable && player.state_machine.current_state == player.state_machine.states["Idling"]:
 		if active_areas.size() != 0:
 			is_interactable = false
 			label.hide()
 			
+			player.state_machine.switch_state(player.state_machine.states["Interacting"])
 			await active_areas[0].interact.call()
+			player.state_machine.switch_state(player.state_machine.states["Idling"])
 			
 			is_interactable = true
 		
