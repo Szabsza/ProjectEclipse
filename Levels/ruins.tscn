@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://behak76asms1i" path="res://Assets/toRecolor/finalNight.PNG" id="1_ndy5b"]
 [ext_resource type="Texture2D" uid="uid://kfmyor3vm8pp" path="res://Assets/toRecolor/tileset.png" id="2_s7awj"]
 [ext_resource type="Texture2D" uid="uid://qj6gjerqgh8p" path="res://Assets/toRecolor/The Sidescroller's Dungeon Tiles 32x32.png" id="3_30ls8"]
-[ext_resource type="PackedScene" uid="uid://v3fb0628e85t" path="res://Character/Player/Player.tscn" id="4_avcyw"]
+[ext_resource type="PackedScene" uid="uid://v3fb0628e85t" path="res://Character/Player/player.tscn" id="4_avcyw"]
 [ext_resource type="Texture2D" uid="uid://cpvn7rm2jgixy" path="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/old-dark-castle-interior-tileset.png" id="5_tne0m"]
 [ext_resource type="Texture2D" uid="uid://dkeb7hcssuln2" path="res://Assets/assets/SpriteSheets/background/jungle_tree1.png" id="6_hg8gy"]
 [ext_resource type="Texture2D" uid="uid://cjnyvihey70m3" path="res://Assets/assets/SpriteSheets/background/jungle_tree1_bg.png" id="7_305yk"]

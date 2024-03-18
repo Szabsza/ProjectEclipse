@@ -19,6 +19,7 @@ func _ready():
 
 func _on_interact():
 	if not is_activated:
+		is_activated = true
 		playback.travel(ACTIVATED_ANIMATION)
 	else:
 		checkpoint_menu.visible = true

@@ -100,70 +100,6 @@ offset_bottom = -141.16
 theme = SubResource("Theme_yigas")
 script = ExtResource("1_nbt8d")
 
-[node name="TravelMenu" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_right = 40.0
-offset_bottom = 40.0
-grow_horizontal = 2
-script = ExtResource("5_mnqs3")
-
-[node name="Panel" type="Panel" parent="TravelMenu"]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 3.575
-anchor_right = 3.575
-offset_left = -56.0
-offset_top = -78.0
-offset_right = 56.0
-offset_bottom = 79.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = SubResource("Theme_d1i7a")
-theme_override_styles/panel = SubResource("StyleBoxTexture_4nnxg")
-
-[node name="Panel2" type="Panel" parent="TravelMenu"]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 3.575
-anchor_right = 3.575
-offset_left = -65.0
-offset_top = -87.0
-offset_right = 65.0
-offset_bottom = 87.0
-theme = SubResource("Theme_kuhi0")
-theme_override_styles/panel = SubResource("StyleBoxTexture_u6uf2")
-
-[node name="MarginContainer" type="MarginContainer" parent="TravelMenu"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 3.575
-anchor_right = 3.575
-offset_left = -30.0
-offset_top = -64.0
-offset_right = 30.0
-offset_bottom = 67.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ScrollContainer" type="ScrollContainer" parent="TravelMenu/MarginContainer"]
-layout_mode = 2
-horizontal_scroll_mode = 0
-vertical_scroll_mode = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TravelMenu/MarginContainer/ScrollContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="Label" type="Label" parent="TravelMenu/MarginContainer/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-text = "Travel to:"
-horizontal_alignment = 1
-
 [node name="Panel" type="Panel" parent="."]
 texture_filter = 1
 layout_mode = 1
@@ -228,6 +164,69 @@ text = "Travel"
 [node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Leave"
+
+[node name="TravelMenu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("5_mnqs3")
+
+[node name="Panel" type="Panel" parent="TravelMenu"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 3.575
+anchor_right = 3.575
+offset_left = -56.0
+offset_top = -78.0
+offset_right = 56.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_d1i7a")
+theme_override_styles/panel = SubResource("StyleBoxTexture_4nnxg")
+
+[node name="Panel2" type="Panel" parent="TravelMenu"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 3.575
+anchor_right = 3.575
+offset_left = -65.0
+offset_top = -87.0
+offset_right = 65.0
+offset_bottom = 87.0
+theme = SubResource("Theme_kuhi0")
+theme_override_styles/panel = SubResource("StyleBoxTexture_u6uf2")
+
+[node name="MarginContainer" type="MarginContainer" parent="TravelMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 3.575
+anchor_right = 3.575
+offset_left = -30.0
+offset_top = -64.0
+offset_right = 30.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TravelMenu/MarginContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TravelMenu/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="TravelMenu/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Travel to:"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Rest" to="." method="_on_rest_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Level" to="." method="_on_level_pressed"]
