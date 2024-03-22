@@ -16,7 +16,9 @@ func state_process(delta):
 
 
 func state_input(event : InputEvent):
-	if event.is_action_pressed("jump") and not character.has_double_jumped:
+	if event.is_action_pressed("jump") \
+	and not character.has_double_jumped \
+	and  character.stamina.current_stamina - character.JUMP_STAMINA_COST > 0:
 		perform_jump()
 
 

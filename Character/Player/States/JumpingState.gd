@@ -6,19 +6,22 @@ class_name JumpingState extends State
 
 const JUMP_ANIMATION : String = "jump"
 
+
 func state_process(delta):
 	if character.velocity.y > 0 and not character.is_on_floor():
 		next_state = states["Falling"]
 	
-	#player.velocity.x = lerp(player.velocity.x, player.direction.x * speed, jump_acceleration)
 	character.velocity.x = character.direction.x * speed
 
 
 func state_input(event : InputEvent):
-	if event.is_action_pressed("attack"):
+	if event.is_action_pressed("attack") \
+	and character.stamina.current_stamina - character.ATTACK_STAMINA_COST > 0:
 		perform_jumping_attack()
 	
-	if event.is_action_pressed("jump") and not character.has_double_jumped:
+	if event.is_action_pressed("jump") \
+	and not character.has_double_jumped \
+	and character.stamina.current_stamina - character.JUMP_STAMINA_COST > 0:
 		perform_jump()
 
 
@@ -34,6 +37,7 @@ func perform_jump():
 
 func on_enter():
 	playback.travel(JUMP_ANIMATION)
+	character.stamina.decrease_current_stamina(character.JUMP_STAMINA_COST)
 
 
 func on_exit():

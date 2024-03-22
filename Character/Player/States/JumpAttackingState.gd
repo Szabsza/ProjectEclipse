@@ -14,6 +14,7 @@ func on_enter():
 		attacking_direction = -1
 	
 	playback.travel(JUMP_ATTACK_ANIMATION)
+	character.stamina.decrease_current_stamina(character.ATTACK_STAMINA_COST)
 
 
 func state_process(delta):

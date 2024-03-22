@@ -1,7 +1,10 @@
 class_name HitBox extends Area2D
 
-@export var damage : float = 50.0
+var damage : int = 0
 
-func _init():
-	collision_layer = 2
-	collision_mask = 0
+
+func setup(damage : int, layer: int, mask: int):
+	collision_layer = layer
+	collision_mask = mask
+	
+	self.damage = damage

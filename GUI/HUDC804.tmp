@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciycxun4i5wvu"]
+
+[ext_resource type="Script" path="res://GUI/HUD.gd" id="1_c5nti"]
+[ext_resource type="PackedScene" uid="uid://biu3xvae7hxfd" path="res://GUI/HealthBar.tscn" id="1_tfwml"]
+[ext_resource type="PackedScene" uid="uid://cxdepm6ksokn3" path="res://GUI/StaminaBar.tscn" id="2_xsdn5"]
+
+[node name="Hud" type="CanvasLayer"]
+script = ExtResource("1_c5nti")
+
+[node name="HealthBar" parent="." instance=ExtResource("1_tfwml")]
+offset_left = 20.0
+offset_top = 22.0
+offset_right = 189.0
+offset_bottom = 34.0
+
+[node name="HealthPoints" type="Label" parent="."]
+texture_filter = 1
+offset_left = 202.0
+offset_top = 17.0
+offset_right = 246.0
+offset_bottom = 40.0
+
+[node name="StaminaBar" parent="." instance=ExtResource("2_xsdn5")]
+offset_left = 20.0
+offset_top = 38.0
+offset_right = 123.0
+offset_bottom = 50.0
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="StaminaPoints" type="Label" parent="."]
+offset_left = 131.0
+offset_top = 34.0
+offset_right = 171.0
+offset_bottom = 57.0

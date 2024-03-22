@@ -22,6 +22,7 @@ func _on_interact():
 		is_activated = true
 		playback.travel(ACTIVATED_ANIMATION)
 	else:
+		DeathManager.last_interacted_checkpoint = self
 		checkpoint_menu.visible = true
 		await checkpoint_menu.exited
 		

@@ -89,4 +89,5 @@ frame_progress = 0.891157
 [node name="PointLight2D" type="PointLight2D" parent="."]
 color = Color(0.666667, 0.360784, 0.223529, 1)
 energy = 2.0
+range_z_max = 150
 texture = SubResource("GradientTexture2D_da6kd")

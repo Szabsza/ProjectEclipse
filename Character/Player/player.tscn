@@ -1,4 +1,4 @@
-[gd_scene load_steps=196 format=3 uid="uid://v3fb0628e85t"]
+[gd_scene load_steps=212 format=3 uid="uid://v3fb0628e85t"]
 
 [ext_resource type="Script" path="res://Character/Player/Player.gd" id="1_8wcef"]
 [ext_resource type="Texture2D" uid="uid://c8ktilt4ey03q" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/3_atk/3_atk_26.png" id="2_2l6g5"]
@@ -40,7 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://bq2td3odqlv1m" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/3_atk/3_atk_23.png" id="38_1ty0n"]
 [ext_resource type="Texture2D" uid="uid://bav44mluqiekp" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/3_atk/3_atk_24.png" id="39_hfevt"]
 [ext_resource type="Texture2D" uid="uid://bj5ja8qd51lkd" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/3_atk/3_atk_25.png" id="40_lguxg"]
-[ext_resource type="Texture2D" uid="uid://dxs62mpkfmdcj" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/death/death_1.png" id="41_a4cfs"]
+[ext_resource type="Texture2D" uid="uid://dxs62mpkfmdcj" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/death/death_1.png" id="42_87lnd"]
 [ext_resource type="Texture2D" uid="uid://decc1epl6d4lo" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/death/death_2.png" id="42_uwod1"]
 [ext_resource type="Texture2D" uid="uid://c5f0726i5f855" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/death/death_3.png" id="43_fe6jm"]
 [ext_resource type="Texture2D" uid="uid://xmocbjx3gjpx" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/death/death_4.png" id="44_khjfr"]
@@ -124,7 +124,10 @@
 [ext_resource type="Texture2D" uid="uid://bendmybgr2bks" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/take_hit/take_hit_5.png" id="122_yobc0"]
 [ext_resource type="Texture2D" uid="uid://bctac216wv3nk" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/take_hit/take_hit_6.png" id="123_yrqx6"]
 [ext_resource type="Script" path="res://Character/CharacterStateMachine.gd" id="124_ocqha"]
+[ext_resource type="Script" path="res://Character/Health.gd" id="124_siaoi"]
 [ext_resource type="Script" path="res://Character/Player/States/JumpingState.gd" id="125_fkc0c"]
+[ext_resource type="Script" path="res://Character/Stamina.gd" id="125_x1723"]
+[ext_resource type="Script" path="res://Character/Mana.gd" id="125_xls3q"]
 [ext_resource type="Script" path="res://Character/Player/States/FallingState.gd" id="126_hobok"]
 [ext_resource type="Script" path="res://Character/Player/States/IdlingState.gd" id="127_yf4fg"]
 [ext_resource type="Script" path="res://Character/Player/States/RollingState.gd" id="128_k87xc"]
@@ -132,7 +135,8 @@
 [ext_resource type="Script" path="res://Character/Player/States/JumpAttackingState.gd" id="130_otwpi"]
 [ext_resource type="Script" path="res://Character/Player/States/AttackingState.gd" id="130_y2uni"]
 [ext_resource type="Script" path="res://Character/Player/StateLabel.gd" id="132_p6pfp"]
-[ext_resource type="Script" path="res://Character/Player/InteractingState.gd" id="132_s2gqo"]
+[ext_resource type="Script" path="res://Character/Player/States/InteractingState.gd" id="134_sjlx5"]
+[ext_resource type="Script" path="res://Character/Player/States/DyingState.gd" id="135_jsx0q"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tm3yw"]
 radius = 11.0
@@ -455,7 +459,8 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id="Animation_c43pu"]
 resource_name = "death"
-length = 1.9
+length = 1.3
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -463,10 +468,106 @@ tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1, 1.05, 1.1, 1.15, 1.2, 1.25),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("41_a4cfs"), ExtResource("42_uwod1"), ExtResource("43_fe6jm"), ExtResource("44_khjfr"), ExtResource("45_rfajl"), ExtResource("46_up1dx"), ExtResource("47_7wnfr"), ExtResource("48_3jp25"), ExtResource("49_id2li"), ExtResource("50_efar3"), ExtResource("51_pfcbk"), ExtResource("52_h5ltt"), ExtResource("53_6y5in"), ExtResource("54_xjw28"), ExtResource("55_v6uvd"), ExtResource("56_oeyyr"), ExtResource("57_rgs27"), ExtResource("58_d13qw"), ExtResource("59_bbw4y")]
+"values": [ExtResource("42_87lnd"), ExtResource("42_uwod1"), ExtResource("43_fe6jm"), ExtResource("44_khjfr"), ExtResource("45_rfajl"), ExtResource("46_up1dx"), ExtResource("47_7wnfr"), ExtResource("48_3jp25"), ExtResource("49_id2li"), ExtResource("50_efar3"), ExtResource("51_pfcbk"), ExtResource("52_h5ltt"), ExtResource("53_6y5in"), ExtResource("54_xjw28"), ExtResource("55_v6uvd"), ExtResource("56_oeyyr"), ExtResource("57_rgs27"), ExtResource("58_d13qw"), ExtResource("59_bbw4y")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/HitBoxA/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/HitBoxB/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/HitBoxC/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D/HitBoxD/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D/HitBoxE/CollisionShape2D:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sprite2D/HitBoxF/CollisionShape2D:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Sprite2D/HitBoxG/CollisionShape2D:disabled")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Sprite2D/HitBoxH/CollisionShape2D:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_gws7v"]
@@ -728,6 +829,9 @@ animation = &"attack_chain_b_finish"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3iaxc"]
 animation = &"attack_chain_c"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1ak5o"]
+animation = &"death"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kmsiv"]
 animation = &"fall"
 
@@ -782,6 +886,28 @@ animation = &"run"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vqgkp"]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kf1vo"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ajo5l"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0sea0"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vk4fn"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_iok4i"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dhnej"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_modwo"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_iqvv3"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3dcwb"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gqwns"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6yh4o"]
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_0le0i"]
 states/End/position = Vector2(1209.33, 161.753)
 states/Start/position = Vector2(197.939, 471.58)
@@ -795,6 +921,8 @@ states/attack_chain_b_finish/node = SubResource("AnimationNodeAnimation_wxeoc")
 states/attack_chain_b_finish/position = Vector2(557, 161.753)
 states/attack_chain_c/node = SubResource("AnimationNodeAnimation_3iaxc")
 states/attack_chain_c/position = Vector2(907.293, 79.247)
+states/death/node = SubResource("AnimationNodeAnimation_1ak5o")
+states/death/position = Vector2(916.626, 392.032)
 states/fall/node = SubResource("AnimationNodeAnimation_kmsiv")
 states/fall/position = Vector2(340.667, 612.247)
 states/idle/node = SubResource("AnimationNodeAnimation_xkcsv")
@@ -807,8 +935,8 @@ states/roll/node = SubResource("AnimationNodeAnimation_tosc3")
 states/roll/position = Vector2(444.626, 548.58)
 states/run/node = SubResource("AnimationNodeAnimation_0n7er")
 states/run/position = Vector2(554, 473.21)
-transitions = ["jump", "fall", SubResource("AnimationNodeStateMachineTransition_4o5ba"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_puimu"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_qw3re"), "run", "jump", SubResource("AnimationNodeStateMachineTransition_yfn5k"), "fall", "idle", SubResource("AnimationNodeStateMachineTransition_a3vle"), "run", "roll", SubResource("AnimationNodeStateMachineTransition_21pd8"), "roll", "idle", SubResource("AnimationNodeStateMachineTransition_7ryhi"), "idle", "attack_chain_a", SubResource("AnimationNodeStateMachineTransition_s1pcx"), "attack_chain_a", "attack_chain_a_finish", SubResource("AnimationNodeStateMachineTransition_c3ibt"), "attack_chain_a_finish", "idle", SubResource("AnimationNodeStateMachineTransition_y0hdu"), "attack_chain_a", "attack_chain_b", SubResource("AnimationNodeStateMachineTransition_klvi0"), "attack_chain_b", "attack_chain_b_finish", SubResource("AnimationNodeStateMachineTransition_34n6o"), "attack_chain_b_finish", "idle", SubResource("AnimationNodeStateMachineTransition_uofoh"), "attack_chain_b", "attack_chain_c", SubResource("AnimationNodeStateMachineTransition_kcb34"), "attack_chain_c", "idle", SubResource("AnimationNodeStateMachineTransition_ws4n5"), "run", "attack_chain_a", SubResource("AnimationNodeStateMachineTransition_pt0se"), "jump", "jump_attack", SubResource("AnimationNodeStateMachineTransition_ulgnq"), "jump_attack", "fall", SubResource("AnimationNodeStateMachineTransition_vqgkp")]
-graph_offset = Vector2(-2.70728, 112.967)
+transitions = ["jump", "fall", SubResource("AnimationNodeStateMachineTransition_4o5ba"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_puimu"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_qw3re"), "run", "jump", SubResource("AnimationNodeStateMachineTransition_yfn5k"), "fall", "idle", SubResource("AnimationNodeStateMachineTransition_a3vle"), "run", "roll", SubResource("AnimationNodeStateMachineTransition_21pd8"), "roll", "idle", SubResource("AnimationNodeStateMachineTransition_7ryhi"), "idle", "attack_chain_a", SubResource("AnimationNodeStateMachineTransition_s1pcx"), "attack_chain_a", "attack_chain_a_finish", SubResource("AnimationNodeStateMachineTransition_c3ibt"), "attack_chain_a_finish", "idle", SubResource("AnimationNodeStateMachineTransition_y0hdu"), "attack_chain_a", "attack_chain_b", SubResource("AnimationNodeStateMachineTransition_klvi0"), "attack_chain_b", "attack_chain_b_finish", SubResource("AnimationNodeStateMachineTransition_34n6o"), "attack_chain_b_finish", "idle", SubResource("AnimationNodeStateMachineTransition_uofoh"), "attack_chain_b", "attack_chain_c", SubResource("AnimationNodeStateMachineTransition_kcb34"), "attack_chain_c", "idle", SubResource("AnimationNodeStateMachineTransition_ws4n5"), "run", "attack_chain_a", SubResource("AnimationNodeStateMachineTransition_pt0se"), "jump", "jump_attack", SubResource("AnimationNodeStateMachineTransition_ulgnq"), "jump_attack", "fall", SubResource("AnimationNodeStateMachineTransition_vqgkp"), "idle", "death", SubResource("AnimationNodeStateMachineTransition_kf1vo"), "run", "death", SubResource("AnimationNodeStateMachineTransition_ajo5l"), "roll", "death", SubResource("AnimationNodeStateMachineTransition_0sea0"), "jump", "death", SubResource("AnimationNodeStateMachineTransition_vk4fn"), "attack_chain_a_finish", "death", SubResource("AnimationNodeStateMachineTransition_iok4i"), "attack_chain_a", "death", SubResource("AnimationNodeStateMachineTransition_dhnej"), "attack_chain_b_finish", "death", SubResource("AnimationNodeStateMachineTransition_modwo"), "attack_chain_b", "death", SubResource("AnimationNodeStateMachineTransition_iqvv3"), "attack_chain_c", "death", SubResource("AnimationNodeStateMachineTransition_3dcwb"), "jump_attack", "death", SubResource("AnimationNodeStateMachineTransition_gqwns"), "fall", "death", SubResource("AnimationNodeStateMachineTransition_6yh4o")]
+graph_offset = Vector2(-2.70728, -48.6343)
 
 [sub_resource type="Gradient" id="Gradient_s1wsq"]
 offsets = PackedFloat32Array(0, 0.689737)
@@ -825,7 +953,7 @@ script = ExtResource("1_8wcef")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, -45)
-texture = ExtResource("110_3gqgb")
+texture = ExtResource("36_6omcm")
 
 [node name="HurtBox" type="Area2D" parent="Sprite2D"]
 visible = false
@@ -927,6 +1055,19 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_0le0i")
 anim_player = NodePath("../AnimationPlayer")
 
+[node name="Health" type="Node" parent="."]
+script = ExtResource("124_siaoi")
+
+[node name="Mana" type="Node" parent="."]
+script = ExtResource("125_xls3q")
+
+[node name="Stamina" type="Node" parent="."]
+script = ExtResource("125_x1723")
+
+[node name="StaminaRegenTimer" type="Timer" parent="Stamina"]
+wait_time = 0.2
+autostart = true
+
 [node name="CharacterStateMachine" type="Node" parent="."]
 script = ExtResource("124_ocqha")
 
@@ -959,7 +1100,10 @@ one_shot = true
 wait_time = 0.15
 
 [node name="Interacting" type="Node" parent="CharacterStateMachine"]
-script = ExtResource("132_s2gqo")
+script = ExtResource("134_sjlx5")
+
+[node name="Dying" type="Node" parent="CharacterStateMachine"]
+script = ExtResource("135_jsx0q")
 
 [node name="StateLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
 visible = false
@@ -977,9 +1121,12 @@ position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
 color = Color(0.352941, 0.262745, 0.188235, 1)
 energy = 0.5
 texture = SubResource("GradientTexture2D_afbri")
 
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/JumpAttacking" method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Attacking" method="_on_animation_tree_animation_finished"]
+[connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Dying" method="_on_animation_tree_animation_finished"]
+[connection signal="timeout" from="Stamina/StaminaRegenTimer" to="Stamina" method="_on_stamina_regen_timer_timeout"]

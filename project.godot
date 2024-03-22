@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 InteractionManager="*res://Util/Interaction/InteractionManager.tscn"
 TravelManager="*res://Util/Checkpoint/Travel/TravelManager.tscn"
+StatusManager="*res://Util/Checkpoint/Status/StatusManager.tscn"
+RuneManager="*res://Util/Rune/RuneManager.tscn"
+DeathManager="*res://Character/Player/DeathManager.tscn"
+HotBarManager="*res://GUI/Inventory/HotBarManager.tscn"
 
 [display]
 

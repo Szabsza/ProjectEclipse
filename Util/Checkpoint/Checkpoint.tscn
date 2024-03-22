@@ -213,7 +213,6 @@ tree_root = SubResource("AnimationNodeStateMachine_j38sx")
 anim_player = NodePath("../AnimationPlayer")
 
 [node name="InteractableArea" parent="." instance=ExtResource("2_nrs6m")]
-visible = false
 action_name = "Commune"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea"]
@@ -225,6 +224,7 @@ position = Vector2(5.68434e-14, 32)
 scale = Vector2(1.40625, 1.21875)
 color = Color(0, 1, 1, 1)
 energy = 1.2
+range_z_max = 150
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_lofgj")
 

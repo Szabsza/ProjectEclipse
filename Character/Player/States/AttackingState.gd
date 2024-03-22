@@ -22,6 +22,7 @@ func on_enter():
 		attacking_direction = -1
 		
 	playback.travel(ATTACK_A_ANIMATION)
+	character.stamina.decrease_current_stamina(character.ATTACK_STAMINA_COST)
 	character.velocity.x = attacking_direction * attack_move_speed
 
 

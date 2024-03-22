@@ -14,16 +14,19 @@ func state_process(delta):
 
 
 func state_input(event: InputEvent):
-	if event.is_action_pressed("jump"):
+	if event.is_action_pressed("jump") \
+	and character.stamina.current_stamina - character.JUMP_STAMINA_COST > 0:
 		perform_jump()
 	
 	if event.is_action_pressed("right") or event.is_action_pressed("left"):
 		perform_run()
 	
-	if event.is_action_pressed("dash"):
+	if event.is_action_pressed("dash") \
+	and  character.stamina.current_stamina - character.ROLL_STAMINA_COST > 0:
 		perform_dash()
 	
-	if event.is_action_pressed("attack"):
+	if event.is_action_pressed("attack") \
+	and character.stamina.current_stamina - character.ATTACK_STAMINA_COST > 0:
 		perform_attack()
 
 
@@ -33,7 +36,6 @@ func perform_jump():
 
 
 func perform_run():
-	#player.velocity.x = lerp(player.velocity.x, player.direction.x * run_speed, run_acceleration)
 	character.velocity.x = character.direction.x * run_speed
 	next_state = states["Running"]
 	

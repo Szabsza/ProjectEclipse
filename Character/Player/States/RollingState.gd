@@ -4,6 +4,7 @@ const ROLL_ANIMATION : String = "roll"
 
 var roll_frames : int = 20
 
+
 func state_process(delta):
 	if not character.is_on_floor():
 		next_state = states["Falling"]
@@ -15,6 +16,7 @@ func state_process(delta):
 
 func on_enter():
 	playback.travel(ROLL_ANIMATION)
+	character.stamina.decrease_current_stamina(character.ROLL_STAMINA_COST)
 
 
 func on_exit():
