@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2r46v6kjtqn8"
-path="res://.godot/imported/Fire Trap - Level 3 - Transition.png-b701e226ec256efd8723070f516b18c3.ctex"
+path="res://.godot/imported/Fire Trap - Level 3 - Transition.png-cafb976683a1fe3083c7d29bf12b7e89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/Fire Trap/Transition/PNGs/Fire Trap - Level 3 - Transition.png"
-dest_files=["res://.godot/imported/Fire Trap - Level 3 - Transition.png-b701e226ec256efd8723070f516b18c3.ctex"]
+source_file="res://assets/assets/Fire Trap/Transition/PNGs/Fire Trap - Level 3 - Transition.png"
+dest_files=["res://.godot/imported/Fire Trap - Level 3 - Transition.png-cafb976683a1fe3083c7d29bf12b7e89.ctex"]
 
 [params]
 

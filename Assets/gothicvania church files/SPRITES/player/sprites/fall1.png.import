@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mmnto0xnxd7x"
-path="res://.godot/imported/fall1.png-530ad9f7fd833b57d04f74c0f143fb47.ctex"
+path="res://.godot/imported/fall1.png-1e19b8969c86bd7fd6738b5391f0c77b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania church files/SPRITES/player/sprites/fall1.png"
-dest_files=["res://.godot/imported/fall1.png-530ad9f7fd833b57d04f74c0f143fb47.ctex"]
+source_file="res://assets/gothicvania church files/SPRITES/player/sprites/fall1.png"
+dest_files=["res://.godot/imported/fall1.png-1e19b8969c86bd7fd6738b5391f0c77b.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpnsd8xwqpq8a"
-path="res://.godot/imported/middle.png-02a1f28f89f68a18b3979ceecf1f2f3a.ctex"
+path="res://.godot/imported/middle.png-b6016f776bfc49f0fc2a22372f204f60.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/toRecolor/middle.png"
-dest_files=["res://.godot/imported/middle.png-02a1f28f89f68a18b3979ceecf1f2f3a.ctex"]
+source_file="res://assets/toRecolor/middle.png"
+dest_files=["res://.godot/imported/middle.png-b6016f776bfc49f0fc2a22372f204f60.ctex"]
 
 [params]
 

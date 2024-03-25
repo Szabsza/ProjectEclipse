@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dh2yhx4mrm8ow"
-path="res://.godot/imported/player_weapon_break.png-28b3a36c2dbaea075bf638578921d15f.ctex"
+path="res://.godot/imported/player_weapon_break.png-595b24bc48d21a401d992b143e4d22ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/SpriteSheets/player/player_weapon_break.png"
-dest_files=["res://.godot/imported/player_weapon_break.png-28b3a36c2dbaea075bf638578921d15f.ctex"]
+source_file="res://assets/assets/SpriteSheets/player/player_weapon_break.png"
+dest_files=["res://.godot/imported/player_weapon_break.png-595b24bc48d21a401d992b143e4d22ef.ctex"]
 
 [params]
 

@@ -1,0 +1,110 @@
+[gd_scene load_steps=9 format=3 uid="uid://ciycxun4i5wvu"]
+
+[ext_resource type="Script" path="res://interface/hud/HUD.gd" id="1_c5nti"]
+[ext_resource type="PackedScene" uid="uid://biu3xvae7hxfd" path="res://interface/hud/HealthBar.tscn" id="1_tfwml"]
+[ext_resource type="PackedScene" uid="uid://cxdepm6ksokn3" path="res://interface/hud/StaminaBar.tscn" id="2_xsdn5"]
+[ext_resource type="Texture2D" uid="uid://gac2lwmm34sf" path="res://assets/GUI/GUI_2x.png" id="4_wtn24"]
+[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://assets/DungeonFont.ttf" id="5_d23xu"]
+[ext_resource type="PackedScene" uid="uid://ddvflbb4qvkrh" path="res://interface/hotbar/HotBar.tscn" id="6_wlgjf"]
+[ext_resource type="PackedScene" uid="uid://6c0nmw03t3c7" path="res://interface/hud/ManaBar.tscn" id="7_cjy4l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1v5ht"]
+atlas = ExtResource("4_wtn24")
+region = Rect2(146, 144, 12, 16)
+
+[node name="Hud" type="CanvasLayer"]
+script = ExtResource("1_c5nti")
+
+[node name="HealthBar" parent="." instance=ExtResource("1_tfwml")]
+offset_left = 20.0
+offset_top = 22.0
+offset_right = 189.0
+offset_bottom = 34.0
+
+[node name="HealthPoints" type="Label" parent="."]
+texture_filter = 1
+offset_left = 195.0
+offset_top = 17.0
+offset_right = 239.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("5_d23xu")
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ManaBar" parent="." instance=ExtResource("7_cjy4l")]
+offset_left = 20.0
+offset_top = 40.0
+offset_right = 155.0
+offset_bottom = 52.0
+
+[node name="ManaPoints" type="Label" parent="."]
+texture_filter = 1
+offset_left = 161.0
+offset_top = 35.0
+offset_right = 201.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("5_d23xu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StaminaBar" parent="." instance=ExtResource("2_xsdn5")]
+offset_left = 20.0
+offset_top = 58.0
+offset_right = 123.0
+offset_bottom = 70.0
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="StaminaPoints" type="Label" parent="."]
+texture_filter = 1
+offset_left = 129.0
+offset_top = 53.0
+offset_right = 169.0
+offset_bottom = 76.0
+theme_override_fonts/font = ExtResource("5_d23xu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RuneIcon" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -162.0
+offset_top = -75.0
+offset_right = -139.0
+offset_bottom = -48.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = SubResource("AtlasTexture_1v5ht")
+
+[node name="RunesHeldLabel" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -135.0
+offset_top = -75.0
+offset_right = -83.0
+offset_bottom = -46.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("5_d23xu")
+theme_override_font_sizes/font_size = 20
+vertical_alignment = 1
+
+[node name="HotBar2" parent="." instance=ExtResource("6_wlgjf")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 21.0
+offset_top = -75.0
+offset_right = 317.0
+offset_bottom = -19.0
+grow_vertical = 0

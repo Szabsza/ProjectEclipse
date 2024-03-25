@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgix1o11bud04"
-path="res://.godot/imported/ui_weapon_missile_red.png-a86b7d5d359f4b7554e2668e0406d4b3.ctex"
+path="res://.godot/imported/ui_weapon_missile_red.png-c6d34f20510f3fdb142858103d893774.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/ui/ui_weapon_missile_red.png"
-dest_files=["res://.godot/imported/ui_weapon_missile_red.png-a86b7d5d359f4b7554e2668e0406d4b3.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/ui/ui_weapon_missile_red.png"
+dest_files=["res://.godot/imported/ui_weapon_missile_red.png-c6d34f20510f3fdb142858103d893774.ctex"]
 
 [params]
 

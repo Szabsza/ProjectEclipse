@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://j1tyrcvpucl"
-path="res://.godot/imported/MawingBeaver.png-fa5ca09d0c022c50b25b38cfa14ba9e3.ctex"
+path="res://.godot/imported/MawingBeaver.png-95d3af7fe8103a161e082e80552480f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Basic Vermin Animations/Mawing Beaver/MawingBeaver.png"
-dest_files=["res://.godot/imported/MawingBeaver.png-fa5ca09d0c022c50b25b38cfa14ba9e3.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Basic Vermin Animations/Mawing Beaver/MawingBeaver.png"
+dest_files=["res://.godot/imported/MawingBeaver.png-95d3af7fe8103a161e082e80552480f3.ctex"]
 
 [params]
 

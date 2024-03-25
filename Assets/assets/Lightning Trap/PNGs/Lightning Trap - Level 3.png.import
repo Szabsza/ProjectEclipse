@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://388yiuwbpymj"
-path="res://.godot/imported/Lightning Trap - Level 3.png-3e21385b05893cab808311a84c04c97e.ctex"
+path="res://.godot/imported/Lightning Trap - Level 3.png-834b9c14b8683e73d0b3a111f25514b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/Lightning Trap/PNGs/Lightning Trap - Level 3.png"
-dest_files=["res://.godot/imported/Lightning Trap - Level 3.png-3e21385b05893cab808311a84c04c97e.ctex"]
+source_file="res://assets/assets/Lightning Trap/PNGs/Lightning Trap - Level 3.png"
+dest_files=["res://.godot/imported/Lightning Trap - Level 3.png-834b9c14b8683e73d0b3a111f25514b6.ctex"]
 
 [params]
 

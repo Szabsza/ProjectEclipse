@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfrkgf820lio1"
-path="res://.godot/imported/crouch-kick1.png-ffcd8c66de4cd47fbb9ee8c32c07ccf6.ctex"
+path="res://.godot/imported/crouch-kick1.png-edecdc71bb6ec6027656aa387bd3bbb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania church files/SPRITES/player/sprites/crouch-kick1.png"
-dest_files=["res://.godot/imported/crouch-kick1.png-ffcd8c66de4cd47fbb9ee8c32c07ccf6.ctex"]
+source_file="res://assets/gothicvania church files/SPRITES/player/sprites/crouch-kick1.png"
+dest_files=["res://.godot/imported/crouch-kick1.png-edecdc71bb6ec6027656aa387bd3bbb6.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4cxq8dsn0jmq"
-path="res://.godot/imported/near.png-4ecc5eb0c301744c5aa20a60231c58d1.ctex"
+path="res://.godot/imported/near.png-5a0f5f4a4819cbd5c4a7563269589534.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/toRecolor/near.png"
-dest_files=["res://.godot/imported/near.png-4ecc5eb0c301744c5aa20a60231c58d1.ctex"]
+source_file="res://assets/toRecolor/near.png"
+dest_files=["res://.godot/imported/near.png-5a0f5f4a4819cbd5c4a7563269589534.ctex"]
 
 [params]
 

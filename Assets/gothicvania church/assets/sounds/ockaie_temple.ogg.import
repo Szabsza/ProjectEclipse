@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://djrundo3ebgl7"
-path="res://.godot/imported/ockaie_temple.ogg-3bf3d6332784cd719ab8bee0e9ff038c.oggvorbisstr"
+path="res://.godot/imported/ockaie_temple.ogg-e68b332d002d81ae5328e4bcd1c8fcaa.oggvorbisstr"
 
 [deps]
 
-source_file="res://Assets/gothicvania church/assets/sounds/ockaie_temple.ogg"
-dest_files=["res://.godot/imported/ockaie_temple.ogg-3bf3d6332784cd719ab8bee0e9ff038c.oggvorbisstr"]
+source_file="res://assets/gothicvania church/assets/sounds/ockaie_temple.ogg"
+dest_files=["res://.godot/imported/ockaie_temple.ogg-e68b332d002d81ae5328e4bcd1c8fcaa.oggvorbisstr"]
 
 [params]
 

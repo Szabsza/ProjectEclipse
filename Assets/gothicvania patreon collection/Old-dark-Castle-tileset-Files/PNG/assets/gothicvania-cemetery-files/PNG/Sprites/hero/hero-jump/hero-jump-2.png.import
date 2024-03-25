@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cey7w66q4nay"
-path="res://.godot/imported/hero-jump-2.png-7ee2e25564681cc55d067bebd47080e5.ctex"
+path="res://.godot/imported/hero-jump-2.png-1e99d68d239d7bda8c3cfc56a4a4a269.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-jump/hero-jump-2.png"
-dest_files=["res://.godot/imported/hero-jump-2.png-7ee2e25564681cc55d067bebd47080e5.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-jump/hero-jump-2.png"
+dest_files=["res://.godot/imported/hero-jump-2.png-1e99d68d239d7bda8c3cfc56a4a4a269.ctex"]
 
 [params]
 

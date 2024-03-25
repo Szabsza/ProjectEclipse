@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgp6oibn1ecpf"
-path="res://.godot/imported/john_dead.png-8b5f53a847c3eef7661a616e9a311b2a.ctex"
+path="res://.godot/imported/john_dead.png-457fea701bf0aff66dab5465a01309a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/SpriteSheets/player/john_dead.png"
-dest_files=["res://.godot/imported/john_dead.png-8b5f53a847c3eef7661a616e9a311b2a.ctex"]
+source_file="res://assets/assets/SpriteSheets/player/john_dead.png"
+dest_files=["res://.godot/imported/john_dead.png-457fea701bf0aff66dab5465a01309a7.ctex"]
 
 [params]
 

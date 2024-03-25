@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bai1nh5vwod2w"]
+
+[ext_resource type="Script" path="res://autoloads/rune/RuneManager.gd" id="1_ykhhf"]
+
+[node name="RuneManager" type="Node2D"]
+script = ExtResource("1_ykhhf")

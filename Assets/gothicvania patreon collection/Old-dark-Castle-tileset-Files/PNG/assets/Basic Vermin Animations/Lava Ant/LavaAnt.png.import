@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cib5i43adoiia"
-path="res://.godot/imported/LavaAnt.png-a6591839f1735b7a79280ea04f1c4e11.ctex"
+path="res://.godot/imported/LavaAnt.png-81c987ddd5fa829e392fb40706a55129.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Basic Vermin Animations/Lava Ant/LavaAnt.png"
-dest_files=["res://.godot/imported/LavaAnt.png-a6591839f1735b7a79280ea04f1c4e11.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Basic Vermin Animations/Lava Ant/LavaAnt.png"
+dest_files=["res://.godot/imported/LavaAnt.png-81c987ddd5fa829e392fb40706a55129.ctex"]
 
 [params]
 

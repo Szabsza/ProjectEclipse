@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3aam8k65bql0"]
+
+[ext_resource type="Script" path="res://autoloads/hotbar/HotBarManager.gd" id="1_xc2x0"]
+
+[node name="HotBarManager" type="Node"]
+script = ExtResource("1_xc2x0")

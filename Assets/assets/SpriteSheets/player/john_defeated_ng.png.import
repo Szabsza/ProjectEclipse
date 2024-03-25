@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dy0o1ti7tiol0"
-path="res://.godot/imported/john_defeated_ng.png-5d3465dab66fec216ae889612c2e3220.ctex"
+path="res://.godot/imported/john_defeated_ng.png-94da5f04523a69620b234e8ed4150b78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/SpriteSheets/player/john_defeated_ng.png"
-dest_files=["res://.godot/imported/john_defeated_ng.png-5d3465dab66fec216ae889612c2e3220.ctex"]
+source_file="res://assets/assets/SpriteSheets/player/john_defeated_ng.png"
+dest_files=["res://.godot/imported/john_defeated_ng.png-94da5f04523a69620b234e8ed4150b78.ctex"]
 
 [params]
 

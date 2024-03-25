@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dext5e5r2dum0"
-path="res://.godot/imported/shelter.png-525a3b9b8ceadc657e407eb45bd7a2af.ctex"
+path="res://.godot/imported/shelter.png-80a02c686bc0d8530e298fce54a36ec0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/props/shelter.png"
-dest_files=["res://.godot/imported/shelter.png-525a3b9b8ceadc657e407eb45bd7a2af.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/props/shelter.png"
+dest_files=["res://.godot/imported/shelter.png-80a02c686bc0d8530e298fce54a36ec0.ctex"]
 
 [params]
 

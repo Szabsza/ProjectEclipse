@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctgkkstop40y8"
-path="res://.godot/imported/PR_TileGround 16x16.png-8386b50f1d779c2ce135324641ffd4a5.ctex"
+path="res://.godot/imported/PR_TileGround 16x16.png-32972a8a24aa1f7ed02be87268cf1960.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/toRecolor/Pyramid Ruins/PR_TileGround 16x16.png"
-dest_files=["res://.godot/imported/PR_TileGround 16x16.png-8386b50f1d779c2ce135324641ffd4a5.ctex"]
+source_file="res://assets/toRecolor/Pyramid Ruins/PR_TileGround 16x16.png"
+dest_files=["res://.godot/imported/PR_TileGround 16x16.png-32972a8a24aa1f7ed02be87268cf1960.ctex"]
 
 [params]
 

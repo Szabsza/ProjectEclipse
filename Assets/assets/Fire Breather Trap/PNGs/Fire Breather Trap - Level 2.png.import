@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1r51qxxpne1o"
-path="res://.godot/imported/Fire Breather Trap - Level 2.png-75093542c4eb7c75e4bb48ffc380dd89.ctex"
+path="res://.godot/imported/Fire Breather Trap - Level 2.png-16660ca58c4e3a163b4ff8b1810bc307.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/Fire Breather Trap/PNGs/Fire Breather Trap - Level 2.png"
-dest_files=["res://.godot/imported/Fire Breather Trap - Level 2.png-75093542c4eb7c75e4bb48ffc380dd89.ctex"]
+source_file="res://assets/assets/Fire Breather Trap/PNGs/Fire Breather Trap - Level 2.png"
+dest_files=["res://.godot/imported/Fire Breather Trap - Level 2.png-16660ca58c4e3a163b4ff8b1810bc307.ctex"]
 
 [params]
 

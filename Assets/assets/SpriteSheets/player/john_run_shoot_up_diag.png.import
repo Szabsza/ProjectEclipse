@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djbyl1uu7u76q"
-path="res://.godot/imported/john_run_shoot_up_diag.png-448ea8f191fd77103d9f86903af57372.ctex"
+path="res://.godot/imported/john_run_shoot_up_diag.png-fa745c6b39f135c9c7bb767cce8fe345.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/SpriteSheets/player/john_run_shoot_up_diag.png"
-dest_files=["res://.godot/imported/john_run_shoot_up_diag.png-448ea8f191fd77103d9f86903af57372.ctex"]
+source_file="res://assets/assets/SpriteSheets/player/john_run_shoot_up_diag.png"
+dest_files=["res://.godot/imported/john_run_shoot_up_diag.png-fa745c6b39f135c9c7bb767cce8fe345.ctex"]
 
 [params]
 

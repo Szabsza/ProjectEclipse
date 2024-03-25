@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckve57yv4e1ap"
-path="res://.godot/imported/walk4.png-89897d5e6cba33b6caafebb2df909537.ctex"
+path="res://.godot/imported/walk4.png-def477a1a731eee2242e96cab9bc78bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania church files/SPRITES/player/sprites/walk4.png"
-dest_files=["res://.godot/imported/walk4.png-89897d5e6cba33b6caafebb2df909537.ctex"]
+source_file="res://assets/gothicvania church files/SPRITES/player/sprites/walk4.png"
+dest_files=["res://.godot/imported/walk4.png-def477a1a731eee2242e96cab9bc78bb.ctex"]
 
 [params]
 

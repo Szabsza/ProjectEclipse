@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5n5q405fnf6q"
-path="res://.godot/imported/SwoopingBat.png-6796f17101bbe5f3ebe2a1b2789a6fe9.ctex"
+path="res://.godot/imported/SwoopingBat.png-d4d63485e1527b8a8aaa57bcb25bddcd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/Basic Vermin Animations/Swooping Bat/SwoopingBat.png"
-dest_files=["res://.godot/imported/SwoopingBat.png-6796f17101bbe5f3ebe2a1b2789a6fe9.ctex"]
+source_file="res://assets/assets/Basic Vermin Animations/Swooping Bat/SwoopingBat.png"
+dest_files=["res://.godot/imported/SwoopingBat.png-d4d63485e1527b8a8aaa57bcb25bddcd.ctex"]
 
 [params]
 

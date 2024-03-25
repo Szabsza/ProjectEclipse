@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bciyb68xi35p3"
-path="res://.godot/imported/cloud7.png-9c3277f8d91ca83f2f2f401d3df39efc.ctex"
+path="res://.godot/imported/cloud7.png-216204238239d9de2db76206d52ee357.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/toRecolor/Új mappa (3)/cloud7.png"
-dest_files=["res://.godot/imported/cloud7.png-9c3277f8d91ca83f2f2f401d3df39efc.ctex"]
+source_file="res://assets/toRecolor/Új mappa (3)/cloud7.png"
+dest_files=["res://.godot/imported/cloud7.png-216204238239d9de2db76206d52ee357.ctex"]
 
 [params]
 

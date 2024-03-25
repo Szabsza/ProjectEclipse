@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://t3cep1ol5n3x"
-path="res://.godot/imported/ghost-halo-1.png-93837f0a58acac87b758c4c98e641b36.ctex"
+path="res://.godot/imported/ghost-halo-1.png-cf71f983e1b8644d1e157d078914a582.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Sprites/ghost-halo/ghost-halo-1.png"
-dest_files=["res://.godot/imported/ghost-halo-1.png-93837f0a58acac87b758c4c98e641b36.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Sprites/ghost-halo/ghost-halo-1.png"
+dest_files=["res://.godot/imported/ghost-halo-1.png-cf71f983e1b8644d1e157d078914a582.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dw1je5fn7dqmx"
-path="res://.godot/imported/hero-attack-2.png-3e268d0bea1e2be31077261664293271.ctex"
+path="res://.godot/imported/hero-attack-2.png-1bf4f967bf9aff8e0d83b03f0b64a8fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-attack/hero-attack-2.png"
-dest_files=["res://.godot/imported/hero-attack-2.png-3e268d0bea1e2be31077261664293271.ctex"]
+source_file="res://assets/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-attack/hero-attack-2.png"
+dest_files=["res://.godot/imported/hero-attack-2.png-1bf4f967bf9aff8e0d83b03f0b64a8fa.ctex"]
 
 [params]
 

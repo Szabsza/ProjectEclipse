@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hp3yqcnwmgdk"
-path="res://.godot/imported/Arrow Trap - Level 2.png-3f7939bd0b707ae413e5a57d6313b67c.ctex"
+path="res://.godot/imported/Arrow Trap - Level 2.png-bcd60b68fbba89f03cfb4cd4c0c2cb6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Arrow Trap/PNGs/Arrow Trap - Level 2.png"
-dest_files=["res://.godot/imported/Arrow Trap - Level 2.png-3f7939bd0b707ae413e5a57d6313b67c.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Arrow Trap/PNGs/Arrow Trap - Level 2.png"
+dest_files=["res://.godot/imported/Arrow Trap - Level 2.png-bcd60b68fbba89f03cfb4cd4c0c2cb6c.ctex"]
 
 [params]
 

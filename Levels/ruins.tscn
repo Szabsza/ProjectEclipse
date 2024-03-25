@@ -1,21 +1,21 @@
 [gd_scene load_steps=30 format=3 uid="uid://bqaipc210dp67"]
 
-[ext_resource type="Texture2D" uid="uid://cdcx8cdchwwnm" path="res://Assets/gothicvania church/assets/environment/tileset_mk_16_16_nature_tileset_godot.png" id="1_7e7d7"]
-[ext_resource type="Texture2D" uid="uid://behak76asms1i" path="res://Assets/toRecolor/finalNight.PNG" id="1_ndy5b"]
-[ext_resource type="Texture2D" uid="uid://kfmyor3vm8pp" path="res://Assets/toRecolor/tileset.png" id="2_s7awj"]
-[ext_resource type="Texture2D" uid="uid://qj6gjerqgh8p" path="res://Assets/toRecolor/The Sidescroller's Dungeon Tiles 32x32.png" id="3_30ls8"]
-[ext_resource type="PackedScene" uid="uid://v3fb0628e85t" path="res://Character/Player/Player.tscn" id="4_avcyw"]
-[ext_resource type="Texture2D" uid="uid://cpvn7rm2jgixy" path="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/old-dark-castle-interior-tileset.png" id="5_tne0m"]
-[ext_resource type="Texture2D" uid="uid://dkeb7hcssuln2" path="res://Assets/assets/SpriteSheets/background/jungle_tree1.png" id="6_hg8gy"]
-[ext_resource type="Texture2D" uid="uid://cjnyvihey70m3" path="res://Assets/assets/SpriteSheets/background/jungle_tree1_bg.png" id="7_305yk"]
-[ext_resource type="Texture2D" uid="uid://ci4738i4iqgki" path="res://Assets/assets/SpriteSheets/background/jungle_tree2.png" id="8_rytfa"]
-[ext_resource type="Texture2D" uid="uid://bsoihhsodlwsk" path="res://Assets/assets/SpriteSheets/background/jungle_tree2_bg.png" id="9_2t58t"]
-[ext_resource type="Texture2D" uid="uid://dwkig2oapvt1p" path="res://Assets/sand-tileset.png" id="10_lcxc5"]
-[ext_resource type="PackedScene" uid="uid://bh4jtxaokddii" path="res://Util/Checkpoint/Checkpoint.tscn" id="12_evdsl"]
-[ext_resource type="PackedScene" uid="uid://b2j0hs4almrne" path="res://Util/Remains/Remains.tscn" id="13_g3r2a"]
-[ext_resource type="PackedScene" uid="uid://d26deo5pjs12u" path="res://Util/Torch.tscn" id="13_rjnrv"]
-[ext_resource type="PackedScene" uid="uid://gei5r3s8tiis" path="res://Util/Chest/Chest.tscn" id="14_88b7c"]
-[ext_resource type="PackedScene" uid="uid://ciycxun4i5wvu" path="res://GUI/HUD.tscn" id="14_vj7dc"]
+[ext_resource type="Texture2D" uid="uid://cdcx8cdchwwnm" path="res://assets/gothicvania church/assets/environment/tileset_mk_16_16_nature_tileset_godot.png" id="1_7e7d7"]
+[ext_resource type="Texture2D" uid="uid://behak76asms1i" path="res://assets/toRecolor/finalNight.PNG" id="1_ndy5b"]
+[ext_resource type="Texture2D" uid="uid://kfmyor3vm8pp" path="res://assets/toRecolor/tileset.png" id="2_s7awj"]
+[ext_resource type="Texture2D" uid="uid://qj6gjerqgh8p" path="res://assets/toRecolor/The Sidescroller's Dungeon Tiles 32x32.png" id="3_30ls8"]
+[ext_resource type="PackedScene" uid="uid://v3fb0628e85t" path="res://characters/player/player.tscn" id="4_avcyw"]
+[ext_resource type="Texture2D" uid="uid://cpvn7rm2jgixy" path="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/old-dark-castle-interior-tileset.png" id="5_tne0m"]
+[ext_resource type="Texture2D" uid="uid://dkeb7hcssuln2" path="res://assets/assets/SpriteSheets/background/jungle_tree1.png" id="6_hg8gy"]
+[ext_resource type="Texture2D" uid="uid://cjnyvihey70m3" path="res://assets/assets/SpriteSheets/background/jungle_tree1_bg.png" id="7_305yk"]
+[ext_resource type="Texture2D" uid="uid://ci4738i4iqgki" path="res://assets/assets/SpriteSheets/background/jungle_tree2.png" id="8_rytfa"]
+[ext_resource type="Texture2D" uid="uid://bsoihhsodlwsk" path="res://assets/assets/SpriteSheets/background/jungle_tree2_bg.png" id="9_2t58t"]
+[ext_resource type="Texture2D" uid="uid://dwkig2oapvt1p" path="res://assets/sand-tileset.png" id="10_lcxc5"]
+[ext_resource type="PackedScene" uid="uid://bh4jtxaokddii" path="res://common/checkpoint/Checkpoint.tscn" id="12_evdsl"]
+[ext_resource type="PackedScene" uid="uid://b2j0hs4almrne" path="res://common/remains/Remains.tscn" id="13_g3r2a"]
+[ext_resource type="PackedScene" uid="uid://d26deo5pjs12u" path="res://common/torch/Torch.tscn" id="13_rjnrv"]
+[ext_resource type="PackedScene" uid="uid://gei5r3s8tiis" path="res://common/chest/Chest.tscn" id="14_88b7c"]
+[ext_resource type="PackedScene" uid="uid://ciycxun4i5wvu" path="res://interface/hud/HUD.tscn" id="14_vj7dc"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_alosm"]
 tile_data = PackedInt32Array(262144, 1, 5, 1, 65537, 1, 65537, 65537, 2, 131073, 65537, 3, 196609, 65537, 4, 262145, 65537, 5, 327681, 65537, 6, 2, 196609, 1, 65538, 196609, 2, 131074, 196609, 3, 196610, 196609, 4, 262146, 196609, 6, 327682, 196609, 6, 3, 262145, 1, 65539, 262145, 2, 131075, 262145, 3, 196611, 262145, 4, 262147, 196609, 6, 327683, 196609, 6, 4, 196609, 1, 65540, 196609, 2, 131076, 196609, 3, 196612, 196609, 4, 262148, 196609, 6, 327684, 196609, 6, 5, 262145, 1, 65541, 262145, 2, 131077, 262145, 3, 196613, 262145, 4, 262149, 196609, 6, 327685, 196609, 6, 6, 393217, 1, 65542, 393217, 2, 131078, 393217, 3, 196614, 393217, 4, 262150, 393217, 5, 327686, 393217, 6, 262151, 458753, 5)
@@ -6880,7 +6880,7 @@ pattern_0 = SubResource("TileMapPattern_alosm")
 pattern_1 = SubResource("TileMapPattern_ye8uk")
 pattern_2 = SubResource("TileMapPattern_olyy6")
 
-[node name="Ruins" type="Node2D"]
+[node name="Ruins" type="Node2D" groups=["level"]]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

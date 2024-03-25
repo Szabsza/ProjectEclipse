@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://b2j0hs4almrne"]
+
+[ext_resource type="Texture2D" uid="uid://ceom7gj05p0u5" path="res://assets/elementals_wind_hashashin_FREE_v1.1/PNG/death/death_19.png" id="1_koknt"]
+[ext_resource type="Script" path="res://common/remains/Remains.gd" id="1_ngofh"]
+[ext_resource type="Script" path="res://common/interactable_area/InteractableArea.gd" id="3_vyl4f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c5itu"]
+size = Vector2(13, 14)
+
+[sub_resource type="Gradient" id="Gradient_8uxj1"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bldya"]
+gradient = SubResource("Gradient_8uxj1")
+width = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.794872, 0.222222)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jiaw0"]
+radius = 21.0
+
+[node name="Remains" type="RigidBody2D" groups=["remains"]]
+position = Vector2(0, -13)
+script = ExtResource("1_ngofh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, 0)
+texture = ExtResource("1_koknt")
+offset = Vector2(-10, -50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 6)
+shape = SubResource("RectangleShape2D_c5itu")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, 6)
+texture = SubResource("GradientTexture2D_bldya")
+
+[node name="InteractableArea" type="Area2D" parent="."]
+script = ExtResource("3_vyl4f")
+action_name = "touch Remains"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea"]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_jiaw0")

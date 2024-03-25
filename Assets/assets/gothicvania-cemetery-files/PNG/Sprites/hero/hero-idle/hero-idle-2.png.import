@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cppe442dxm7nh"
-path="res://.godot/imported/hero-idle-2.png-5276725f21956e31fb62073be6364183.ctex"
+path="res://.godot/imported/hero-idle-2.png-d32558ce06c968773f4f4dc4e971b9da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-idle/hero-idle-2.png"
-dest_files=["res://.godot/imported/hero-idle-2.png-5276725f21956e31fb62073be6364183.ctex"]
+source_file="res://assets/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-idle/hero-idle-2.png"
+dest_files=["res://.godot/imported/hero-idle-2.png-d32558ce06c968773f4f4dc4e971b9da.ctex"]
 
 [params]
 

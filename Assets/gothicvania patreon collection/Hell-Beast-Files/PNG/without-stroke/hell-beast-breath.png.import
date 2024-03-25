@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djyckvbraisu6"
-path="res://.godot/imported/hell-beast-breath.png-7002f623d252f44146c15b735fb803f9.ctex"
+path="res://.godot/imported/hell-beast-breath.png-e9cf89be3e83a54ff63ea2b77ec98ac1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Hell-Beast-Files/PNG/without-stroke/hell-beast-breath.png"
-dest_files=["res://.godot/imported/hell-beast-breath.png-7002f623d252f44146c15b735fb803f9.ctex"]
+source_file="res://assets/gothicvania patreon collection/Hell-Beast-Files/PNG/without-stroke/hell-beast-breath.png"
+dest_files=["res://.godot/imported/hell-beast-breath.png-e9cf89be3e83a54ff63ea2b77ec98ac1.ctex"]
 
 [params]
 

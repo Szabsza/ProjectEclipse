@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c657f85dsnm1p"
-path="res://.godot/imported/backgrounds.png-229cb8fbb5c61dc857390154952d2811.ctex"
+path="res://.godot/imported/backgrounds.png-6f9e3d20518f27a8ef45d2107197e164.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania church files/ENVIRONMENT/backgrounds.png"
-dest_files=["res://.godot/imported/backgrounds.png-229cb8fbb5c61dc857390154952d2811.ctex"]
+source_file="res://assets/gothicvania church files/ENVIRONMENT/backgrounds.png"
+dest_files=["res://.godot/imported/backgrounds.png-6f9e3d20518f27a8ef45d2107197e164.ctex"]
 
 [params]
 

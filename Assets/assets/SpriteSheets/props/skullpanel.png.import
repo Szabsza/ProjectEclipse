@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dswg6fff2mdag"
-path="res://.godot/imported/skullpanel.png-b7a96e565789873f9d3f816524d8bfd1.ctex"
+path="res://.godot/imported/skullpanel.png-58db6c8aac2c22cd092596b06452728a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/SpriteSheets/props/skullpanel.png"
-dest_files=["res://.godot/imported/skullpanel.png-b7a96e565789873f9d3f816524d8bfd1.ctex"]
+source_file="res://assets/assets/SpriteSheets/props/skullpanel.png"
+dest_files=["res://.godot/imported/skullpanel.png-58db6c8aac2c22cd092596b06452728a.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csxqanphjy8yp"
-path="res://.godot/imported/john_run_shoot.png-c33261e54df97275bbeed6ee56b6577d.ctex"
+path="res://.godot/imported/john_run_shoot.png-ded278ad1b66793b14b7e1244fb7c6ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/john_run_shoot.png"
-dest_files=["res://.godot/imported/john_run_shoot.png-c33261e54df97275bbeed6ee56b6577d.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/john_run_shoot.png"
+dest_files=["res://.godot/imported/john_run_shoot.png-ded278ad1b66793b14b7e1244fb7c6ba.ctex"]
 
 [params]
 

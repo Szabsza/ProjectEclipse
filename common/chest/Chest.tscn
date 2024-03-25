@@ -1,0 +1,142 @@
+[gd_scene load_steps=20 format=3 uid="uid://gei5r3s8tiis"]
+
+[ext_resource type="Script" path="res://common/chest/Chest.gd" id="1_txroh"]
+[ext_resource type="Texture2D" uid="uid://ljflg4bcdga3" path="res://assets/Animated Chests/Chests.png" id="2_e5iil"]
+[ext_resource type="PackedScene" uid="uid://bl2o2h1iqspts" path="res://common/loot_items/Rune.tscn" id="2_u3sa3"]
+[ext_resource type="Script" path="res://common/interactable_area/InteractableArea.gd" id="3_fgata"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stxy8"]
+atlas = ExtResource("2_e5iil")
+region = Rect2(0, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkqi1"]
+atlas = ExtResource("2_e5iil")
+region = Rect2(48, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdodo"]
+atlas = ExtResource("2_e5iil")
+region = Rect2(96, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rq5ik"]
+atlas = ExtResource("2_e5iil")
+region = Rect2(144, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipn6y"]
+atlas = ExtResource("2_e5iil")
+region = Rect2(192, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pa3tw"]
+atlas = ExtResource("2_e5iil")
+region = Rect2(0, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dck8"]
+atlas = ExtResource("2_e5iil")
+region = Rect2(48, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7kct"]
+atlas = ExtResource("2_e5iil")
+region = Rect2(96, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7h88b"]
+atlas = ExtResource("2_e5iil")
+region = Rect2(144, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2m3k5"]
+atlas = ExtResource("2_e5iil")
+region = Rect2(192, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hk5qb"]
+atlas = ExtResource("2_e5iil")
+region = Rect2(192, 32, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o1n0q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stxy8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkqi1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdodo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rq5ik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipn6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pa3tw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dck8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7kct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7h88b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2m3k5")
+}],
+"loop": false,
+"name": &"open",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hk5qb")
+}],
+"loop": true,
+"name": &"opened",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rw3ak"]
+size = Vector2(99, 40)
+
+[sub_resource type="Gradient" id="Gradient_hqmx6"]
+offsets = PackedFloat32Array(0, 0.00954654, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.983294, 0.983294, 0.983294, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ab8h0"]
+gradient = SubResource("Gradient_hqmx6")
+width = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.850427, 0.219373)
+
+[node name="Chest" type="Node2D" groups=["chest"]]
+texture_filter = 1
+script = ExtResource("1_txroh")
+drop_items = Array[PackedScene]([ExtResource("2_u3sa3")])
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_o1n0q")
+animation = &"open"
+offset = Vector2(9, 7)
+
+[node name="InteractableArea" type="Area2D" parent="."]
+visible = false
+script = ExtResource("3_fgata")
+action_name = "Open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea"]
+position = Vector2(-6.5, -4)
+shape = SubResource("RectangleShape2D_rw3ak")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, 13)
+color = Color(0.858824, 0.333333, 0.184314, 1)
+energy = 2.0
+texture = SubResource("GradientTexture2D_ab8h0")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

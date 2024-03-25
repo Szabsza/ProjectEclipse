@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckxs4jg3wws0j"
-path="res://.godot/imported/Ceiling Trap - Level 3 - Transition.png-dd4dba7ecd00d88d69fbebd87db14a88.ctex"
+path="res://.godot/imported/Ceiling Trap - Level 3 - Transition.png-330ec2340b9d30005fa6bdccc1d96d3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Ceiling Trap/Transitions/PNGs/Ceiling Trap - Level 3 - Transition.png"
-dest_files=["res://.godot/imported/Ceiling Trap - Level 3 - Transition.png-dd4dba7ecd00d88d69fbebd87db14a88.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Ceiling Trap/Transitions/PNGs/Ceiling Trap - Level 3 - Transition.png"
+dest_files=["res://.godot/imported/Ceiling Trap - Level 3 - Transition.png-330ec2340b9d30005fa6bdccc1d96d3d.ctex"]
 
 [params]
 

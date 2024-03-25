@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cryf1p7e0qo74"
-path="res://.godot/imported/player_weapon_break.png-db5da72bd6d1d323e738f94c7a2f81a1.ctex"
+path="res://.godot/imported/player_weapon_break.png-9e15d719dd7054d226460b85c6e51a27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/player_weapon_break.png"
-dest_files=["res://.godot/imported/player_weapon_break.png-db5da72bd6d1d323e738f94c7a2f81a1.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/player_weapon_break.png"
+dest_files=["res://.godot/imported/player_weapon_break.png-9e15d719dd7054d226460b85c6e51a27.ctex"]
 
 [params]
 

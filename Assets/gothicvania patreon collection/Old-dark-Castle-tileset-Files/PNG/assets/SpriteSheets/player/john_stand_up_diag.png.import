@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bilcx532fvtkg"
-path="res://.godot/imported/john_stand_up_diag.png-6097603a47ba91d44176149f913e0ade.ctex"
+path="res://.godot/imported/john_stand_up_diag.png-3cc70645022b694c958890e6c346d09d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/john_stand_up_diag.png"
-dest_files=["res://.godot/imported/john_stand_up_diag.png-6097603a47ba91d44176149f913e0ade.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/john_stand_up_diag.png"
+dest_files=["res://.godot/imported/john_stand_up_diag.png-3cc70645022b694c958890e6c346d09d.ctex"]
 
 [params]
 

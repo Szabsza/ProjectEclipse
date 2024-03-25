@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brvbjlyjepaiv"
-path="res://.godot/imported/john_stand_shooting_down_diag.png-6d7d5cb6236aa3b7f6059f1b1e82f1a2.ctex"
+path="res://.godot/imported/john_stand_shooting_down_diag.png-fb5e8b07c5a7aa3a44e031ff8d31d881.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/john_stand_shooting_down_diag.png"
-dest_files=["res://.godot/imported/john_stand_shooting_down_diag.png-6d7d5cb6236aa3b7f6059f1b1e82f1a2.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/john_stand_shooting_down_diag.png"
+dest_files=["res://.godot/imported/john_stand_shooting_down_diag.png-fb5e8b07c5a7aa3a44e031ff8d31d881.ctex"]
 
 [params]
 

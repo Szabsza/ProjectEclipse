@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqomtavmsnh6y"
-path="res://.godot/imported/jungle_paralax_bg2.png-87c5e3c875d2db15bd97e806cdd5ff7e.ctex"
+path="res://.godot/imported/jungle_paralax_bg2.png-9e72723e7352db0871e44ba180361a95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/SpriteSheets/background/jungle_paralax_bg2.png"
-dest_files=["res://.godot/imported/jungle_paralax_bg2.png-87c5e3c875d2db15bd97e806cdd5ff7e.ctex"]
+source_file="res://assets/assets/SpriteSheets/background/jungle_paralax_bg2.png"
+dest_files=["res://.godot/imported/jungle_paralax_bg2.png-9e72723e7352db0871e44ba180361a95.ctex"]
 
 [params]
 

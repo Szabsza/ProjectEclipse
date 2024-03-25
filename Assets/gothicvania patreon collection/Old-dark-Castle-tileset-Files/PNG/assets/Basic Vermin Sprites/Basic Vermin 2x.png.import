@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5ov3kiojs6a7"
-path="res://.godot/imported/Basic Vermin 2x.png-4451ff094dc3d1ea760a67ed937ed1d5.ctex"
+path="res://.godot/imported/Basic Vermin 2x.png-86a1340bd8f38781ee5ca5019f699479.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Basic Vermin Sprites/Basic Vermin 2x.png"
-dest_files=["res://.godot/imported/Basic Vermin 2x.png-4451ff094dc3d1ea760a67ed937ed1d5.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Basic Vermin Sprites/Basic Vermin 2x.png"
+dest_files=["res://.godot/imported/Basic Vermin 2x.png-86a1340bd8f38781ee5ca5019f699479.ctex"]
 
 [params]
 

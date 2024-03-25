@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4ca718qsiaq3"
-path="res://.godot/imported/tileset-sliced.png-fd060e706e969ebcea48912eef8bc042.ctex"
+path="res://.godot/imported/tileset-sliced.png-1a6477a68cd6360a139d7b45d130bdf2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/gothicvania-cemetery-files/PNG/Environment/tileset-sliced.png"
-dest_files=["res://.godot/imported/tileset-sliced.png-fd060e706e969ebcea48912eef8bc042.ctex"]
+source_file="res://assets/assets/gothicvania-cemetery-files/PNG/Environment/tileset-sliced.png"
+dest_files=["res://.godot/imported/tileset-sliced.png-1a6477a68cd6360a139d7b45d130bdf2.ctex"]
 
 [params]
 

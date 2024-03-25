@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqv8wa3sva3kv"
-path="res://.godot/imported/wizard.png-42a149a67a6fb0c46c76bbf6e3f7a5c9.ctex"
+path="res://.godot/imported/wizard.png-bfd7ed1db5c61f346b89ccae0cb342fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania church files/SPRITES/wizard/spritesheet/wizard.png"
-dest_files=["res://.godot/imported/wizard.png-42a149a67a6fb0c46c76bbf6e3f7a5c9.ctex"]
+source_file="res://assets/gothicvania church files/SPRITES/wizard/spritesheet/wizard.png"
+dest_files=["res://.godot/imported/wizard.png-bfd7ed1db5c61f346b89ccae0cb342fb.ctex"]
 
 [params]
 

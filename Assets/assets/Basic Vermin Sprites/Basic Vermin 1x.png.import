@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkrg24vthnvgm"
-path="res://.godot/imported/Basic Vermin 1x.png-2ac83516ae9db3f78767bd8d34c208b8.ctex"
+path="res://.godot/imported/Basic Vermin 1x.png-8450dfe3cb8ac3870ea92261276f6577.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/Basic Vermin Sprites/Basic Vermin 1x.png"
-dest_files=["res://.godot/imported/Basic Vermin 1x.png-2ac83516ae9db3f78767bd8d34c208b8.ctex"]
+source_file="res://assets/assets/Basic Vermin Sprites/Basic Vermin 1x.png"
+dest_files=["res://.godot/imported/Basic Vermin 1x.png-8450dfe3cb8ac3870ea92261276f6577.ctex"]
 
 [params]
 
