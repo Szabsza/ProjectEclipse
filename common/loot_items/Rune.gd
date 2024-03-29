@@ -4,7 +4,7 @@ class_name Rune extends Sprite2D
 
 var amount : int = 500
 
-func _ready(): 
+func _ready():
 	interactable_area.interact = Callable(self, "_on_interact")
 
 

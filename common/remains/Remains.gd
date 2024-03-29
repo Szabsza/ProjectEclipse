@@ -9,10 +9,12 @@ var runes_amount : int = 0
 func setup(runes_amount: int, position : Vector2):
 	self.runes_amount = runes_amount
 	global_position = position
-	collision_layer = 2
+	
 
 
 func _ready():
+	collision_layer = 2
+	collision_mask = 1
 	lock_rotation = true
 	starting_position = global_position
 	interactable_area.interact = Callable(self, "_on_interact")

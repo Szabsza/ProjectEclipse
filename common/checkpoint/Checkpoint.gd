@@ -11,6 +11,11 @@ var is_activated : bool = false
 var playback : AnimationNodeStateMachinePlayback
 
 
+func load_as_activated():
+	playback.travel(ACTIVE_ANIMATION)
+	is_activated = true
+
+
 func _ready():
 	playback = animation_tree["parameters/playback"]
 	interactable_area.interact = Callable(self, "_on_interact")

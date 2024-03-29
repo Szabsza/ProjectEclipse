@@ -1,7 +1,27 @@
 extends Node2D
 
-@onready var levels : Array = get_tree().get_nodes_in_group("level")
+var levels : Array = []
+var checkpoints : Array = []
+var chests : Array = []
+var remains : Remains = null
+var current_level : String = ""
 
+signal init()
+
+
+func setup(levels : Array, checkpoints : Array, chests : Array, remains : Remains):
+	self.levels = levels
+	self.chests = chests
+	self.checkpoints = checkpoints
+	self.remains = remains
+	
+	SaveManager.remains = remains
+	
+	print(remains.collision_layer)
+	print(remains.collision_mask)
+	
+	init.emit()
+	
 
 func get_opened_chests_for_each_level():
 	var opened_chests = {}
@@ -29,4 +49,3 @@ func get_activated_checkpoints_for_each_level():
 		activated_checkpoints[level.get_name()] = checkpoints.filter(func(checkpoint) : return checkpoint.is_activated).map(func(checkpoint) : return checkpoint.get_name())
 	
 	return activated_checkpoints
-

@@ -121,7 +121,7 @@ drop_items = Array[PackedScene]([ExtResource("2_u3sa3")])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_o1n0q")
-animation = &"open"
+animation = &"opened"
 offset = Vector2(9, 7)
 
 [node name="InteractableArea" type="Area2D" parent="."]

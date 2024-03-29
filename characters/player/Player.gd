@@ -29,6 +29,7 @@ const ROLL_STAMINA_COST : int = 25
 
 
 func _ready():
+	add_to_group("player")
 	collision_layer = 4
 	collision_mask = 1
 	animation_tree.active = true

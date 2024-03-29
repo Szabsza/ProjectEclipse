@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwswaw56eqs6b"]
+[gd_scene load_steps=5 format=3 uid="uid://cwswaw56eqs6b"]
 
 [ext_resource type="PackedScene" uid="uid://xicx1vr1g113" path="res://common/floor.tscn" id="1_j6243"]
-[ext_resource type="PackedScene" uid="uid://v3fb0628e85t" path="res://characters/player/player.tscn" id="2_h15nw"]
 [ext_resource type="PackedScene" uid="uid://dse50ogb1ndlt" path="res://characters/enemies/Monk/Monk.tscn" id="3_kscw5"]
 [ext_resource type="PackedScene" uid="uid://bh4jtxaokddii" path="res://common/checkpoint/Checkpoint.tscn" id="4_o0wol"]
 [ext_resource type="PackedScene" uid="uid://gei5r3s8tiis" path="res://common/chest/Chest.tscn" id="5_2tdqp"]
@@ -117,9 +116,8 @@ position = Vector2(-247, 136)
 [node name="Monk" parent="." instance=ExtResource("3_kscw5")]
 position = Vector2(253, 202)
 
-[node name="Player" parent="." instance=ExtResource("2_h15nw")]
-position = Vector2(80, 246)
-
 [node name="Checkpoint" parent="." instance=ExtResource("4_o0wol")]
+position = Vector2(516, 129)
 
 [node name="Chest" parent="." instance=ExtResource("5_2tdqp")]
+position = Vector2(-187, 108)

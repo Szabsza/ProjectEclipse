@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var player : Player = get_tree().get_first_node_in_group("player")
+var player : Player = null
 
 var health_points : int = 0
 var stamina_points : int = 0

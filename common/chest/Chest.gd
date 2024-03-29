@@ -10,6 +10,16 @@ var is_opened : bool = false
 
 const IDLE_ANIMATION : String = "idle"
 const OPEN_ANIMATION : String = "open"
+const OPENED_ANIMATION : String = "opened"
+
+
+func load_as_opened():
+	is_opened = true
+	point_light.energy = 0
+	animated_sprite.play(OPENED_ANIMATION)
+	drop_items = []
+	InteractionManager.unregister_interactable_area(interactable_area)
+	interactable_area.is_interactable = false
 
 
 func _ready():

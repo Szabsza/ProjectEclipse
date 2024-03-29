@@ -1,6 +1,6 @@
 extends Node
 
-@onready var player : Player = get_tree().get_first_node_in_group("player")
+var player : Player = null 
 
 const HEALTH_POTION_REGENERATION : int = 50
 const MANA_POTION_REGENERATION : int = 20
