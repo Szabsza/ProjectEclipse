@@ -26,6 +26,7 @@ func get_game_data() -> Dictionary:
 		"wing_slot" : HotBarManager.wing_slot,
 		"bracelet_slot" : HotBarManager.bracelet_slot,
 		"ring_slot" : HotBarManager.ring_slot,
+		"key_quantity" : HotBarManager.key_quantity,
 		
 		"health_points" : StatusManager.health_points,
 		"stamina_points" : StatusManager.stamina_points,

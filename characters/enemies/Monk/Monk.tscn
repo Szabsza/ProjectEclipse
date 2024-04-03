@@ -1,14 +1,14 @@
 [gd_scene load_steps=83 format=3 uid="uid://dse50ogb1ndlt"]
 
 [ext_resource type="Texture2D" uid="uid://c28n3av3fly8c" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/idle/idle_2.png" id="1_6otmi"]
-[ext_resource type="Script" path="res://characters/enemies/Monk/Monk.gd" id="1_a8mv2"]
+[ext_resource type="Script" path="res://characters/enemies/monk/Monk.gd" id="1_a8mv2"]
 [ext_resource type="Texture2D" uid="uid://dwaprsb3qny08" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/1_atk/1_atk_6.png" id="2_0abnl"]
 [ext_resource type="Texture2D" uid="uid://oq1h8g1kc5ru" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/take_hit/take_hit_6.png" id="2_3mip6"]
 [ext_resource type="Texture2D" uid="uid://m2yhkps6mx8u" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/idle/idle_1.png" id="2_kc5ld"]
 [ext_resource type="Texture2D" uid="uid://c6uh2g2r7qhx7" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/idle/idle_3.png" id="3_33crn"]
 [ext_resource type="Script" path="res://characters/HurtBox.gd" id="3_f6ga6"]
 [ext_resource type="Texture2D" uid="uid://bxocmfve6bxgo" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/idle/idle_4.png" id="4_31w2m"]
-[ext_resource type="Script" path="res://characters/enemies/Monk/PlayerDetectionArea.gd" id="4_qtx4k"]
+[ext_resource type="Script" path="res://characters/enemies/monk/PlayerDetectionArea.gd" id="4_qtx4k"]
 [ext_resource type="Texture2D" uid="uid://oesgrml0toxs" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/idle/idle_5.png" id="5_voruv"]
 [ext_resource type="Texture2D" uid="uid://fe0whk3jrytg" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/idle/idle_6.png" id="6_dc30h"]
 [ext_resource type="Texture2D" uid="uid://cxcqxy8rj833i" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/take_hit/take_hit_1.png" id="10_gdlob"]
@@ -18,8 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://8wkn0wat4rrj" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/take_hit/take_hit_5.png" id="14_8e3cv"]
 [ext_resource type="Script" path="res://characters/CharacterStateMachine.gd" id="15_afh3l"]
 [ext_resource type="Texture2D" uid="uid://bftgg6ij5sd5y" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/run/run_1.png" id="16_2ncvb"]
-[ext_resource type="Script" path="res://characters/enemies/Monk/IdlingState.gd" id="16_dvk46"]
-[ext_resource type="Script" path="res://characters/enemies/Monk/ChasingState.gd" id="17_j1b61"]
+[ext_resource type="Script" path="res://characters/enemies/monk/state/IdlingState.gd" id="16_dvk46"]
+[ext_resource type="Script" path="res://characters/enemies/monk/state/ChasingState.gd" id="17_j1b61"]
 [ext_resource type="Texture2D" uid="uid://c1wbofjaoey64" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/run/run_2.png" id="17_wcoqv"]
 [ext_resource type="Texture2D" uid="uid://bnstwm27ac36a" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/run/run_3.png" id="18_1ppqx"]
 [ext_resource type="Script" path="res://characters/player/StateLabel.gd" id="19_cqdes"]
@@ -37,11 +37,11 @@
 [ext_resource type="Texture2D" uid="uid://ephs2808vi3l" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/death/death_2.png" id="31_knjh6"]
 [ext_resource type="Texture2D" uid="uid://3dm41m11dv81" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/death/death_3.png" id="32_6df4g"]
 [ext_resource type="Texture2D" uid="uid://bujj8ymsqrj68" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/death/death_4.png" id="33_k1npe"]
-[ext_resource type="Script" path="res://characters/enemies/Monk/AttackingState.gd" id="33_pc7c1"]
-[ext_resource type="Script" path="res://characters/enemies/Monk/HurtingState.gd" id="34_kwqbv"]
+[ext_resource type="Script" path="res://characters/enemies/monk/state/AttackingState.gd" id="33_pc7c1"]
+[ext_resource type="Script" path="res://characters/enemies/monk/state/HurtingState.gd" id="34_kwqbv"]
 [ext_resource type="Texture2D" uid="uid://b5g2ssqke8wmr" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/death/death_5.png" id="34_nfiwd"]
 [ext_resource type="Texture2D" uid="uid://pv8wupjrbpm5" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/death/death_6.png" id="35_0t66r"]
-[ext_resource type="Script" path="res://characters/enemies/Monk/DyingState.gd" id="35_ywkh8"]
+[ext_resource type="Script" path="res://characters/enemies/monk/state/DyingState.gd" id="35_ywkh8"]
 [ext_resource type="Texture2D" uid="uid://bvkuj1ngcinrk" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/death/death_7.png" id="36_6t88t"]
 [ext_resource type="Texture2D" uid="uid://ccwx7vlqm5fqa" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/death/death_8.png" id="37_0146x"]
 [ext_resource type="Texture2D" uid="uid://bhl107seja0jm" path="res://assets/Elementals_ground_monk_FREE_v1.3/png/death/death_9.png" id="38_4oboh"]
@@ -243,7 +243,7 @@ script = ExtResource("1_a8mv2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -40)
-texture = ExtResource("5_voruv")
+texture = ExtResource("2_kc5ld")
 
 [node name="HurtBox" type="Area2D" parent="Sprite2D"]
 script = ExtResource("3_f6ga6")

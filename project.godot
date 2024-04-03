@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Project Eclipse"
-run/main_scene="res://levels/ruins.tscn"
+run/main_scene="res://interface/main_menu/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -40,6 +40,10 @@ window/stretch/scale=2.01
 [dotnet]
 
 project/assembly_name="Project Eclipse"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_rl_agents/plugin.cfg")
 
 [input]
 

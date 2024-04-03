@@ -15,6 +15,9 @@ var wing_slot : Node = null
 var ring_slot : Node = null
 var bracelet_slot : Node = null
 
+var key_quantity : int = 0
+	
+
 signal potions_restored()
 
 
@@ -37,3 +40,6 @@ func reset_potions():
 	mana_potion_quantity = mana_potion_max_quantity
 	potions_restored.emit()
 	
+
+func increase_keys(amount):
+	key_quantity += amount

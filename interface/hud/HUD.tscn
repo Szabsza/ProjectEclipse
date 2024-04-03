@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ciycxun4i5wvu"]
+[gd_scene load_steps=11 format=3 uid="uid://ciycxun4i5wvu"]
 
 [ext_resource type="Script" path="res://interface/hud/HUD.gd" id="1_c5nti"]
 [ext_resource type="PackedScene" uid="uid://biu3xvae7hxfd" path="res://interface/hud/HealthBar.tscn" id="1_tfwml"]
@@ -7,10 +7,15 @@
 [ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://assets/DungeonFont.ttf" id="5_d23xu"]
 [ext_resource type="PackedScene" uid="uid://ddvflbb4qvkrh" path="res://interface/hotbar/HotBar.tscn" id="6_wlgjf"]
 [ext_resource type="PackedScene" uid="uid://6c0nmw03t3c7" path="res://interface/hud/ManaBar.tscn" id="7_cjy4l"]
+[ext_resource type="Texture2D" uid="uid://crgdx5iqxvvjn" path="res://assets/GUI/GUI_1x.png" id="8_2jtxr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1v5ht"]
 atlas = ExtResource("4_wtn24")
 region = Rect2(146, 144, 12, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6q1y"]
+atlas = ExtResource("8_2jtxr")
+region = Rect2(89, 72, 6, 8)
 
 [node name="Hud" type="CanvasLayer"]
 script = ExtResource("1_c5nti")
@@ -108,3 +113,24 @@ offset_top = -75.0
 offset_right = 317.0
 offset_bottom = -19.0
 grow_vertical = 0
+
+[node name="Keys" type="Node" parent="."]
+
+[node name="KeyIcon" type="TextureRect" parent="Keys"]
+texture_filter = 1
+offset_left = 21.0
+offset_top = 80.0
+offset_right = 36.0
+offset_bottom = 98.0
+texture = SubResource("AtlasTexture_e6q1y")
+
+[node name="KeysHeldLabel" type="Label" parent="Keys"]
+texture_filter = 1
+offset_left = 40.0
+offset_top = 79.0
+offset_right = 80.0
+offset_bottom = 102.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_d23xu")
+text = "1"
+vertical_alignment = 1

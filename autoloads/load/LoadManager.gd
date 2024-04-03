@@ -21,6 +21,7 @@ func load_game_data(game_data):
 	HotBarManager.health_potion_max_quantity = game_data["health_potion_max_quantity"]
 	HotBarManager.mana_potion_quantity = game_data["mana_potion_quantity"]
 	HotBarManager.mana_potion_max_quantity = game_data["mana_potion_max_quantity"]
+	HotBarManager.key_quantity = game_data["key_quantity"]
 	
 	StatusManager.health_points = game_data["health_points"]
 	StatusManager.stamina_points = game_data["stamina_points"]

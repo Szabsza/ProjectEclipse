@@ -3,22 +3,21 @@ extends Node2D
 var levels : Array = []
 var checkpoints : Array = []
 var chests : Array = []
+var doors : Array = []
 var remains : Remains = null
 var current_level : String = ""
 
 signal init()
 
 
-func setup(levels : Array, checkpoints : Array, chests : Array, remains : Remains):
+func setup(levels : Array, checkpoints : Array, chests : Array, doors : Array, remains : Remains):
 	self.levels = levels
 	self.chests = chests
+	self.doors = doors
 	self.checkpoints = checkpoints
 	self.remains = remains
 	
 	SaveManager.remains = remains
-	
-	print(remains.collision_layer)
-	print(remains.collision_mask)
 	
 	init.emit()
 	

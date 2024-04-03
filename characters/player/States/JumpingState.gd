@@ -8,6 +8,9 @@ const JUMP_ANIMATION : String = "jump"
 
 
 func state_process(delta):
+	if character.is_on_floor():
+		next_state = states["Idling"]
+	
 	if character.velocity.y > 0 and not character.is_on_floor():
 		next_state = states["Falling"]
 	

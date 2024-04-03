@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cwswaw56eqs6b"]
 
 [ext_resource type="PackedScene" uid="uid://xicx1vr1g113" path="res://common/floor.tscn" id="1_j6243"]
-[ext_resource type="PackedScene" uid="uid://dse50ogb1ndlt" path="res://characters/enemies/Monk/Monk.tscn" id="3_kscw5"]
+[ext_resource type="PackedScene" uid="uid://dse50ogb1ndlt" path="res://characters/enemies/monk/Monk.tscn" id="3_kscw5"]
 [ext_resource type="PackedScene" uid="uid://bh4jtxaokddii" path="res://common/checkpoint/Checkpoint.tscn" id="4_o0wol"]
 [ext_resource type="PackedScene" uid="uid://gei5r3s8tiis" path="res://common/chest/Chest.tscn" id="5_2tdqp"]
 

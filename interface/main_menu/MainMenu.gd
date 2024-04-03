@@ -1,7 +1,7 @@
 class_name MainMenu extends Control
 
-const GAME_SCENE : String = "res://levels/Game.tscn"
-const LOADING_SCENE : String = "res://levels/Loading.tscn"
+const GAME_SCENE : String = "res://levels/game/Game.tscn"
+const LOADING_SCENE : String = "res://levels/loading/Loading.tscn"
 
 
 func _on_continue_pressed():

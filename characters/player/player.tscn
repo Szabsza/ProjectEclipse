@@ -125,18 +125,18 @@
 [ext_resource type="Texture2D" uid="uid://bctac216wv3nk" path="res://assets/elementals_wind_hashashin_FREE_v1.1/PNG/take_hit/take_hit_6.png" id="123_yrqx6"]
 [ext_resource type="Script" path="res://characters/CharacterStateMachine.gd" id="124_ocqha"]
 [ext_resource type="Script" path="res://characters/Health.gd" id="124_siaoi"]
-[ext_resource type="Script" path="res://characters/player/States/JumpingState.gd" id="125_fkc0c"]
+[ext_resource type="Script" path="res://characters/player/states/JumpingState.gd" id="125_fkc0c"]
 [ext_resource type="Script" path="res://characters/Stamina.gd" id="125_x1723"]
 [ext_resource type="Script" path="res://characters/Mana.gd" id="125_xls3q"]
-[ext_resource type="Script" path="res://characters/player/States/FallingState.gd" id="126_hobok"]
-[ext_resource type="Script" path="res://characters/player/States/IdlingState.gd" id="127_yf4fg"]
-[ext_resource type="Script" path="res://characters/player/States/RollingState.gd" id="128_k87xc"]
-[ext_resource type="Script" path="res://characters/player/States/RunningState.gd" id="129_at5jl"]
-[ext_resource type="Script" path="res://characters/player/States/JumpAttackingState.gd" id="130_otwpi"]
-[ext_resource type="Script" path="res://characters/player/States/AttackingState.gd" id="130_y2uni"]
+[ext_resource type="Script" path="res://characters/player/states/FallingState.gd" id="126_hobok"]
+[ext_resource type="Script" path="res://characters/player/states/IdlingState.gd" id="127_yf4fg"]
+[ext_resource type="Script" path="res://characters/player/states/RollingState.gd" id="128_k87xc"]
+[ext_resource type="Script" path="res://characters/player/states/RunningState.gd" id="129_at5jl"]
+[ext_resource type="Script" path="res://characters/player/states/JumpAttackingState.gd" id="130_otwpi"]
+[ext_resource type="Script" path="res://characters/player/states/AttackingState.gd" id="130_y2uni"]
 [ext_resource type="Script" path="res://characters/player/StateLabel.gd" id="132_p6pfp"]
-[ext_resource type="Script" path="res://characters/player/States/InteractingState.gd" id="134_sjlx5"]
-[ext_resource type="Script" path="res://characters/player/States/DyingState.gd" id="135_jsx0q"]
+[ext_resource type="Script" path="res://characters/player/states/InteractingState.gd" id="134_sjlx5"]
+[ext_resource type="Script" path="res://characters/player/states/DyingState.gd" id="135_jsx0q"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tm3yw"]
 radius = 11.0
@@ -717,6 +717,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_iej4a"]
 resource_name = "roll"
 length = 0.6
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -736,10 +737,10 @@ tracks/1/path = NodePath("Sprite2D/HurtBox/CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.05, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [true, false]
+"values": [false, true, false]
 }
 
 [sub_resource type="Animation" id="Animation_wyjmf"]
@@ -953,7 +954,7 @@ script = ExtResource("1_8wcef")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, -45)
-texture = ExtResource("36_6omcm")
+texture = ExtResource("96_e433v")
 
 [node name="HurtBox" type="Area2D" parent="Sprite2D"]
 visible = false
