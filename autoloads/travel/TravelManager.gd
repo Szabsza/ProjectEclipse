@@ -5,6 +5,8 @@ var player : Player = null
 
 func travel_to_checkpoint(checkpoint : Checkpoint):
 	if WorldManager.checkpoints.find(checkpoint) != -1:
+		TransitionManager.play_transition()
+		await get_tree().create_timer(1).timeout 
 		player.global_position = checkpoint.global_position 
 
 
@@ -18,6 +20,8 @@ func get_available_checkpoints_name():
 
 func go_trough_door(door : Door):
 	if WorldManager.doors.find(door.destination_door) != -1:
+		TransitionManager.play_transition()
+		await get_tree().create_timer(1).timeout 
 		player.global_position = door.destination_door.spawn.global_position
 
 

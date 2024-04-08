@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcw65siyag0qy"
-path="res://.godot/imported/breath-fire.png-a55618cfdb58fbc671e7d7842820488b.ctex"
+path="res://.godot/imported/breath-fire.png-b04427fd7a82db5ecfc79e56c83dcc13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/demon-Files/PNG/breath-fire.png"
-dest_files=["res://.godot/imported/breath-fire.png-a55618cfdb58fbc671e7d7842820488b.ctex"]
+source_file="res://Assets/gothicvania patreon collection/demon-Files/PNG/breath-fire.png"
+dest_files=["res://.godot/imported/breath-fire.png-b04427fd7a82db5ecfc79e56c83dcc13.ctex"]
 
 [params]
 

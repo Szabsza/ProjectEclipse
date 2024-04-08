@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhmpoo703d4u2"
-path="res://.godot/imported/angel-attack-3.png-28153bb4cedc2475ac0dcb08205af9b8.ctex"
+path="res://.godot/imported/angel-attack-3.png-5719f92834b08332745ecc15375d5713.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania church files/SPRITES/angel/sprites/angel-attack/angel-attack-3.png"
-dest_files=["res://.godot/imported/angel-attack-3.png-28153bb4cedc2475ac0dcb08205af9b8.ctex"]
+source_file="res://Assets/gothicvania church files/SPRITES/angel/sprites/angel-attack/angel-attack-3.png"
+dest_files=["res://.godot/imported/angel-attack-3.png-5719f92834b08332745ecc15375d5713.ctex"]
 
 [params]
 

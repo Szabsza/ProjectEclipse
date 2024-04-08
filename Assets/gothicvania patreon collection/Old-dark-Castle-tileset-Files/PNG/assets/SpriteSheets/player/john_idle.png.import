@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsm2sgb1wkggl"
-path="res://.godot/imported/john_idle.png-7ca9ae517a0de092fa5b47054aa9843a.ctex"
+path="res://.godot/imported/john_idle.png-0b1a50847d1e5917dcdcec6505e435ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/john_idle.png"
-dest_files=["res://.godot/imported/john_idle.png-7ca9ae517a0de092fa5b47054aa9843a.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/john_idle.png"
+dest_files=["res://.godot/imported/john_idle.png-0b1a50847d1e5917dcdcec6505e435ab.ctex"]
 
 [params]
 

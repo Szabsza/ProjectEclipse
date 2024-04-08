@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://deocxkun7x0ko"
-path="res://.godot/imported/9.png-f20ca77b4774f53af5af7c7c6a986e79.ctex"
+path="res://.godot/imported/9.png-9a173a13d2cf48db5711c4db72549233.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/toRecolor/9.png"
-dest_files=["res://.godot/imported/9.png-f20ca77b4774f53af5af7c7c6a986e79.ctex"]
+source_file="res://Assets/toRecolor/9.png"
+dest_files=["res://.godot/imported/9.png-9a173a13d2cf48db5711c4db72549233.ctex"]
 
 [params]
 

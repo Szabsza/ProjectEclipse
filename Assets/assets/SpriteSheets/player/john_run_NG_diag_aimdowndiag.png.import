@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cou0pnyldam30"
-path="res://.godot/imported/john_run_NG_diag_aimdowndiag.png-7dd9acb778eae08fc8973601c19b6ae2.ctex"
+path="res://.godot/imported/john_run_NG_diag_aimdowndiag.png-dd8a2a55bf0dc88051fc58d03e0a8486.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/SpriteSheets/player/john_run_NG_diag_aimdowndiag.png"
-dest_files=["res://.godot/imported/john_run_NG_diag_aimdowndiag.png-7dd9acb778eae08fc8973601c19b6ae2.ctex"]
+source_file="res://Assets/assets/SpriteSheets/player/john_run_NG_diag_aimdowndiag.png"
+dest_files=["res://.godot/imported/john_run_NG_diag_aimdowndiag.png-dd8a2a55bf0dc88051fc58d03e0a8486.ctex"]
 
 [params]
 

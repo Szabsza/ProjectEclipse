@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bo2njau1pec74"
-path="res://.godot/imported/multiplier_x2.png-bff2bf9c7bf5659298c8f756e3e7f192.ctex"
+path="res://.godot/imported/multiplier_x2.png-6c306074ec03235116237362c1144f2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/ui/multiplier_x2.png"
-dest_files=["res://.godot/imported/multiplier_x2.png-bff2bf9c7bf5659298c8f756e3e7f192.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/ui/multiplier_x2.png"
+dest_files=["res://.godot/imported/multiplier_x2.png-6c306074ec03235116237362c1144f2b.ctex"]
 
 [params]
 

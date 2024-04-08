@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ciupkp6e4t6pm"
-path="res://.godot/imported/Fire Trap - Level 2.png-76d137c4c23ba54e3e01b6d61408d31f.ctex"
+path="res://.godot/imported/Fire Trap - Level 2.png-eaae7f32aba690a3b4d9af6050bce9ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/Fire Trap/PNGs/Fire Trap - Level 2.png"
-dest_files=["res://.godot/imported/Fire Trap - Level 2.png-76d137c4c23ba54e3e01b6d61408d31f.ctex"]
+source_file="res://Assets/assets/Fire Trap/PNGs/Fire Trap - Level 2.png"
+dest_files=["res://.godot/imported/Fire Trap - Level 2.png-eaae7f32aba690a3b4d9af6050bce9ed.ctex"]
 
 [params]
 

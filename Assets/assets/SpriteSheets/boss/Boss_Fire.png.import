@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jva8p21sa5a0"
-path="res://.godot/imported/Boss_Fire.png-54ec5e8aac8ae2fe487e9d799a9e4c20.ctex"
+path="res://.godot/imported/Boss_Fire.png-8f4d43e211644fe8040369bb71cb3bff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/SpriteSheets/boss/Boss_Fire.png"
-dest_files=["res://.godot/imported/Boss_Fire.png-54ec5e8aac8ae2fe487e9d799a9e4c20.ctex"]
+source_file="res://Assets/assets/SpriteSheets/boss/Boss_Fire.png"
+dest_files=["res://.godot/imported/Boss_Fire.png-8f4d43e211644fe8040369bb71cb3bff.ctex"]
 
 [params]
 

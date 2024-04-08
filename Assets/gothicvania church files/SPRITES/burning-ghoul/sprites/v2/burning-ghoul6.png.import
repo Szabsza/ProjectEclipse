@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bs807tu7eumxe"
-path="res://.godot/imported/burning-ghoul6.png-f0867382225b44331cb4e37284ece68e.ctex"
+path="res://.godot/imported/burning-ghoul6.png-b7de1d3ef4e630f404b6abb532c8e4f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania church files/SPRITES/burning-ghoul/sprites/v2/burning-ghoul6.png"
-dest_files=["res://.godot/imported/burning-ghoul6.png-f0867382225b44331cb4e37284ece68e.ctex"]
+source_file="res://Assets/gothicvania church files/SPRITES/burning-ghoul/sprites/v2/burning-ghoul6.png"
+dest_files=["res://.godot/imported/burning-ghoul6.png-b7de1d3ef4e630f404b6abb532c8e4f7.ctex"]
 
 [params]
 

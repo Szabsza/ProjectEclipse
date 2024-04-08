@@ -1,10 +1,10 @@
 [gd_scene load_steps=32 format=3 uid="uid://y8i53dbxrgoy"]
 
-[ext_resource type="Texture2D" uid="uid://b3tnox2fbaaqn" path="res://assets/assets/Fire Trap/PNGs/Fire Trap - Level 3.png" id="1_80bmd"]
-[ext_resource type="Texture2D" uid="uid://2r46v6kjtqn8" path="res://assets/assets/Fire Trap/Transition/PNGs/Fire Trap - Level 3 - Transition.png" id="1_g73fy"]
+[ext_resource type="Texture2D" uid="uid://b3tnox2fbaaqn" path="res://Assets/assets/Fire Trap/PNGs/Fire Trap - Level 3.png" id="1_80bmd"]
+[ext_resource type="Texture2D" uid="uid://2r46v6kjtqn8" path="res://Assets/assets/Fire Trap/Transition/PNGs/Fire Trap - Level 3 - Transition.png" id="1_g73fy"]
 [ext_resource type="Script" path="res://common/trap/fire_trap/FireTrap.gd" id="1_p0b3i"]
 [ext_resource type="Script" path="res://characters/HitBox.gd" id="2_mdohy"]
-[ext_resource type="Script" path="res://characters/enemies/monk/PlayerDetectionArea.gd" id="4_s6o2g"]
+[ext_resource type="Script" path="res://characters/enemies/monk/PlayerDetectionArea.gd" id="4_2eelk"]
 [ext_resource type="Script" path="res://common/trap/TrapStateMachine.gd" id="6_cc148"]
 [ext_resource type="Script" path="res://common/trap/fire_trap/state/InactiveState.gd" id="7_57p0j"]
 [ext_resource type="Script" path="res://common/trap/fire_trap/state/ActiveState.gd" id="8_1sy8y"]
@@ -329,7 +329,7 @@ shape = SubResource("CapsuleShape2D_abfh2")
 disabled = true
 
 [node name="PlayerDetectionArea" type="Area2D" parent="."]
-script = ExtResource("4_s6o2g")
+script = ExtResource("4_2eelk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetectionArea"]
 position = Vector2(0, -57.5)

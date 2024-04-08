@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dg0iu1gskh0uw"
-path="res://.godot/imported/hero-attack-2.png-0b8b26c0082a4e69b40b0542b3dada4e.ctex"
+path="res://.godot/imported/hero-attack-2.png-39e5e155b2426132ea6043976881f31d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-attack/hero-attack-2.png"
-dest_files=["res://.godot/imported/hero-attack-2.png-0b8b26c0082a4e69b40b0542b3dada4e.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-attack/hero-attack-2.png"
+dest_files=["res://.godot/imported/hero-attack-2.png-39e5e155b2426132ea6043976881f31d.ctex"]
 
 [params]
 

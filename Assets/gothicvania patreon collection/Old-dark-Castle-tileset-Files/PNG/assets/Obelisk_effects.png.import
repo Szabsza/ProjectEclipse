@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csobdejmwo2fc"
-path="res://.godot/imported/Obelisk_effects.png-fe78f891198ae572ac664f55f1e43fc9.ctex"
+path="res://.godot/imported/Obelisk_effects.png-310e42acb6984c2f567e1194e6146423.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Obelisk_effects.png"
-dest_files=["res://.godot/imported/Obelisk_effects.png-fe78f891198ae572ac664f55f1e43fc9.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Obelisk_effects.png"
+dest_files=["res://.godot/imported/Obelisk_effects.png-310e42acb6984c2f567e1194e6146423.ctex"]
 
 [params]
 

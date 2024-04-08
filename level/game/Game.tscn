@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://bmm18jv2ooo6i"]
+[gd_scene load_steps=9 format=3 uid="uid://bmm18jv2ooo6i"]
 
-[ext_resource type="PackedScene" uid="uid://bqaipc210dp67" path="res://levels/ruins/ruins.tscn" id="1_m7x70"]
-[ext_resource type="Script" path="res://levels/game/Game.gd" id="1_yhvoh"]
-[ext_resource type="PackedScene" uid="uid://cwswaw56eqs6b" path="res://levels/sandbox/sandbox.tscn" id="2_ddx21"]
-[ext_resource type="PackedScene" uid="uid://v3fb0628e85t" path="res://characters/player/player.tscn" id="2_vrqdx"]
-[ext_resource type="PackedScene" uid="uid://cj1ienw6bbkk4" path="res://levels/dungeon/Dungeon.tscn" id="3_ftbfq"]
+[ext_resource type="PackedScene" uid="uid://bqaipc210dp67" path="res://level/ruins/ruins.tscn" id="1_m7x70"]
+[ext_resource type="Script" path="res://level/game/Game.gd" id="1_yhvoh"]
+[ext_resource type="PackedScene" uid="uid://cwswaw56eqs6b" path="res://level/sandbox/sandbox.tscn" id="2_ddx21"]
+[ext_resource type="PackedScene" uid="uid://v3fb0628e85t" path="res://characters/player/Player.tscn" id="2_vrqdx"]
+[ext_resource type="PackedScene" uid="uid://cj1ienw6bbkk4" path="res://level/dungeon/Dungeon.tscn" id="3_ftbfq"]
 [ext_resource type="PackedScene" uid="uid://ciycxun4i5wvu" path="res://interface/hud/HUD.tscn" id="3_lb20u"]
 [ext_resource type="PackedScene" uid="uid://b2j0hs4almrne" path="res://common/remains/Remains.tscn" id="4_dtw6x"]
+[ext_resource type="PackedScene" uid="uid://dseh7bl57kqh3" path="res://interface/transition/Transition.tscn" id="8_e8738"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_yhvoh")
@@ -26,3 +27,5 @@ position = Vector2(-333, -4)
 position = Vector2(171, 781)
 
 [node name="Hud" parent="." instance=ExtResource("3_lb20u")]
+
+[node name="Transition" parent="." instance=ExtResource("8_e8738")]

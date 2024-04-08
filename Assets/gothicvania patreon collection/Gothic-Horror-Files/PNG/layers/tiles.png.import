@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://catfrljd2fdwu"
-path="res://.godot/imported/tiles.png-16fcf87848df7d86a58b98bd75f9a137.ctex"
+path="res://.godot/imported/tiles.png-9c99d7606083a2479bf3a5507ec85ff9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Gothic-Horror-Files/PNG/layers/tiles.png"
-dest_files=["res://.godot/imported/tiles.png-16fcf87848df7d86a58b98bd75f9a137.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Gothic-Horror-Files/PNG/layers/tiles.png"
+dest_files=["res://.godot/imported/tiles.png-9c99d7606083a2479bf3a5507ec85ff9.ctex"]
 
 [params]
 

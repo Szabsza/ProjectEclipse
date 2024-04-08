@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b13pghmkkpf2p"
-path="res://.godot/imported/mainlev_build.png-5c12a0de8a99db765b764566847cde64.ctex"
+path="res://.godot/imported/mainlev_build.png-c4147f809e82b5b3a42f99502446ce54.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/toRecolor/mainlev_build.png"
-dest_files=["res://.godot/imported/mainlev_build.png-5c12a0de8a99db765b764566847cde64.ctex"]
+source_file="res://Assets/toRecolor/mainlev_build.png"
+dest_files=["res://.godot/imported/mainlev_build.png-c4147f809e82b5b3a42f99502446ce54.ctex"]
 
 [params]
 

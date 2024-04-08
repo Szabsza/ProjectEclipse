@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b63e5uev1qbqu"
-path="res://.godot/imported/sparks.png-83e929dfb3cd16d2e75a1983a727cb53.ctex"
+path="res://.godot/imported/sparks.png-97c6c7740f871e9f413c8b0b6a42d80c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/boss/sparks.png"
-dest_files=["res://.godot/imported/sparks.png-83e929dfb3cd16d2e75a1983a727cb53.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/boss/sparks.png"
+dest_files=["res://.godot/imported/sparks.png-97c6c7740f871e9f413c8b0b6a42d80c.ctex"]
 
 [params]
 

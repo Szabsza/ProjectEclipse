@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qj6gjerqgh8p"
-path="res://.godot/imported/The Sidescroller's Dungeon Tiles 32x32.png-2202b0e13100470c31f7c6443bfe87c8.ctex"
+path="res://.godot/imported/The Sidescroller's Dungeon Tiles 32x32.png-e4a3f9c8e3fd7acc057d73b99813c55d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/toRecolor/The Sidescroller's Dungeon Tiles 32x32.png"
-dest_files=["res://.godot/imported/The Sidescroller's Dungeon Tiles 32x32.png-2202b0e13100470c31f7c6443bfe87c8.ctex"]
+source_file="res://Assets/toRecolor/The Sidescroller's Dungeon Tiles 32x32.png"
+dest_files=["res://.godot/imported/The Sidescroller's Dungeon Tiles 32x32.png-e4a3f9c8e3fd7acc057d73b99813c55d.ctex"]
 
 [params]
 

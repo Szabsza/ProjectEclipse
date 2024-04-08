@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://bqaipc210dp67"]
 
-[ext_resource type="Script" path="res://levels/ruins/ruins.gd" id="1_2u5ea"]
-[ext_resource type="Texture2D" uid="uid://behak76asms1i" path="res://assets/toRecolor/finalNight.PNG" id="1_ndy5b"]
-[ext_resource type="TileSet" uid="uid://b0fx4w3bh6fvg" path="res://levels/tileset.tres" id="3_4jdbi"]
+[ext_resource type="Script" path="res://level/ruins/ruins.gd" id="1_2u5ea"]
+[ext_resource type="Texture2D" uid="uid://behak76asms1i" path="res://Assets/toRecolor/finalNight.PNG" id="1_ndy5b"]
+[ext_resource type="TileSet" uid="uid://b0fx4w3bh6fvg" path="res://level/tileset.tres" id="3_4jdbi"]
 [ext_resource type="PackedScene" uid="uid://bbu6j2a3v0imn" path="res://common/door/Door.tscn" id="4_eicmf"]
 [ext_resource type="PackedScene" uid="uid://ccl2rl1md4ps2" path="res://common/loot_items/Key.tscn" id="8_35jyw"]
 [ext_resource type="PackedScene" uid="uid://bh4jtxaokddii" path="res://common/checkpoint/Checkpoint.tscn" id="12_evdsl"]

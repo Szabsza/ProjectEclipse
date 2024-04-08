@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bghfdjdxdgnun"
-path="res://.godot/imported/gothic-castle-tileset.png-5c75782fa4dd8e0466610c85ff6dd319.ctex"
+path="res://.godot/imported/gothic-castle-tileset.png-d2a2fc24835ba00333936fde05e8ea3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Gothic-Castle-Files/PNG/layers/gothic-castle-tileset.png"
-dest_files=["res://.godot/imported/gothic-castle-tileset.png-5c75782fa4dd8e0466610c85ff6dd319.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Gothic-Castle-Files/PNG/layers/gothic-castle-tileset.png"
+dest_files=["res://.godot/imported/gothic-castle-tileset.png-d2a2fc24835ba00333936fde05e8ea3b.ctex"]
 
 [params]
 

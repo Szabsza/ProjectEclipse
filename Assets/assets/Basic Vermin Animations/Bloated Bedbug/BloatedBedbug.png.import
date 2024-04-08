@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0drrdvh12ioi"
-path="res://.godot/imported/BloatedBedbug.png-e5ec3d0d73ee754328b4e122e6cbde27.ctex"
+path="res://.godot/imported/BloatedBedbug.png-cea4daff2203b71e30c00fbf22bbe7fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/Basic Vermin Animations/Bloated Bedbug/BloatedBedbug.png"
-dest_files=["res://.godot/imported/BloatedBedbug.png-e5ec3d0d73ee754328b4e122e6cbde27.ctex"]
+source_file="res://Assets/assets/Basic Vermin Animations/Bloated Bedbug/BloatedBedbug.png"
+dest_files=["res://.godot/imported/BloatedBedbug.png-cea4daff2203b71e30c00fbf22bbe7fa.ctex"]
 
 [params]
 

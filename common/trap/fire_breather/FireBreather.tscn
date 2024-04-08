@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://common/trap/fire_breather/FireBreather.gd" id="1_uvgh7"]
 [ext_resource type="Script" path="res://characters/HitBox.gd" id="2_j3tu2"]
-[ext_resource type="Texture2D" uid="uid://c1pqmwp5ap1hb" path="res://assets/assets/Fire Breather Trap/Transition/PNGs/Fire Breather Trap - Level 3 - Transition.png" id="2_vtm1k"]
-[ext_resource type="Texture2D" uid="uid://cppfjk5uc74ij" path="res://assets/assets/Fire Breather Trap/PNGs/Fire Thrower Trap - Level 3.png" id="3_8pi6v"]
+[ext_resource type="Texture2D" uid="uid://c1pqmwp5ap1hb" path="res://Assets/assets/Fire Breather Trap/Transition/PNGs/Fire Breather Trap - Level 3 - Transition.png" id="2_vtm1k"]
+[ext_resource type="Texture2D" uid="uid://cppfjk5uc74ij" path="res://Assets/assets/Fire Breather Trap/PNGs/Fire Thrower Trap - Level 3.png" id="3_8pi6v"]
 [ext_resource type="Script" path="res://common/trap/TrapStateMachine.gd" id="3_mqeut"]
 [ext_resource type="Script" path="res://common/trap/fire_breather/state/ActiveState.gd" id="4_0l0wb"]
-[ext_resource type="Script" path="res://characters/enemies/monk/PlayerDetectionArea.gd" id="4_hove2"]
+[ext_resource type="Script" path="res://characters/enemies/monk/PlayerDetectionArea.gd" id="4_sp0bb"]
 [ext_resource type="Script" path="res://common/trap/fire_breather/state/InactiveState.gd" id="5_b3gv1"]
 [ext_resource type="Script" path="res://common/trap/fire_breather/state/ActivatingState.gd" id="6_4q80b"]
 [ext_resource type="Script" path="res://common/trap/fire_breather/state/DeactivatingState.gd" id="7_ga7wr"]
@@ -429,8 +429,8 @@ texture_filter = 1
 script = ExtResource("1_uvgh7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("3_8pi6v")
-hframes = 25
+texture = ExtResource("2_vtm1k")
+hframes = 13
 
 [node name="HitBox" type="Area2D" parent="Sprite2D"]
 position = Vector2(-3, 7)
@@ -461,7 +461,7 @@ disabled = true
 
 [node name="PlayerDetectionArea" type="Area2D" parent="."]
 visible = false
-script = ExtResource("4_hove2")
+script = ExtResource("4_sp0bb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetectionArea"]
 position = Vector2(-130.5, -65.5)
