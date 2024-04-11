@@ -1,14 +1,14 @@
 [gd_resource type="TileSet" load_steps=22 format=3 uid="uid://b0fx4w3bh6fvg"]
 
-[ext_resource type="Texture2D" uid="uid://qj6gjerqgh8p" path="res://Assets/toRecolor/The Sidescroller's Dungeon Tiles 32x32.png" id="1_dw7oq"]
-[ext_resource type="Texture2D" uid="uid://kfmyor3vm8pp" path="res://Assets/toRecolor/tileset.png" id="2_i03pi"]
-[ext_resource type="Texture2D" uid="uid://cdcx8cdchwwnm" path="res://Assets/gothicvania church/assets/environment/tileset_mk_16_16_nature_tileset_godot.png" id="3_utq4k"]
-[ext_resource type="Texture2D" uid="uid://cpvn7rm2jgixy" path="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/old-dark-castle-interior-tileset.png" id="4_jjye6"]
-[ext_resource type="Texture2D" uid="uid://dkeb7hcssuln2" path="res://Assets/assets/SpriteSheets/background/jungle_tree1.png" id="5_6nynb"]
-[ext_resource type="Texture2D" uid="uid://cjnyvihey70m3" path="res://Assets/assets/SpriteSheets/background/jungle_tree1_bg.png" id="6_7n4ao"]
-[ext_resource type="Texture2D" uid="uid://ci4738i4iqgki" path="res://Assets/assets/SpriteSheets/background/jungle_tree2.png" id="7_6lwic"]
-[ext_resource type="Texture2D" uid="uid://bsoihhsodlwsk" path="res://Assets/assets/SpriteSheets/background/jungle_tree2_bg.png" id="8_dg8js"]
-[ext_resource type="Texture2D" uid="uid://dwkig2oapvt1p" path="res://Assets/sand-tileset.png" id="9_b68bu"]
+[ext_resource type="Texture2D" uid="uid://qj6gjerqgh8p" path="res://assets/toRecolor/The Sidescroller's Dungeon Tiles 32x32.png" id="1_dw7oq"]
+[ext_resource type="Texture2D" uid="uid://kfmyor3vm8pp" path="res://assets/toRecolor/tileset.png" id="2_i03pi"]
+[ext_resource type="Texture2D" uid="uid://cdcx8cdchwwnm" path="res://assets/gothicvania church/assets/environment/tileset_mk_16_16_nature_tileset_godot.png" id="3_utq4k"]
+[ext_resource type="Texture2D" uid="uid://cpvn7rm2jgixy" path="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/old-dark-castle-interior-tileset.png" id="4_jjye6"]
+[ext_resource type="Texture2D" uid="uid://dkeb7hcssuln2" path="res://assets/assets/SpriteSheets/background/jungle_tree1.png" id="5_6nynb"]
+[ext_resource type="Texture2D" uid="uid://cjnyvihey70m3" path="res://assets/assets/SpriteSheets/background/jungle_tree1_bg.png" id="6_7n4ao"]
+[ext_resource type="Texture2D" uid="uid://ci4738i4iqgki" path="res://assets/assets/SpriteSheets/background/jungle_tree2.png" id="7_6lwic"]
+[ext_resource type="Texture2D" uid="uid://bsoihhsodlwsk" path="res://assets/assets/SpriteSheets/background/jungle_tree2_bg.png" id="8_dg8js"]
+[ext_resource type="Texture2D" uid="uid://dwkig2oapvt1p" path="res://assets/sand-tileset.png" id="9_b68bu"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_alosm"]
 tile_data = PackedInt32Array(262144, 1, 5, 1, 65537, 1, 65537, 65537, 2, 131073, 65537, 3, 196609, 65537, 4, 262145, 65537, 5, 327681, 65537, 6, 2, 196609, 1, 65538, 196609, 2, 131074, 196609, 3, 196610, 196609, 4, 262146, 196609, 6, 327682, 196609, 6, 3, 262145, 1, 65539, 262145, 2, 131075, 262145, 3, 196611, 262145, 4, 262147, 196609, 6, 327683, 196609, 6, 4, 196609, 1, 65540, 196609, 2, 131076, 196609, 3, 196612, 196609, 4, 262148, 196609, 6, 327684, 196609, 6, 5, 262145, 1, 65541, 262145, 2, 131077, 262145, 3, 196613, 262145, 4, 262149, 196609, 6, 327685, 196609, 6, 6, 393217, 1, 65542, 393217, 2, 131078, 393217, 3, 196614, 393217, 4, 262150, 393217, 5, 327686, 393217, 6, 262151, 458753, 5)

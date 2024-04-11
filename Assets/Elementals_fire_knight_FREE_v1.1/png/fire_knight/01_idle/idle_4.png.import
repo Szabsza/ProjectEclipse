@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kt45vfbpiwf8"
-path="res://.godot/imported/idle_4.png-6344e0b21ac1ef118c973797be1b992a.ctex"
+path="res://.godot/imported/idle_4.png-bb053c2ef9235142d9b601a2874e11c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Elementals_fire_knight_FREE_v1.1/png/fire_knight/01_idle/idle_4.png"
-dest_files=["res://.godot/imported/idle_4.png-6344e0b21ac1ef118c973797be1b992a.ctex"]
+source_file="res://assets/Elementals_fire_knight_FREE_v1.1/png/fire_knight/01_idle/idle_4.png"
+dest_files=["res://.godot/imported/idle_4.png-bb053c2ef9235142d9b601a2874e11c0.ctex"]
 
 [params]
 

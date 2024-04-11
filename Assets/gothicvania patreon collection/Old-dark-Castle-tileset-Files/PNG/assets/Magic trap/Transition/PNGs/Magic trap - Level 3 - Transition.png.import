@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jpca2qevmcvt"
-path="res://.godot/imported/Magic trap - Level 3 - Transition.png-b8c9ea404cf7bdf63852196d247f3f02.ctex"
+path="res://.godot/imported/Magic trap - Level 3 - Transition.png-2dd891a513b42318a71f1cc253fcf034.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Magic trap/Transition/PNGs/Magic trap - Level 3 - Transition.png"
-dest_files=["res://.godot/imported/Magic trap - Level 3 - Transition.png-b8c9ea404cf7bdf63852196d247f3f02.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Magic trap/Transition/PNGs/Magic trap - Level 3 - Transition.png"
+dest_files=["res://.godot/imported/Magic trap - Level 3 - Transition.png-2dd891a513b42318a71f1cc253fcf034.ctex"]
 
 [params]
 

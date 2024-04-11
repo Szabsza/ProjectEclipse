@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://egfrxo1ly4lo"
-path="res://.godot/imported/john_hagging_aimupup_firing.png-da045763e7e7d78e5215c46fafaa9763.ctex"
+path="res://.godot/imported/john_hagging_aimupup_firing.png-d3a2d1b5e19ae57a10cabdc58dc5a4f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/SpriteSheets/player/john_hagging_aimupup_firing.png"
-dest_files=["res://.godot/imported/john_hagging_aimupup_firing.png-da045763e7e7d78e5215c46fafaa9763.ctex"]
+source_file="res://assets/assets/SpriteSheets/player/john_hagging_aimupup_firing.png"
+dest_files=["res://.godot/imported/john_hagging_aimupup_firing.png-d3a2d1b5e19ae57a10cabdc58dc5a4f0.ctex"]
 
 [params]
 

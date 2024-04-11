@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bc10d4sbuia2b"
-path="res://.godot/imported/BossScreen_rockcache2.png-6207b2770d8f68b4a6648ffe7008f744.ctex"
+path="res://.godot/imported/BossScreen_rockcache2.png-e4c98a6c2623c1d5c5c7b16758a9684e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/boss/BossScreen_rockcache2.png"
-dest_files=["res://.godot/imported/BossScreen_rockcache2.png-6207b2770d8f68b4a6648ffe7008f744.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/boss/BossScreen_rockcache2.png"
+dest_files=["res://.godot/imported/BossScreen_rockcache2.png-e4c98a6c2623c1d5c5c7b16758a9684e.ctex"]
 
 [params]
 

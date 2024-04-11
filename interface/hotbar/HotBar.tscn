@@ -1,29 +1,54 @@
-[gd_scene load_steps=7 format=3 uid="uid://ddvflbb4qvkrh"]
+[gd_scene load_steps=12 format=3 uid="uid://8i50xyhqys14"]
 
-[ext_resource type="Script" path="res://interface/hotbar/HotBar.gd" id="1_n5un2"]
-[ext_resource type="PackedScene" uid="uid://c7grwh74qfedn" path="res://interface/hotbar/items/HealthPotion.tscn" id="1_yg4pk"]
-[ext_resource type="PackedScene" uid="uid://cu71y3gmg2l6e" path="res://interface/hotbar/items/ManaPotion.tscn" id="3_3oege"]
-[ext_resource type="PackedScene" uid="uid://cyjtdfak80s8q" path="res://interface/hotbar/items/Wings.tscn" id="4_aep83"]
-[ext_resource type="PackedScene" uid="uid://b8t54kan77uq6" path="res://interface/hotbar/items/Ring.tscn" id="5_5wodv"]
-[ext_resource type="PackedScene" uid="uid://c4ui31xluef3v" path="res://interface/hotbar/items/Bracelet.tscn" id="6_hl466"]
+[ext_resource type="Script" path="res://interface/hotbar/Hotbar.gd" id="1_tuda4"]
+[ext_resource type="PackedScene" uid="uid://c7grwh74qfedn" path="res://interface/hotbar/items/potions/HealthPotion.tscn" id="2_m5csh"]
+[ext_resource type="Resource" uid="uid://2ps16yjy4fpn" path="res://items/resources/potions/health_potion.tres" id="3_gx11h"]
+[ext_resource type="PackedScene" uid="uid://cu71y3gmg2l6e" path="res://interface/hotbar/items/potions/ManaPotion.tscn" id="3_rb67n"]
+[ext_resource type="PackedScene" uid="uid://c4ui31xluef3v" path="res://interface/hotbar/items/bracelets/BraceletPlaceholder.tscn" id="4_eapjo"]
+[ext_resource type="Resource" uid="uid://d4fvgn6tw51yv" path="res://items/resources/potions/mana_potion.tres" id="5_iqvc5"]
+[ext_resource type="PackedScene" uid="uid://cyjtdfak80s8q" path="res://interface/hotbar/items/wings/WingsPlaceholder.tscn" id="6_jiqo3"]
+[ext_resource type="PackedScene" uid="uid://crtx1nogyrlu8" path="res://interface/hotbar/items/bracelets/Bracelet.tscn" id="9_kvlno"]
+[ext_resource type="PackedScene" uid="uid://k2mrn0mb3kdg" path="res://interface/hotbar/items/necklaces/Necklace.tscn" id="9_vuae7"]
+[ext_resource type="PackedScene" uid="uid://cc6dvqu7dibnv" path="res://interface/hotbar/items/wings/Wings.tscn" id="10_kvjx6"]
+[ext_resource type="PackedScene" uid="uid://h85svpqbhk1a" path="res://interface/hotbar/items/necklaces/NecklacePlaceholder.tscn" id="11_xkklg"]
 
-[node name="HotBar2" type="HBoxContainer"]
-texture_filter = 1
-offset_right = 92.0
-offset_bottom = 42.0
-script = ExtResource("1_n5un2")
+[node name="Hotbar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_tuda4")
 
-[node name="HealthPotion" parent="." instance=ExtResource("1_yg4pk")]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 88.0
+offset_bottom = 56.0
+alignment = 1
+
+[node name="HealthPotion" parent="HBoxContainer" instance=ExtResource("2_m5csh")]
+layout_mode = 2
+health_potion = ExtResource("3_gx11h")
+
+[node name="ManaPotion" parent="HBoxContainer" instance=ExtResource("3_rb67n")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mana_potion = ExtResource("5_iqvc5")
+
+[node name="BraceletPlaceholder" parent="HBoxContainer" instance=ExtResource("4_eapjo")]
 layout_mode = 2
 
-[node name="ManaPotion" parent="." instance=ExtResource("3_3oege")]
+[node name="Bracelet" parent="HBoxContainer" instance=ExtResource("9_kvlno")]
 layout_mode = 2
 
-[node name="Wings" parent="." instance=ExtResource("4_aep83")]
+[node name="NecklacePlaceholder" parent="HBoxContainer" instance=ExtResource("11_xkklg")]
 layout_mode = 2
 
-[node name="Ring" parent="." instance=ExtResource("5_5wodv")]
+[node name="Necklace" parent="HBoxContainer" instance=ExtResource("9_vuae7")]
 layout_mode = 2
 
-[node name="Bracelet" parent="." instance=ExtResource("6_hl466")]
+[node name="WingsPlaceholder" parent="HBoxContainer" instance=ExtResource("6_jiqo3")]
 layout_mode = 2
+
+[node name="Wings" parent="HBoxContainer" instance=ExtResource("10_kvjx6")]
+layout_mode = 2
+ignore_texture_size = true
+stretch_mode = 5

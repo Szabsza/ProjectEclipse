@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8n3rqaj0nys3"
-path="res://.godot/imported/fireball1.png-740fca7cb49b942fcbb8e8983fbf39e2.ctex"
+path="res://.godot/imported/fireball1.png-ab81494c92b127e7d96ae2c6099a3374.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania church files/SPRITES/fx/fireball/fireball-sprites/fireball1.png"
-dest_files=["res://.godot/imported/fireball1.png-740fca7cb49b942fcbb8e8983fbf39e2.ctex"]
+source_file="res://assets/gothicvania church files/SPRITES/fx/fireball/fireball-sprites/fireball1.png"
+dest_files=["res://.godot/imported/fireball1.png-ab81494c92b127e7d96ae2c6099a3374.ctex"]
 
 [params]
 

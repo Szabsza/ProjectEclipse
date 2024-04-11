@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2a1kb7u6l6ei"
-path="res://.godot/imported/hero-jump-2.png-50aa34ca7ee590808aa603ea89580cc2.ctex"
+path="res://.godot/imported/hero-jump-2.png-8eabed61fa207301acbebee0f6f863b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-jump/hero-jump-2.png"
-dest_files=["res://.godot/imported/hero-jump-2.png-50aa34ca7ee590808aa603ea89580cc2.ctex"]
+source_file="res://assets/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-jump/hero-jump-2.png"
+dest_files=["res://.godot/imported/hero-jump-2.png-8eabed61fa207301acbebee0f6f863b8.ctex"]
 
 [params]
 

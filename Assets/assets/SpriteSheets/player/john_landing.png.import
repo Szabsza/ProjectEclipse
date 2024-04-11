@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7epkn0jikpv"
-path="res://.godot/imported/john_landing.png-3a5009c4b81a501eacc4b0073c9e6bdd.ctex"
+path="res://.godot/imported/john_landing.png-9dc2d3a82d479b180445487a9c3196f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/SpriteSheets/player/john_landing.png"
-dest_files=["res://.godot/imported/john_landing.png-3a5009c4b81a501eacc4b0073c9e6bdd.ctex"]
+source_file="res://assets/assets/SpriteSheets/player/john_landing.png"
+dest_files=["res://.godot/imported/john_landing.png-9dc2d3a82d479b180445487a9c3196f8.ctex"]
 
 [params]
 

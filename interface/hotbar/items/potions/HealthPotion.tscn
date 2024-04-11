@@ -1,0 +1,106 @@
+[gd_scene load_steps=7 format=3 uid="uid://c7grwh74qfedn"]
+
+[ext_resource type="Texture2D" uid="uid://gac2lwmm34sf" path="res://assets/GUI/GUI_2x.png" id="1_kky67"]
+[ext_resource type="Script" path="res://interface/hotbar/items/potions/HealthPotion.gd" id="2_wgadh"]
+[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://assets/DungeonFont.ttf" id="3_4qyl3"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_q8ut5"]
+
+[sub_resource type="Shortcut" id="Shortcut_11sh4"]
+events = [SubResource("InputEventKey_q8ut5")]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cn16h"]
+atlas = ExtResource("1_kky67")
+region = Rect2(194, 98, 28, 28)
+
+[node name="HealthPotion" type="TextureButton"]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 32)
+offset_right = 32.0
+offset_bottom = 32.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+shortcut = SubResource("Shortcut_11sh4")
+texture_normal = SubResource("AtlasTexture_cn16h")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_wgadh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.5
+offset_right = 16.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 1
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+modulate = Color(1, 1, 1, 0.996078)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+step = 0.05
+fill_mode = 5
+nine_patch_stretch = true
+texture_progress = SubResource("AtlasTexture_cn16h")
+tint_progress = Color(0.243137, 0.235294, 0.219608, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+
+[node name="Time" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+offset_right = 11.0
+offset_bottom = 11.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4qyl3")
+theme_override_font_sizes/font_size = 10
+
+[node name="Key" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -12.0
+offset_right = 10.0
+offset_bottom = -1.0
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4qyl3")
+theme_override_font_sizes/font_size = 10
+text = "R"
+
+[node name="Amount" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -12.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4qyl3")
+theme_override_font_sizes/font_size = 10
+vertical_alignment = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccv80syhb0bnv"
-path="res://.godot/imported/enemy-death-5.png-9f60113a3ad77ab7ebec008ded597737.ctex"
+path="res://.godot/imported/enemy-death-5.png-fc4b3590e47454d34e77de96d816b8e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Sprites/enemy-death/enemy-death-5.png"
-dest_files=["res://.godot/imported/enemy-death-5.png-9f60113a3ad77ab7ebec008ded597737.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Sprites/enemy-death/enemy-death-5.png"
+dest_files=["res://.godot/imported/enemy-death-5.png-fc4b3590e47454d34e77de96d816b8e2.ctex"]
 
 [params]
 

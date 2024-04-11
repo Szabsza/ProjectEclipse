@@ -1,69 +1,12 @@
-[gd_scene load_steps=29 format=3 uid="uid://3wvvolcwvsk7"]
+[gd_scene load_steps=23 format=3 uid="uid://3wvvolcwvsk7"]
 
-[ext_resource type="Texture2D" uid="uid://c5esfe0e5usks" path="res://assets/Buttons/buttons_1x.png" id="1_12kx3"]
-[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://assets/DungeonFont.ttf" id="2_80kig"]
+[ext_resource type="Theme" uid="uid://crlofspi6s6xu" path="res://interface/UI.tres" id="1_vwlqt"]
 [ext_resource type="Script" path="res://interface/checkpoint/CheckpointMenu.gd" id="3_n4m28"]
 [ext_resource type="Script" path="res://interface/checkpoint/StatusMenu.gd" id="4_n8heu"]
 [ext_resource type="Texture2D" uid="uid://crgdx5iqxvvjn" path="res://assets/GUI/GUI_1x.png" id="5_cb7sj"]
 [ext_resource type="Texture2D" uid="uid://nit4dw0rc4fa" path="res://assets/GUI/Sliced/GUI_2x_sliced.png" id="6_lgbgk"]
 [ext_resource type="Texture2D" uid="uid://bbfdlabvty13h" path="res://assets/Buttons/buttons_2x.png" id="7_b6uqo"]
 [ext_resource type="Script" path="res://interface/checkpoint/TravelMenu.gd" id="8_ws7hs"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w4tne"]
-content_margin_left = 5.0
-content_margin_top = 5.0
-content_margin_right = 5.0
-content_margin_bottom = 5.0
-texture = ExtResource("1_12kx3")
-texture_margin_left = 2.0
-texture_margin_top = 2.0
-texture_margin_right = 2.0
-texture_margin_bottom = 4.0
-region_rect = Rect2(33, 1, 22, 14)
-modulate_color = Color(0.415686, 0.215686, 0.105882, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kdbd5"]
-texture = ExtResource("1_12kx3")
-texture_margin_left = 2.0
-texture_margin_top = 2.0
-texture_margin_right = 2.0
-texture_margin_bottom = 4.0
-region_rect = Rect2(33, 1, 22, 14)
-modulate_color = Color(0.415686, 0.215686, 0.105882, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xoorx"]
-content_margin_left = 5.0
-content_margin_top = 5.0
-content_margin_right = 5.0
-content_margin_bottom = 5.0
-texture = ExtResource("1_12kx3")
-texture_margin_left = 2.0
-texture_margin_top = 2.0
-texture_margin_right = 2.0
-texture_margin_bottom = 4.0
-region_rect = Rect2(33, 1, 22, 14)
-modulate_color = Color(0.45098, 0.258824, 0.160784, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ju2vs"]
-content_margin_left = 5.0
-content_margin_top = 5.0
-content_margin_right = 5.0
-content_margin_bottom = 5.0
-texture = ExtResource("1_12kx3")
-texture_margin_left = 2.0
-texture_margin_top = 2.0
-texture_margin_right = 2.0
-texture_margin_bottom = 3.0
-region_rect = Rect2(57, 2, 22, 13)
-modulate_color = Color(0.290196, 0.156863, 0.0901961, 1)
-
-[sub_resource type="Theme" id="Theme_yigas"]
-default_font = ExtResource("2_80kig")
-default_font_size = 14
-Button/styles/focus = SubResource("StyleBoxTexture_w4tne")
-Button/styles/hover = SubResource("StyleBoxTexture_kdbd5")
-Button/styles/normal = SubResource("StyleBoxTexture_xoorx")
-Button/styles/pressed = SubResource("StyleBoxTexture_ju2vs")
 
 [sub_resource type="Theme" id="Theme_d1i7a"]
 
@@ -146,7 +89,7 @@ offset_left = -0.320004
 offset_top = 0.319998
 offset_right = -0.319996
 offset_bottom = 0.319983
-theme = SubResource("Theme_yigas")
+theme = ExtResource("1_vwlqt")
 script = ExtResource("3_n4m28")
 
 [node name="StatusMenu" type="Control" parent="."]

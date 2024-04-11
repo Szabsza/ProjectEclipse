@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dj1bwlhyjd3l5"
-path="res://.godot/imported/j_up_3.png-4eca189aa74eaf6cb9ba6e7a8300f01c.ctex"
+path="res://.godot/imported/j_up_3.png-069d129841e4dbbf9f061ecf98574dae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/j_up/j_up_3.png"
-dest_files=["res://.godot/imported/j_up_3.png-4eca189aa74eaf6cb9ba6e7a8300f01c.ctex"]
+source_file="res://assets/elementals_wind_hashashin_FREE_v1.1/PNG/j_up/j_up_3.png"
+dest_files=["res://.godot/imported/j_up_3.png-069d129841e4dbbf9f061ecf98574dae.ctex"]
 
 [params]
 

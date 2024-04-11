@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://r583c33qomib"
-path="res://.godot/imported/atlas-props.png-834433deb60a98ac294b2718b50cce9e.ctex"
+path="res://.godot/imported/atlas-props.png-ecea45d03dd65cf1c080bb2d0ea8d0a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/demo/assets/atlas/atlas-props.png"
-dest_files=["res://.godot/imported/atlas-props.png-834433deb60a98ac294b2718b50cce9e.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/demo/assets/atlas/atlas-props.png"
+dest_files=["res://.godot/imported/atlas-props.png-ecea45d03dd65cf1c080bb2d0ea8d0a3.ctex"]
 
 [params]
 

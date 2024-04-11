@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gn2bwdx86s76"
-path="res://.godot/imported/john_hagging_move.png-4f8b585175fc16bbdede9e2d9138c248.ctex"
+path="res://.godot/imported/john_hagging_move.png-d894da93395c005582d0d776ba2073aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/SpriteSheets/player/john_hagging_move.png"
-dest_files=["res://.godot/imported/john_hagging_move.png-4f8b585175fc16bbdede9e2d9138c248.ctex"]
+source_file="res://assets/assets/SpriteSheets/player/john_hagging_move.png"
+dest_files=["res://.godot/imported/john_hagging_move.png-d894da93395c005582d0d776ba2073aa.ctex"]
 
 [params]
 

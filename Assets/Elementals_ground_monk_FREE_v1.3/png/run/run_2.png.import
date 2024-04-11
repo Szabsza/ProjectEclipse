@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1wbofjaoey64"
-path="res://.godot/imported/run_2.png-b654785967c6e3b9331122aee9b03168.ctex"
+path="res://.godot/imported/run_2.png-23b8e49bafbca286f1dd42551cabeef2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Elementals_ground_monk_FREE_v1.3/png/run/run_2.png"
-dest_files=["res://.godot/imported/run_2.png-b654785967c6e3b9331122aee9b03168.ctex"]
+source_file="res://assets/Elementals_ground_monk_FREE_v1.3/png/run/run_2.png"
+dest_files=["res://.godot/imported/run_2.png-23b8e49bafbca286f1dd42551cabeef2.ctex"]
 
 [params]
 

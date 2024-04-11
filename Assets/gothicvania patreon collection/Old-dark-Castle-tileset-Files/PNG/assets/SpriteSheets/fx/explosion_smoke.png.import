@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnowxyu52chcu"
-path="res://.godot/imported/explosion_smoke.png-fc6eb8078ef7c749aef9753a58225d44.ctex"
+path="res://.godot/imported/explosion_smoke.png-405542c7d2b7f70c897725537c5bf30d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/fx/explosion_smoke.png"
-dest_files=["res://.godot/imported/explosion_smoke.png-fc6eb8078ef7c749aef9753a58225d44.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/fx/explosion_smoke.png"
+dest_files=["res://.godot/imported/explosion_smoke.png-405542c7d2b7f70c897725537c5bf30d.ctex"]
 
 [params]
 

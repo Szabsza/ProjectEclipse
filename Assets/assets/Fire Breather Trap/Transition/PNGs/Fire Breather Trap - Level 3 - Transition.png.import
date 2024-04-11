@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1pqmwp5ap1hb"
-path="res://.godot/imported/Fire Breather Trap - Level 3 - Transition.png-3f21d9f20c6fc059ac3e65eafc7faf41.ctex"
+path="res://.godot/imported/Fire Breather Trap - Level 3 - Transition.png-3d604fcb4630b065d60c8feb73f0ce9e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/Fire Breather Trap/Transition/PNGs/Fire Breather Trap - Level 3 - Transition.png"
-dest_files=["res://.godot/imported/Fire Breather Trap - Level 3 - Transition.png-3f21d9f20c6fc059ac3e65eafc7faf41.ctex"]
+source_file="res://assets/assets/Fire Breather Trap/Transition/PNGs/Fire Breather Trap - Level 3 - Transition.png"
+dest_files=["res://.godot/imported/Fire Breather Trap - Level 3 - Transition.png-3d604fcb4630b065d60c8feb73f0ce9e.ctex"]
 
 [params]
 

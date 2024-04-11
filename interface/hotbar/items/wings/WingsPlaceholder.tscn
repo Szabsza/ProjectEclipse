@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyjtdfak80s8q"]
+
+[ext_resource type="Texture2D" uid="uid://pqgprggd4b6q" path="res://assets/GUI/GUI_4x.png" id="1_v5c5l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgu6k"]
+atlas = ExtResource("1_v5c5l")
+region = Rect2(388, 196, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rja2i"]
+atlas = ExtResource("1_v5c5l")
+region = Rect2(576, 4, 32, 24)
+
+[node name="WingsPlaceholder" type="TextureButton"]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 32)
+offset_right = 32.0
+offset_bottom = 32.0
+texture_normal = SubResource("AtlasTexture_fgu6k")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PlaceHolder" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -16.0
+offset_right = 13.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_rja2i")
+expand_mode = 1
+stretch_mode = 5

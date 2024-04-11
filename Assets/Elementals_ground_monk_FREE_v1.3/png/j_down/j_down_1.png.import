@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnosylgypchj5"
-path="res://.godot/imported/j_down_1.png-1d73343492eb2915955bb67019644852.ctex"
+path="res://.godot/imported/j_down_1.png-6db72f3df14e70a00b4f895467b6056b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Elementals_ground_monk_FREE_v1.3/png/j_down/j_down_1.png"
-dest_files=["res://.godot/imported/j_down_1.png-1d73343492eb2915955bb67019644852.ctex"]
+source_file="res://assets/Elementals_ground_monk_FREE_v1.3/png/j_down/j_down_1.png"
+dest_files=["res://.godot/imported/j_down_1.png-6db72f3df14e70a00b4f895467b6056b.ctex"]
 
 [params]
 

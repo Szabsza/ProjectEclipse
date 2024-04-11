@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc6dvqu7dibnv"]
+
+[ext_resource type="Texture2D" uid="uid://pqgprggd4b6q" path="res://assets/GUI/GUI_4x.png" id="1_graff"]
+[ext_resource type="Script" path="res://interface/hotbar/items/wings/Wings.gd" id="2_0su85"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_te0iu"]
+atlas = ExtResource("1_graff")
+region = Rect2(388, 196, 56, 56)
+
+[node name="Wings" type="TextureButton"]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 32)
+texture_normal = SubResource("AtlasTexture_te0iu")
+script = ExtResource("2_0su85")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

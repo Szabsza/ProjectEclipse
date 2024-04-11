@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2lt6e28cs2xv"
-path="res://.godot/imported/night-town-background-mountains-lights.png-2211d4f4285b45e9b756bf8b9285b262.ctex"
+path="res://.godot/imported/night-town-background-mountains-lights.png-fa634d0f2b7bcc86c9f8e108ca5b8121.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/night-town-background-files/layers/night-town-background-mountains-lights.png"
-dest_files=["res://.godot/imported/night-town-background-mountains-lights.png-2211d4f4285b45e9b756bf8b9285b262.ctex"]
+source_file="res://assets/gothicvania patreon collection/night-town-background-files/layers/night-town-background-mountains-lights.png"
+dest_files=["res://.godot/imported/night-town-background-mountains-lights.png-fa634d0f2b7bcc86c9f8e108ca5b8121.ctex"]
 
 [params]
 

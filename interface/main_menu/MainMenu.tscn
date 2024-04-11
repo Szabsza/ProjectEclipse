@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dl7we7xq0lvjp"]
 
-[ext_resource type="Texture2D" uid="uid://behak76asms1i" path="res://Assets/toRecolor/finalNight.PNG" id="1_m4tv6"]
+[ext_resource type="Texture2D" uid="uid://behak76asms1i" path="res://assets/toRecolor/finalNight.PNG" id="1_m4tv6"]
 [ext_resource type="Script" path="res://interface/main_menu/MainMenu.gd" id="1_tqnxw"]
-[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://Assets/DungeonFont.ttf" id="2_jk8n6"]
+[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://assets/DungeonFont.ttf" id="2_jk8n6"]
 
 [node name="MainMenu" type="Control"]
 texture_filter = 1

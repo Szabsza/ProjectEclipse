@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://p8laitti0rqf"
-path="res://.godot/imported/hell-gato-2.png-fd14c30e6f6b82bf4954e530e357e6b7.ctex"
+path="res://.godot/imported/hell-gato-2.png-0f5f865df4511966851e0fd682b7cb89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/gothicvania-cemetery-files/PNG/Sprites/hell-gato/hell-gato-2.png"
-dest_files=["res://.godot/imported/hell-gato-2.png-fd14c30e6f6b82bf4954e530e357e6b7.ctex"]
+source_file="res://assets/assets/gothicvania-cemetery-files/PNG/Sprites/hell-gato/hell-gato-2.png"
+dest_files=["res://.godot/imported/hell-gato-2.png-0f5f865df4511966851e0fd682b7cb89.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djsf8hlcp5b8s"
-path="res://.godot/imported/credits-text.png-efd80ec4b57cfaa0183e910f75b74a89.ctex"
+path="res://.godot/imported/credits-text.png-9da99fc0379464a29b982c76cc379ffb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania church/assets/images/credits-text.png"
-dest_files=["res://.godot/imported/credits-text.png-efd80ec4b57cfaa0183e910f75b74a89.ctex"]
+source_file="res://assets/gothicvania church/assets/images/credits-text.png"
+dest_files=["res://.godot/imported/credits-text.png-9da99fc0379464a29b982c76cc379ffb.ctex"]
 
 [params]
 

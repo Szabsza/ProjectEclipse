@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://da7a1t756ngdt"
-path="res://.godot/imported/jump1.png-63663ae89e559196a3e25de2230ed9d3.ctex"
+path="res://.godot/imported/jump1.png-c576d22589101c7425edf3319ed51300.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania church files/SPRITES/player/sprites/jump1.png"
-dest_files=["res://.godot/imported/jump1.png-63663ae89e559196a3e25de2230ed9d3.ctex"]
+source_file="res://assets/gothicvania church files/SPRITES/player/sprites/jump1.png"
+dest_files=["res://.godot/imported/jump1.png-c576d22589101c7425edf3319ed51300.ctex"]
 
 [params]
 

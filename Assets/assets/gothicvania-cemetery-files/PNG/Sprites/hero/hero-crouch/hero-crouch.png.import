@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkfb0owkumtb0"
-path="res://.godot/imported/hero-crouch.png-eac9e98b17bd3b482d4276b06fcb1f30.ctex"
+path="res://.godot/imported/hero-crouch.png-de775d889ad186b0ef02152ee5cdb7dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-crouch/hero-crouch.png"
-dest_files=["res://.godot/imported/hero-crouch.png-eac9e98b17bd3b482d4276b06fcb1f30.ctex"]
+source_file="res://assets/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-crouch/hero-crouch.png"
+dest_files=["res://.godot/imported/hero-crouch.png-de775d889ad186b0ef02152ee5cdb7dc.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blafgqxjqshft"
-path="res://.godot/imported/PlagueBat.png-9047ce4916586222411d456d2bdaa813.ctex"
+path="res://.godot/imported/PlagueBat.png-e22df5a3d537de92cb189ca76d116124.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/Basic Vermin Animations/Plague Bat/PlagueBat.png"
-dest_files=["res://.godot/imported/PlagueBat.png-9047ce4916586222411d456d2bdaa813.ctex"]
+source_file="res://assets/assets/Basic Vermin Animations/Plague Bat/PlagueBat.png"
+dest_files=["res://.godot/imported/PlagueBat.png-e22df5a3d537de92cb189ca76d116124.ctex"]
 
 [params]
 

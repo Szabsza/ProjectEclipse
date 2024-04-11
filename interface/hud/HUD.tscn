@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cxdepm6ksokn3" path="res://interface/hud/StaminaBar.tscn" id="2_xsdn5"]
 [ext_resource type="Texture2D" uid="uid://gac2lwmm34sf" path="res://assets/GUI/GUI_2x.png" id="4_wtn24"]
 [ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://assets/DungeonFont.ttf" id="5_d23xu"]
-[ext_resource type="PackedScene" uid="uid://ddvflbb4qvkrh" path="res://interface/hotbar/HotBar.tscn" id="6_wlgjf"]
+[ext_resource type="PackedScene" uid="uid://8i50xyhqys14" path="res://interface/hotbar/Hotbar.tscn" id="6_wlgjf"]
 [ext_resource type="PackedScene" uid="uid://6c0nmw03t3c7" path="res://interface/hud/ManaBar.tscn" id="7_cjy4l"]
 [ext_resource type="Texture2D" uid="uid://crgdx5iqxvvjn" path="res://assets/GUI/GUI_1x.png" id="8_2jtxr"]
 
@@ -104,14 +104,14 @@ theme_override_fonts/font = ExtResource("5_d23xu")
 theme_override_font_sizes/font_size = 20
 vertical_alignment = 1
 
-[node name="HotBar2" parent="." instance=ExtResource("6_wlgjf")]
+[node name="Hotbar" parent="." instance=ExtResource("6_wlgjf")]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 21.0
-offset_top = -75.0
-offset_right = 317.0
-offset_bottom = -19.0
+offset_left = 22.0
+offset_top = -70.0
+offset_right = 22.0
+offset_bottom = -70.0
 grow_vertical = 0
 
 [node name="Keys" type="Node" parent="."]

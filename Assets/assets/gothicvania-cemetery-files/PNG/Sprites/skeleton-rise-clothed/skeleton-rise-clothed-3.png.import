@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://l4dm6yfoa6yt"
-path="res://.godot/imported/skeleton-rise-clothed-3.png-97b6cb88697ed8dd5dc0243bca55d5e2.ctex"
+path="res://.godot/imported/skeleton-rise-clothed-3.png-8a0f9352f612aad3c7e20af811382ee8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/gothicvania-cemetery-files/PNG/Sprites/skeleton-rise-clothed/skeleton-rise-clothed-3.png"
-dest_files=["res://.godot/imported/skeleton-rise-clothed-3.png-97b6cb88697ed8dd5dc0243bca55d5e2.ctex"]
+source_file="res://assets/assets/gothicvania-cemetery-files/PNG/Sprites/skeleton-rise-clothed/skeleton-rise-clothed-3.png"
+dest_files=["res://.godot/imported/skeleton-rise-clothed-3.png-8a0f9352f612aad3c7e20af811382ee8.ctex"]
 
 [params]
 

@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://crtx1nogyrlu8"]
+
+[ext_resource type="Texture2D" uid="uid://pqgprggd4b6q" path="res://assets/GUI/GUI_4x.png" id="1_8ghkm"]
+[ext_resource type="Script" path="res://interface/hotbar/items/bracelets/Bracelet.gd" id="2_0dots"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nk507"]
+atlas = ExtResource("1_8ghkm")
+region = Rect2(388, 196, 56, 56)
+
+[node name="Bracelet" type="TextureButton"]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 32)
+offset_right = 32.0
+offset_bottom = 32.0
+texture_normal = SubResource("AtlasTexture_nk507")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_0dots")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5

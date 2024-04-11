@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hxim7hsf2eob"
-path="res://.godot/imported/Saw Trap - Level 3 - Transition.png-806f79984142fc74482cbffa1fc71c49.ctex"
+path="res://.godot/imported/Saw Trap - Level 3 - Transition.png-de6933d53865149e46eb199ea9ad1868.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/Saw Trap/Transitions/PNGs/Saw Trap - Level 3 - Transition.png"
-dest_files=["res://.godot/imported/Saw Trap - Level 3 - Transition.png-806f79984142fc74482cbffa1fc71c49.ctex"]
+source_file="res://assets/assets/Saw Trap/Transitions/PNGs/Saw Trap - Level 3 - Transition.png"
+dest_files=["res://.godot/imported/Saw Trap - Level 3 - Transition.png-de6933d53865149e46eb199ea9ad1868.ctex"]
 
 [params]
 

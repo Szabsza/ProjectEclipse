@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dp8pninv4eedo"
-path="res://.godot/imported/punch4.png-3dafacb1a673883aa67432f44e218e88.ctex"
+path="res://.godot/imported/punch4.png-821141b4b522782424cc760e128678ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania church files/SPRITES/player/sprites/punch4.png"
-dest_files=["res://.godot/imported/punch4.png-3dafacb1a673883aa67432f44e218e88.ctex"]
+source_file="res://assets/gothicvania church files/SPRITES/player/sprites/punch4.png"
+dest_files=["res://.godot/imported/punch4.png-821141b4b522782424cc760e128678ec.ctex"]
 
 [params]
 

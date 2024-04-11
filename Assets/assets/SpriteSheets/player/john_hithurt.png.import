@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpce67xdl7u45"
-path="res://.godot/imported/john_hithurt.png-b1b8787dad5643ed43b60d062b47736b.ctex"
+path="res://.godot/imported/john_hithurt.png-73a839cac547e6f22fcfcd9a46bd886c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/SpriteSheets/player/john_hithurt.png"
-dest_files=["res://.godot/imported/john_hithurt.png-b1b8787dad5643ed43b60d062b47736b.ctex"]
+source_file="res://assets/assets/SpriteSheets/player/john_hithurt.png"
+dest_files=["res://.godot/imported/john_hithurt.png-73a839cac547e6f22fcfcd9a46bd886c.ctex"]
 
 [params]
 

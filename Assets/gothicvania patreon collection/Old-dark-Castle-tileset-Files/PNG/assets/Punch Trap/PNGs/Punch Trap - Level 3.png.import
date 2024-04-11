@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cc6yteut2h4wg"
-path="res://.godot/imported/Punch Trap - Level 3.png-229e85e8fb22142ce77727aecc252aae.ctex"
+path="res://.godot/imported/Punch Trap - Level 3.png-7200a3810e7f6bdbec4220308f0d2a42.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Punch Trap/PNGs/Punch Trap - Level 3.png"
-dest_files=["res://.godot/imported/Punch Trap - Level 3.png-229e85e8fb22142ce77727aecc252aae.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Punch Trap/PNGs/Punch Trap - Level 3.png"
+dest_files=["res://.godot/imported/Punch Trap - Level 3.png-7200a3810e7f6bdbec4220308f0d2a42.ctex"]
 
 [params]
 

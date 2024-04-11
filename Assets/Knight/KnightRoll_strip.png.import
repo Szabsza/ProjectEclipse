@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cja5d337okdhp"
-path="res://.godot/imported/KnightRoll_strip.png-72f1f801fdcadaa47f8c124d9683b746.ctex"
+path="res://.godot/imported/KnightRoll_strip.png-aef1dc959aec7761cd809d8927340cb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Knight/KnightRoll_strip.png"
-dest_files=["res://.godot/imported/KnightRoll_strip.png-72f1f801fdcadaa47f8c124d9683b746.ctex"]
+source_file="res://assets/Knight/KnightRoll_strip.png"
+dest_files=["res://.godot/imported/KnightRoll_strip.png-aef1dc959aec7761cd809d8927340cb1.ctex"]
 
 [params]
 

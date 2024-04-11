@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnl44biaao41t"
-path="res://.godot/imported/Magic trap - Level 1.png-1987a81ee786ddc17dbcc68d4dbe4e2d.ctex"
+path="res://.godot/imported/Magic trap - Level 1.png-9e4ec9989bd099f93cdc2c67b3d9d8c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/Magic trap/PNGs/Magic trap - Level 1.png"
-dest_files=["res://.godot/imported/Magic trap - Level 1.png-1987a81ee786ddc17dbcc68d4dbe4e2d.ctex"]
+source_file="res://assets/assets/Magic trap/PNGs/Magic trap - Level 1.png"
+dest_files=["res://.godot/imported/Magic trap - Level 1.png-9e4ec9989bd099f93cdc2c67b3d9d8c3.ctex"]
 
 [params]
 

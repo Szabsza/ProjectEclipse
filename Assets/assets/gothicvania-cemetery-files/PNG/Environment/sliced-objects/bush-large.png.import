@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvlgs4v4gu4b2"
-path="res://.godot/imported/bush-large.png-edcef0bfa5ae832808233284ed3c82fe.ctex"
+path="res://.godot/imported/bush-large.png-426387c2fd6e66a9349e25927bf6fe74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/gothicvania-cemetery-files/PNG/Environment/sliced-objects/bush-large.png"
-dest_files=["res://.godot/imported/bush-large.png-edcef0bfa5ae832808233284ed3c82fe.ctex"]
+source_file="res://assets/assets/gothicvania-cemetery-files/PNG/Environment/sliced-objects/bush-large.png"
+dest_files=["res://.godot/imported/bush-large.png-426387c2fd6e66a9349e25927bf6fe74.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bct4t3bouuckh"
-path="res://.godot/imported/GameOverScreen-still.png-7a610026dba90e2041ef651898d7503e.ctex"
+path="res://.godot/imported/GameOverScreen-still.png-136d9f1b88f855457a751cf0ba8adcff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/SpriteSheets/titlescreen/GameOverScreen-still.png"
-dest_files=["res://.godot/imported/GameOverScreen-still.png-7a610026dba90e2041ef651898d7503e.ctex"]
+source_file="res://assets/assets/SpriteSheets/titlescreen/GameOverScreen-still.png"
+dest_files=["res://.godot/imported/GameOverScreen-still.png-136d9f1b88f855457a751cf0ba8adcff.ctex"]
 
 [params]
 

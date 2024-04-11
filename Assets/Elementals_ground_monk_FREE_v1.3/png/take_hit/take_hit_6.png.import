@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://oq1h8g1kc5ru"
-path="res://.godot/imported/take_hit_6.png-338a0dffe925e7a1780079812b90cbdf.ctex"
+path="res://.godot/imported/take_hit_6.png-9afb9df3c8504a4d6a5017aa869f3846.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Elementals_ground_monk_FREE_v1.3/png/take_hit/take_hit_6.png"
-dest_files=["res://.godot/imported/take_hit_6.png-338a0dffe925e7a1780079812b90cbdf.ctex"]
+source_file="res://assets/Elementals_ground_monk_FREE_v1.3/png/take_hit/take_hit_6.png"
+dest_files=["res://.godot/imported/take_hit_6.png-9afb9df3c8504a4d6a5017aa869f3846.ctex"]
 
 [params]
 

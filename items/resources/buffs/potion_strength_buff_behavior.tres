@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BuffBehavior" load_steps=2 format=3 uid="uid://ciau74y0nxvr4"]
+
+[ext_resource type="Script" path="res://items/buffs/BuffBehavior.gd" id="1_feikn"]
+
+[resource]
+script = ExtResource("1_feikn")
+is_increasing = true
+is_decreasing = false
+amount = 0
+percent = 20
+target = 1

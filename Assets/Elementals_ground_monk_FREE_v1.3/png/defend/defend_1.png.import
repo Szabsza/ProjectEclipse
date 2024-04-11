@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cu72xue8kk38i"
-path="res://.godot/imported/defend_1.png-775e2b4ce5f9813e73af8941aae688f4.ctex"
+path="res://.godot/imported/defend_1.png-9203d66aff0aeac71cd6c97cb89bf672.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Elementals_ground_monk_FREE_v1.3/png/defend/defend_1.png"
-dest_files=["res://.godot/imported/defend_1.png-775e2b4ce5f9813e73af8941aae688f4.ctex"]
+source_file="res://assets/Elementals_ground_monk_FREE_v1.3/png/defend/defend_1.png"
+dest_files=["res://.godot/imported/defend_1.png-9203d66aff0aeac71cd6c97cb89bf672.ctex"]
 
 [params]
 

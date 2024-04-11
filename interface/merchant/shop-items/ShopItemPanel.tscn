@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=3 uid="uid://cl8njy7r53ohq"]
+
+[ext_resource type="Texture2D" uid="uid://gac2lwmm34sf" path="res://assets/GUI/GUI_2x.png" id="1_8rxpa"]
+[ext_resource type="Script" path="res://interface/merchant/shop-items/ShopItemPanel.gd" id="2_32tjj"]
+[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://assets/DungeonFont.ttf" id="3_dy31q"]
+[ext_resource type="Texture2D" uid="uid://nit4dw0rc4fa" path="res://assets/GUI/Sliced/GUI_2x_sliced.png" id="4_8nkew"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i7o1u"]
+texture = ExtResource("1_8rxpa")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(194, 98, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47ryw"]
+atlas = ExtResource("1_8rxpa")
+region = Rect2(272, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mj4i0"]
+atlas = ExtResource("4_8nkew")
+region = Rect2(20, 290, 12, 16)
+
+[node name="ShopItemPanel" type="Panel"]
+texture_filter = 1
+custom_minimum_size = Vector2(160, 160)
+offset_right = 128.0
+offset_bottom = 128.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_i7o1u")
+script = ExtResource("2_32tjj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_47ryw")
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(10, 5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_dy31q")
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Description" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_dy31q")
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="CostLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_dy31q")
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CoinIcon" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_mj4i0")
+stretch_mode = 5

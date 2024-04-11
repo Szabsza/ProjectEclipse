@@ -1,0 +1,139 @@
+[gd_scene load_steps=16 format=3 uid="uid://phd5qyfq0ak2"]
+
+[ext_resource type="Script" path="res://interface/merchant/Shop.gd" id="1_d4mnl"]
+[ext_resource type="Theme" uid="uid://crlofspi6s6xu" path="res://interface/UI.tres" id="1_d11sy"]
+[ext_resource type="Texture2D" uid="uid://gac2lwmm34sf" path="res://assets/GUI/GUI_2x.png" id="1_xleld"]
+[ext_resource type="Texture2D" uid="uid://crgdx5iqxvvjn" path="res://assets/GUI/GUI_1x.png" id="3_d848a"]
+[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://assets/DungeonFont.ttf" id="3_vwrdo"]
+[ext_resource type="Texture2D" uid="uid://bbfdlabvty13h" path="res://assets/Buttons/buttons_2x.png" id="6_1ke4m"]
+[ext_resource type="PackedScene" uid="uid://cl8njy7r53ohq" path="res://interface/merchant/shop-items/ShopItemPanel.tscn" id="7_h3iqh"]
+
+[sub_resource type="Theme" id="Theme_32txq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w2aas"]
+texture = ExtResource("1_xleld")
+texture_margin_left = 7.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(191, 0, 49, 48)
+
+[sub_resource type="Theme" id="Theme_ewrvu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xg1on"]
+texture = ExtResource("3_d848a")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 7.0
+region_rect = Rect2(0, 56, 32, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b23e6"]
+atlas = ExtResource("6_1ke4m")
+region = Rect2(210, 18, 8, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sq8aq"]
+atlas = ExtResource("6_1ke4m")
+region = Rect2(211, 18, 8, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrfty"]
+atlas = ExtResource("6_1ke4m")
+region = Rect2(198, 18, 8, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0eih"]
+atlas = ExtResource("6_1ke4m")
+region = Rect2(198, 18, 7, 11)
+
+[node name="Shop" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 182.0
+offset_bottom = 253.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource("1_d11sy")
+script = ExtResource("1_d4mnl")
+
+[node name="Background" type="Panel" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_32txq")
+theme_override_styles/panel = SubResource("StyleBoxTexture_w2aas")
+
+[node name="Border" type="Panel" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ewrvu")
+theme_override_styles/panel = SubResource("StyleBoxTexture_xg1on")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="MerchantLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_vwrdo")
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShopItems" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="LeftButton" type="TextureButton" parent="VBoxContainer/ShopItems"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_b23e6")
+texture_pressed = SubResource("AtlasTexture_sq8aq")
+stretch_mode = 5
+
+[node name="ShopItemPanel" parent="VBoxContainer/ShopItems" instance=ExtResource("7_h3iqh")]
+layout_mode = 2
+
+[node name="RightButton" type="TextureButton" parent="VBoxContainer/ShopItems"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_yrfty")
+texture_pressed = SubResource("AtlasTexture_m0eih")
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="BuyButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Buy"
+
+[node name="LeaveButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+focus_mode = 0
+text = "Close"
+
+[connection signal="pressed" from="VBoxContainer/ShopItems/LeftButton" to="." method="_on_left_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ShopItems/RightButton" to="." method="_on_right_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/BuyButton" to="." method="_on_buy_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/LeaveButton" to="." method="_on_leave_button_pressed"]

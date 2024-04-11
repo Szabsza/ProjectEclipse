@@ -19,13 +19,13 @@ func get_game_data() -> Dictionary:
 		
 		"runes_held" : RuneManager.runes_held,
 		
-		"health_potion_quantity" : HotBarManager.health_potion_quantity,
-		"health_potion_max_quantity": HotBarManager.health_potion_max_quantity,
-		"mana_potion_quantity" : HotBarManager.mana_potion_quantity,
-		"mana_potion_max_quantity" : HotBarManager.mana_potion_max_quantity,
-		"wing_slot" : HotBarManager.wing_slot,
-		"bracelet_slot" : HotBarManager.bracelet_slot,
-		"ring_slot" : HotBarManager.ring_slot,
+		"health_potion_quantity" : HotBarManager.health_potion.quantity,
+		"health_potion_max_quantity": HotBarManager.health_potion.max_quantity,
+		"mana_potion_quantity" : HotBarManager.mana_potion.quantity,
+		"mana_potion_max_quantity" : HotBarManager.mana_potion.max_quantity,
+		"wing_slot" : HotBarManager.wing,
+		"bracelet_slot" : HotBarManager.bracelet,
+		"ring_slot" : HotBarManager.ring,
 		"key_quantity" : HotBarManager.key_quantity,
 		
 		"health_points" : StatusManager.health_points,

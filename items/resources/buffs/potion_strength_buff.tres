@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Buff" load_steps=4 format=3 uid="uid://dlffu5sfmctoa"]
+
+[ext_resource type="Script" path="res://items/buffs/Buff.gd" id="1_os81x"]
+[ext_resource type="Texture2D" uid="uid://cunrhg6i0xue4" path="res://assets/shop_icons/Free_Skills.png" id="2_5qwwa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oub6y"]
+atlas = ExtResource("2_5qwwa")
+region = Rect2(127, 288, 32, 32)
+
+[resource]
+script = ExtResource("1_os81x")
+cost = 1200
+item_name = "Potion Strength Buff"
+description = "Increases the the potion's regeneration"
+quantity = 1
+texture = SubResource("AtlasTexture_oub6y")
