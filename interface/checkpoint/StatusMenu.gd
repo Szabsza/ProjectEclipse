@@ -9,85 +9,63 @@ class_name StatusMenu extends Control
 @onready var runes_held_label : Label = $MarginContainer/VBoxContainer/HBoxContainer2/RunesHeld
 @onready var runes_needed_label : Label = $MarginContainer/VBoxContainer/HBoxContainer/RunesNeeded
 
+var player : Player = null
+
+
+func set_interacted_player(player : Player):
+	self.player = player
+	refresh_labels()
+
 
 func refresh_labels():
-	health_label.text = "Health: " + str(StatusManager.health_points)
-	stamina_label.text = "Stamina: " + str(StatusManager.stamina_points)
-	mana_label.text = "Mana: " + str(StatusManager.mana_points)
-	power_label.text = "Power: " + str(StatusManager.power_points)
-	level_label.text = "Level: " + str(StatusManager.level)
-	runes_held_label.text = "Runes held: " + str(RuneManager.runes_held)
-	runes_needed_label.text = "Runes needed: " + str(StatusManager.runes_needed)
+	health_label.text = "Health: " + str(player.status.health)
+	stamina_label.text = "Stamina: " + str(player.status.stamina)
+	mana_label.text = "Mana: " + str(player.status.mana)
+	power_label.text = "Power: " + str(player.status.attack_power)
+	level_label.text = "Level: " + str(player.status.level)
+	runes_held_label.text = "Runes held: " + str(player.runes_held.amount)
+	runes_needed_label.text = "Runes needed: " + str(player.status.runes_needed)	
 
 
 func _ready(): 
 	visible = false
-	refresh_labels()
-
-
-func _process(delta):
-	refresh_labels()
 
 
 func _on_decrease_health_pressed():
-	if StatusManager.health_points > 0:
-		StatusManager.decrease_health()
-		StatusManager.decrease_needed_runes()
-		RuneManager.increase_runes(StatusManager.runes_needed)
-		refresh_labels()
+	StatusManager.decrease_health(player)
+	refresh_labels()
 
 
 func _on_increase_health_pressed():
-	if StatusManager.runes_needed <= RuneManager.runes_held:
-		RuneManager.decrease_runes(StatusManager.runes_needed)
-		StatusManager.increase_needed_runes()
-		StatusManager.increase_health()
-		refresh_labels()
+	StatusManager.increase_health(player)
+	refresh_labels()
 
 
 func _on_decrease_stamina_pressed():
-	if StatusManager.stamina_points > 0:
-		StatusManager.decrease_stamina()
-		StatusManager.decrease_needed_runes()
-		RuneManager.increase_runes(StatusManager.runes_needed)
-		refresh_labels()
+	StatusManager.decrease_stamina(player)
+	refresh_labels()
 
 
 func _on_increase_stamina_pressed():
-	if StatusManager.runes_needed <= RuneManager.runes_held:
-		RuneManager.decrease_runes(StatusManager.runes_needed)
-		StatusManager.increase_needed_runes()
-		StatusManager.increase_stamina()
-		refresh_labels()
+	StatusManager.increase_stamina(player)
+	refresh_labels()
 
 
 func _on_decrease_mana_pressed():
-	if StatusManager.mana_points > 0:
-		StatusManager.decrease_mana()
-		StatusManager.decrease_needed_runes()
-		RuneManager.increase_runes(StatusManager.runes_needed)
-		refresh_labels()
+	StatusManager.decrease_mana(player)
+	refresh_labels()
 
 
 func _on_increase_mana_pressed():
-	if StatusManager.runes_needed <= RuneManager.runes_held:
-		RuneManager.decrease_runes(StatusManager.runes_needed)
-		StatusManager.increase_needed_runes()
-		StatusManager.increase_mana()
-		refresh_labels()
+	StatusManager.increase_mana(player)
+	refresh_labels()
 
 
 func _on_decrease_power_pressed():
-	if StatusManager.power_points > 0:
-		StatusManager.decrease_power()
-		StatusManager.decrease_needed_runes()
-		RuneManager.increase_runes(StatusManager.runes_needed)
-		refresh_labels()
+	StatusManager.increase_attack_power(player)
+	refresh_labels()
 
 
 func _on_increase_power_pressed():
-	if StatusManager.runes_needed <= RuneManager.runes_held:
-		RuneManager.decrease_runes(StatusManager.runes_needed)
-		StatusManager.increase_needed_runes()
-		StatusManager.increase_power()
-		refresh_labels()
+	StatusManager.increase_attack_power(player)
+	refresh_labels()

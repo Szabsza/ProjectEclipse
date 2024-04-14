@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsge1ar75q4ew"
-path="res://.godot/imported/hero-run-4.png-37757fb244309d7d75d06642a8af1f20.ctex"
+path="res://.godot/imported/hero-run-4.png-7c4309676a9c4b22ebda3e1696eddb4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-run/hero-run-4.png"
-dest_files=["res://.godot/imported/hero-run-4.png-37757fb244309d7d75d06642a8af1f20.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-run/hero-run-4.png"
+dest_files=["res://.godot/imported/hero-run-4.png-7c4309676a9c4b22ebda3e1696eddb4b.ctex"]
 
 [params]
 

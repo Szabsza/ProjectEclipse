@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://interface/merchant/Shop.gd" id="1_d4mnl"]
 [ext_resource type="Theme" uid="uid://crlofspi6s6xu" path="res://interface/UI.tres" id="1_d11sy"]
-[ext_resource type="Texture2D" uid="uid://gac2lwmm34sf" path="res://assets/GUI/GUI_2x.png" id="1_xleld"]
-[ext_resource type="Texture2D" uid="uid://crgdx5iqxvvjn" path="res://assets/GUI/GUI_1x.png" id="3_d848a"]
-[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://assets/DungeonFont.ttf" id="3_vwrdo"]
-[ext_resource type="Texture2D" uid="uid://bbfdlabvty13h" path="res://assets/Buttons/buttons_2x.png" id="6_1ke4m"]
+[ext_resource type="Texture2D" uid="uid://gac2lwmm34sf" path="res://Assets/GUI/GUI_2x.png" id="1_xleld"]
+[ext_resource type="Texture2D" uid="uid://crgdx5iqxvvjn" path="res://Assets/GUI/GUI_1x.png" id="3_d848a"]
+[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://Assets/DungeonFont.ttf" id="3_vwrdo"]
+[ext_resource type="Texture2D" uid="uid://bbfdlabvty13h" path="res://Assets/Buttons/buttons_2x.png" id="6_1ke4m"]
 [ext_resource type="PackedScene" uid="uid://cl8njy7r53ohq" path="res://interface/merchant/shop-items/ShopItemPanel.tscn" id="7_h3iqh"]
 
 [sub_resource type="Theme" id="Theme_32txq"]

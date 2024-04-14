@@ -30,7 +30,7 @@ func update_mana_bar():
 
 
 func update_runes_held():
-	runes_held_label.text = str(RuneManager.runes_held)	
+	runes_held_label.text = str(player.runes_held.amount)	
 
 
 func update_keys_held():

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmidbglr33uuu"
-path="res://.godot/imported/Obelisk_effects.png-66dc95cd2bf909daad473dc03529dc83.ctex"
+path="res://.godot/imported/Obelisk_effects.png-f0282340ff25c94e4b4e07b5e54cdbc0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/Obelisk_effects.png"
-dest_files=["res://.godot/imported/Obelisk_effects.png-66dc95cd2bf909daad473dc03529dc83.ctex"]
+source_file="res://Assets/assets/Obelisk_effects.png"
+dest_files=["res://.godot/imported/Obelisk_effects.png-f0282340ff25c94e4b4e07b5e54cdbc0.ctex"]
 
 [params]
 

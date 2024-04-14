@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cw4dpqc1ogxyv"
-path="res://.godot/imported/j_up_1.png-41a2742893385e76410c84259ee34435.ctex"
+path="res://.godot/imported/j_up_1.png-1b8aca45da9fd7df46f824a1da015af5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Elementals_ground_monk_FREE_v1.3/png/j_up/j_up_1.png"
-dest_files=["res://.godot/imported/j_up_1.png-41a2742893385e76410c84259ee34435.ctex"]
+source_file="res://Assets/Elementals_ground_monk_FREE_v1.3/png/j_up/j_up_1.png"
+dest_files=["res://.godot/imported/j_up_1.png-1b8aca45da9fd7df46f824a1da015af5.ctex"]
 
 [params]
 

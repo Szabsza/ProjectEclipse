@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ManaPotion" load_steps=4 format=3 uid="uid://d4fvgn6tw51yv"]
 
 [ext_resource type="Script" path="res://items/potions/ManaPotion.gd" id="1_0mr4v"]
-[ext_resource type="Texture2D" uid="uid://1ac1w54eu4m4" path="res://assets/assets/PotionsPack1.png" id="2_qib4d"]
+[ext_resource type="Texture2D" uid="uid://1ac1w54eu4m4" path="res://Assets/assets/PotionsPack1.png" id="2_qib4d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_prclg"]
 atlas = ExtResource("2_qib4d")

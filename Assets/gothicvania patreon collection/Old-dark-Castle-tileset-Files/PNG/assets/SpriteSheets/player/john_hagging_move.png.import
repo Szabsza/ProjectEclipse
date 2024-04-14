@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6h8o7rdgpf2j"
-path="res://.godot/imported/john_hagging_move.png-feddad8a4f6ecbd0013b3ece2569ea48.ctex"
+path="res://.godot/imported/john_hagging_move.png-da6172e7f4bedf9ec7ce2cc383545836.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/john_hagging_move.png"
-dest_files=["res://.godot/imported/john_hagging_move.png-feddad8a4f6ecbd0013b3ece2569ea48.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/john_hagging_move.png"
+dest_files=["res://.godot/imported/john_hagging_move.png-da6172e7f4bedf9ec7ce2cc383545836.ctex"]
 
 [params]
 

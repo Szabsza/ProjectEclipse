@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vrmbo3na2pvh"
-path="res://.godot/imported/john_jump_ng_aimdown.png-0e1d78f5070f6707a3f4c692700e8a8c.ctex"
+path="res://.godot/imported/john_jump_ng_aimdown.png-f14f1df58167ba90ef07af33102d71ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/john_jump_ng_aimdown.png"
-dest_files=["res://.godot/imported/john_jump_ng_aimdown.png-0e1d78f5070f6707a3f4c692700e8a8c.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/john_jump_ng_aimdown.png"
+dest_files=["res://.godot/imported/john_jump_ng_aimdown.png-f14f1df58167ba90ef07af33102d71ab.ctex"]
 
 [params]
 

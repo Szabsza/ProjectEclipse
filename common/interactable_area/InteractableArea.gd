@@ -16,9 +16,10 @@ var interact : Callable = func():
 
 
 func _on_body_entered(body : Node2D):
-	if is_interactable:
+	if body is Player and is_interactable:
 		InteractionManager.register_interactable_area(self)
 	
 	
 func _on_body_exited(body : Node2D):
-	InteractionManager.unregister_interactable_area(self)
+	if body is Player:
+		InteractionManager.unregister_interactable_area(self)

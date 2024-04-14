@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bm55yepjsg77w"
-path="res://.godot/imported/john_crouch_ng.png-46848eb13c2f5ce37eb1d40216079f95.ctex"
+path="res://.godot/imported/john_crouch_ng.png-cfb32776e4351f1f8f15b4bdf9c7b7e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/john_crouch_ng.png"
-dest_files=["res://.godot/imported/john_crouch_ng.png-46848eb13c2f5ce37eb1d40216079f95.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/john_crouch_ng.png"
+dest_files=["res://.godot/imported/john_crouch_ng.png-cfb32776e4351f1f8f15b4bdf9c7b7e9.ctex"]
 
 [params]
 

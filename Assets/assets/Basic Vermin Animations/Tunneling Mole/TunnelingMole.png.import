@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1023qflie0e4"
-path="res://.godot/imported/TunnelingMole.png-c3b2b4ab83a607b52dc8ea6d78d47fd8.ctex"
+path="res://.godot/imported/TunnelingMole.png-ff896cd8d0a9085a6852258045f3f001.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/Basic Vermin Animations/Tunneling Mole/TunnelingMole.png"
-dest_files=["res://.godot/imported/TunnelingMole.png-c3b2b4ab83a607b52dc8ea6d78d47fd8.ctex"]
+source_file="res://Assets/assets/Basic Vermin Animations/Tunneling Mole/TunnelingMole.png"
+dest_files=["res://.godot/imported/TunnelingMole.png-ff896cd8d0a9085a6852258045f3f001.ctex"]
 
 [params]
 

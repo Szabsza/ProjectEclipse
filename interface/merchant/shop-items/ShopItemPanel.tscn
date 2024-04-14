@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://cl8njy7r53ohq"]
 
-[ext_resource type="Texture2D" uid="uid://gac2lwmm34sf" path="res://assets/GUI/GUI_2x.png" id="1_8rxpa"]
+[ext_resource type="Texture2D" uid="uid://gac2lwmm34sf" path="res://Assets/GUI/GUI_2x.png" id="1_8rxpa"]
 [ext_resource type="Script" path="res://interface/merchant/shop-items/ShopItemPanel.gd" id="2_32tjj"]
-[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://assets/DungeonFont.ttf" id="3_dy31q"]
-[ext_resource type="Texture2D" uid="uid://nit4dw0rc4fa" path="res://assets/GUI/Sliced/GUI_2x_sliced.png" id="4_8nkew"]
+[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://Assets/DungeonFont.ttf" id="3_dy31q"]
+[ext_resource type="Texture2D" uid="uid://nit4dw0rc4fa" path="res://Assets/GUI/Sliced/GUI_2x_sliced.png" id="4_8nkew"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i7o1u"]
 texture = ExtResource("1_8rxpa")

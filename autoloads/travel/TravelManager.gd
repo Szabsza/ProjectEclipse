@@ -1,9 +1,7 @@
 extends Node2D
 
-var player : Player = null
 
-
-func travel_to_checkpoint(checkpoint : Checkpoint):
+func travel_to_checkpoint(player : Player, checkpoint : Checkpoint):
 	if WorldManager.checkpoints.find(checkpoint) != -1:
 		TransitionManager.play_transition()
 		await get_tree().create_timer(1).timeout 
@@ -11,14 +9,14 @@ func travel_to_checkpoint(checkpoint : Checkpoint):
 
 
 func get_available_checkpoints():
-	return WorldManager.checkpoints.filter(func(checkpoint): return checkpoint.is_activated)
+	return WorldManager.checkpoints.filter(func(checkpoint): return checkpoint.checkpoint_data.is_activated)
 	
 
 func get_available_checkpoints_name():
-	return get_available_checkpoints().map(func(checkpoint): return checkpoint.name)
+	return get_available_checkpoints().map(func(checkpoint): return checkpoint.checkpoint_data.checkpoint_name)
 
 
-func go_trough_door(door : Door):
+func go_trough_door(player : Player, door : Door):
 	if WorldManager.doors.find(door.destination_door) != -1:
 		TransitionManager.play_transition()
 		await get_tree().create_timer(1).timeout 
@@ -38,4 +36,4 @@ func connect_doors():
 			doors_to_connect[key][0].destination_door = doors_to_connect[key][1]
 			doors_to_connect[key][1].destination_door = doors_to_connect[key][0]
 		else:
-			OS.alert("There are more than 2 doors with the same name!") 
+			OS.alert("there are more than 2 doors with the same name!") 

@@ -1,9 +1,9 @@
 [gd_scene load_steps=20 format=3 uid="uid://gei5r3s8tiis"]
 
 [ext_resource type="Script" path="res://common/chest/Chest.gd" id="1_txroh"]
-[ext_resource type="Texture2D" uid="uid://ljflg4bcdga3" path="res://assets/Animated Chests/Chests.png" id="2_e5iil"]
-[ext_resource type="PackedScene" uid="uid://bl2o2h1iqspts" path="res://common/loot_items/Rune.tscn" id="2_u3sa3"]
+[ext_resource type="Texture2D" uid="uid://ljflg4bcdga3" path="res://Assets/Animated Chests/Chests.png" id="2_e5iil"]
 [ext_resource type="Script" path="res://common/interactable_area/InteractableArea.gd" id="3_fgata"]
+[ext_resource type="PackedScene" uid="uid://bsd4v1mcddtv0" path="res://common/chest/ChestLootItem.tscn" id="4_wm15b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_stxy8"]
 atlas = ExtResource("2_e5iil")
@@ -117,7 +117,6 @@ fill_to = Vector2(0.850427, 0.219373)
 [node name="Chest" type="Node2D" groups=["chest"]]
 texture_filter = 1
 script = ExtResource("1_txroh")
-drop_items = Array[PackedScene]([ExtResource("2_u3sa3")])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_o1n0q")
@@ -138,5 +137,7 @@ position = Vector2(0, 13)
 color = Color(0.858824, 0.333333, 0.184314, 1)
 energy = 2.0
 texture = SubResource("GradientTexture2D_ab8h0")
+
+[node name="ChestLootItem" parent="." instance=ExtResource("4_wm15b")]
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

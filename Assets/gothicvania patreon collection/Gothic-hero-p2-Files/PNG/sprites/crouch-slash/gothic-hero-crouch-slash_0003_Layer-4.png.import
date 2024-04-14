@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bllmeklihq58v"
-path="res://.godot/imported/gothic-hero-crouch-slash_0003_Layer-4.png-7ba0fd1fcd14df5d9feb208916b2066c.ctex"
+path="res://.godot/imported/gothic-hero-crouch-slash_0003_Layer-4.png-0801ea9b9f2841750bfd9431b0caba81.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Gothic-hero-p2-Files/PNG/sprites/crouch-slash/gothic-hero-crouch-slash_0003_Layer-4.png"
-dest_files=["res://.godot/imported/gothic-hero-crouch-slash_0003_Layer-4.png-7ba0fd1fcd14df5d9feb208916b2066c.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Gothic-hero-p2-Files/PNG/sprites/crouch-slash/gothic-hero-crouch-slash_0003_Layer-4.png"
+dest_files=["res://.godot/imported/gothic-hero-crouch-slash_0003_Layer-4.png-0801ea9b9f2841750bfd9431b0caba81.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cemn1sg8nl76u"
-path="res://.godot/imported/hell-gato-2.png-80e1482962118f9e70bdab745625e7ae.ctex"
+path="res://.godot/imported/hell-gato-2.png-969ea93f4d64661a77c89f5dfab583fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Sprites/hell-gato/hell-gato-2.png"
-dest_files=["res://.godot/imported/hell-gato-2.png-80e1482962118f9e70bdab745625e7ae.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Sprites/hell-gato/hell-gato-2.png"
+dest_files=["res://.godot/imported/hell-gato-2.png-969ea93f4d64661a77c89f5dfab583fb.ctex"]
 
 [params]
 

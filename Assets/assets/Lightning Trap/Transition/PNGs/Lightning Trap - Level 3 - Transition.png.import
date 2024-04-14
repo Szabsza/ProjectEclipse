@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvnrdm3u75c8m"
-path="res://.godot/imported/Lightning Trap - Level 3 - Transition.png-83392c89c07aab9a2c086146eeab8291.ctex"
+path="res://.godot/imported/Lightning Trap - Level 3 - Transition.png-643adb801860930175858a8750616562.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/Lightning Trap/Transition/PNGs/Lightning Trap - Level 3 - Transition.png"
-dest_files=["res://.godot/imported/Lightning Trap - Level 3 - Transition.png-83392c89c07aab9a2c086146eeab8291.ctex"]
+source_file="res://Assets/assets/Lightning Trap/Transition/PNGs/Lightning Trap - Level 3 - Transition.png"
+dest_files=["res://.godot/imported/Lightning Trap - Level 3 - Transition.png-643adb801860930175858a8750616562.ctex"]
 
 [params]
 

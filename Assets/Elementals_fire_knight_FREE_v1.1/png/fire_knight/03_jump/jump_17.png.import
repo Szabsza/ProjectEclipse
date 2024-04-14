@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmnk2hrtjpg05"
-path="res://.godot/imported/jump_17.png-403f1e14f76ac12490d6fd4d9ff014ff.ctex"
+path="res://.godot/imported/jump_17.png-d176e23db01c0ddfc11268063c89fd06.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Elementals_fire_knight_FREE_v1.1/png/fire_knight/03_jump/jump_17.png"
-dest_files=["res://.godot/imported/jump_17.png-403f1e14f76ac12490d6fd4d9ff014ff.ctex"]
+source_file="res://Assets/Elementals_fire_knight_FREE_v1.1/png/fire_knight/03_jump/jump_17.png"
+dest_files=["res://.godot/imported/jump_17.png-d176e23db01c0ddfc11268063c89fd06.ctex"]
 
 [params]
 

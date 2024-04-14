@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpiuu04isugo"
-path="res://.godot/imported/enemy-death6.png-643b53e5822e36e89e3418be52ad962b.ctex"
+path="res://.godot/imported/enemy-death6.png-e46fc49927cea6346f0a464e1de45ded.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania church files/SPRITES/fx/enemy-death/enemy-death-sprites/enemy-death6.png"
-dest_files=["res://.godot/imported/enemy-death6.png-643b53e5822e36e89e3418be52ad962b.ctex"]
+source_file="res://Assets/gothicvania church files/SPRITES/fx/enemy-death/enemy-death-sprites/enemy-death6.png"
+dest_files=["res://.godot/imported/enemy-death6.png-e46fc49927cea6346f0a464e1de45ded.ctex"]
 
 [params]
 

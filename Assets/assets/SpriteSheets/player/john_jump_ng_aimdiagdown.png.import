@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpcjcn5pbwjxn"
-path="res://.godot/imported/john_jump_ng_aimdiagdown.png-d6db5a3970c29bf423ea510c62af3ad3.ctex"
+path="res://.godot/imported/john_jump_ng_aimdiagdown.png-4d019c1037b723b129a0f6c04badd65b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/SpriteSheets/player/john_jump_ng_aimdiagdown.png"
-dest_files=["res://.godot/imported/john_jump_ng_aimdiagdown.png-d6db5a3970c29bf423ea510c62af3ad3.ctex"]
+source_file="res://Assets/assets/SpriteSheets/player/john_jump_ng_aimdiagdown.png"
+dest_files=["res://.godot/imported/john_jump_ng_aimdiagdown.png-4d019c1037b723b129a0f6c04badd65b.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://b2amrbmfvw53g"
-path="res://.godot/imported/kill.ogg-b4f6657a32bc15718a22a34399b4a7f5.oggvorbisstr"
+path="res://.godot/imported/kill.ogg-dd96fe39e387a63469285425d42adc81.oggvorbisstr"
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/demo/assets/sounds/kill.ogg"
-dest_files=["res://.godot/imported/kill.ogg-b4f6657a32bc15718a22a34399b4a7f5.oggvorbisstr"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/demo/assets/sounds/kill.ogg"
+dest_files=["res://.godot/imported/kill.ogg-dd96fe39e387a63469285425d42adc81.oggvorbisstr"]
 
 [params]
 

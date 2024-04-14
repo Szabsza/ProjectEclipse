@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://doh8f8bltkw04"
-path="res://.godot/imported/jump.ogg-dad940a35b9f8a8c16048b06123bbdad.oggvorbisstr"
+path="res://.godot/imported/jump.ogg-a2f6ec4ceed784df6e56ae10f017844f.oggvorbisstr"
 
 [deps]
 
-source_file="res://assets/assets/gothicvania-cemetery-files/demo/assets/sounds/jump.ogg"
-dest_files=["res://.godot/imported/jump.ogg-dad940a35b9f8a8c16048b06123bbdad.oggvorbisstr"]
+source_file="res://Assets/assets/gothicvania-cemetery-files/demo/assets/sounds/jump.ogg"
+dest_files=["res://.godot/imported/jump.ogg-a2f6ec4ceed784df6e56ae10f017844f.oggvorbisstr"]
 
 [params]
 

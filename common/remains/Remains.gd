@@ -11,7 +11,6 @@ func setup(runes_amount: int, position : Vector2):
 	global_position = position
 	
 
-
 func _ready():
 	collision_layer = 2
 	collision_mask = 1
@@ -21,6 +20,6 @@ func _ready():
 	
 
 func _on_interact():
-	RuneManager.increase_runes(runes_amount)
+	#RuneManager.increase_runes(runes_amount)
 	runes_amount = 0
 	global_position = starting_position

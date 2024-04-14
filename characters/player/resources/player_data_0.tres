@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="PlayerData" load_steps=2 format=3 uid="uid://d0qikgohrs3u"]
+
+[ext_resource type="Script" path="res://characters/player/PlayerData.gd" id="1_wilhu"]
+
+[resource]
+script = ExtResource("1_wilhu")
+keys_held = 0
+attack_stamina_cost = 25
+jump_stamina_cost = 25
+roll_stamina_cost = 25
+attack_damage = 10
+has_double_jumped = false
+facing_direction_locked = false
+character_name = "Szabsza"
+character_type = 0
+global_position = Vector2(0, 0)

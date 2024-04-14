@@ -17,8 +17,6 @@ func setup(levels : Array, checkpoints : Array, chests : Array, doors : Array, r
 	self.checkpoints = checkpoints
 	self.remains = remains
 	
-	SaveManager.remains = remains
-	
 	init.emit()
 	
 

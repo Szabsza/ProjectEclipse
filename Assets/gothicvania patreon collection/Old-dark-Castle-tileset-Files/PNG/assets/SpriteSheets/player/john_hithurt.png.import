@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cr6ran8c8bxwe"
-path="res://.godot/imported/john_hithurt.png-bb8565053eba87f7b5a115633faceb33.ctex"
+path="res://.godot/imported/john_hithurt.png-64dfaa530301e410bd7f5d6d86177dc4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/john_hithurt.png"
-dest_files=["res://.godot/imported/john_hithurt.png-bb8565053eba87f7b5a115633faceb33.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/john_hithurt.png"
+dest_files=["res://.godot/imported/john_hithurt.png-64dfaa530301e410bd7f5d6d86177dc4.ctex"]
 
 [params]
 

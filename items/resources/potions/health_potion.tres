@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="HealthPotion" load_steps=4 format=3 uid="uid://2ps16yjy4fpn"]
 
 [ext_resource type="Script" path="res://items/potions/HealthPotion.gd" id="1_b0yv7"]
-[ext_resource type="Texture2D" uid="uid://1ac1w54eu4m4" path="res://assets/assets/PotionsPack1.png" id="2_lq3m6"]
+[ext_resource type="Texture2D" uid="uid://1ac1w54eu4m4" path="res://Assets/assets/PotionsPack1.png" id="2_lq3m6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d1eea"]
 atlas = ExtResource("2_lq3m6")

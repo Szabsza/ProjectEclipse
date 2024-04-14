@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkokw7jjsp1lu"
-path="res://.godot/imported/BossBodyIdle.png-c443800d7f1606a7ba5531ca6a21d28b.ctex"
+path="res://.godot/imported/BossBodyIdle.png-8d3d2c55d56baefee817c1e5389882d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/boss/BossBodyIdle.png"
-dest_files=["res://.godot/imported/BossBodyIdle.png-c443800d7f1606a7ba5531ca6a21d28b.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/boss/BossBodyIdle.png"
+dest_files=["res://.godot/imported/BossBodyIdle.png-8d3d2c55d56baefee817c1e5389882d9.ctex"]
 
 [params]
 

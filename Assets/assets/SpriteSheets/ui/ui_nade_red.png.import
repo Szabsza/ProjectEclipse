@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cidre1drmyibj"
-path="res://.godot/imported/ui_nade_red.png-0b41eb91af812c70ed5bc02aa0919530.ctex"
+path="res://.godot/imported/ui_nade_red.png-3549cd2068d25d186ab2c71ef57cf04f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/SpriteSheets/ui/ui_nade_red.png"
-dest_files=["res://.godot/imported/ui_nade_red.png-0b41eb91af812c70ed5bc02aa0919530.ctex"]
+source_file="res://Assets/assets/SpriteSheets/ui/ui_nade_red.png"
+dest_files=["res://.godot/imported/ui_nade_red.png-3549cd2068d25d186ab2c71ef57cf04f.ctex"]
 
 [params]
 

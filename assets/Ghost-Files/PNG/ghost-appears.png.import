@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pyg2g4i3vvs0"
-path="res://.godot/imported/ghost-appears.png-0b305c7a4b533370c440290f556f42ec.ctex"
+path="res://.godot/imported/ghost-appears.png-ee0088b7ed1cbb589638ff3bc43786a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Ghost-Files/PNG/ghost-appears.png"
-dest_files=["res://.godot/imported/ghost-appears.png-0b305c7a4b533370c440290f556f42ec.ctex"]
+source_file="res://Assets/Ghost-Files/PNG/ghost-appears.png"
+dest_files=["res://.godot/imported/ghost-appears.png-ee0088b7ed1cbb589638ff3bc43786a2.ctex"]
 
 [params]
 

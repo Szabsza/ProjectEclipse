@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cng5v07qis6fm"
-path="res://.godot/imported/Skeleton Hit.png-5f5d04c7a1333a523af9f8b7b2ce1ee3.ctex"
+path="res://.godot/imported/Skeleton Hit.png-f255dc671859d5d60cf46a74b82f0cf9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Skeleton/Sprite Sheets/Skeleton Hit.png"
-dest_files=["res://.godot/imported/Skeleton Hit.png-5f5d04c7a1333a523af9f8b7b2ce1ee3.ctex"]
+source_file="res://Assets/Skeleton/Sprite Sheets/Skeleton Hit.png"
+dest_files=["res://.godot/imported/Skeleton Hit.png-f255dc671859d5d60cf46a74b82f0cf9.ctex"]
 
 [params]
 

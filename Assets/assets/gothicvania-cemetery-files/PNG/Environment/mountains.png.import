@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c24p8hfm301n8"
-path="res://.godot/imported/mountains.png-6e158ae37fb9f59810c51603ec81260f.ctex"
+path="res://.godot/imported/mountains.png-136afcd57e92beb7aef1dda5d8a40ba3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/gothicvania-cemetery-files/PNG/Environment/mountains.png"
-dest_files=["res://.godot/imported/mountains.png-6e158ae37fb9f59810c51603ec81260f.ctex"]
+source_file="res://Assets/assets/gothicvania-cemetery-files/PNG/Environment/mountains.png"
+dest_files=["res://.godot/imported/mountains.png-136afcd57e92beb7aef1dda5d8a40ba3.ctex"]
 
 [params]
 

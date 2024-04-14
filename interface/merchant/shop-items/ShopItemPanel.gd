@@ -9,8 +9,12 @@ class_name ShopItemPanel extends Panel
 
 
 func set_item(item : ShopItem):
-	self.item = item
-	icon.texture = item.texture
-	name_label.text = item.item_name
-	description_label.text = item.description
-	cost_label.text = str(item.cost)
+	if item != null:
+		self.item = item
+		icon.texture = item.texture
+		name_label.text = item.item_name
+		description_label.text = item.description
+		cost_label.text = str(item.cost)
+	else:
+		for child in get_children():
+			child.visible = false

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmdpwcticml8n"
-path="res://.godot/imported/hero-idle-1.png-2a7b26b85af135a3d887035ffbf6b1d6.ctex"
+path="res://.godot/imported/hero-idle-1.png-71bbeb4e285c6a76784985e323fc6879.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-idle/hero-idle-1.png"
-dest_files=["res://.godot/imported/hero-idle-1.png-2a7b26b85af135a3d887035ffbf6b1d6.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-idle/hero-idle-1.png"
+dest_files=["res://.godot/imported/hero-idle-1.png-71bbeb4e285c6a76784985e323fc6879.ctex"]
 
 [params]
 

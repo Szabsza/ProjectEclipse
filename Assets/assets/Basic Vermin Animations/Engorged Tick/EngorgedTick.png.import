@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://defknes16jq03"
-path="res://.godot/imported/EngorgedTick.png-43677243e10448b5645e9929a795ac73.ctex"
+path="res://.godot/imported/EngorgedTick.png-f94e72256273c670cdf7c999c82bbf42.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/Basic Vermin Animations/Engorged Tick/EngorgedTick.png"
-dest_files=["res://.godot/imported/EngorgedTick.png-43677243e10448b5645e9929a795ac73.ctex"]
+source_file="res://Assets/assets/Basic Vermin Animations/Engorged Tick/EngorgedTick.png"
+dest_files=["res://.godot/imported/EngorgedTick.png-f94e72256273c670cdf7c999c82bbf42.ctex"]
 
 [params]
 

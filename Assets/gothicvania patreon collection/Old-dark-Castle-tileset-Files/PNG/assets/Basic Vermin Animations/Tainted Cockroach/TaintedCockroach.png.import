@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cv1vkmjtom3so"
-path="res://.godot/imported/TaintedCockroach.png-7de7c524e767e6cc75bc9403078971ec.ctex"
+path="res://.godot/imported/TaintedCockroach.png-18594d78e3e5411fb64df5dc29b69968.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Basic Vermin Animations/Tainted Cockroach/TaintedCockroach.png"
-dest_files=["res://.godot/imported/TaintedCockroach.png-7de7c524e767e6cc75bc9403078971ec.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Basic Vermin Animations/Tainted Cockroach/TaintedCockroach.png"
+dest_files=["res://.godot/imported/TaintedCockroach.png-18594d78e3e5411fb64df5dc29b69968.ctex"]
 
 [params]
 

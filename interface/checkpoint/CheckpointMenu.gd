@@ -1,17 +1,18 @@
 class_name CheckpointMenu extends Control
 
 @onready var name_label : Label = $MarginContainer/VBoxContainer/Name
-@onready var travel_menu : Control = $TravelMenu
-@onready var status_menu : Control = $StatusMenu
+@onready var travel_menu : TravelMenu = $TravelMenu
+@onready var status_menu : StatusMenu = $StatusMenu
 
 var checkpoint_name : String = ""
 
 signal exited()
 
 
-func setup(checkpoint_name : String):
+func setup(checkpoint_name : String, player : Player):
 	self.checkpoint_name = checkpoint_name
 	name_label.text = checkpoint_name
+	status_menu.set_interacted_player(player)
 
 
 func close_all_open_tabs():

@@ -2,47 +2,67 @@ class_name Player extends CharacterBody2D
 
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var animation_tree : AnimationTree = $AnimationTree
-@onready var state_machine : CharacterStateMachine = $CharacterStateMachine
+@onready var state_machine : PlayerStateMachine = $PlayerStateMachine
 @onready var hurtbox : HurtBox = $Sprite2D/HurtBox
-@onready var health : Health = $Health
-@onready var mana : Mana = $Mana
-@onready var stamina : Stamina = $Stamina
+
+@export var health : Health
+@export var mana : Mana
+@export var stamina : Stamina
+@export var runes_held : RunesHeld
+@export var status : Status
+@export var player_data : PlayerData
 
 var is_facing_left : bool = false
 var is_facing_right : bool = true
-var has_double_jumped : bool = false
 var facing_direction_locked : bool = false
-
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var direction : Vector2
 
-const INITIAL_ATTACK_POWER = 10
-const INITIAL_MAX_HEALTH = 100
-const INITIAL_MAX_MANA = 20
 
-const INITIAL_MAX_STAMINA = 100
-const STAMINA_REGENERATION_RATE = 5
-
-const ATTACK_STAMINA_COST : int = 25
-const JUMP_STAMINA_COST : int = 25
-const ROLL_STAMINA_COST : int = 25
-
+func resources_loaded():
+	if player_data == null:
+		OS.alert("player data has not been set!")
+		return false
+		
+	if status == null:
+		OS.alert("player status has not been set!")
+		return false
+		
+	if runes_held == null:
+		OS.alert("player runes has not been set!")
+		return false
+		
+	if health == null:
+		OS.alert("player health has not been set!")
+		return false
+		
+	if mana == null:
+		OS.alert("player mana has not been set!")
+		return false	
+	
+	if stamina == null:
+		OS.alert("player stamina has not been set!")
+		return false
+	
+	return true
+	
 
 func _ready():
 	add_to_group("player")
+	
+	if not resources_loaded():
+		return
+	
 	collision_layer = 4
 	collision_mask = 1
 	animation_tree.active = true
-	state_machine.setup(self, animation_tree)
-	health.setup(INITIAL_MAX_HEALTH)
-	mana.setup(INITIAL_MAX_MANA)
-	stamina.setup(INITIAL_MAX_STAMINA, STAMINA_REGENERATION_RATE)
+	state_machine.setup(self)
 	
 	hurtbox.setup(0, 2)
 	
 	for child in sprite.get_children():
 		if child is HitBox:
-			child.setup(INITIAL_ATTACK_POWER, 2, 0)
+			child.setup(player_data.attack_damage, 2, 0)
 
 
 func _physics_process(delta):

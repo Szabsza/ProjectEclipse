@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hv8fi5enx1l6"
-path="res://.godot/imported/death_5.png-a08b09b46dfdd4b440568283160b7dc2.ctex"
+path="res://.godot/imported/death_5.png-32aa95eab874783cf8f2387162ff8733.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/elementals_wind_hashashin_FREE_v1.1/PNG/death/death_5.png"
-dest_files=["res://.godot/imported/death_5.png-a08b09b46dfdd4b440568283160b7dc2.ctex"]
+source_file="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/death/death_5.png"
+dest_files=["res://.godot/imported/death_5.png-32aa95eab874783cf8f2387162ff8733.ctex"]
 
 [params]
 

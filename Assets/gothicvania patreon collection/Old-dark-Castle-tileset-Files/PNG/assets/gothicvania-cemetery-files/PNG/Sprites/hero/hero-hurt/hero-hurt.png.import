@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dem5br3yyvwxf"
-path="res://.godot/imported/hero-hurt.png-3f863871f72803108ca0ae0f5a18b244.ctex"
+path="res://.godot/imported/hero-hurt.png-ece6ec190dd9ab9949da851dbee710bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-hurt/hero-hurt.png"
-dest_files=["res://.godot/imported/hero-hurt.png-3f863871f72803108ca0ae0f5a18b244.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-hurt/hero-hurt.png"
+dest_files=["res://.godot/imported/hero-hurt.png-ece6ec190dd9ab9949da851dbee710bf.ctex"]
 
 [params]
 

@@ -1,10 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://bqaipc210dp67"]
+[gd_scene load_steps=18 format=3 uid="uid://bqaipc210dp67"]
 
 [ext_resource type="Script" path="res://level/ruins/ruins.gd" id="1_2u5ea"]
-[ext_resource type="Texture2D" uid="uid://behak76asms1i" path="res://assets/toRecolor/finalNight.PNG" id="1_ndy5b"]
+[ext_resource type="Texture2D" uid="uid://behak76asms1i" path="res://Assets/toRecolor/finalNight.PNG" id="1_ndy5b"]
 [ext_resource type="TileSet" uid="uid://b0fx4w3bh6fvg" path="res://level/tileset.tres" id="3_4jdbi"]
 [ext_resource type="PackedScene" uid="uid://bbu6j2a3v0imn" path="res://common/door/Door.tscn" id="4_eicmf"]
-[ext_resource type="PackedScene" uid="uid://ccl2rl1md4ps2" path="res://common/loot_items/Key.tscn" id="8_35jyw"]
+[ext_resource type="Resource" uid="uid://wcrm5cp6tfm2" path="res://common/checkpoint/resources/start_checkpoint.tres" id="6_najdj"]
+[ext_resource type="Resource" uid="uid://cn80b8tgutr18" path="res://common/checkpoint/resources/middle_checkpoint.tres" id="7_kgh1a"]
+[ext_resource type="Resource" uid="uid://dxam46a5mb53t" path="res://items/resources/loot/large_amount_of_runes.tres" id="8_ausgq"]
+[ext_resource type="Resource" uid="uid://ia3kbo22tx62" path="res://common/checkpoint/resources/end_checkpoint.tres" id="8_w6gbk"]
+[ext_resource type="Resource" uid="uid://d1s2ten4xv6p" path="res://items/resources/loot/low_amount_of_runes.tres" id="9_d7jn7"]
+[ext_resource type="Resource" uid="uid://b0x35dlc12hro" path="res://items/resources/loot/medium_amount_of_runes.tres" id="10_8me7k"]
+[ext_resource type="Resource" uid="uid://dymfls3echjde" path="res://items/resources/loot/dungeon_key.tres" id="11_haj4s"]
 [ext_resource type="PackedScene" uid="uid://dcgcpbp1np8l5" path="res://characters/merchant/GhostMerchant.tscn" id="11_ppsa8"]
 [ext_resource type="PackedScene" uid="uid://bh4jtxaokddii" path="res://common/checkpoint/Checkpoint.tscn" id="12_evdsl"]
 [ext_resource type="PackedScene" uid="uid://d26deo5pjs12u" path="res://common/torch/Torch.tscn" id="13_rjnrv"]
@@ -73,12 +79,15 @@ requires_key = true
 
 [node name="StartCheckpoint" parent="." instance=ExtResource("12_evdsl")]
 position = Vector2(226, 736)
+checkpoint_data = ExtResource("6_najdj")
 
 [node name="MiddleCheckpoint" parent="." instance=ExtResource("12_evdsl")]
 position = Vector2(5733, 931)
+checkpoint_data = ExtResource("7_kgh1a")
 
 [node name="EndCheckpoint" parent="." instance=ExtResource("12_evdsl")]
 position = Vector2(9925, 716)
+checkpoint_data = ExtResource("8_w6gbk")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 position = Vector2(-489, -38)
@@ -162,36 +171,43 @@ position = Vector2(9406, 777)
 [node name="Chest" parent="." instance=ExtResource("14_88b7c")]
 position = Vector2(82, 771)
 scale = Vector2(-1, 1)
+loot_item = ExtResource("8_ausgq")
 
 [node name="Chest2" parent="." instance=ExtResource("14_88b7c")]
 position = Vector2(1270, 637)
+loot_item = ExtResource("8_ausgq")
 
 [node name="Chest3" parent="." instance=ExtResource("14_88b7c")]
 position = Vector2(2735, 769)
 rotation = 3.14159
 scale = Vector2(1, -1)
+loot_item = ExtResource("9_d7jn7")
 
 [node name="Chest4" parent="." instance=ExtResource("14_88b7c")]
 position = Vector2(4968, 762)
+loot_item = ExtResource("9_d7jn7")
 
 [node name="Chest5" parent="." instance=ExtResource("14_88b7c")]
 position = Vector2(5206, 581)
+loot_item = ExtResource("10_8me7k")
 
 [node name="Chest6" parent="." instance=ExtResource("14_88b7c")]
 position = Vector2(6968, 645)
 rotation = 3.14159
 scale = Vector2(1, -1)
+loot_item = ExtResource("10_8me7k")
 
 [node name="Chest7" parent="." instance=ExtResource("14_88b7c")]
 position = Vector2(8511, 763)
 rotation = 3.14159
 scale = Vector2(1, -1)
+loot_item = ExtResource("9_d7jn7")
 
 [node name="Chest8" parent="." instance=ExtResource("14_88b7c")]
 position = Vector2(10421, 931)
 rotation = 3.14159
 scale = Vector2(1, -1)
-drop_items = Array[PackedScene]([ExtResource("8_35jyw")])
+loot_item = ExtResource("11_haj4s")
 
 [node name="FireTrap" parent="." instance=ExtResource("15_c7wv2")]
 position = Vector2(1366, 807)
@@ -221,5 +237,5 @@ position = Vector2(7275, 616)
 position = Vector2(10709, 938)
 scale = Vector2(0.993459, 0.974318)
 
-[node name="Merchant" parent="." instance=ExtResource("11_ppsa8")]
-position = Vector2(934, 876)
+[node name="GhostMerchant" parent="." instance=ExtResource("11_ppsa8")]
+position = Vector2(928, 870)

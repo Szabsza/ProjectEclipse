@@ -15,7 +15,7 @@ func _ready():
 	collision_mask = 1
 	shop.visible = false
 	animation_tree.active = true
-	state_machine.setup(self, animation_tree)
+	state_machine.setup(self)
 	state_machine.switch_state(state_machine.states["Hiding"])
 	interactable_area.interact = Callable(self, "_on_interact")
 	shop.setup(get_name(), shop_items)

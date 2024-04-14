@@ -70,7 +70,8 @@ func increase_mana_potions_regeneration(amount):
 
 func increase_health_potions_quantity(amount):
 	health_potion.max_quantity += amount
-	health_potion.quantity += amount 
+	health_potion.quantity += amount
+	print(health_potion.max_quantity) 
 	potions_quantity_updated.emit()
 
 

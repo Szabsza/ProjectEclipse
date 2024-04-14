@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cf7i3uqspev4v"
-path="res://.godot/imported/ui_nade_blue.png-229e708f585fa9637c12d5250c92897a.ctex"
+path="res://.godot/imported/ui_nade_blue.png-cd9db604cf473bcb41d7dca4bd972e6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/SpriteSheets/ui/ui_nade_blue.png"
-dest_files=["res://.godot/imported/ui_nade_blue.png-229e708f585fa9637c12d5250c92897a.ctex"]
+source_file="res://Assets/assets/SpriteSheets/ui/ui_nade_blue.png"
+dest_files=["res://.godot/imported/ui_nade_blue.png-cd9db604cf473bcb41d7dca4bd972e6e.ctex"]
 
 [params]
 

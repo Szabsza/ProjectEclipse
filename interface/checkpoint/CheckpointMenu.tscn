@@ -1,12 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://3wvvolcwvsk7"]
+[gd_scene load_steps=10 format=3 uid="uid://3wvvolcwvsk7"]
 
 [ext_resource type="Theme" uid="uid://crlofspi6s6xu" path="res://interface/UI.tres" id="1_vwlqt"]
+[ext_resource type="PackedScene" uid="uid://cwx57kfwdwcxq" path="res://interface/checkpoint/StatusMenu.tscn" id="3_fvxor"]
 [ext_resource type="Script" path="res://interface/checkpoint/CheckpointMenu.gd" id="3_n4m28"]
-[ext_resource type="Script" path="res://interface/checkpoint/StatusMenu.gd" id="4_n8heu"]
-[ext_resource type="Texture2D" uid="uid://crgdx5iqxvvjn" path="res://assets/GUI/GUI_1x.png" id="5_cb7sj"]
-[ext_resource type="Texture2D" uid="uid://nit4dw0rc4fa" path="res://assets/GUI/Sliced/GUI_2x_sliced.png" id="6_lgbgk"]
-[ext_resource type="Texture2D" uid="uid://bbfdlabvty13h" path="res://assets/Buttons/buttons_2x.png" id="7_b6uqo"]
-[ext_resource type="Script" path="res://interface/checkpoint/TravelMenu.gd" id="8_ws7hs"]
+[ext_resource type="PackedScene" uid="uid://ddpsnvvnfp82y" path="res://interface/checkpoint/TravelMenu.tscn" id="4_xklbk"]
+[ext_resource type="Texture2D" uid="uid://crgdx5iqxvvjn" path="res://Assets/GUI/GUI_1x.png" id="5_cb7sj"]
 
 [sub_resource type="Theme" id="Theme_d1i7a"]
 
@@ -32,389 +30,49 @@ texture_margin_right = 9.0
 texture_margin_bottom = 9.0
 region_rect = Rect2(32, 56, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r5xue"]
-atlas = ExtResource("6_lgbgk")
-region = Rect2(72, 290, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yneui"]
-atlas = ExtResource("6_lgbgk")
-region = Rect2(20, 290, 12, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0m7yg"]
-atlas = ExtResource("6_lgbgk")
-region = Rect2(2, 290, 12, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5b1u4"]
-atlas = ExtResource("6_lgbgk")
-region = Rect2(0, 272, 16, 16)
-margin = Rect2(2, 2, 3, 3)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tf8la"]
-atlas = ExtResource("7_b6uqo")
-region = Rect2(210, 18, 8, 12)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_507ia"]
-atlas = ExtResource("7_b6uqo")
-region = Rect2(211, 18, 8, 11)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2wnuv"]
-atlas = ExtResource("7_b6uqo")
-region = Rect2(198, 18, 8, 12)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b0tfx"]
-atlas = ExtResource("7_b6uqo")
-region = Rect2(198, 18, 7, 11)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0b34j"]
-atlas = ExtResource("6_lgbgk")
-region = Rect2(56, 272, 12, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g1xsj"]
-atlas = ExtResource("6_lgbgk")
-region = Rect2(19, 272, 15, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nu8xg"]
-atlas = ExtResource("6_lgbgk")
-region = Rect2(36, 272, 16, 16)
-
 [node name="Control" type="Control"]
 z_index = 200
 texture_filter = 1
 layout_mode = 3
-anchor_left = 0.021
-anchor_top = 0.021
-anchor_right = 0.021
-anchor_bottom = 0.021
-offset_left = -0.320004
-offset_top = 0.319998
-offset_right = -0.319996
-offset_bottom = 0.319983
+anchors_preset = 0
+offset_right = 144.0
+offset_bottom = 173.0
+size_flags_horizontal = 0
 theme = ExtResource("1_vwlqt")
 script = ExtResource("3_n4m28")
 
-[node name="StatusMenu" type="Control" parent="."]
+[node name="StatusMenu" parent="." instance=ExtResource("3_fvxor")]
 layout_mode = 1
-anchors_preset = 10
+offset_left = 162.0
+offset_top = -73.0
+offset_right = 389.0
+offset_bottom = 173.0
+
+[node name="TravelMenu" parent="." instance=ExtResource("4_xklbk")]
+layout_mode = 1
+offset_left = 162.0
+offset_right = 312.0
+offset_bottom = 173.0
+
+[node name="Background" type="Panel" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
-offset_right = 40.0
-offset_bottom = 40.0
-grow_horizontal = 2
-script = ExtResource("4_n8heu")
-
-[node name="Panel" type="Panel" parent="StatusMenu"]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 5.687
-anchor_top = 0.975
-anchor_right = 5.687
-anchor_bottom = 0.975
-offset_left = -140.48
-offset_top = -117.0
-offset_right = 140.52
-offset_bottom = 117.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_d1i7a")
 theme_override_styles/panel = SubResource("StyleBoxTexture_4nnxg")
 
-[node name="Panel2" type="Panel" parent="StatusMenu"]
+[node name="Border" type="Panel" parent="."]
 texture_filter = 1
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 5.675
-anchor_top = 0.95
-anchor_right = 5.675
-anchor_bottom = 0.95
-offset_left = -149.0
-offset_top = -125.0
-offset_right = 149.0
-offset_bottom = 126.0
-theme = SubResource("Theme_kuhi0")
-theme_override_styles/panel = SubResource("StyleBoxTexture_u6uf2")
-
-[node name="MarginContainer" type="MarginContainer" parent="StatusMenu"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 5.675
-anchor_top = -0.6
-anchor_right = 5.675
-anchor_bottom = -0.6
-offset_left = -132.0
-offset_top = -47.0
-offset_right = 132.0
-offset_bottom = 44.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="StatusMenu/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="Label" type="Label" parent="StatusMenu/MarginContainer/VBoxContainer"]
-modulate = Color(0, 0, 0, 1)
-layout_mode = 2
-text = "Level Up
-"
-horizontal_alignment = 1
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="StatusMenu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="LevelIcon" type="TextureRect" parent="StatusMenu/MarginContainer/VBoxContainer/HBoxContainer3"]
-layout_mode = 2
-texture = SubResource("AtlasTexture_r5xue")
-stretch_mode = 2
-
-[node name="Level" type="Label" parent="StatusMenu/MarginContainer/VBoxContainer/HBoxContainer3"]
-modulate = Color(0, 0, 0, 1)
-layout_mode = 2
-text = "Level:  "
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="StatusMenu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="RunesHeldIcon" type="TextureRect" parent="StatusMenu/MarginContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-texture = SubResource("AtlasTexture_yneui")
-stretch_mode = 2
-
-[node name="RunesHeld" type="Label" parent="StatusMenu/MarginContainer/VBoxContainer/HBoxContainer2"]
-modulate = Color(0, 0, 0, 1)
-layout_mode = 2
-text = "Runes held: "
-
-[node name="HBoxContainer" type="HBoxContainer" parent="StatusMenu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="RunesNeededIcon" type="TextureRect" parent="StatusMenu/MarginContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-texture = SubResource("AtlasTexture_0m7yg")
-stretch_mode = 2
-
-[node name="RunesNeeded" type="Label" parent="StatusMenu/MarginContainer/VBoxContainer/HBoxContainer"]
-modulate = Color(0, 0, 0, 1)
-layout_mode = 2
-text = "Runes needed:"
-
-[node name="MarginContainer2" type="MarginContainer" parent="StatusMenu"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 5.25
-anchor_top = 2.275
-anchor_right = 5.25
-anchor_bottom = 2.275
-offset_left = -90.0
-offset_top = -53.0
-offset_right = 124.0
-offset_bottom = 49.0
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="StatusMenu/MarginContainer2"]
-layout_mode = 2
-alignment = 1
-
-[node name="Label5" type="Label" parent="StatusMenu/MarginContainer2/VBoxContainer2"]
-modulate = Color(0, 0, 0, 1)
-layout_mode = 2
-text = "Status Points
-"
-horizontal_alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="StatusMenu/MarginContainer2/VBoxContainer2"]
-layout_mode = 2
-alignment = 1
-
-[node name="HealthIcon" type="TextureRect" parent="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = SubResource("AtlasTexture_5b1u4")
-stretch_mode = 2
-
-[node name="Health" type="Label" parent="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer"]
-modulate = Color(0, 0, 0, 1)
-layout_mode = 2
-text = "Health:"
-
-[node name="DecreaseHealth" type="TextureButton" parent="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_tf8la")
-texture_pressed = SubResource("AtlasTexture_507ia")
-
-[node name="IncreaseHealth" type="TextureButton" parent="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer"]
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_2wnuv")
-texture_pressed = SubResource("AtlasTexture_b0tfx")
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="StatusMenu/MarginContainer2/VBoxContainer2"]
-layout_mode = 2
-alignment = 1
-
-[node name="StaminaIcon" type="TextureRect" parent="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer2"]
-texture_filter = 1
-layout_mode = 2
-texture = SubResource("AtlasTexture_0b34j")
-stretch_mode = 2
-
-[node name="Stamina" type="Label" parent="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer2"]
-modulate = Color(0, 0, 0, 1)
-layout_mode = 2
-text = "Stamina:"
-
-[node name="DecreaseStamina" type="TextureButton" parent="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer2"]
-texture_filter = 1
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_tf8la")
-texture_pressed = SubResource("AtlasTexture_507ia")
-
-[node name="IncreaseStamina" type="TextureButton" parent="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer2"]
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_2wnuv")
-texture_pressed = SubResource("AtlasTexture_b0tfx")
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="StatusMenu/MarginContainer2/VBoxContainer2"]
-layout_mode = 2
-alignment = 1
-
-[node name="ManaIcon" type="TextureRect" parent="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer3"]
-texture_filter = 1
-layout_mode = 2
-texture = SubResource("AtlasTexture_g1xsj")
-stretch_mode = 2
-
-[node name="Mana" type="Label" parent="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer3"]
-modulate = Color(0, 0, 0, 1)
-layout_mode = 2
-text = "Mana:"
-
-[node name="DecreaseMana" type="TextureButton" parent="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer3"]
-texture_filter = 1
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_tf8la")
-texture_pressed = SubResource("AtlasTexture_507ia")
-
-[node name="IncreaseMana" type="TextureButton" parent="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer3"]
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_2wnuv")
-texture_pressed = SubResource("AtlasTexture_b0tfx")
-
-[node name="HBoxContainer4" type="HBoxContainer" parent="StatusMenu/MarginContainer2/VBoxContainer2"]
-layout_mode = 2
-alignment = 1
-
-[node name="PowerIcon" type="TextureRect" parent="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer4"]
-texture_filter = 1
-layout_mode = 2
-texture = SubResource("AtlasTexture_nu8xg")
-stretch_mode = 2
-
-[node name="Power" type="Label" parent="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer4"]
-modulate = Color(0, 0, 0, 1)
-layout_mode = 2
-text = "Power:
-"
-
-[node name="DecreasePower" type="TextureButton" parent="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer4"]
-texture_filter = 1
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_tf8la")
-texture_pressed = SubResource("AtlasTexture_507ia")
-
-[node name="IncreasePower" type="TextureButton" parent="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer4"]
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_2wnuv")
-texture_pressed = SubResource("AtlasTexture_b0tfx")
-
-[node name="TravelMenu" type="Control" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
-offset_right = 40.0
-offset_bottom = 40.0
-grow_horizontal = 2
-script = ExtResource("8_ws7hs")
-
-[node name="Panel" type="Panel" parent="TravelMenu"]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 3.575
-anchor_right = 3.575
-offset_left = -56.0
-offset_top = -78.0
-offset_right = 56.0
-offset_bottom = 79.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_d1i7a")
-theme_override_styles/panel = SubResource("StyleBoxTexture_4nnxg")
-
-[node name="Panel2" type="Panel" parent="TravelMenu"]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 3.575
-anchor_right = 3.575
-offset_left = -65.0
-offset_top = -87.0
-offset_right = 65.0
-offset_bottom = 87.0
-theme = SubResource("Theme_kuhi0")
-theme_override_styles/panel = SubResource("StyleBoxTexture_u6uf2")
-
-[node name="MarginContainer" type="MarginContainer" parent="TravelMenu"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 3.575
-anchor_right = 3.575
-offset_left = -30.0
-offset_top = -64.0
-offset_right = 30.0
-offset_bottom = 67.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ScrollContainer" type="ScrollContainer" parent="TravelMenu/MarginContainer"]
-layout_mode = 2
-horizontal_scroll_mode = 0
-vertical_scroll_mode = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TravelMenu/MarginContainer/ScrollContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="Label" type="Label" parent="TravelMenu/MarginContainer/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-text = "Travel to:"
-horizontal_alignment = 1
-
-[node name="Panel" type="Panel" parent="."]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -55.0
-offset_top = -78.0
-offset_right = 56.0
-offset_bottom = 78.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = SubResource("Theme_d1i7a")
-theme_override_styles/panel = SubResource("StyleBoxTexture_4nnxg")
-
-[node name="Panel2" type="Panel" parent="."]
-texture_filter = 1
-layout_mode = 0
-offset_left = -64.0
-offset_top = -87.0
-offset_right = 65.0
-offset_bottom = 87.0
 theme = SubResource("Theme_kuhi0")
 theme_override_styles/panel = SubResource("StyleBoxTexture_u6uf2")
 
@@ -457,14 +115,6 @@ text = "Travel"
 layout_mode = 2
 text = "Leave"
 
-[connection signal="pressed" from="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer/DecreaseHealth" to="StatusMenu" method="_on_decrease_health_pressed"]
-[connection signal="pressed" from="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer/IncreaseHealth" to="StatusMenu" method="_on_increase_health_pressed"]
-[connection signal="pressed" from="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer2/DecreaseStamina" to="StatusMenu" method="_on_decrease_stamina_pressed"]
-[connection signal="pressed" from="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer2/IncreaseStamina" to="StatusMenu" method="_on_increase_stamina_pressed"]
-[connection signal="pressed" from="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer3/DecreaseMana" to="StatusMenu" method="_on_decrease_mana_pressed"]
-[connection signal="pressed" from="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer3/IncreaseMana" to="StatusMenu" method="_on_increase_mana_pressed"]
-[connection signal="pressed" from="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer4/DecreasePower" to="StatusMenu" method="_on_decrease_power_pressed"]
-[connection signal="pressed" from="StatusMenu/MarginContainer2/VBoxContainer2/HBoxContainer4/IncreasePower" to="StatusMenu" method="_on_increase_power_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Rest" to="." method="_on_rest_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Level" to="." method="_on_level_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Travel" to="." method="_on_travel_pressed"]

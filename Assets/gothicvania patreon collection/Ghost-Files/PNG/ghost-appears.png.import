@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkgeqskg4gij4"
-path="res://.godot/imported/ghost-appears.png-db7e8c956308fadca0e95315961ce3e8.ctex"
+path="res://.godot/imported/ghost-appears.png-a53a98f138945204780b9a7cbec275aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Ghost-Files/PNG/ghost-appears.png"
-dest_files=["res://.godot/imported/ghost-appears.png-db7e8c956308fadca0e95315961ce3e8.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Ghost-Files/PNG/ghost-appears.png"
+dest_files=["res://.godot/imported/ghost-appears.png-a53a98f138945204780b9a7cbec275aa.ctex"]
 
 [params]
 

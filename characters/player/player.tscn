@@ -1,12 +1,18 @@
-[gd_scene load_steps=212 format=3 uid="uid://v3fb0628e85t"]
+[gd_scene load_steps=214 format=3 uid="uid://v3fb0628e85t"]
 
 [ext_resource type="Script" path="res://characters/player/Player.gd" id="1_0leal"]
+[ext_resource type="Resource" uid="uid://dp8lrnq336bxe" path="res://characters/player/resources/player_health_0.tres" id="2_pv40g"]
 [ext_resource type="Texture2D" uid="uid://bwhad7r4eo0b7" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/roll/roll_1.png" id="2_wmwy8"]
-[ext_resource type="Script" path="res://characters/HurtBox.gd" id="3_ucu24"]
-[ext_resource type="Script" path="res://characters/HitBox.gd" id="4_qruuq"]
+[ext_resource type="Resource" uid="uid://bxwxpfadwdkh6" path="res://characters/player/resources/player_mana_0.tres" id="3_7qn27"]
+[ext_resource type="Script" path="res://characters/common/HurtBox.gd" id="3_ucu24"]
+[ext_resource type="Resource" uid="uid://c1lf5qevxryre" path="res://characters/player/resources/player_stamina_0.tres" id="4_if63n"]
+[ext_resource type="Script" path="res://characters/common/HitBox.gd" id="4_qruuq"]
+[ext_resource type="Resource" uid="uid://cywpkj8mx48o7" path="res://characters/player/resources/player_runes_held_0.tres" id="5_1vfvh"]
 [ext_resource type="Texture2D" uid="uid://br8f7is3ufx3s" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/3_atk/3_atk_1.png" id="5_yjera"]
+[ext_resource type="Resource" uid="uid://2iok5redapdj" path="res://characters/player/resources/player_status_0.tres" id="6_0n3v4"]
 [ext_resource type="Texture2D" uid="uid://efy7cb1qabwc" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/3_atk/3_atk_2.png" id="6_jke48"]
 [ext_resource type="Texture2D" uid="uid://brwwkm5s5a1x2" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/3_atk/3_atk_3.png" id="7_80axh"]
+[ext_resource type="Resource" uid="uid://d0qikgohrs3u" path="res://characters/player/resources/player_data_0.tres" id="7_uuf7l"]
 [ext_resource type="Texture2D" uid="uid://cldhoocidgjoq" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/3_atk/3_atk_4.png" id="8_f7nda"]
 [ext_resource type="Texture2D" uid="uid://b3tmdrdxm52pf" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/1_atk/1_atk_5.png" id="9_jtgic"]
 [ext_resource type="Texture2D" uid="uid://dsxa1gppuv8s7" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/1_atk/1_atk_6.png" id="10_c0uyd"]
@@ -123,20 +129,16 @@
 [ext_resource type="Texture2D" uid="uid://df37wsnhc0amd" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/take_hit/take_hit_4.png" id="121_epsm6"]
 [ext_resource type="Texture2D" uid="uid://bendmybgr2bks" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/take_hit/take_hit_5.png" id="122_ddniw"]
 [ext_resource type="Texture2D" uid="uid://bctac216wv3nk" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/take_hit/take_hit_6.png" id="123_a7rfp"]
-[ext_resource type="Script" path="res://characters/Health.gd" id="124_l67g1"]
-[ext_resource type="Script" path="res://characters/Mana.gd" id="125_6ktta"]
-[ext_resource type="Script" path="res://characters/Stamina.gd" id="126_rbs2h"]
-[ext_resource type="Script" path="res://characters/CharacterStateMachine.gd" id="127_echu6"]
-[ext_resource type="Script" path="res://characters/player/states/JumpingState.gd" id="128_pejwy"]
-[ext_resource type="Script" path="res://characters/player/states/FallingState.gd" id="129_5mac3"]
-[ext_resource type="Script" path="res://characters/player/states/IdlingState.gd" id="130_xd5mh"]
-[ext_resource type="Script" path="res://characters/player/states/RollingState.gd" id="131_l43cg"]
-[ext_resource type="Script" path="res://characters/player/states/RunningState.gd" id="132_1kvk6"]
-[ext_resource type="Script" path="res://characters/player/states/JumpAttackingState.gd" id="133_8qsfv"]
-[ext_resource type="Script" path="res://characters/player/states/AttackingState.gd" id="134_tcp0x"]
-[ext_resource type="Script" path="res://characters/player/states/InteractingState.gd" id="135_7cokv"]
-[ext_resource type="Script" path="res://characters/player/states/DyingState.gd" id="136_k2d5h"]
-[ext_resource type="Script" path="res://characters/player/StateLabel.gd" id="137_4vcgl"]
+[ext_resource type="Script" path="res://characters/player/player_state_machine/PlayerStateMachine.gd" id="127_echu6"]
+[ext_resource type="Script" path="res://characters/player/player_state_machine/states/JumpingState.gd" id="128_pejwy"]
+[ext_resource type="Script" path="res://characters/player/player_state_machine/states/FallingState.gd" id="129_5mac3"]
+[ext_resource type="Script" path="res://characters/player/player_state_machine/states/IdlingState.gd" id="130_xd5mh"]
+[ext_resource type="Script" path="res://characters/player/player_state_machine/states/RollingState.gd" id="131_l43cg"]
+[ext_resource type="Script" path="res://characters/player/player_state_machine/states/RunningState.gd" id="132_1kvk6"]
+[ext_resource type="Script" path="res://characters/player/player_state_machine/states/AttackingState.gd" id="134_tcp0x"]
+[ext_resource type="Script" path="res://characters/player/player_state_machine/states/InteractingState.gd" id="135_7cokv"]
+[ext_resource type="Script" path="res://characters/player/player_state_machine/states/DyingState.gd" id="136_k2d5h"]
+[ext_resource type="Script" path="res://characters/player/player_state_machine/StateLabel.gd" id="137_4vcgl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tm3yw"]
 radius = 11.0
@@ -951,6 +953,12 @@ fill_from = Vector2(0.5, 0.5)
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 texture_filter = 1
 script = ExtResource("1_0leal")
+health = ExtResource("2_pv40g")
+mana = ExtResource("3_7qn27")
+stamina = ExtResource("4_if63n")
+runes_held = ExtResource("5_1vfvh")
+status = ExtResource("6_0n3v4")
+player_data = ExtResource("7_uuf7l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, -45)
@@ -1056,54 +1064,41 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_0le0i")
 anim_player = NodePath("../AnimationPlayer")
 
-[node name="Health" type="Node" parent="."]
-script = ExtResource("124_l67g1")
-
-[node name="Mana" type="Node" parent="."]
-script = ExtResource("125_6ktta")
-
-[node name="Stamina" type="Node" parent="."]
-script = ExtResource("126_rbs2h")
-
-[node name="StaminaRegenTimer" type="Timer" parent="Stamina"]
-wait_time = 0.2
-autostart = true
-
-[node name="CharacterStateMachine" type="Node" parent="."]
+[node name="PlayerStateMachine" type="Node" parent="."]
 script = ExtResource("127_echu6")
 
-[node name="Jumping" type="Node" parent="CharacterStateMachine"]
+[node name="Jumping" type="Node" parent="PlayerStateMachine"]
 script = ExtResource("128_pejwy")
 
-[node name="Falling" type="Node" parent="CharacterStateMachine"]
+[node name="Falling" type="Node" parent="PlayerStateMachine"]
 script = ExtResource("129_5mac3")
 
-[node name="Idling" type="Node" parent="CharacterStateMachine"]
+[node name="Idling" type="Node" parent="PlayerStateMachine"]
 script = ExtResource("130_xd5mh")
 
-[node name="Rolling" type="Node" parent="CharacterStateMachine"]
+[node name="Rolling" type="Node" parent="PlayerStateMachine"]
 script = ExtResource("131_l43cg")
 
-[node name="Running" type="Node" parent="CharacterStateMachine"]
+[node name="Running" type="Node" parent="PlayerStateMachine"]
 script = ExtResource("132_1kvk6")
 
-[node name="JumpAttacking" type="Node" parent="CharacterStateMachine"]
-script = ExtResource("133_8qsfv")
+[node name="JumpAttacking" type="Node" parent="PlayerStateMachine"]
+script = ExtResource("128_pejwy")
 
-[node name="Attacking" type="Node" parent="CharacterStateMachine"]
+[node name="Attacking" type="Node" parent="PlayerStateMachine"]
 script = ExtResource("134_tcp0x")
 
-[node name="Timer" type="Timer" parent="CharacterStateMachine/Attacking"]
+[node name="Timer" type="Timer" parent="PlayerStateMachine/Attacking"]
 wait_time = 0.3
 one_shot = true
 
-[node name="IdlingTimer" type="Timer" parent="CharacterStateMachine/Attacking"]
+[node name="IdlingTimer" type="Timer" parent="PlayerStateMachine/Attacking"]
 wait_time = 0.15
 
-[node name="Interacting" type="Node" parent="CharacterStateMachine"]
+[node name="Interacting" type="Node" parent="PlayerStateMachine"]
 script = ExtResource("135_7cokv")
 
-[node name="Dying" type="Node" parent="CharacterStateMachine"]
+[node name="Dying" type="Node" parent="PlayerStateMachine"]
 script = ExtResource("136_k2d5h")
 
 [node name="StateLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
@@ -1114,7 +1109,7 @@ offset_right = 42.0
 offset_bottom = -32.0
 text = "State: "
 script = ExtResource("137_4vcgl")
-state_machine = NodePath("../CharacterStateMachine")
+state_machine = NodePath("../PlayerStateMachine")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -99)
@@ -1127,7 +1122,6 @@ color = Color(0.352941, 0.262745, 0.188235, 1)
 energy = 0.5
 texture = SubResource("GradientTexture2D_afbri")
 
-[connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/JumpAttacking" method="_on_animation_tree_animation_finished"]
-[connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Attacking" method="_on_animation_tree_animation_finished"]
-[connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Dying" method="_on_animation_tree_animation_finished"]
-[connection signal="timeout" from="Stamina/StaminaRegenTimer" to="Stamina" method="_on_stamina_regen_timer_timeout"]
+[connection signal="animation_finished" from="AnimationTree" to="PlayerStateMachine/JumpAttacking" method="_on_animation_tree_animation_finished"]
+[connection signal="animation_finished" from="AnimationTree" to="PlayerStateMachine/Attacking" method="_on_animation_tree_animation_finished"]
+[connection signal="animation_finished" from="AnimationTree" to="PlayerStateMachine/Dying" method="_on_animation_tree_animation_finished"]

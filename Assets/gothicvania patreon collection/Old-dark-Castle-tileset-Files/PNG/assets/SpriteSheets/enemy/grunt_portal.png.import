@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm4gkk46iywjy"
-path="res://.godot/imported/grunt_portal.png-d021fa43d326ab261d60fdb56c07c6a4.ctex"
+path="res://.godot/imported/grunt_portal.png-74028a835ca330060aaafc493b86884a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/enemy/grunt_portal.png"
-dest_files=["res://.godot/imported/grunt_portal.png-d021fa43d326ab261d60fdb56c07c6a4.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/enemy/grunt_portal.png"
+dest_files=["res://.godot/imported/grunt_portal.png-74028a835ca330060aaafc493b86884a.ctex"]
 
 [params]
 
