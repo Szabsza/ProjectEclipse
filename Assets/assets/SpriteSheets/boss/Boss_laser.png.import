@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgetff141uj7a"
-path="res://.godot/imported/Boss_laser.png-36da5ca3af2fc54774cee1de8bdee7cf.ctex"
+path="res://.godot/imported/Boss_laser.png-c94098729028c5d494a1e2b82a33571a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/SpriteSheets/boss/Boss_laser.png"
-dest_files=["res://.godot/imported/Boss_laser.png-36da5ca3af2fc54774cee1de8bdee7cf.ctex"]
+source_file="res://assets/assets/SpriteSheets/boss/Boss_laser.png"
+dest_files=["res://.godot/imported/Boss_laser.png-c94098729028c5d494a1e2b82a33571a.ctex"]
 
 [params]
 

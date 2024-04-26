@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0d6ea06jjcef"
-path="res://.godot/imported/controller_atlas_2x.png-5d3bd44ed848f72db5acfbe4078629fc.ctex"
+path="res://.godot/imported/controller_atlas_2x.png-55851958f5507f9ff42f5cf43afdfaa0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Controller/controller_atlas_2x.png"
-dest_files=["res://.godot/imported/controller_atlas_2x.png-5d3bd44ed848f72db5acfbe4078629fc.ctex"]
+source_file="res://assets/Controller/controller_atlas_2x.png"
+dest_files=["res://.godot/imported/controller_atlas_2x.png-55851958f5507f9ff42f5cf43afdfaa0.ctex"]
 
 [params]
 

@@ -4,6 +4,7 @@ class_name InteractableArea extends Area2D
 
 var is_interactable : bool = true
 
+
 func _ready():
 	collision_mask = 4
 	collision_layer = 0

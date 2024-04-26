@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://l3hv544tvobb"
-path="res://.godot/imported/ui_weapon_tribow_blue.png-91822f45bb38094389cdc363fcff6f2e.ctex"
+path="res://.godot/imported/ui_weapon_tribow_blue.png-fe92d2cd86fb728cd0d0aebb58bc9ffe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/ui/ui_weapon_tribow_blue.png"
-dest_files=["res://.godot/imported/ui_weapon_tribow_blue.png-91822f45bb38094389cdc363fcff6f2e.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/ui/ui_weapon_tribow_blue.png"
+dest_files=["res://.godot/imported/ui_weapon_tribow_blue.png-fe92d2cd86fb728cd0d0aebb58bc9ffe.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dn7sinsn5pig"
-path="res://.godot/imported/bigcrate.png-149c5df186130ef13abf9042f25871f2.ctex"
+path="res://.godot/imported/bigcrate.png-abee4e17249f12391a68f9b22acf58c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/props/bigcrate.png"
-dest_files=["res://.godot/imported/bigcrate.png-149c5df186130ef13abf9042f25871f2.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/props/bigcrate.png"
+dest_files=["res://.godot/imported/bigcrate.png-abee4e17249f12391a68f9b22acf58c6.ctex"]
 
 [params]
 

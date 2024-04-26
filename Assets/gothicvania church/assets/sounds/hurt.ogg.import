@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://du2j75usajhbo"
-path="res://.godot/imported/hurt.ogg-1b16747386f7423c46ad01391078edf2.oggvorbisstr"
+path="res://.godot/imported/hurt.ogg-2fb00e294de6eab6aec1f2f2219dfa86.oggvorbisstr"
 
 [deps]
 
-source_file="res://Assets/gothicvania church/assets/sounds/hurt.ogg"
-dest_files=["res://.godot/imported/hurt.ogg-1b16747386f7423c46ad01391078edf2.oggvorbisstr"]
+source_file="res://assets/gothicvania church/assets/sounds/hurt.ogg"
+dest_files=["res://.godot/imported/hurt.ogg-2fb00e294de6eab6aec1f2f2219dfa86.oggvorbisstr"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8tks2q1axim6"
-path="res://.godot/imported/jungle_tree2.png-a752561bb5ec2e1bd3ad2a9c838832b4.ctex"
+path="res://.godot/imported/jungle_tree2.png-b54df73f4cceeb0991c3818cadf04d42.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/background/jungle_tree2.png"
-dest_files=["res://.godot/imported/jungle_tree2.png-a752561bb5ec2e1bd3ad2a9c838832b4.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/background/jungle_tree2.png"
+dest_files=["res://.godot/imported/jungle_tree2.png-b54df73f4cceeb0991c3818cadf04d42.ctex"]
 
 [params]
 

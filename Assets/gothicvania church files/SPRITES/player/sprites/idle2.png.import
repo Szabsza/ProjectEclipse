@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://x03xxyek5act"
-path="res://.godot/imported/idle2.png-bc869b395560b66c2db7c890f546ec5c.ctex"
+path="res://.godot/imported/idle2.png-6a31ce2aff5e69069bcd46a44c311219.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania church files/SPRITES/player/sprites/idle2.png"
-dest_files=["res://.godot/imported/idle2.png-bc869b395560b66c2db7c890f546ec5c.ctex"]
+source_file="res://assets/gothicvania church files/SPRITES/player/sprites/idle2.png"
+dest_files=["res://.godot/imported/idle2.png-6a31ce2aff5e69069bcd46a44c311219.ctex"]
 
 [params]
 

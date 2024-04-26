@@ -4,15 +4,15 @@ var starting_point : Vector2 = Vector2(226, 736)
 var last_interacted_checkpoint : Checkpoint = null
 
 
-func place_runes_where_player_died(player : Player):
-	WorldManager.remains.setup(player.runes_held.amount, player.global_position)
+func place_runes_where_player_died():
+	WorldManager.remains.setup(PlayerManager.player.runes_held.amount, PlayerManager.player.global_position)
 	
 
-func respawn_player(player : Player):
+func respawn_player():
 	if last_interacted_checkpoint == null:
-		player.global_position = starting_point
+		PlayerManager.player.global_position = starting_point
 	else:
-		player.global_position = last_interacted_checkpoint.global_position
-	player.runes_held.take_all_runes()
-	player.health.increase_current_health(player.health.max_health)
+		PlayerManager.player.global_position = last_interacted_checkpoint.global_position
+	PlayerManager.player.runes_held.take_all_runes()
+	PlayerManager.player.health.increase_current_health(PlayerManager.player.health.max_health)
 	

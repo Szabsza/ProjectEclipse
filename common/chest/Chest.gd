@@ -45,4 +45,3 @@ func _on_interact():
 
 func _on_animated_sprite_2d_animation_finished():
 	chest_loot_item.visible = true
-	

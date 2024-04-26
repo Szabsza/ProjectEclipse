@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dya6kf2vvgugx"
-path="res://.godot/imported/stone-1.png-4e3b55cc93262e474d7d1c8101525e59.ctex"
+path="res://.godot/imported/stone-1.png-2dbde892119ce93f4ae9e06aedfdb60e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Environment/sliced-objects/stone-1.png"
-dest_files=["res://.godot/imported/stone-1.png-4e3b55cc93262e474d7d1c8101525e59.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Environment/sliced-objects/stone-1.png"
+dest_files=["res://.godot/imported/stone-1.png-2dbde892119ce93f4ae9e06aedfdb60e.ctex"]
 
 [params]
 

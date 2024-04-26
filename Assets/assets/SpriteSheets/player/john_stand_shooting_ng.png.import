@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bp33u8vgly4it"
-path="res://.godot/imported/john_stand_shooting_ng.png-497a6a550a33a934d7f8186499d85478.ctex"
+path="res://.godot/imported/john_stand_shooting_ng.png-c47afa9183f8ad815d812a46e16ba9e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/SpriteSheets/player/john_stand_shooting_ng.png"
-dest_files=["res://.godot/imported/john_stand_shooting_ng.png-497a6a550a33a934d7f8186499d85478.ctex"]
+source_file="res://assets/assets/SpriteSheets/player/john_stand_shooting_ng.png"
+dest_files=["res://.godot/imported/john_stand_shooting_ng.png-c47afa9183f8ad815d812a46e16ba9e9.ctex"]
 
 [params]
 

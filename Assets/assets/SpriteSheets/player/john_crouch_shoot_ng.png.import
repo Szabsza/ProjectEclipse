@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1fj2bji6juay"
-path="res://.godot/imported/john_crouch_shoot_ng.png-31dee514f220abb0986779aebdec50bf.ctex"
+path="res://.godot/imported/john_crouch_shoot_ng.png-3d6f6b4d031a56ed81daea62658e73b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/SpriteSheets/player/john_crouch_shoot_ng.png"
-dest_files=["res://.godot/imported/john_crouch_shoot_ng.png-31dee514f220abb0986779aebdec50bf.ctex"]
+source_file="res://assets/assets/SpriteSheets/player/john_crouch_shoot_ng.png"
+dest_files=["res://.godot/imported/john_crouch_shoot_ng.png-3d6f6b4d031a56ed81daea62658e73b0.ctex"]
 
 [params]
 

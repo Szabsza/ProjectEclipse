@@ -6,7 +6,6 @@ signal necklace_slot_changed()
 signal bracelet_slot_changed()
 signal wings_slot_changed()
 
-var player : Player = null 
 
 var health_potion : HealthPotion = null 
 var mana_potion : ManaPotion = null
@@ -41,17 +40,17 @@ func set_necklace(necklace : Necklace):
 
 
 func drink_health_potion():
-	if player.health.current_health + health_potion.regeneration_amount > player.health.max_health:
-		player.health.current_health = player.health.max_health
+	if PlayerManager.player.health.current_health + health_potion.regeneration_amount > PlayerManager.player.health.max_health:
+		PlayerManager.player.health.current_health = PlayerManager.player.health.max_health
 	else:
-		player.health.current_health += health_potion.regeneration_amount
+		PlayerManager.player.health.current_health += health_potion.regeneration_amount
 	
 
 func drink_mana_potion():
-	if player.mana.current_mana + mana_potion.regeneration_amount > player.mana.max_mana:
-		player.mana.current_mana = player.mana.max_mana
+	if PlayerManager.player.mana.current_mana + mana_potion.regeneration_amount > PlayerManager.player.mana.max_mana:
+		PlayerManager.player.mana.current_mana = PlayerManager.player.mana.max_mana
 	else:
-		player.mana.current_mana += mana_potion.regeneration_amount 
+		PlayerManager.player.mana.current_mana += mana_potion.regeneration_amount 
 
 
 func reset_potions():
@@ -71,7 +70,6 @@ func increase_mana_potions_regeneration(amount):
 func increase_health_potions_quantity(amount):
 	health_potion.max_quantity += amount
 	health_potion.quantity += amount
-	print(health_potion.max_quantity) 
 	potions_quantity_updated.emit()
 
 

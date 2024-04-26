@@ -24,3 +24,10 @@ func increase_current_stamina(amount : float):
 func decrease_current_stamina(amount : int):
 	if current_stamina - amount >= 0:
 		current_stamina -= amount
+
+
+func regen_stamina():
+	if current_stamina + stamina_regeneration_rate > max_stamina:
+		current_stamina = max_stamina
+	else:
+		current_stamina += stamina_regeneration_rate

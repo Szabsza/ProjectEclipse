@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjnyvihey70m3"
-path="res://.godot/imported/jungle_tree1_bg.png-431060730794fb145820ab06668fb579.ctex"
+path="res://.godot/imported/jungle_tree1_bg.png-f2b9dfd288bb896bed84f61cc389cad0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/SpriteSheets/background/jungle_tree1_bg.png"
-dest_files=["res://.godot/imported/jungle_tree1_bg.png-431060730794fb145820ab06668fb579.ctex"]
+source_file="res://assets/assets/SpriteSheets/background/jungle_tree1_bg.png"
+dest_files=["res://.godot/imported/jungle_tree1_bg.png-f2b9dfd288bb896bed84f61cc389cad0.ctex"]
 
 [params]
 

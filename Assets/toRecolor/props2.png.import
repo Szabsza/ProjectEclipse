@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1vmrtsyj64em"
-path="res://.godot/imported/props2.png-34c18a2669e0b7a525efd33c2d5d89d5.ctex"
+path="res://.godot/imported/props2.png-2c895d2f9602c2cd65add1de6042322e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/toRecolor/props2.png"
-dest_files=["res://.godot/imported/props2.png-34c18a2669e0b7a525efd33c2d5d89d5.ctex"]
+source_file="res://assets/toRecolor/props2.png"
+dest_files=["res://.godot/imported/props2.png-2c895d2f9602c2cd65add1de6042322e.ctex"]
 
 [params]
 

@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbl6nwcln2gvx"]
-
-[ext_resource type="Script" path="res://autoloads/shop/ShopManager.gd" id="1_rp22g"]
-
-[node name="ShopManager" type="Node"]
-script = ExtResource("1_rp22g")

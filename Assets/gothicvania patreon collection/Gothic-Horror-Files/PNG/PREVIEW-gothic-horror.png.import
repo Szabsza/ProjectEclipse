@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drs3lddbeqr40"
-path="res://.godot/imported/PREVIEW-gothic-horror.png-98929111064d35c82d33d6fb189c2345.ctex"
+path="res://.godot/imported/PREVIEW-gothic-horror.png-e39585e1de69c39380ffa7ac9c265363.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Gothic-Horror-Files/PNG/PREVIEW-gothic-horror.png"
-dest_files=["res://.godot/imported/PREVIEW-gothic-horror.png-98929111064d35c82d33d6fb189c2345.ctex"]
+source_file="res://assets/gothicvania patreon collection/Gothic-Horror-Files/PNG/PREVIEW-gothic-horror.png"
+dest_files=["res://.godot/imported/PREVIEW-gothic-horror.png-e39585e1de69c39380ffa7ac9c265363.ctex"]
 
 [params]
 

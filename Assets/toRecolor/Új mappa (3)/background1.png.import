@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfyayq14rf25a"
-path="res://.godot/imported/background1.png-6e87a97bcc2a09fadfc5abeee06916e7.ctex"
+path="res://.godot/imported/background1.png-69adb9bb3e709190a274c4e976faa758.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/toRecolor/Új mappa (3)/background1.png"
-dest_files=["res://.godot/imported/background1.png-6e87a97bcc2a09fadfc5abeee06916e7.ctex"]
+source_file="res://assets/toRecolor/Új mappa (3)/background1.png"
+dest_files=["res://.godot/imported/background1.png-69adb9bb3e709190a274c4e976faa758.ctex"]
 
 [params]
 

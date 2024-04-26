@@ -5,6 +5,7 @@ class_name TravelMenu extends Control
 var available_checkpoints : Array = []
 var checkpoint_menu : CheckpointMenu = null
 
+
 func setup(checkpoint_menu : CheckpointMenu):
 	self.checkpoint_menu = checkpoint_menu
 

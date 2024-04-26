@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8y4hf8a7wbwi"
-path="res://.godot/imported/john_dead_soul.png-4b71288e10b46ff842bd5f8c04084789.ctex"
+path="res://.godot/imported/john_dead_soul.png-94ac85feb96283327f1f5f7f71e06f3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/john_dead_soul.png"
-dest_files=["res://.godot/imported/john_dead_soul.png-4b71288e10b46ff842bd5f8c04084789.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/player/john_dead_soul.png"
+dest_files=["res://.godot/imported/john_dead_soul.png-94ac85feb96283327f1f5f7f71e06f3e.ctex"]
 
 [params]
 

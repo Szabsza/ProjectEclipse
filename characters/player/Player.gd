@@ -4,6 +4,7 @@ class_name Player extends CharacterBody2D
 @onready var animation_tree : AnimationTree = $AnimationTree
 @onready var state_machine : PlayerStateMachine = $PlayerStateMachine
 @onready var hurtbox : HurtBox = $Sprite2D/HurtBox
+@onready var stamina_regen_timer : Timer = $StaminaRegenerationTimer
 
 @export var health : Health
 @export var mana : Mana
@@ -91,3 +92,7 @@ func take_damage(amount):
 	health.decrease_current_health(amount)
 	if health.current_health <= 0:
 		state_machine.switch_state(state_machine.states["Dying"])
+
+
+func _on_stamina_regeneration_timer_timeout():
+	stamina.regen_stamina()

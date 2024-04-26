@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fb5tiawxxish"
-path="res://.godot/imported/angel8.png-bb87f8b86bf02986beff3477b3f92642.ctex"
+path="res://.godot/imported/angel8.png-54e95b52f0761179ee6a67c8428ea7f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania church files/SPRITES/angel/sprites/idle/angel8.png"
-dest_files=["res://.godot/imported/angel8.png-bb87f8b86bf02986beff3477b3f92642.ctex"]
+source_file="res://assets/gothicvania church files/SPRITES/angel/sprites/idle/angel8.png"
+dest_files=["res://.godot/imported/angel8.png-54e95b52f0761179ee6a67c8428ea7f6.ctex"]
 
 [params]
 

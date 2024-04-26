@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bffdkial7ybgg"
-path="res://.godot/imported/sp_atk_2.png-7c632147ae5a8aacdbd61bc7730a4f33.ctex"
+path="res://.godot/imported/sp_atk_2.png-10691a8ecf2edf2854b339f95e306eef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Elementals_ground_monk_FREE_v1.3/png/sp_atk/sp_atk_2.png"
-dest_files=["res://.godot/imported/sp_atk_2.png-7c632147ae5a8aacdbd61bc7730a4f33.ctex"]
+source_file="res://assets/Elementals_ground_monk_FREE_v1.3/png/sp_atk/sp_atk_2.png"
+dest_files=["res://.godot/imported/sp_atk_2.png-10691a8ecf2edf2854b339f95e306eef.ctex"]
 
 [params]
 

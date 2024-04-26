@@ -1,13 +1,13 @@
 extends Node2D
 
+signal init()
+
 var levels : Array = []
 var checkpoints : Array = []
 var chests : Array = []
 var doors : Array = []
 var remains : Remains = null
 var current_level : String = ""
-
-signal init()
 
 
 func setup(levels : Array, checkpoints : Array, chests : Array, doors : Array, remains : Remains):

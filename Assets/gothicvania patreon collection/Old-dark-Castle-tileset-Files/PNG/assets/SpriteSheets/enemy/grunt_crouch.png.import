@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bynf4fs2m6b68"
-path="res://.godot/imported/grunt_crouch.png-60e5225c5471595cc68bc05dbe8de37e.ctex"
+path="res://.godot/imported/grunt_crouch.png-ab4bc8ca665929106a15a9ad25e13851.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/enemy/grunt_crouch.png"
-dest_files=["res://.godot/imported/grunt_crouch.png-60e5225c5471595cc68bc05dbe8de37e.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/enemy/grunt_crouch.png"
+dest_files=["res://.godot/imported/grunt_crouch.png-ab4bc8ca665929106a15a9ad25e13851.ctex"]
 
 [params]
 

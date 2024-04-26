@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://s4s3kbukebyb"
-path="res://.godot/imported/roll_6.png-5f7abc045e1599b32498bc9fe1b00cfd.ctex"
+path="res://.godot/imported/roll_6.png-6e23f1ee92017f13f43f2169a8b70199.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Elementals_ground_monk_FREE_v1.3/png/roll/roll_6.png"
-dest_files=["res://.godot/imported/roll_6.png-5f7abc045e1599b32498bc9fe1b00cfd.ctex"]
+source_file="res://assets/Elementals_ground_monk_FREE_v1.3/png/roll/roll_6.png"
+dest_files=["res://.godot/imported/roll_6.png-6e23f1ee92017f13f43f2169a8b70199.ctex"]
 
 [params]
 

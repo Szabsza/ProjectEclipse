@@ -8,6 +8,7 @@ class_name GhostMerchant extends CharacterBody2D
 @onready var shop : Shop = $Shop
 
 @export var shop_items : Array[ShopItem]
+#@export var merchant_data : MerchantData
 
 
 func _ready():

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cunrhg6i0xue4"
-path="res://.godot/imported/Free_Skills.png-a7b43b5eca58a8266eaa5b80eb5d045f.ctex"
+path="res://.godot/imported/Free_Skills.png-f763b957b8355bc240928fc455c0db78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/shop_icons/Free_Skills.png"
-dest_files=["res://.godot/imported/Free_Skills.png-a7b43b5eca58a8266eaa5b80eb5d045f.ctex"]
+source_file="res://assets/shop_icons/Free_Skills.png"
+dest_files=["res://.godot/imported/Free_Skills.png-f763b957b8355bc240928fc455c0db78.ctex"]
 
 [params]
 

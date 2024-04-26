@@ -1,6 +1,5 @@
 extends Node2D
 
-var player : Player = null
 @onready var label : Label = $Label 
 
 const BASE_TEXT : String = "[E] to "
@@ -23,8 +22,8 @@ func unregister_interactable_area(area : InteractableArea):
 		
 		
 func _sort_by_distance_to_player(area_a : InteractableArea, area_b : InteractableArea):
-	var area_a_to_player = player.global_position.direction_to(area_a.global_position)
-	var area_b_to_player = player.global_position.direction_to(area_b.global_position)
+	var area_a_to_player = PlayerManager.player.global_position.direction_to(area_a.global_position)
+	var area_b_to_player = PlayerManager.player.global_position.direction_to(area_b.global_position)
 	
 	return area_a_to_player < area_b_to_player
 		
@@ -42,14 +41,14 @@ func _process(delta):
 		
 		
 func _input(event : InputEvent):
-	if event.is_action_pressed("interact") && is_interactable && player.state_machine.current_state == player.state_machine.states["Idling"]:
+	if event.is_action_pressed("interact") && is_interactable && PlayerManager.player.state_machine.current_state == PlayerManager.player.state_machine.states["Idling"]:
 		if active_areas.size() != 0:
 			is_interactable = false
 			label.hide()
 			
-			player.state_machine.switch_state(player.state_machine.states["Interacting"])
+			PlayerManager.player.state_machine.switch_state(PlayerManager.player.state_machine.states["Interacting"])
 			await active_areas[0].interact.call()
-			player.state_machine.switch_state(player.state_machine.states["Idling"])
+			PlayerManager.player.state_machine.switch_state(PlayerManager.player.state_machine.states["Idling"])
 			
 			is_interactable = true
 		

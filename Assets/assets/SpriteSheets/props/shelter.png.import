@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cn02vv37evpyq"
-path="res://.godot/imported/shelter.png-3225177743d7f6f6266acd7d12aab27c.ctex"
+path="res://.godot/imported/shelter.png-d8bffb2a0829fdca1a0e57970a0a161b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/SpriteSheets/props/shelter.png"
-dest_files=["res://.godot/imported/shelter.png-3225177743d7f6f6266acd7d12aab27c.ctex"]
+source_file="res://assets/assets/SpriteSheets/props/shelter.png"
+dest_files=["res://.godot/imported/shelter.png-d8bffb2a0829fdca1a0e57970a0a161b.ctex"]
 
 [params]
 

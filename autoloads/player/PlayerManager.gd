@@ -2,13 +2,9 @@ extends Node2D
 
 signal init()
 
-var player : Player
+var player : Player = null
 
 
 func setup(player : Player):
 	self.player = player
-		
-	InteractionManager.player = player
-	HotBarManager.player = player
-	
 	init.emit()

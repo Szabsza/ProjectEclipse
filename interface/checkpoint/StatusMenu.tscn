@@ -1,9 +1,9 @@
 [gd_scene load_steps=20 format=3 uid="uid://cwx57kfwdwcxq"]
 
 [ext_resource type="Script" path="res://interface/checkpoint/StatusMenu.gd" id="1_w3e60"]
-[ext_resource type="Texture2D" uid="uid://crgdx5iqxvvjn" path="res://Assets/GUI/GUI_1x.png" id="2_kge5o"]
-[ext_resource type="Texture2D" uid="uid://nit4dw0rc4fa" path="res://Assets/GUI/Sliced/GUI_2x_sliced.png" id="3_txgda"]
-[ext_resource type="Texture2D" uid="uid://bbfdlabvty13h" path="res://Assets/Buttons/buttons_2x.png" id="4_ug75h"]
+[ext_resource type="Texture2D" uid="uid://crgdx5iqxvvjn" path="res://assets/GUI/GUI_1x.png" id="2_kge5o"]
+[ext_resource type="Texture2D" uid="uid://nit4dw0rc4fa" path="res://assets/GUI/Sliced/GUI_2x_sliced.png" id="3_txgda"]
+[ext_resource type="Texture2D" uid="uid://bbfdlabvty13h" path="res://assets/Buttons/buttons_2x.png" id="4_ug75h"]
 
 [sub_resource type="Theme" id="Theme_d1i7a"]
 

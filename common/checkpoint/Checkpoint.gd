@@ -27,9 +27,7 @@ func _ready():
 	playback = animation_tree["parameters/playback"]
 	interactable_area.interact = Callable(self, "_on_interact")
 	
-	print(PlayerManager.player)
-	
-	#checkpoint_menu.setup(checkpoint_data.checkpoint_name, PlayerManager.player)
+	checkpoint_menu.setup(checkpoint_data.checkpoint_name)
 
 
 func _on_interact():

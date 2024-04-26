@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6nf2ihhobn0p"
-path="res://.godot/imported/press-enter-text.png-88b77f76f5b9f68269a33480818dd604.ctex"
+path="res://.godot/imported/press-enter-text.png-9f5cdf3831a6ea7b124d06afed303bde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/gothicvania-cemetery-files/demo/assets/sprites/press-enter-text.png"
-dest_files=["res://.godot/imported/press-enter-text.png-88b77f76f5b9f68269a33480818dd604.ctex"]
+source_file="res://assets/assets/gothicvania-cemetery-files/demo/assets/sprites/press-enter-text.png"
+dest_files=["res://.godot/imported/press-enter-text.png-9f5cdf3831a6ea7b124d06afed303bde.ctex"]
 
 [params]
 

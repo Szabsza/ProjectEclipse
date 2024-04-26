@@ -2,7 +2,7 @@
 
 [ext_resource type="Resource" uid="uid://bqli2g3u62gul" path="res://items/resources/buffs/potion_amount_buff_behavior.tres" id="1_j83jg"]
 [ext_resource type="Script" path="res://items/buffs/Buff.gd" id="1_lqcyg"]
-[ext_resource type="Texture2D" uid="uid://cunrhg6i0xue4" path="res://Assets/shop_icons/Free_Skills.png" id="2_n52p0"]
+[ext_resource type="Texture2D" uid="uid://cunrhg6i0xue4" path="res://assets/shop_icons/Free_Skills.png" id="2_n52p0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bjvb5"]
 atlas = ExtResource("2_n52p0")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c75mo4risugl2"
-path="res://.godot/imported/Get Hit.png-d30ca40b4dcddd1d5b80557f54d34f64.ctex"
+path="res://.godot/imported/Get Hit.png-af29b5a3162666999910dcba5d081987.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/Worm/Get Hit.png"
-dest_files=["res://.godot/imported/Get Hit.png-d30ca40b4dcddd1d5b80557f54d34f64.ctex"]
+source_file="res://assets/assets/Worm/Get Hit.png"
+dest_files=["res://.godot/imported/Get Hit.png-af29b5a3162666999910dcba5d081987.ctex"]
 
 [params]
 

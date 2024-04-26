@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1e4a7gndwt5k"
-path="res://.godot/imported/background.png-e53d5f9f0e4027e8d49eb3a18d2ffaac.ctex"
+path="res://.godot/imported/background.png-990a40420b52cc49633be1542eaad688.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Environment/background.png"
-dest_files=["res://.godot/imported/background.png-e53d5f9f0e4027e8d49eb3a18d2ffaac.ctex"]
+source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Environment/background.png"
+dest_files=["res://.godot/imported/background.png-990a40420b52cc49633be1542eaad688.ctex"]
 
 [params]
 

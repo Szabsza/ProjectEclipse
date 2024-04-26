@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cadwd7hx2747j"
-path="res://.godot/imported/roll_4.png-c39e18869904d7b46d5f42d95ecadd42.ctex"
+path="res://.godot/imported/roll_4.png-c8bc6d1b018b17a6220540dd8be29b2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/roll/roll_4.png"
-dest_files=["res://.godot/imported/roll_4.png-c39e18869904d7b46d5f42d95ecadd42.ctex"]
+source_file="res://assets/elementals_wind_hashashin_FREE_v1.1/PNG/roll/roll_4.png"
+dest_files=["res://.godot/imported/roll_4.png-c8bc6d1b018b17a6220540dd8be29b2e.ctex"]
 
 [params]
 

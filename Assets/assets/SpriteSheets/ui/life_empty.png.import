@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkkmpxs7fqmgl"
-path="res://.godot/imported/life_empty.png-bfbb545946b71b372511aae2e2607496.ctex"
+path="res://.godot/imported/life_empty.png-78c5c492a821310ea382b8c282249e1b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/SpriteSheets/ui/life_empty.png"
-dest_files=["res://.godot/imported/life_empty.png-bfbb545946b71b372511aae2e2607496.ctex"]
+source_file="res://assets/assets/SpriteSheets/ui/life_empty.png"
+dest_files=["res://.godot/imported/life_empty.png-78c5c492a821310ea382b8c282249e1b.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhav5jjukmqke"
-path="res://.godot/imported/ForagingMaggot.png-553f6cabb714bb2f119d262f9d07886f.ctex"
+path="res://.godot/imported/ForagingMaggot.png-27ffbb579af2849c566e89db1a2b75a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/Basic Vermin Animations/Foraging Maggot/ForagingMaggot.png"
-dest_files=["res://.godot/imported/ForagingMaggot.png-553f6cabb714bb2f119d262f9d07886f.ctex"]
+source_file="res://assets/assets/Basic Vermin Animations/Foraging Maggot/ForagingMaggot.png"
+dest_files=["res://.godot/imported/ForagingMaggot.png-27ffbb579af2849c566e89db1a2b75a3.ctex"]
 
 [params]
 

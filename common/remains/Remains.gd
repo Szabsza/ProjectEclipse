@@ -20,6 +20,6 @@ func _ready():
 	
 
 func _on_interact():
-	#RuneManager.increase_runes(runes_amount)
+	PlayerManager.player.runes_held.increase_runes(runes_amount)
 	runes_amount = 0
 	global_position = starting_position

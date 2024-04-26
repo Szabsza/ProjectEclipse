@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://b7f1lf6dmuhvt"
-path="res://.godot/imported/sci_fi_platformer04_main_loop.ogg-8261857dc0e7f8cc520434778d7afebe.oggvorbisstr"
+path="res://.godot/imported/sci_fi_platformer04_main_loop.ogg-ce6ffaa5a570af27b84a5d6fb2520a21.oggvorbisstr"
 
 [deps]
 
-source_file="res://Assets/assets/gothicvania-cemetery-files/demo/assets/sounds/sci_fi_platformer04_main_loop.ogg"
-dest_files=["res://.godot/imported/sci_fi_platformer04_main_loop.ogg-8261857dc0e7f8cc520434778d7afebe.oggvorbisstr"]
+source_file="res://assets/assets/gothicvania-cemetery-files/demo/assets/sounds/sci_fi_platformer04_main_loop.ogg"
+dest_files=["res://.godot/imported/sci_fi_platformer04_main_loop.ogg-ce6ffaa5a570af27b84a5d6fb2520a21.oggvorbisstr"]
 
 [params]
 

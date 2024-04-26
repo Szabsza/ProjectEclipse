@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpytlaux13fx6"
-path="res://.godot/imported/Toxic Trap - Level 3 - Transition.png-ecad905d1dae279f6816020b51f7810e.ctex"
+path="res://.godot/imported/Toxic Trap - Level 3 - Transition.png-a0dbff091f401606b0c38466765f96ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/Toxic Trap/Transitions/PNGs/Toxic Trap - Level 3 - Transition.png"
-dest_files=["res://.godot/imported/Toxic Trap - Level 3 - Transition.png-ecad905d1dae279f6816020b51f7810e.ctex"]
+source_file="res://assets/assets/Toxic Trap/Transitions/PNGs/Toxic Trap - Level 3 - Transition.png"
+dest_files=["res://.godot/imported/Toxic Trap - Level 3 - Transition.png-a0dbff091f401606b0c38466765f96ca.ctex"]
 
 [params]
 

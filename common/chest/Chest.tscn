@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://gei5r3s8tiis"]
 
 [ext_resource type="Script" path="res://common/chest/Chest.gd" id="1_txroh"]
-[ext_resource type="Texture2D" uid="uid://ljflg4bcdga3" path="res://Assets/Animated Chests/Chests.png" id="2_e5iil"]
+[ext_resource type="Texture2D" uid="uid://ljflg4bcdga3" path="res://assets/Animated Chests/Chests.png" id="2_e5iil"]
 [ext_resource type="Script" path="res://common/interactable_area/InteractableArea.gd" id="3_fgata"]
 [ext_resource type="PackedScene" uid="uid://bsd4v1mcddtv0" path="res://common/chest/ChestLootItem.tscn" id="4_wm15b"]
 
