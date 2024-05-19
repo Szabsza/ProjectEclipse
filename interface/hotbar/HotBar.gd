@@ -10,6 +10,20 @@ class_name Hotbar extends Control
 @onready var wings_hotbar_button : WingsHotbarButton = $HBoxContainer/Wings
 
 
+func refresh():
+	if HotBarManager.bracelet != null:
+		bracelet_placeholder.visible = false
+		bracelet_hotbar_button.set_bracelet(HotBarManager.bracelet)
+	
+	if HotBarManager.necklace != null:
+		necklace_placeholder.visible = false
+		necklace_hotbar_button.set_necklace(HotBarManager.necklace)
+		
+	if HotBarManager.wings != null:
+		wings_placeholder.visible = false
+		wings_hotbar_button.set_wings(HotBarManager.wings)
+	
+
 func _ready():
 	init_hotbar()
 	
@@ -19,6 +33,8 @@ func _ready():
 	HotBarManager.connect("bracelet_slot_changed", _on_bracelet_slot_changed)
 	HotBarManager.connect("necklace_slot_changed", _on_necklace_slot_changed)
 	HotBarManager.connect("wings_slot_changed", _on_wings_slot_changed)
+	
+	refresh()
 	
 
 func init_hotbar():

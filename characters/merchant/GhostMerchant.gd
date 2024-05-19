@@ -7,8 +7,7 @@ class_name GhostMerchant extends CharacterBody2D
 @onready var interactable_area : InteractableArea = $InteractableArea
 @onready var shop : Shop = $Shop
 
-@export var shop_items : Array[ShopItem]
-#@export var merchant_data : MerchantData
+@export var merchant_data : MerchantData
 
 
 func _ready():
@@ -19,7 +18,7 @@ func _ready():
 	state_machine.setup(self)
 	state_machine.switch_state(state_machine.states["Hiding"])
 	interactable_area.interact = Callable(self, "_on_interact")
-	shop.setup(get_name(), shop_items)
+	shop.setup(merchant_data.merchant_name, merchant_data.shop_items)
 
 
 func _on_interact():

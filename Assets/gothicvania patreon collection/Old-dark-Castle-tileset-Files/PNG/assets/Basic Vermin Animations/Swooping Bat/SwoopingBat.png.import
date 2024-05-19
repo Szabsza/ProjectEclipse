@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vvnlo3hbx73x"
-path="res://.godot/imported/SwoopingBat.png-b3837123bb4fae26d83990fff01e8392.ctex"
+path="res://.godot/imported/SwoopingBat.png-4e669a93b9d3a7ee51b9246a2dab4bd5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Basic Vermin Animations/Swooping Bat/SwoopingBat.png"
-dest_files=["res://.godot/imported/SwoopingBat.png-b3837123bb4fae26d83990fff01e8392.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Basic Vermin Animations/Swooping Bat/SwoopingBat.png"
+dest_files=["res://.godot/imported/SwoopingBat.png-4e669a93b9d3a7ee51b9246a2dab4bd5.ctex"]
 
 [params]
 

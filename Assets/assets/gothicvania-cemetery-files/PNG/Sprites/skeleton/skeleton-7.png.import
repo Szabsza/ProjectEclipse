@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6yyrc8icvcyi"
-path="res://.godot/imported/skeleton-7.png-96f3dd508d3c511708952a775e92186f.ctex"
+path="res://.godot/imported/skeleton-7.png-6d71af7e5563328cb55082e4e7fe955a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/gothicvania-cemetery-files/PNG/Sprites/skeleton/skeleton-7.png"
-dest_files=["res://.godot/imported/skeleton-7.png-96f3dd508d3c511708952a775e92186f.ctex"]
+source_file="res://Assets/assets/gothicvania-cemetery-files/PNG/Sprites/skeleton/skeleton-7.png"
+dest_files=["res://.godot/imported/skeleton-7.png-6d71af7e5563328cb55082e4e7fe955a.ctex"]
 
 [params]
 

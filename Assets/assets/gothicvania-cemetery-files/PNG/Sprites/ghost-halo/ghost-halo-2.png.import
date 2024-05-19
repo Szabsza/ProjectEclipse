@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgynwgx0onqni"
-path="res://.godot/imported/ghost-halo-2.png-860d77e2c6861a1c56251a9ec34f184b.ctex"
+path="res://.godot/imported/ghost-halo-2.png-162be84827c9530465440af38feee8f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/gothicvania-cemetery-files/PNG/Sprites/ghost-halo/ghost-halo-2.png"
-dest_files=["res://.godot/imported/ghost-halo-2.png-860d77e2c6861a1c56251a9ec34f184b.ctex"]
+source_file="res://Assets/assets/gothicvania-cemetery-files/PNG/Sprites/ghost-halo/ghost-halo-2.png"
+dest_files=["res://.godot/imported/ghost-halo-2.png-162be84827c9530465440af38feee8f0.ctex"]
 
 [params]
 

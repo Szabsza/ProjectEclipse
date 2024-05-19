@@ -6,12 +6,12 @@ signal exited()
 @onready var travel_menu : TravelMenu = $TravelMenu
 @onready var status_menu : StatusMenu = $StatusMenu
 
-var checkpoint_name : String = ""
+var checkpoint_data : CheckpointData
 
 
-func setup(checkpoint_name : String):
-	self.checkpoint_name = checkpoint_name
-	name_label.text = checkpoint_name
+func setup(checkpoint_data : CheckpointData):
+	self.checkpoint_data = checkpoint_data
+	name_label.text = checkpoint_data.checkpoint_name
 	
 
 func close_all_open_tabs():
@@ -27,6 +27,7 @@ func _ready():
 func _on_rest_pressed():
 	close_all_open_tabs()
 	HotBarManager.reset_potions()
+	PlayerManager.rest()
 	#SaveManager.save_game()
 
 

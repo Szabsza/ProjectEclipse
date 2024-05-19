@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://w76o36awohkc"
-path="res://.godot/imported/Ceiling Trap - Level 1.png-25d88e3d49d4a1ef51249719cfb8cc71.ctex"
+path="res://.godot/imported/Ceiling Trap - Level 1.png-b02559b8137ed490bdc06b0f45857c9c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/Ceiling Trap/PNGs/Ceiling Trap - Level 1.png"
-dest_files=["res://.godot/imported/Ceiling Trap - Level 1.png-25d88e3d49d4a1ef51249719cfb8cc71.ctex"]
+source_file="res://Assets/assets/Ceiling Trap/PNGs/Ceiling Trap - Level 1.png"
+dest_files=["res://.godot/imported/Ceiling Trap - Level 1.png-b02559b8137ed490bdc06b0f45857c9c.ctex"]
 
 [params]
 

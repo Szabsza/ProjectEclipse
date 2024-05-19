@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crhxd3tep3qdr"
-path="res://.godot/imported/meditate_8.png-0022338a6f693c2b59a6cf6968ee9d47.ctex"
+path="res://.godot/imported/meditate_8.png-b7d5388407f839be7eb72de6290fb98e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Elementals_ground_monk_FREE_v1.3/png/meditate/meditate_8.png"
-dest_files=["res://.godot/imported/meditate_8.png-0022338a6f693c2b59a6cf6968ee9d47.ctex"]
+source_file="res://Assets/Elementals_ground_monk_FREE_v1.3/png/meditate/meditate_8.png"
+dest_files=["res://.godot/imported/meditate_8.png-b7d5388407f839be7eb72de6290fb98e.ctex"]
 
 [params]
 

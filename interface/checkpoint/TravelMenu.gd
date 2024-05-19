@@ -15,9 +15,9 @@ func refresh_traveling_options():
 		if child is Button:
 			child.queue_free()
 
-	for checkpoint in TravelManager.get_available_checkpoints():
+	for checkpoint in TravelManager.get_available_checkpoints() as Array[CheckpointData]:
 		var button : Button = Button.new()
-		button.text = checkpoint.name
+		button.text = checkpoint.checkpoint_name
 		button.pressed.connect(self._checkpoint_button_pressed.bind(checkpoint))
 		container.add_child(button)
 
@@ -26,7 +26,7 @@ func _ready():
 	visible = false
 
 
-func _checkpoint_button_pressed(checkpoint : Checkpoint):
+func _checkpoint_button_pressed(checkpoint : CheckpointData):
 	checkpoint_menu.visible = false
 	visible = false
 	checkpoint_menu.exited.emit()

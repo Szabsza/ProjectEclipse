@@ -1,0 +1,107 @@
+[gd_scene load_steps=14 format=3 uid="uid://wcmtm1y1qiy4"]
+
+[ext_resource type="Texture2D" uid="uid://25f78tfaffuv" path="res://Assets/Wings/wings.png" id="1_2x3fa"]
+[ext_resource type="Script" path="res://characters/player/wings/Wings.gd" id="1_edmbw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rsgh"]
+atlas = ExtResource("1_2x3fa")
+region = Rect2(0, 64, 87, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18xbi"]
+atlas = ExtResource("1_2x3fa")
+region = Rect2(0, 96, 87, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1q8y"]
+atlas = ExtResource("1_2x3fa")
+region = Rect2(0, 96, 87, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jp5ap"]
+atlas = ExtResource("1_2x3fa")
+region = Rect2(0, 64, 87, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppgy3"]
+atlas = ExtResource("1_2x3fa")
+region = Rect2(0, 32, 87, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6a3s"]
+atlas = ExtResource("1_2x3fa")
+region = Rect2(0, 0, 87, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1x2g"]
+atlas = ExtResource("1_2x3fa")
+region = Rect2(0, 0, 87, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ulwg"]
+atlas = ExtResource("1_2x3fa")
+region = Rect2(0, 32, 87, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rovf1"]
+atlas = ExtResource("1_2x3fa")
+region = Rect2(0, 64, 87, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8q3y"]
+atlas = ExtResource("1_2x3fa")
+region = Rect2(0, 32, 87, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kw7u3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rsgh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18xbi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1q8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jp5ap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppgy3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6a3s")
+}],
+"loop": false,
+"name": &"launch",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1x2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ulwg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rovf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8q3y")
+}],
+"loop": false,
+"name": &"spread",
+"speed": 12.0
+}]
+
+[node name="Wings" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_kw7u3")
+animation = &"spread"
+frame = 3
+frame_progress = 1.0
+script = ExtResource("1_edmbw")
+
+[node name="WingSpreadTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="WingDisapearTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
+[connection signal="timeout" from="WingSpreadTimer" to="." method="_on_wing_spread_timer_timeout"]
+[connection signal="timeout" from="WingDisapearTimer" to="." method="_on_wing_disapear_timer_timeout"]

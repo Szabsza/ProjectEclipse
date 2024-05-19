@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://behak76asms1i"
-path="res://.godot/imported/finalNight.PNG-6229c78fa17756e85c45523ec636dc8d.ctex"
+path="res://.godot/imported/finalNight.PNG-b26ee382c5c4cd3ff2feedc100b7da86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/toRecolor/finalNight.PNG"
-dest_files=["res://.godot/imported/finalNight.PNG-6229c78fa17756e85c45523ec636dc8d.ctex"]
+source_file="res://Assets/toRecolor/finalNight.PNG"
+dest_files=["res://.godot/imported/finalNight.PNG-b26ee382c5c4cd3ff2feedc100b7da86.ctex"]
 
 [params]
 

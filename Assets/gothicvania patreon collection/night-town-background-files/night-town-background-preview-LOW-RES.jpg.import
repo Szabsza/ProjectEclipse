@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2cnx3pkab0f7"
-path="res://.godot/imported/night-town-background-preview-LOW-RES.jpg-2aee3393a7c58b5888170970753604d6.ctex"
+path="res://.godot/imported/night-town-background-preview-LOW-RES.jpg-a64ccbb71f916d1ee2de36b7083eb8ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/night-town-background-files/night-town-background-preview-LOW-RES.jpg"
-dest_files=["res://.godot/imported/night-town-background-preview-LOW-RES.jpg-2aee3393a7c58b5888170970753604d6.ctex"]
+source_file="res://Assets/gothicvania patreon collection/night-town-background-files/night-town-background-preview-LOW-RES.jpg"
+dest_files=["res://.godot/imported/night-town-background-preview-LOW-RES.jpg-a64ccbb71f916d1ee2de36b7083eb8ff.ctex"]
 
 [params]
 

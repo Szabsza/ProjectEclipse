@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cf2f6ns7rwvhc"
-path="res://.godot/imported/grunt_portal_broke.png-c2633ff706dcc612b3a367964ce52ac0.ctex"
+path="res://.godot/imported/grunt_portal_broke.png-d93560a3de0a304c1cba134950ed5e1c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/SpriteSheets/enemy/grunt_portal_broke.png"
-dest_files=["res://.godot/imported/grunt_portal_broke.png-c2633ff706dcc612b3a367964ce52ac0.ctex"]
+source_file="res://Assets/assets/SpriteSheets/enemy/grunt_portal_broke.png"
+dest_files=["res://.godot/imported/grunt_portal_broke.png-d93560a3de0a304c1cba134950ed5e1c.ctex"]
 
 [params]
 

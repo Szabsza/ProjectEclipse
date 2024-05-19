@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dualkmufs8fxh"
-path="res://.godot/imported/skeleton-rise-6.png-378d2b8e722611f35bb9a5fc3e4ad4ad.ctex"
+path="res://.godot/imported/skeleton-rise-6.png-06a4c0c0b5dbd1aa6f54a07b1064d4ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/gothicvania-cemetery-files/PNG/Sprites/skeleton-rise/skeleton-rise-6.png"
-dest_files=["res://.godot/imported/skeleton-rise-6.png-378d2b8e722611f35bb9a5fc3e4ad4ad.ctex"]
+source_file="res://Assets/assets/gothicvania-cemetery-files/PNG/Sprites/skeleton-rise/skeleton-rise-6.png"
+dest_files=["res://.godot/imported/skeleton-rise-6.png-06a4c0c0b5dbd1aa6f54a07b1064d4ab.ctex"]
 
 [params]
 

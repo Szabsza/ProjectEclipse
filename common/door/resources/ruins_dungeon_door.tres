@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DoorData" load_steps=2 format=3 uid="uid://c8ebcsjx0kv8e"]
+
+[ext_resource type="Script" path="res://common/door/DoorData.gd" id="1_5f314"]
+
+[resource]
+script = ExtResource("1_5f314")
+parent_scene_path = "res://level/ruins/Ruins.tscn"
+is_unlocked = false

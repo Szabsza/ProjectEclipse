@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tcjwhhwxgv46"
-path="res://.godot/imported/jungle_paralax_bg2.png-b244ce2100184df42065a580ba6550ad.ctex"
+path="res://.godot/imported/jungle_paralax_bg2.png-e4f046c61d9a4837f37afcaa499e23dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/background/jungle_paralax_bg2.png"
-dest_files=["res://.godot/imported/jungle_paralax_bg2.png-b244ce2100184df42065a580ba6550ad.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/background/jungle_paralax_bg2.png"
+dest_files=["res://.godot/imported/jungle_paralax_bg2.png-e4f046c61d9a4837f37afcaa499e23dc.ctex"]
 
 [params]
 

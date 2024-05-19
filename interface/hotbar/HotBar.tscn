@@ -50,5 +50,3 @@ layout_mode = 2
 
 [node name="Wings" parent="HBoxContainer" instance=ExtResource("10_kvjx6")]
 layout_mode = 2
-ignore_texture_size = true
-stretch_mode = 5

@@ -13,8 +13,8 @@ func update_current_item():
 	displayed_shop_item.set_item(shop_items[current_item_index])
 
 
-func setup(merchant : String, shop_items : Array[ShopItem]):
-	merchant_label.text = merchant
+func setup(merchant_name : String, shop_items : Array[ShopItem]):
+	merchant_label.text = merchant_name
 	self.shop_items = shop_items
 	
 	if len(shop_items) > 0:

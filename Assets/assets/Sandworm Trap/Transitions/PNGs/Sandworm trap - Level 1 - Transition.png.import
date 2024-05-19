@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ksye57fburd5"
-path="res://.godot/imported/Sandworm trap - Level 1 - Transition.png-7fceab7bb7a58530bf6f6902b3b78a5e.ctex"
+path="res://.godot/imported/Sandworm trap - Level 1 - Transition.png-2490ebb8d0bb26938a25555e441c990b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/Sandworm Trap/Transitions/PNGs/Sandworm trap - Level 1 - Transition.png"
-dest_files=["res://.godot/imported/Sandworm trap - Level 1 - Transition.png-7fceab7bb7a58530bf6f6902b3b78a5e.ctex"]
+source_file="res://Assets/assets/Sandworm Trap/Transitions/PNGs/Sandworm trap - Level 1 - Transition.png"
+dest_files=["res://.godot/imported/Sandworm trap - Level 1 - Transition.png-2490ebb8d0bb26938a25555e441c990b.ctex"]
 
 [params]
 

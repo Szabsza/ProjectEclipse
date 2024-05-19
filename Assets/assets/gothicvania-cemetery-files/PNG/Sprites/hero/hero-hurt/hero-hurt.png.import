@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nvjmw4lfbepv"
-path="res://.godot/imported/hero-hurt.png-8f44a8eb2df68d05c904d572ec6c2059.ctex"
+path="res://.godot/imported/hero-hurt.png-9b8524465a2ceee644c0f12c3ddbf449.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-hurt/hero-hurt.png"
-dest_files=["res://.godot/imported/hero-hurt.png-8f44a8eb2df68d05c904d572ec6c2059.ctex"]
+source_file="res://Assets/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-hurt/hero-hurt.png"
+dest_files=["res://.godot/imported/hero-hurt.png-9b8524465a2ceee644c0f12c3ddbf449.ctex"]
 
 [params]
 

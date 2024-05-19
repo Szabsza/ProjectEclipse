@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Necklace" load_steps=4 format=3 uid="uid://dsowukkicykrv"]
 
 [ext_resource type="Script" path="res://items/gear/necklaces/Necklace.gd" id="1_4xswa"]
-[ext_resource type="Texture2D" uid="uid://bf8cdoitc4gyi" path="res://assets/Necklaces/golden-necklace-2.png" id="2_yi57e"]
+[ext_resource type="Texture2D" uid="uid://bf8cdoitc4gyi" path="res://Assets/Necklaces/golden-necklace-2.png" id="2_yi57e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4d50n"]
 atlas = ExtResource("2_yi57e")

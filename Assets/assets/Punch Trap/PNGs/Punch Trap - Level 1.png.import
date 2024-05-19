@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnfftvgwsc83b"
-path="res://.godot/imported/Punch Trap - Level 1.png-a2dc4e087a02fb2330402ce211a8ce5b.ctex"
+path="res://.godot/imported/Punch Trap - Level 1.png-ca77eb404378e0327292f659dbc59e4f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/Punch Trap/PNGs/Punch Trap - Level 1.png"
-dest_files=["res://.godot/imported/Punch Trap - Level 1.png-a2dc4e087a02fb2330402ce211a8ce5b.ctex"]
+source_file="res://Assets/assets/Punch Trap/PNGs/Punch Trap - Level 1.png"
+dest_files=["res://.godot/imported/Punch Trap - Level 1.png-ca77eb404378e0327292f659dbc59e4f.ctex"]
 
 [params]
 

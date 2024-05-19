@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mypakqa3smfl"
-path="res://.godot/imported/skullpanel.png-0a6d412f09fc3cb6a53e6735486026a7.ctex"
+path="res://.godot/imported/skullpanel.png-e792e8e0c6e5b14f39e030137b84faba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/props/skullpanel.png"
-dest_files=["res://.godot/imported/skullpanel.png-0a6d412f09fc3cb6a53e6735486026a7.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/props/skullpanel.png"
+dest_files=["res://.godot/imported/skullpanel.png-e792e8e0c6e5b14f39e030137b84faba.ctex"]
 
 [params]
 

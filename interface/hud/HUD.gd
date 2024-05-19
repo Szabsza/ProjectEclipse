@@ -8,29 +8,29 @@ class_name Hud extends CanvasLayer
 @onready var mana_points : Label = $ManaPoints
 @onready var runes_held_label : Label = $RunesHeldLabel
 @onready var keys_held_label : Label = $Keys/KeysHeldLabel
-@onready var player : Player = get_tree().get_first_node_in_group("player")
+
 
 
 func update_stamina_bar():
-	stamina_points.text = str(player.stamina.current_stamina) + "/" + str(player.stamina.max_stamina)
-	stamina_bar.max_value = player.stamina.max_stamina
-	stamina_bar.value = player.stamina.current_stamina
+	stamina_points.text = str(PlayerManager.player.stamina.current_stamina) + "/" + str(PlayerManager.player.stamina.max_stamina)
+	stamina_bar.max_value = PlayerManager.player.stamina.max_stamina
+	stamina_bar.value = PlayerManager.player.stamina.current_stamina
 
 
 func update_health_bar():
-	health_points.text = str(player.health.current_health) + "/" + str(player.health.max_health)
-	health_bar.max_value = player.health.max_health
-	health_bar.value = player.health.current_health
+	health_points.text = str(PlayerManager.player.health.current_health) + "/" + str(PlayerManager.player.health.max_health)
+	health_bar.max_value = PlayerManager.player.health.max_health
+	health_bar.value = PlayerManager.player.health.current_health
 
 
 func update_mana_bar():
-	mana_points.text = str(player.mana.current_mana) + "/" + str(player.mana.max_mana)
-	mana_bar.max_value = player.mana.max_mana
-	mana_bar.value = player.mana.current_mana
+	mana_points.text = str(PlayerManager.player.mana.current_mana) + "/" + str(PlayerManager.player.mana.max_mana)
+	mana_bar.max_value = PlayerManager.player.mana.max_mana
+	mana_bar.value = PlayerManager.player.mana.current_mana
 
 
 func update_runes_held():
-	runes_held_label.text = str(player.runes_held.amount)	
+	runes_held_label.text = str(PlayerManager.player.runes_held.amount)	
 
 
 func update_keys_held():
@@ -38,8 +38,9 @@ func update_keys_held():
 
 
 func _process(delta):
-	update_health_bar()
-	update_mana_bar()
-	update_stamina_bar()
-	update_runes_held()
-	update_keys_held()
+	if PlayerManager.player != null:
+		update_health_bar()
+		update_mana_bar()
+		update_stamina_bar()
+		update_runes_held()
+		update_keys_held()

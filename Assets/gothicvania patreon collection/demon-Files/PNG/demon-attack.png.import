@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://divh58rfmlu4n"
-path="res://.godot/imported/demon-attack.png-c3037c1582a5d786b1ec772b428de46d.ctex"
+path="res://.godot/imported/demon-attack.png-082792cf69d0ca76363a6dc4fdd6401a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/demon-Files/PNG/demon-attack.png"
-dest_files=["res://.godot/imported/demon-attack.png-c3037c1582a5d786b1ec772b428de46d.ctex"]
+source_file="res://Assets/gothicvania patreon collection/demon-Files/PNG/demon-attack.png"
+dest_files=["res://.godot/imported/demon-attack.png-082792cf69d0ca76363a6dc4fdd6401a.ctex"]
 
 [params]
 

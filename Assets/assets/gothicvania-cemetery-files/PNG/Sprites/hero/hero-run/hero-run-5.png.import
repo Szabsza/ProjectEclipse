@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8iw7vnhlw7eq"
-path="res://.godot/imported/hero-run-5.png-27b9a0ae35e2bec9e6421232185ac046.ctex"
+path="res://.godot/imported/hero-run-5.png-c9f10c563c99cb804de6f905ae6076a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-run/hero-run-5.png"
-dest_files=["res://.godot/imported/hero-run-5.png-27b9a0ae35e2bec9e6421232185ac046.ctex"]
+source_file="res://Assets/assets/gothicvania-cemetery-files/PNG/Sprites/hero/hero-run/hero-run-5.png"
+dest_files=["res://.godot/imported/hero-run-5.png-c9f10c563c99cb804de6f905ae6076a9.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bytd6jiw8dm0h"
-path="res://.godot/imported/turret_broke.png-696d31a61b27e1822ce59372eca10116.ctex"
+path="res://.godot/imported/turret_broke.png-a5df7d81c8be6fb43e198c3d92cdbb37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/enemy/turret_broke.png"
-dest_files=["res://.godot/imported/turret_broke.png-696d31a61b27e1822ce59372eca10116.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/enemy/turret_broke.png"
+dest_files=["res://.godot/imported/turret_broke.png-a5df7d81c8be6fb43e198c3d92cdbb37.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckkj3hfptsr4e"
-path="res://.godot/imported/Lightning Trap - Level 3.png-8ddaa4040848fcb88ada0e218ec150fe.ctex"
+path="res://.godot/imported/Lightning Trap - Level 3.png-cc3ed8580b3de63e97781f62670bb818.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Lightning Trap/PNGs/Lightning Trap - Level 3.png"
-dest_files=["res://.godot/imported/Lightning Trap - Level 3.png-8ddaa4040848fcb88ada0e218ec150fe.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Lightning Trap/PNGs/Lightning Trap - Level 3.png"
+dest_files=["res://.godot/imported/Lightning Trap - Level 3.png-cc3ed8580b3de63e97781f62670bb818.ctex"]
 
 [params]
 

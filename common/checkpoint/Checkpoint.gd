@@ -12,9 +12,9 @@ const ACTIVATED_ANIMATION : String = "activated"
 var playback : AnimationNodeStateMachinePlayback
 
 
-func load_as_activated():
-	playback.travel(ACTIVE_ANIMATION)
-	checkpoint_data.is_activated = true
+func refresh():
+	if checkpoint_data.is_activated:
+		playback.travel(ACTIVE_ANIMATION)
 
 
 func _ready():
@@ -27,11 +27,14 @@ func _ready():
 	playback = animation_tree["parameters/playback"]
 	interactable_area.interact = Callable(self, "_on_interact")
 	
-	checkpoint_menu.setup(checkpoint_data.checkpoint_name)
+	checkpoint_menu.setup(checkpoint_data)
+	
+	refresh()
 
 
 func _on_interact():
 	if not checkpoint_data.is_activated:
+		TravelManager.add_to_available_checkpoints(checkpoint_data)
 		checkpoint_data.is_activated = true
 		playback.travel(ACTIVATED_ANIMATION)
 	else:

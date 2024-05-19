@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2t7ce6pf1fkt"
-path="res://.godot/imported/life_empty.png-6167aa3f065b95d4fd7d54718bd0d458.ctex"
+path="res://.godot/imported/life_empty.png-3fb5374cdef873297cfbda0d665a4177.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/ui/life_empty.png"
-dest_files=["res://.godot/imported/life_empty.png-6167aa3f065b95d4fd7d54718bd0d458.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/ui/life_empty.png"
+dest_files=["res://.godot/imported/life_empty.png-3fb5374cdef873297cfbda0d665a4177.ctex"]
 
 [params]
 

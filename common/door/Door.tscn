@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://common/interactable_area/InteractableArea.gd" id="1_rkx1d"]
 [ext_resource type="Script" path="res://common/door/Door.gd" id="1_uuavu"]
-[ext_resource type="Texture2D" uid="uid://qj6gjerqgh8p" path="res://assets/toRecolor/The Sidescroller's Dungeon Tiles 32x32.png" id="2_vfpk0"]
-[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://assets/DungeonFont.ttf" id="4_6omcd"]
+[ext_resource type="Texture2D" uid="uid://qj6gjerqgh8p" path="res://Assets/toRecolor/The Sidescroller's Dungeon Tiles 32x32.png" id="2_vfpk0"]
+[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://Assets/DungeonFont.ttf" id="4_6omcd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cj03w"]
 atlas = ExtResource("2_vfpk0")

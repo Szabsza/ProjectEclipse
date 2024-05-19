@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cri53kueb4pqk"
-path="res://.godot/imported/BossBody-static.png-20d12a89a063b0d75ba722ca165203f6.ctex"
+path="res://.godot/imported/BossBody-static.png-2bb005c6f610d64532952ee5e2ee1673.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/SpriteSheets/boss/BossBody-static.png"
-dest_files=["res://.godot/imported/BossBody-static.png-20d12a89a063b0d75ba722ca165203f6.ctex"]
+source_file="res://Assets/assets/SpriteSheets/boss/BossBody-static.png"
+dest_files=["res://.godot/imported/BossBody-static.png-2bb005c6f610d64532952ee5e2ee1673.ctex"]
 
 [params]
 

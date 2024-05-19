@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://di7twquwfffh0"
-path="res://.godot/imported/RhinoBeetle.png-c41dc9e4be26ad59eb2947a8f473cd62.ctex"
+path="res://.godot/imported/RhinoBeetle.png-9f1bcd53f618094468a627c4b18fad56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/Basic Vermin Animations/Rhino Beetle/RhinoBeetle.png"
-dest_files=["res://.godot/imported/RhinoBeetle.png-c41dc9e4be26ad59eb2947a8f473cd62.ctex"]
+source_file="res://Assets/assets/Basic Vermin Animations/Rhino Beetle/RhinoBeetle.png"
+dest_files=["res://.godot/imported/RhinoBeetle.png-9f1bcd53f618094468a627c4b18fad56.ctex"]
 
 [params]
 

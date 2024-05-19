@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddlpbb1l4bb2"
-path="res://.godot/imported/MawingBeaver.png-fee146daad036e6eb3b51afd19f12c70.ctex"
+path="res://.godot/imported/MawingBeaver.png-717259fd269e06d50569dc56b43af6fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/Basic Vermin Animations/Mawing Beaver/MawingBeaver.png"
-dest_files=["res://.godot/imported/MawingBeaver.png-fee146daad036e6eb3b51afd19f12c70.ctex"]
+source_file="res://Assets/assets/Basic Vermin Animations/Mawing Beaver/MawingBeaver.png"
+dest_files=["res://.godot/imported/MawingBeaver.png-717259fd269e06d50569dc56b43af6fd.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cy8l0ubev0try"
-path="res://.godot/imported/Sandworm trap - Level 3.png-b6ef572d08d6944d403bd3280bc12f84.ctex"
+path="res://.godot/imported/Sandworm trap - Level 3.png-abe90ca8dbd9c9948186c3dc199cadcd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Sandworm Trap/PNGs/Sandworm trap - Level 3.png"
-dest_files=["res://.godot/imported/Sandworm trap - Level 3.png-b6ef572d08d6944d403bd3280bc12f84.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Sandworm Trap/PNGs/Sandworm trap - Level 3.png"
+dest_files=["res://.godot/imported/Sandworm trap - Level 3.png-abe90ca8dbd9c9948186c3dc199cadcd.ctex"]
 
 [params]
 

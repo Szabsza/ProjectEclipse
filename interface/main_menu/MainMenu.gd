@@ -1,17 +1,16 @@
 class_name MainMenu extends Control
 
-const GAME_SCENE : String = "res://level/game/Game.tscn"
+const RUINS_LEVEL_PATH : String = "res://level/ruins/Ruins.tscn" 
 const LOADING_SCENE : String = "res://level/loading/Loading.tscn"
 
 
 func _on_continue_pressed():
-	get_tree().change_scene_to_packed(load(LOADING_SCENE))
-	LoadManager.load_game()
-
+	pass
+	
 
 func _on_new_game_pressed():
-	get_tree().change_scene_to_packed(load(LOADING_SCENE))
-	
+	SceneManager.change_scene_to(RUINS_LEVEL_PATH)
+
 
 func _on_how_to_play_pressed():
 	pass

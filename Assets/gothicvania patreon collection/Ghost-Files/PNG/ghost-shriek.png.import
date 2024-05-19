@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qeuuroig6na"
-path="res://.godot/imported/ghost-shriek.png-7253c5132036ad16160f07c22d6e23ad.ctex"
+path="res://.godot/imported/ghost-shriek.png-aa6fa586e90a40516c3334d731b50530.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Ghost-Files/PNG/ghost-shriek.png"
-dest_files=["res://.godot/imported/ghost-shriek.png-7253c5132036ad16160f07c22d6e23ad.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Ghost-Files/PNG/ghost-shriek.png"
+dest_files=["res://.godot/imported/ghost-shriek.png-aa6fa586e90a40516c3334d731b50530.ctex"]
 
 [params]
 

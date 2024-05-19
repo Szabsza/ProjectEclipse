@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://q4b4r1q4vkij"
-path="res://.godot/imported/CreditsScreen.png-c96be40e0d770d9ab43f83c7ebc31fcd.ctex"
+path="res://.godot/imported/CreditsScreen.png-4921b5ea04440622f12e5d619b4a5f81.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/titlescreen/CreditsScreen.png"
-dest_files=["res://.godot/imported/CreditsScreen.png-c96be40e0d770d9ab43f83c7ebc31fcd.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/titlescreen/CreditsScreen.png"
+dest_files=["res://.godot/imported/CreditsScreen.png-4921b5ea04440622f12e5d619b4a5f81.ctex"]
 
 [params]
 

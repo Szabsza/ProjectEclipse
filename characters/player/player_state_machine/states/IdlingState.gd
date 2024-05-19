@@ -9,19 +9,24 @@ func state_process(delta):
 
 func state_input(event: InputEvent):
 	if event.is_action_pressed("jump") \
-	and player.stamina.current_stamina - player.player_data.jump_stamina_cost > 0:
+	and player.stamina.current_stamina - player.player_data.jump_stamina_cost >= 0:
 		perform_jump()
 	
 	if event.is_action_pressed("right") or event.is_action_pressed("left"):
 		perform_run()
 	
 	if event.is_action_pressed("dash") \
-	and  player.stamina.current_stamina - player.player_data.roll_stamina_cost > 0:
+	and  player.stamina.current_stamina - player.player_data.roll_stamina_cost >= 0:
 		perform_dash()
 	
 	if event.is_action_pressed("attack") \
-	and player.stamina.current_stamina - player.player_data.attack_stamina_cost > 0:
+	and player.stamina.current_stamina - player.player_data.attack_stamina_cost >= 0:
 		perform_attack()
+		
+	if event.is_action_pressed("fly") \
+	and HotBarManager.wings != null \
+	and player.mana.current_mana - HotBarManager.wings.mana_cost >= 0 :
+		perform_fly()
 
 
 func perform_jump():
@@ -45,6 +50,10 @@ func perform_dash():
 
 func perform_attack():
 	next_state = states["Attacking"]
+
+
+func perform_fly():
+	next_state = states["Flying"]
 
 
 func on_enter():

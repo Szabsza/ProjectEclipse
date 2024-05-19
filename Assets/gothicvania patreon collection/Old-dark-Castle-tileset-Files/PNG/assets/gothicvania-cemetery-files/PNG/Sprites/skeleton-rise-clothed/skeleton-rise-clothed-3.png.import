@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yvfrc4xqmm4e"
-path="res://.godot/imported/skeleton-rise-clothed-3.png-85bb61ea7babf1095a231f20aabe3497.ctex"
+path="res://.godot/imported/skeleton-rise-clothed-3.png-dc1fe44684444696515ca5cd6c358aa9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Sprites/skeleton-rise-clothed/skeleton-rise-clothed-3.png"
-dest_files=["res://.godot/imported/skeleton-rise-clothed-3.png-85bb61ea7babf1095a231f20aabe3497.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/gothicvania-cemetery-files/PNG/Sprites/skeleton-rise-clothed/skeleton-rise-clothed-3.png"
+dest_files=["res://.godot/imported/skeleton-rise-clothed-3.png-dc1fe44684444696515ca5cd6c358aa9.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://sotnup4d6e3l"
-path="res://.godot/imported/Get Hit.png-d6dd3855fa9981b3effb36ae0bc8a451.ctex"
+path="res://.godot/imported/Get Hit.png-25ccada9c8c31fbf2367a1118863fa04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Worm/Get Hit.png"
-dest_files=["res://.godot/imported/Get Hit.png-d6dd3855fa9981b3effb36ae0bc8a451.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Worm/Get Hit.png"
+dest_files=["res://.godot/imported/Get Hit.png-25ccada9c8c31fbf2367a1118863fa04.ctex"]
 
 [params]
 

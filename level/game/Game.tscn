@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bmm18jv2ooo6i"]
 
-[ext_resource type="PackedScene" uid="uid://bqaipc210dp67" path="res://level/ruins/ruins.tscn" id="1_m7x70"]
+[ext_resource type="PackedScene" uid="uid://bqaipc210dp67" path="res://level/ruins/Ruins.tscn" id="1_m7x70"]
 [ext_resource type="Script" path="res://level/game/Game.gd" id="1_yhvoh"]
 [ext_resource type="PackedScene" uid="uid://v3fb0628e85t" path="res://characters/player/Player.tscn" id="2_vrqdx"]
 [ext_resource type="PackedScene" uid="uid://cj1ienw6bbkk4" path="res://level/dungeon/Dungeon.tscn" id="3_ftbfq"]

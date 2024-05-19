@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bk2up1mtafrqs"
-path="res://.godot/imported/Arrow Trap - Level 3 - Transition.png-5c3d1b9a70e5435206facc8fb2f95128.ctex"
+path="res://.godot/imported/Arrow Trap - Level 3 - Transition.png-e46174cc84a65c688d218e87f846d5ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/Arrow Trap/Transitions/PNGs/Arrow Trap - Level 3 - Transition.png"
-dest_files=["res://.godot/imported/Arrow Trap - Level 3 - Transition.png-5c3d1b9a70e5435206facc8fb2f95128.ctex"]
+source_file="res://Assets/assets/Arrow Trap/Transitions/PNGs/Arrow Trap - Level 3 - Transition.png"
+dest_files=["res://.godot/imported/Arrow Trap - Level 3 - Transition.png-e46174cc84a65c688d218e87f846d5ac.ctex"]
 
 [params]
 

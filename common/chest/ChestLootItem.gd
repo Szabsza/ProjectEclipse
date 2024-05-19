@@ -5,9 +5,20 @@ class_name ChestLootItem extends Sprite2D
 var loot_item : LootItem = null 
 
 
+func refresh():
+	texture = loot_item.texture
+	if loot_item.picked_up:
+		set_picked_up()
+	
+
+func set_picked_up():
+	visible = false
+	InteractionManager.unregister_interactable_area(interactable_area)
+	interactable_area.is_interactable = false
+
+
 func set_loot_item(loot_item : LootItem):
 	self.loot_item = loot_item
-	texture = loot_item.texture
 
 
 func _ready():
@@ -17,6 +28,4 @@ func _ready():
 
 func _on_interact():
 	loot_item.on_pickup()
-	visible = false
-	InteractionManager.unregister_interactable_area(interactable_area)
-	interactable_area.is_interactable = false
+	set_picked_up()

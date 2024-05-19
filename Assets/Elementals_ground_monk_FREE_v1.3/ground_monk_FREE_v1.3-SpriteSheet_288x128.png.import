@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cp4yckchcxgak"
-path="res://.godot/imported/ground_monk_FREE_v1.3-SpriteSheet_288x128.png-b1f037c611aa9016e0928fefbe8c7138.ctex"
+path="res://.godot/imported/ground_monk_FREE_v1.3-SpriteSheet_288x128.png-aa5915fbd285a98542a8b32517f0b23d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Elementals_ground_monk_FREE_v1.3/ground_monk_FREE_v1.3-SpriteSheet_288x128.png"
-dest_files=["res://.godot/imported/ground_monk_FREE_v1.3-SpriteSheet_288x128.png-b1f037c611aa9016e0928fefbe8c7138.ctex"]
+source_file="res://Assets/Elementals_ground_monk_FREE_v1.3/ground_monk_FREE_v1.3-SpriteSheet_288x128.png"
+dest_files=["res://.godot/imported/ground_monk_FREE_v1.3-SpriteSheet_288x128.png-aa5915fbd285a98542a8b32517f0b23d.ctex"]
 
 [params]
 

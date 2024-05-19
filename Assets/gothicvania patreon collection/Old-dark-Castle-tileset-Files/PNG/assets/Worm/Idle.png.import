@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bovmyvk3v013g"
-path="res://.godot/imported/Idle.png-7cc5924c4380a19be8953d062d2850d5.ctex"
+path="res://.godot/imported/Idle.png-341426209b4d3f83e5e9386a5611e66d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Worm/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-7cc5924c4380a19be8953d062d2850d5.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/Worm/Idle.png"
+dest_files=["res://.godot/imported/Idle.png-341426209b4d3f83e5e9386a5611e66d.ctex"]
 
 [params]
 

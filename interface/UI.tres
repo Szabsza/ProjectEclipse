@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=7 format=3 uid="uid://crlofspi6s6xu"]
 
-[ext_resource type="Texture2D" uid="uid://c5esfe0e5usks" path="res://assets/Buttons/buttons_1x.png" id="1_xhqeu"]
-[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://assets/DungeonFont.ttf" id="2_nw6rg"]
+[ext_resource type="Texture2D" uid="uid://c5esfe0e5usks" path="res://Assets/Buttons/buttons_1x.png" id="1_xhqeu"]
+[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://Assets/DungeonFont.ttf" id="2_nw6rg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w4tne"]
 content_margin_left = 5.0

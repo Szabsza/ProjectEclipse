@@ -21,3 +21,9 @@ class_name PlayerData extends CharacterData
 @export var roll_frames : int = 20
 @export var speed : float = 200.0
 @export var fall_acceleration : float = 0.25
+
+@export var health : Health
+@export var mana : Mana 
+@export var stamina : Stamina
+@export var runes_held : RunesHeld
+@export var status : Status

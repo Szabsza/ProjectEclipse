@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cto2ty4lvf57p"
-path="res://.godot/imported/barrel.png-77d377c6440ab73d3e5dda92b4490354.ctex"
+path="res://.godot/imported/barrel.png-6cfd7102c0b4538c08498291b240bd9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/props/barrel.png"
-dest_files=["res://.godot/imported/barrel.png-77d377c6440ab73d3e5dda92b4490354.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Old-dark-Castle-tileset-Files/PNG/assets/SpriteSheets/props/barrel.png"
+dest_files=["res://.godot/imported/barrel.png-6cfd7102c0b4538c08498291b240bd9d.ctex"]
 
 [params]
 

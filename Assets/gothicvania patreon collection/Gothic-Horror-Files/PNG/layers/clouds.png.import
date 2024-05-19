@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dy8inwcfdpsah"
-path="res://.godot/imported/clouds.png-46aace6893451df6d39d1d809aceec94.ctex"
+path="res://.godot/imported/clouds.png-31c1a8489b2afdd547fd4df236f8a09e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gothicvania patreon collection/Gothic-Horror-Files/PNG/layers/clouds.png"
-dest_files=["res://.godot/imported/clouds.png-46aace6893451df6d39d1d809aceec94.ctex"]
+source_file="res://Assets/gothicvania patreon collection/Gothic-Horror-Files/PNG/layers/clouds.png"
+dest_files=["res://.godot/imported/clouds.png-31c1a8489b2afdd547fd4df236f8a09e.ctex"]
 
 [params]
 

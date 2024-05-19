@@ -10,6 +10,7 @@ region = Rect2(144, 144, 16, 16)
 [resource]
 script = ExtResource("1_adrf7")
 global_position = Vector2(0, 0)
+picked_up = false
 item_name = "Medium amount of Runes"
 description = "A certain amount of Runes"
 quantity = 1000

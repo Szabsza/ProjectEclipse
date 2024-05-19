@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpeac48e6o6sh"
-path="res://.godot/imported/KnightIdle_strip.png-14d473407a81703bd8e69e1f57a08e5f.ctex"
+path="res://.godot/imported/KnightIdle_strip.png-9455d1e26af70965a6b5ba4840ce1568.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Knight/KnightIdle_strip.png"
-dest_files=["res://.godot/imported/KnightIdle_strip.png-14d473407a81703bd8e69e1f57a08e5f.ctex"]
+source_file="res://Assets/Knight/KnightIdle_strip.png"
+dest_files=["res://.godot/imported/KnightIdle_strip.png-9455d1e26af70965a6b5ba4840ce1568.ctex"]
 
 [params]
 

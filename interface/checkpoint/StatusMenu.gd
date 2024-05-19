@@ -11,13 +11,14 @@ class_name StatusMenu extends Control
 
 
 func refresh_labels():		
-	health_label.text = "Health: " + str(PlayerManager.player.status.health)
-	stamina_label.text = "Stamina: " + str(PlayerManager.player.status.stamina)
-	mana_label.text = "Mana: " + str(PlayerManager.player.status.mana)
-	power_label.text = "Power: " + str(PlayerManager.player.status.attack_power)
-	level_label.text = "Level: " + str(PlayerManager.player.status.level)
-	runes_held_label.text = "Runes held: " + str(PlayerManager.player.runes_held.amount)
-	runes_needed_label.text = "Runes needed: " + str(PlayerManager.player.status.runes_needed)	
+	if PlayerManager.player != null:
+		health_label.text = "Health: " + str(PlayerManager.player.status.health)
+		stamina_label.text = "Stamina: " + str(PlayerManager.player.status.stamina)
+		mana_label.text = "Mana: " + str(PlayerManager.player.status.mana)
+		power_label.text = "Power: " + str(PlayerManager.player.status.attack_power)
+		level_label.text = "Level: " + str(PlayerManager.player.status.level)
+		runes_held_label.text = "Runes held: " + str(PlayerManager.player.runes_held.amount)
+		runes_needed_label.text = "Runes needed: " + str(PlayerManager.player.status.runes_needed)	
 
 
 func _ready(): 
