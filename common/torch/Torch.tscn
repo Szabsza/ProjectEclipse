@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://d26deo5pjs12u"]
 
-[ext_resource type="Texture2D" uid="uid://dym4xmctkmh8m" path="res://assets/toRecolor/Torch Sprite Sheet 32x64.png" id="1_byl84"]
+[ext_resource type="Texture2D" uid="uid://dym4xmctkmh8m" path="res://Assets/toRecolor/Torch Sprite Sheet 32x64.png" id="1_byl84"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hxe47"]
 atlas = ExtResource("1_byl84")

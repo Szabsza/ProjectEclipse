@@ -10,6 +10,7 @@ class_name Door extends Node2D
 
 
 func _ready():
+	door_data.global_position = global_position
 	interactable_area.interact = Callable(self, "_on_interact")
 	label.visible = false
 	

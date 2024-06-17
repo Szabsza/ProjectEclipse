@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://c7grwh74qfedn"]
 
-[ext_resource type="Texture2D" uid="uid://gac2lwmm34sf" path="res://assets/GUI/GUI_2x.png" id="1_kky67"]
+[ext_resource type="Texture2D" uid="uid://gac2lwmm34sf" path="res://Assets/GUI/GUI_2x.png" id="1_kky67"]
 [ext_resource type="Script" path="res://interface/hotbar/items/potions/HealthPotion.gd" id="2_wgadh"]
-[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://assets/DungeonFont.ttf" id="3_4qyl3"]
+[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://Assets/DungeonFont.ttf" id="3_4qyl3"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_q8ut5"]
 

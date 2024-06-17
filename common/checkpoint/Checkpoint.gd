@@ -33,6 +33,8 @@ func _ready():
 
 
 func _on_interact():
+	PlayerManager.last_interacted_checkpoint = checkpoint_data
+	
 	if not checkpoint_data.is_activated:
 		TravelManager.add_to_available_checkpoints(checkpoint_data)
 		checkpoint_data.is_activated = true

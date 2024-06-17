@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://k2mrn0mb3kdg"]
 
-[ext_resource type="Texture2D" uid="uid://pqgprggd4b6q" path="res://assets/GUI/GUI_4x.png" id="1_u7os1"]
+[ext_resource type="Texture2D" uid="uid://pqgprggd4b6q" path="res://Assets/GUI/GUI_4x.png" id="1_u7os1"]
 [ext_resource type="Script" path="res://interface/hotbar/items/necklaces/Necklace.gd" id="1_y8w7l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mdifu"]

@@ -7,7 +7,7 @@ class_name LevelData extends Resource
 @export var checkpoints_data : Array[CheckpointData]
 @export var merchants_data : Array[MerchantData]
 @export var chest_loots : Array[LootItem]
-#@export var door_data : Array[DoorData]
+@export var doors_data : Array[DoorData]
 
 
 func set_level_name(level_name : String):
@@ -34,8 +34,8 @@ func add_chest_loot(chest_loot : LootItem):
 	chest_loots.append(chest_loot)
 
 
-#func add_door(door_data : DoorData):
-	#doors_data.append(door_data)
+func add_door(door_data : DoorData):
+	doors_data.append(door_data)
 
 
 func reset_all():
@@ -43,4 +43,4 @@ func reset_all():
 	chest_loots = []
 	checkpoints_data = []
 	merchants_data = []
-	#door_data = []
+	doors_data = []

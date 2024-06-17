@@ -15,6 +15,5 @@ func on_exit():
 
 func _on_animation_tree_animation_finished(anim_name):
 	if anim_name == DEATH_ANIMATION:
-		DeathManager.place_runes_where_player_died()
-		DeathManager.respawn_player()
+		PlayerManager.die_and_respawn()
 		next_state = states["Idling"]

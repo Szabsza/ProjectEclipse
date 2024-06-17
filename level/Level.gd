@@ -18,6 +18,12 @@ func spawn_player(position : Vector2):
 	add_child(player)
 
 
+func spawn_remains(position : Vector2):
+	var remains : Remains = preload("res://common/remains/Remains.tscn").instantiate()
+	remains.global_position = position
+	add_child(remains)
+
+
 func load_level_data():
 	if WorldManager.is_new_level(level_scene_path):
 		level_data = LevelData.new()
@@ -39,8 +45,8 @@ func load_level_data():
 		for chest_loot in chest_loots as Array[ChestLootItem]:
 			level_data.add_chest_loot(chest_loot.loot_item)
 		
-		#for door in doors as Array[Door]:
-			#level_data.add_door(door.door_data)
+		for door in doors as Array[Door]:
+			level_data.add_door(door.door_data)
 	else:
 		level_data = WorldManager.get_level(level_scene_path)
 		
@@ -51,10 +57,22 @@ func load_level() -> void:
 	WorldManager.set_current_level(level_data)
 	
 	if TravelManager.teleported_to_checkpoint:
-		spawn_player(TravelManager.checkpoint_teleported_to.global_position)
+		if PlayerManager.player.player_data.died:
+			if PlayerManager.last_interacted_checkpoint == null:
+				spawn_player(LevelEntryPoint.global_position)
+				PlayerManager.player.player_data.died = false
+			else:
+				spawn_player(TravelManager.checkpoint_teleported_to.global_position)
+				PlayerManager.player.player_data.died = false
+		else:
+			spawn_player(TravelManager.checkpoint_teleported_to.global_position)
 		TravelManager.clear()
-	elif TravelManager.went_trough_door:
+		return
+		
+	if TravelManager.went_trough_door:
 		spawn_player(TravelManager.door_went_trough_to.global_position)
-	else:
-		spawn_player(LevelEntryPoint.global_position)
+		TravelManager.clear()
+		return
+		
+	spawn_player(LevelEntryPoint.global_position)
 	

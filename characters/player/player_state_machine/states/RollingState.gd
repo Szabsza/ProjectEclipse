@@ -18,5 +18,5 @@ func on_enter():
 
 
 func on_exit():
-	player.player_data.roll_frames = 0
+	player.player_data.roll_frames = 20
 	player.velocity.x = 0

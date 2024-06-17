@@ -4,3 +4,6 @@
 
 [node name="SceneManager" type="Node2D"]
 script = ExtResource("1_ale4l")
+LOADING_SCENE_PATH = "res://level/loading/Loading.tscn"
+RUINS_SCENE_PATH = "res://level/ruins/Ruins.tscn"
+DUNGEON_SCENE_PATH = "res://level/dungeon/Dungeon.tscn"

@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Project Eclipse"
 run/main_scene="res://interface/main_menu/MainMenu.tscn"
-config/features=PackedStringArray("4.2", "C#", "Forward Plus")
+config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -20,7 +20,6 @@ config/icon="res://icon.svg"
 InteractionManager="*res://autoloads/interaction/InteractionManager.tscn"
 TravelManager="*res://autoloads/travel/TravelManager.tscn"
 StatusManager="*res://autoloads/status/StatusManager.tscn"
-DeathManager="*res://autoloads/player/death/DeathManager.tscn"
 HotBarManager="*res://autoloads/hotbar/HotBarManager.tscn"
 SaveManager="*res://autoloads/save/SaveManager.tscn"
 LoadManager="*res://autoloads/load/LoadManager.tscn"
@@ -50,7 +49,7 @@ enabled=PackedStringArray()
 [file_customization]
 
 folder_colors={
-"res://assets/": "gray",
+"res://Assets/": "gray",
 "res://autoloads/": "blue",
 "res://interface/": "green",
 "res://items/": "red"

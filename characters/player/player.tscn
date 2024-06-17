@@ -1,4 +1,4 @@
-[gd_scene load_steps=212 format=3 uid="uid://v3fb0628e85t"]
+[gd_scene load_steps=212 format=3 uid="uid://dd5mun2t82eqq"]
 
 [ext_resource type="Script" path="res://characters/player/Player.gd" id="1_g55oj"]
 [ext_resource type="Resource" uid="uid://d0qikgohrs3u" path="res://characters/player/resources/player_data_0.tres" id="7_js4re"]
@@ -1113,7 +1113,6 @@ wait_time = 0.5
 one_shot = true
 
 [node name="StateLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
-visible = false
 offset_left = -40.0
 offset_top = -55.0
 offset_right = 42.0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://xicx1vr1g113"]
 
-[ext_resource type="Texture2D" uid="uid://0xbl5ph6hjsw" path="res://assets/old-dark-castle-interior-tileset.png" id="1_jtrss"]
+[ext_resource type="Texture2D" uid="uid://0xbl5ph6hjsw" path="res://Assets/old-dark-castle-interior-tileset.png" id="1_jtrss"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_viqp5"]
 size = Vector2(32, 17)

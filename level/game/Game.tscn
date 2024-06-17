@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bqaipc210dp67" path="res://level/ruins/Ruins.tscn" id="1_m7x70"]
 [ext_resource type="Script" path="res://level/game/Game.gd" id="1_yhvoh"]
-[ext_resource type="PackedScene" uid="uid://v3fb0628e85t" path="res://characters/player/Player.tscn" id="2_vrqdx"]
+[ext_resource type="PackedScene" uid="uid://dd5mun2t82eqq" path="res://characters/player/player.tscn" id="2_vrqdx"]
 [ext_resource type="PackedScene" uid="uid://cj1ienw6bbkk4" path="res://level/dungeon/Dungeon.tscn" id="3_ftbfq"]
 [ext_resource type="PackedScene" uid="uid://ciycxun4i5wvu" path="res://interface/hud/HUD.tscn" id="3_lb20u"]
 [ext_resource type="PackedScene" uid="uid://b2j0hs4almrne" path="res://common/remains/Remains.tscn" id="4_dtw6x"]

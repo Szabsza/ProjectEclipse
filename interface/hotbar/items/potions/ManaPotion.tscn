@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://cu71y3gmg2l6e"]
 
-[ext_resource type="Texture2D" uid="uid://pqgprggd4b6q" path="res://assets/GUI/GUI_4x.png" id="1_nl766"]
+[ext_resource type="Texture2D" uid="uid://pqgprggd4b6q" path="res://Assets/GUI/GUI_4x.png" id="1_nl766"]
 [ext_resource type="Script" path="res://interface/hotbar/items/potions/ManaPotion.gd" id="2_j34ns"]
-[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://assets/DungeonFont.ttf" id="3_ou5g1"]
+[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://Assets/DungeonFont.ttf" id="3_ou5g1"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_u7kft"]
 

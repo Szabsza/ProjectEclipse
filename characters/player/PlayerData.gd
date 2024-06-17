@@ -2,6 +2,9 @@ class_name PlayerData extends CharacterData
 
 @export var keys_held : int = 0
 
+@export var died : bool = false
+@export var position_where_died : Vector2
+
 @export var attack_stamina_cost : int = 25
 @export var jump_stamina_cost : int = 25
 @export var roll_stamina_cost : int = 25

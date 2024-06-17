@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://interface/hud/HUD.gd" id="1_c5nti"]
 [ext_resource type="PackedScene" uid="uid://biu3xvae7hxfd" path="res://interface/hud/HealthBar.tscn" id="1_tfwml"]
 [ext_resource type="PackedScene" uid="uid://cxdepm6ksokn3" path="res://interface/hud/StaminaBar.tscn" id="2_xsdn5"]
-[ext_resource type="Texture2D" uid="uid://gac2lwmm34sf" path="res://assets/GUI/GUI_2x.png" id="4_wtn24"]
-[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://assets/DungeonFont.ttf" id="5_d23xu"]
-[ext_resource type="PackedScene" uid="uid://8i50xyhqys14" path="res://interface/hotbar/Hotbar.tscn" id="6_wlgjf"]
+[ext_resource type="Texture2D" uid="uid://gac2lwmm34sf" path="res://Assets/GUI/GUI_2x.png" id="4_wtn24"]
+[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://Assets/DungeonFont.ttf" id="5_d23xu"]
+[ext_resource type="PackedScene" uid="uid://dwp7u37ibxbmv" path="res://interface/hotbar/Hotbar.tscn" id="6_wlgjf"]
 [ext_resource type="PackedScene" uid="uid://6c0nmw03t3c7" path="res://interface/hud/ManaBar.tscn" id="7_cjy4l"]
-[ext_resource type="Texture2D" uid="uid://crgdx5iqxvvjn" path="res://assets/GUI/GUI_1x.png" id="8_2jtxr"]
+[ext_resource type="Texture2D" uid="uid://crgdx5iqxvvjn" path="res://Assets/GUI/GUI_1x.png" id="8_2jtxr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1v5ht"]
 atlas = ExtResource("4_wtn24")
