@@ -1,8 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://b2j0hs4almrne"]
+[gd_scene load_steps=10 format=3 uid="uid://b2j0hs4almrne"]
 
 [ext_resource type="Texture2D" uid="uid://ceom7gj05p0u5" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/death/death_19.png" id="1_koknt"]
 [ext_resource type="Script" path="res://common/remains/Remains.gd" id="1_ngofh"]
+[ext_resource type="Script" path="res://common/remains/RemainsData.gd" id="2_pul1y"]
 [ext_resource type="Script" path="res://common/interactable_area/InteractableArea.gd" id="3_vyl4f"]
+
+[sub_resource type="Resource" id="Resource_0hude"]
+script = ExtResource("2_pul1y")
+scene_path = ""
+position = Vector2(0, 0)
+runes_amount = 0
+picked_up = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c5itu"]
 size = Vector2(13, 14)
@@ -23,6 +31,7 @@ radius = 21.0
 [node name="Remains" type="RigidBody2D" groups=["remains"]]
 position = Vector2(0, -13)
 script = ExtResource("1_ngofh")
+remains_data = SubResource("Resource_0hude")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

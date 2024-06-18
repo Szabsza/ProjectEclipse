@@ -28,6 +28,7 @@ PlayerManager="*res://autoloads/player/PlayerManager.tscn"
 TransitionManager="*res://autoloads/transition/TransitionManager.tscn"
 BuffManager="*res://autoloads/buff/BuffManager.tscn"
 SceneManager="*res://autoloads/scene/SceneManager.tscn"
+RemainsManager="*res://autoloads/remains/RemainsManager.tscn"
 
 [display]
 

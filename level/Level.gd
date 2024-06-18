@@ -6,7 +6,7 @@ class_name Level extends Node2D
 @onready var chest_loots : Array = get_tree().get_nodes_in_group("chest_loot")
 @onready var doors : Array = get_tree().get_nodes_in_group("door")
 
-@onready var LevelEntryPoint : Marker2D = $LevelEntryPoint
+@onready var level_entry_point : Marker2D = $LevelEntryPoint
 
 var level_data : LevelData
 var level_scene_path : String
@@ -18,9 +18,9 @@ func spawn_player(position : Vector2):
 	add_child(player)
 
 
-func spawn_remains(position : Vector2):
+func spawn_remains(scene_path : String, position : Vector2, runes_amount : int):
 	var remains : Remains = preload("res://common/remains/Remains.tscn").instantiate()
-	remains.global_position = position
+	remains.setup(scene_path, runes_amount, position)
 	add_child(remains)
 
 
@@ -56,14 +56,17 @@ func load_level() -> void:
 	load_level_data()
 	WorldManager.set_current_level(level_data)
 	
+	if PlayerManager.died and level_scene_path == PlayerManager.scene_path_where_died:
+		spawn_remains(PlayerManager.scene_path_where_died, PlayerManager.position_where_died, PlayerManager.lost_runes_amount)
+	
 	if TravelManager.teleported_to_checkpoint:
-		if PlayerManager.player.player_data.died:
+		if PlayerManager.died:
 			if PlayerManager.last_interacted_checkpoint == null:
-				spawn_player(LevelEntryPoint.global_position)
-				PlayerManager.player.player_data.died = false
+				spawn_player(level_entry_point.global_position)
+				PlayerManager.died = false
 			else:
 				spawn_player(TravelManager.checkpoint_teleported_to.global_position)
-				PlayerManager.player.player_data.died = false
+				PlayerManager.died = false
 		else:
 			spawn_player(TravelManager.checkpoint_teleported_to.global_position)
 		TravelManager.clear()
@@ -74,5 +77,5 @@ func load_level() -> void:
 		TravelManager.clear()
 		return
 		
-	spawn_player(LevelEntryPoint.global_position)
+	spawn_player(level_entry_point.global_position)
 	

@@ -1,6 +1,6 @@
 extends Node2D
 
-var level_entry_point : 
+var STARTING_LEVEL : String = "res://level/ruins/Ruins.tscn"
 var available_checkpoints : Array[CheckpointData] = []
 var checkpoint_teleported_to : CheckpointData
 var teleported_to_checkpoint : bool = false
@@ -11,6 +11,10 @@ var went_trough_door : bool = false
 
 func add_to_available_checkpoints(checkpoint : CheckpointData):
 	available_checkpoints.append(checkpoint)
+
+
+func get_available_checkpoints():
+	return available_checkpoints
 
 
 func clear():
@@ -26,10 +30,6 @@ func travel_to_checkpoint(checkpoint : CheckpointData):
 		teleported_to_checkpoint = true
 		checkpoint_teleported_to = checkpoint
 		SceneManager.change_scene_to(checkpoint.parent_scene_path)
-
-
-func get_available_checkpoints():
-	return available_checkpoints
 	
 
 func go_trough_door(door : DoorData):
@@ -39,4 +39,4 @@ func go_trough_door(door : DoorData):
 
 
 func travel_to_level_entry_position():
-	
+	SceneManager.change_scene_to(STARTING_LEVEL)

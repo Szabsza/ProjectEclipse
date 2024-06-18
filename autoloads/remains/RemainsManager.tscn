@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdy0qsl5km368"]
+
+[ext_resource type="Script" path="res://autoloads/remains/RemainsManager.gd" id="1_vedyc"]
+
+[node name="RemainsManager" type="Node2D"]
+script = ExtResource("1_vedyc")
