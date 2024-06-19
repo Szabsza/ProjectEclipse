@@ -28,7 +28,7 @@ func _on_rest_pressed():
 	close_all_open_tabs()
 	HotBarManager.reset_potions()
 	PlayerManager.rest()
-	#SaveManager.save_game()
+	SaveManager.save_game()
 
 
 func _on_level_pressed():

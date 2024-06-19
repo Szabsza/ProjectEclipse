@@ -9,3 +9,25 @@ class_name DoorData extends Resource
 
 func set_parent_scene_path(scene_path : String):
 	parent_scene_path = scene_path
+
+
+func load_data(door_data : Dictionary):
+	parent_scene_path = door_data["parent_scene_path"]
+	
+	#var _required_key = Key.new()
+	#_required_key.load_data(door_data["required_key"])
+	
+	#required_key.free()
+	#required_key = _required_key
+	
+	is_unlocked = door_data["is_unlocked"]
+	global_position = door_data["global_position"]
+
+
+func to_save() -> Dictionary:
+	return {
+		"parent_scene_path" : parent_scene_path,
+		#"required_key" : required_key.to_save(),
+		"is_unlocked" : is_unlocked,
+		"global_position" : global_position,
+	}

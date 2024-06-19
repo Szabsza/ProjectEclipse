@@ -31,3 +31,17 @@ func regen_stamina():
 		current_stamina = max_stamina
 	else:
 		current_stamina += stamina_regeneration_rate
+
+
+func load_data(stamina_data : Dictionary):
+	max_stamina = stamina_data["max_stamina"]
+	current_stamina = stamina_data["current_stamina"]
+	stamina_regeneration_rate = stamina_data["stamina_regeneration_rate"]
+
+
+func to_save() -> Dictionary:
+	return {
+		"max_stamina" : max_stamina,
+		"current_stamina" : current_stamina,
+		"stamina_regeneration_rate" : stamina_regeneration_rate
+	}

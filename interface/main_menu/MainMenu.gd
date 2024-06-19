@@ -5,7 +5,8 @@ const LOADING_SCENE : String = "res://level/loading/Loading.tscn"
 
 
 func _on_continue_pressed():
-	pass
+	LoadManager.load_game()
+	SceneManager.change_scene_to(WorldManager.current_level_data.level_scene_path)
 	
 
 func _on_new_game_pressed():

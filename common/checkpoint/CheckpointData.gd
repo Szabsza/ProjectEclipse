@@ -9,3 +9,19 @@ class_name CheckpointData extends Resource
 
 func set_parent_scene_path(scene_path : String):
 	parent_scene_path = scene_path
+
+
+func load_data(checkpoint_data : Dictionary):	
+	parent_scene_path = checkpoint_data["parent_scene_path"]
+	checkpoint_name = checkpoint_data["checkpoint_name"]
+	is_activated = checkpoint_data["is_activated"]
+	global_position = checkpoint_data["global_position"]
+
+
+func to_save() -> Dictionary:
+	return {
+		"parent_scene_path" : parent_scene_path,
+		"checkpoint_name" : checkpoint_name,
+		"is_activated" : is_activated,
+		"global_position" : global_position,
+	}

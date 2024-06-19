@@ -14,3 +14,13 @@ func decrease_runes(amount : int):
 
 func take_all_runes():
 	amount = 0
+
+
+func load_data(runes_held_data : Dictionary):
+	amount = runes_held_data["amount"]
+
+
+func to_save() -> Dictionary:
+	return {
+		"amount" : amount,
+	}

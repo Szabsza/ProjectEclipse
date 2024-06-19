@@ -23,3 +23,15 @@ func increase_current_health(amount : int):
 func decrease_current_health(amount : int):
 	if current_health - amount >= 0:
 		current_health -= amount
+
+
+func to_load(health_data : Dictionary):
+	max_health = health_data["max_health"]
+	current_health = health_data["current_health"]
+
+
+func to_save() -> Dictionary:
+	return {
+		"max_health" : max_health,
+		"current_health" : current_health,
+	}
