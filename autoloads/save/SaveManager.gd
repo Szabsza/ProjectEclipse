@@ -1,6 +1,6 @@
 extends Node2D
 
-var save_path : String = "user://save.tres"
+var save_path : String = "user://game.save"
 
 
 func _ready():
@@ -28,5 +28,6 @@ func load_save_data() -> SaveData:
 
 
 func save_game():
-	var save_data = load_save_data()
-	print(save_data.to_save())
+	var save_data = JSON.stringify(load_save_data().to_save(), "", false)
+	var save_file = FileAccess.open(save_path, FileAccess.WRITE)
+	save_file.store_line(save_data)

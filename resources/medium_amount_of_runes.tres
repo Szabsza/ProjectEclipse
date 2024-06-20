@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Runes" load_steps=4 format=3 uid="uid://b0x35dlc12hro"]
+
+[ext_resource type="Script" path="res://model/Runes.gd" id="1_adrf7"]
+[ext_resource type="Texture2D" uid="uid://gac2lwmm34sf" path="res://Assets/GUI/GUI_2x.png" id="2_x2pag"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcjg1"]
+atlas = ExtResource("2_x2pag")
+region = Rect2(144, 144, 16, 16)
+
+[resource]
+script = ExtResource("1_adrf7")
+global_position = Vector2(0, 0)
+picked_up = false
+item_name = "Medium amount of Runes"
+description = "A certain amount of Runes"
+quantity = 1000
+texture = SubResource("AtlasTexture_dcjg1")

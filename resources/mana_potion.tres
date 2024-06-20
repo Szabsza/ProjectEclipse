@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ManaPotion" load_steps=4 format=3 uid="uid://d4fvgn6tw51yv"]
+
+[ext_resource type="Script" path="res://model/ManaPotion.gd" id="1_0mr4v"]
+[ext_resource type="Texture2D" uid="uid://1ac1w54eu4m4" path="res://Assets/assets/PotionsPack1.png" id="2_qib4d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prclg"]
+atlas = ExtResource("2_qib4d")
+region = Rect2(32, 322, 32, 32)
+
+[resource]
+script = ExtResource("1_0mr4v")
+regeneration_amount = 10
+cool_down = 15.0
+max_quantity = 1
+item_name = "Mana Potion"
+description = "Regenerates a certain amount of Mana"
+quantity = 1
+texture = SubResource("AtlasTexture_prclg")

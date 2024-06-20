@@ -51,9 +51,13 @@ enabled=PackedStringArray()
 
 folder_colors={
 "res://Assets/": "gray",
-"res://autoloads/": "blue",
+"res://autoloads/": "red",
+"res://characters/": "blue",
+"res://common/": "pink",
 "res://interface/": "green",
-"res://items/": "red"
+"res://level/": "orange",
+"res://model/": "yellow",
+"res://resources/": "purple"
 }
 
 [input]

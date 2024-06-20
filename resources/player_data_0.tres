@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="PlayerData" load_steps=7 format=3 uid="uid://d0qikgohrs3u"]
+
+[ext_resource type="Resource" uid="uid://dp8lrnq336bxe" path="res://resources/player_health_0.tres" id="1_hkrnq"]
+[ext_resource type="Script" path="res://model/PlayerData.gd" id="1_wilhu"]
+[ext_resource type="Resource" uid="uid://bxwxpfadwdkh6" path="res://resources/player_mana_0.tres" id="2_yc6b3"]
+[ext_resource type="Resource" uid="uid://cywpkj8mx48o7" path="res://resources/player_runes_held_0.tres" id="3_8d4fa"]
+[ext_resource type="Resource" uid="uid://c1lf5qevxryre" path="res://resources/player_stamina_0.tres" id="5_cxytu"]
+[ext_resource type="Resource" uid="uid://2iok5redapdj" path="res://resources/player_status_0.tres" id="6_wa8ud"]
+
+[resource]
+script = ExtResource("1_wilhu")
+keys_held = 0
+died = false
+position_where_died = Vector2(0, 0)
+attack_stamina_cost = 25
+jump_stamina_cost = 25
+roll_stamina_cost = 25
+attack_damage = 10
+has_double_jumped = false
+facing_direction_locked = false
+jump_velocity = -300.0
+run_speed = 200.0
+dash_speed = 1.0
+dash_velocity = 500.0
+run_acceleration = 0.25
+attack_move_speed = 10.0
+minimum_run_speed = 0.005
+roll_frames = 20
+speed = 200.0
+fall_acceleration = 0.25
+health = ExtResource("1_hkrnq")
+mana = ExtResource("2_yc6b3")
+stamina = ExtResource("5_cxytu")
+runes_held = ExtResource("3_8d4fa")
+status = ExtResource("6_wa8ud")
+character_name = "Szabsza"
+character_type = 0
+global_position = Vector2(0, 0)

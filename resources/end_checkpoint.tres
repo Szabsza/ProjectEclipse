@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CheckpointData" load_steps=2 format=3 uid="uid://ia3kbo22tx62"]
+
+[ext_resource type="Script" path="res://model/CheckpointData.gd" id="1_b0uir"]
+
+[resource]
+script = ExtResource("1_b0uir")
+checkpoint_name = "End Checkpoint"
+is_activated = false
+global_position = Vector2(0, 0)

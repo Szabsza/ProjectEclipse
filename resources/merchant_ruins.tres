@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MerchantData" load_steps=6 format=3 uid="uid://cqk0cmne8eckw"]
+
+[ext_resource type="Script" path="res://model/MerchantData.gd" id="1_tc7u4"]
+[ext_resource type="Resource" uid="uid://bjctp8ffj0saj" path="res://resources/potion_amount_buff.tres" id="2_f5lo8"]
+[ext_resource type="Resource" uid="uid://dlffu5sfmctoa" path="res://resources/potion_strength_buff.tres" id="3_ko0oi"]
+[ext_resource type="Resource" uid="uid://m4xa8kd8ronq" path="res://resources/golden_bracelet.tres" id="4_0xmf1"]
+[ext_resource type="Resource" uid="uid://dsowukkicykrv" path="res://resources/golden_necklace.tres" id="5_mil7v"]
+
+[resource]
+script = ExtResource("1_tc7u4")
+merchant_name = "Merchant"
+shop_items = Array[Resource("res://items/ShopItem.gd")]([ExtResource("2_f5lo8"), ExtResource("3_ko0oi"), ExtResource("4_0xmf1"), ExtResource("5_mil7v")])

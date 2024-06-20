@@ -2,29 +2,29 @@
 
 [ext_resource type="Script" path="res://level/ruins/Ruins.gd" id="1_pwxno"]
 [ext_resource type="Texture2D" uid="uid://behak76asms1i" path="res://Assets/toRecolor/finalNight.PNG" id="2_gvf1a"]
-[ext_resource type="TileSet" uid="uid://b0fx4w3bh6fvg" path="res://level/tileset.tres" id="3_kbcol"]
+[ext_resource type="TileSet" uid="uid://b0fx4w3bh6fvg" path="res://resources/tileset.tres" id="3_kbcol"]
 [ext_resource type="PackedScene" uid="uid://bbu6j2a3v0imn" path="res://common/door/Door.tscn" id="4_2dp4o"]
 [ext_resource type="PackedScene" uid="uid://bh4jtxaokddii" path="res://common/checkpoint/Checkpoint.tscn" id="5_bxv7d"]
-[ext_resource type="Resource" uid="uid://wcrm5cp6tfm2" path="res://common/checkpoint/resources/start_checkpoint.tres" id="6_ql283"]
-[ext_resource type="Resource" uid="uid://cn80b8tgutr18" path="res://common/checkpoint/resources/middle_checkpoint.tres" id="7_8fcig"]
-[ext_resource type="Resource" uid="uid://ia3kbo22tx62" path="res://common/checkpoint/resources/end_checkpoint.tres" id="8_3r5wd"]
+[ext_resource type="Resource" uid="uid://wcrm5cp6tfm2" path="res://resources/start_checkpoint.tres" id="6_ql283"]
+[ext_resource type="Resource" uid="uid://cn80b8tgutr18" path="res://resources/middle_checkpoint.tres" id="7_8fcig"]
+[ext_resource type="Resource" uid="uid://ia3kbo22tx62" path="res://resources/end_checkpoint.tres" id="8_3r5wd"]
 [ext_resource type="PackedScene" uid="uid://d26deo5pjs12u" path="res://common/torch/Torch.tscn" id="9_wuhkw"]
 [ext_resource type="PackedScene" uid="uid://gei5r3s8tiis" path="res://common/chest/Chest.tscn" id="10_lv80l"]
 [ext_resource type="PackedScene" uid="uid://y8i53dbxrgoy" path="res://common/trap/fire_trap/FireTrap.tscn" id="11_1kxfo"]
-[ext_resource type="Script" path="res://common/chest/ChestData.gd" id="11_57ri2"]
+[ext_resource type="Script" path="res://model/ChestData.gd" id="11_57ri2"]
 [ext_resource type="PackedScene" uid="uid://d3jjqw47s8tmf" path="res://common/trap/fire_breather/FireBreather.tscn" id="12_0j6hx"]
-[ext_resource type="Resource" uid="uid://d1s2ten4xv6p" path="res://items/resources/loot/low_amount_of_runes.tres" id="12_5iax2"]
+[ext_resource type="Resource" uid="uid://d1s2ten4xv6p" path="res://resources/low_amount_of_runes.tres" id="12_5iax2"]
 [ext_resource type="PackedScene" uid="uid://dcgcpbp1np8l5" path="res://characters/merchant/GhostMerchant.tscn" id="13_2r631"]
-[ext_resource type="Resource" uid="uid://b0x35dlc12hro" path="res://items/resources/loot/medium_amount_of_runes.tres" id="13_h2oy7"]
-[ext_resource type="Resource" uid="uid://dxam46a5mb53t" path="res://items/resources/loot/large_amount_of_runes.tres" id="14_eatve"]
-[ext_resource type="Resource" uid="uid://dymfls3echjde" path="res://items/resources/loot/dungeon_key.tres" id="15_pvp3m"]
-[ext_resource type="Script" path="res://characters/merchant/MerchantData.gd" id="19_nwvk8"]
-[ext_resource type="Resource" uid="uid://bjctp8ffj0saj" path="res://items/resources/buffs/potion_amount_buff.tres" id="20_bg6kq"]
-[ext_resource type="Resource" uid="uid://dlffu5sfmctoa" path="res://items/resources/buffs/potion_strength_buff.tres" id="21_inwrh"]
-[ext_resource type="Resource" uid="uid://m4xa8kd8ronq" path="res://items/resources/gear/golden_bracelet.tres" id="22_box57"]
-[ext_resource type="Resource" uid="uid://dsowukkicykrv" path="res://items/resources/gear/golden_necklace.tres" id="23_aav0j"]
-[ext_resource type="Resource" uid="uid://c8ebcsjx0kv8e" path="res://common/door/resources/ruins_dungeon_door.tres" id="24_jce1e"]
-[ext_resource type="Resource" uid="uid://2xh3dfje280g" path="res://common/door/resources/dungeon_ruins_door.tres" id="25_0evj3"]
+[ext_resource type="Resource" uid="uid://b0x35dlc12hro" path="res://resources/medium_amount_of_runes.tres" id="13_h2oy7"]
+[ext_resource type="Resource" uid="uid://dxam46a5mb53t" path="res://resources/large_amount_of_runes.tres" id="14_eatve"]
+[ext_resource type="Resource" uid="uid://dymfls3echjde" path="res://resources/dungeon_key.tres" id="15_pvp3m"]
+[ext_resource type="Script" path="res://model/MerchantData.gd" id="19_nwvk8"]
+[ext_resource type="Resource" uid="uid://bjctp8ffj0saj" path="res://resources/potion_amount_buff.tres" id="20_bg6kq"]
+[ext_resource type="Resource" uid="uid://dlffu5sfmctoa" path="res://resources/potion_strength_buff.tres" id="21_inwrh"]
+[ext_resource type="Resource" uid="uid://m4xa8kd8ronq" path="res://resources/golden_bracelet.tres" id="22_box57"]
+[ext_resource type="Resource" uid="uid://dsowukkicykrv" path="res://resources/golden_necklace.tres" id="23_aav0j"]
+[ext_resource type="Resource" uid="uid://c8ebcsjx0kv8e" path="res://resources/ruins_dungeon_door.tres" id="24_jce1e"]
+[ext_resource type="Resource" uid="uid://2xh3dfje280g" path="res://resources/dungeon_ruins_door.tres" id="25_0evj3"]
 [ext_resource type="PackedScene" uid="uid://ciycxun4i5wvu" path="res://interface/hud/HUD.tscn" id="25_g3xad"]
 
 [sub_resource type="Resource" id="Resource_ys603"]
@@ -79,7 +79,7 @@ is_opened = false
 script = ExtResource("19_nwvk8")
 parent_scene_path = ""
 merchant_name = "Ghost Merchant"
-shop_items = Array[Resource("res://items/ShopItem.gd")]([ExtResource("20_bg6kq"), ExtResource("21_inwrh"), ExtResource("22_box57"), ExtResource("23_aav0j")])
+shop_items = Array[Resource("res://model/ShopItem.gd")]([ExtResource("20_bg6kq"), ExtResource("21_inwrh"), ExtResource("22_box57"), ExtResource("23_aav0j")])
 
 [node name="Ruins" type="Node2D" groups=["level"]]
 script = ExtResource("1_pwxno")

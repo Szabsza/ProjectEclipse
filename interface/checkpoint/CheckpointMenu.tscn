@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://3wvvolcwvsk7"]
 
-[ext_resource type="Theme" uid="uid://crlofspi6s6xu" path="res://interface/UI.tres" id="1_vwlqt"]
+[ext_resource type="Theme" uid="uid://crlofspi6s6xu" path="res://resources/UI.tres" id="1_vwlqt"]
 [ext_resource type="PackedScene" uid="uid://cwx57kfwdwcxq" path="res://interface/checkpoint/StatusMenu.tscn" id="3_fvxor"]
 [ext_resource type="Script" path="res://interface/checkpoint/CheckpointMenu.gd" id="3_n4m28"]
 [ext_resource type="PackedScene" uid="uid://ddpsnvvnfp82y" path="res://interface/checkpoint/TravelMenu.tscn" id="4_xklbk"]

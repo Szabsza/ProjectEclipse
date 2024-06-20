@@ -1,7 +1,7 @@
 [gd_scene load_steps=212 format=3 uid="uid://dd5mun2t82eqq"]
 
 [ext_resource type="Script" path="res://characters/player/Player.gd" id="1_g55oj"]
-[ext_resource type="Resource" uid="uid://d0qikgohrs3u" path="res://characters/player/resources/player_data_0.tres" id="7_js4re"]
+[ext_resource type="Resource" uid="uid://d0qikgohrs3u" path="res://resources/player_data_0.tres" id="7_js4re"]
 [ext_resource type="Texture2D" uid="uid://bwhad7r4eo0b7" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/roll/roll_1.png" id="8_etpxa"]
 [ext_resource type="Script" path="res://characters/common/HurtBox.gd" id="9_xsymh"]
 [ext_resource type="Script" path="res://characters/common/HitBox.gd" id="10_kxtqt"]

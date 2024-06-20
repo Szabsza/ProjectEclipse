@@ -12,7 +12,6 @@ var mana_potion : ManaPotion = null
 var wings : Wings = null
 var necklace : Necklace = null
 var bracelet : Bracelet = null
-
 var key_quantity : int = 0
 
 

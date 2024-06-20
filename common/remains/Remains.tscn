@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ceom7gj05p0u5" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/death/death_19.png" id="1_koknt"]
 [ext_resource type="Script" path="res://common/remains/Remains.gd" id="1_ngofh"]
-[ext_resource type="Script" path="res://common/remains/RemainsData.gd" id="2_pul1y"]
+[ext_resource type="Script" path="res://model/RemainsData.gd" id="2_pul1y"]
 [ext_resource type="Script" path="res://common/interactable_area/InteractableArea.gd" id="3_vyl4f"]
 
 [sub_resource type="Resource" id="Resource_0hude"]

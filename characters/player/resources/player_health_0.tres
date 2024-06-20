@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="Health" load_steps=2 format=3 uid="uid://dp8lrnq336bxe"]
-
-[ext_resource type="Script" path="res://characters/common/Health.gd" id="1_3ryoe"]
-
-[resource]
-script = ExtResource("1_3ryoe")
-max_health = 100
-current_health = 100

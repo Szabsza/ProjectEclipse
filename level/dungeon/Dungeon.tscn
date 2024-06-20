@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://cj1ienw6bbkk4"]
 
-[ext_resource type="TileSet" uid="uid://b0fx4w3bh6fvg" path="res://level/tileset.tres" id="1_f2hwo"]
+[ext_resource type="TileSet" uid="uid://b0fx4w3bh6fvg" path="res://resources/tileset.tres" id="1_f2hwo"]
 [ext_resource type="Script" path="res://level/dungeon/Dungeon.gd" id="1_tdapc"]
 [ext_resource type="PackedScene" uid="uid://d26deo5pjs12u" path="res://common/torch/Torch.tscn" id="2_73mgl"]
 [ext_resource type="PackedScene" uid="uid://ciycxun4i5wvu" path="res://interface/hud/HUD.tscn" id="4_xm70f"]
 [ext_resource type="PackedScene" uid="uid://bbu6j2a3v0imn" path="res://common/door/Door.tscn" id="4_y1yvx"]
-[ext_resource type="Resource" uid="uid://2xh3dfje280g" path="res://common/door/resources/dungeon_ruins_door.tres" id="5_mmamw"]
-[ext_resource type="Resource" uid="uid://c8ebcsjx0kv8e" path="res://common/door/resources/ruins_dungeon_door.tres" id="6_an3ct"]
+[ext_resource type="Resource" uid="uid://2xh3dfje280g" path="res://resources/dungeon_ruins_door.tres" id="5_mmamw"]
+[ext_resource type="Resource" uid="uid://c8ebcsjx0kv8e" path="res://resources/ruins_dungeon_door.tres" id="6_an3ct"]
 
 [node name="Dungeon" type="Node2D"]
 texture_filter = 1

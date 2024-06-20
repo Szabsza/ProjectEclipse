@@ -1,6 +1,6 @@
 extends Node2D
 
-var save_path : String = "user://save.tres"
+var save_path : String = "user://game.save"
 var scene_to_load : String = ""	
 
 
@@ -9,9 +9,16 @@ func set_scene_to_load(scene_path : String):
 
 
 func load_game():
-	var save_data = load(save_path)
+	if not FileAccess.file_exists(save_path):
+		return
 	
-	print(save_data.player_data.runes_held.amount)
+	var save_file = FileAccess.open(save_path, FileAccess.READ)
+	var json = save_file.get_as_text()
+	
+	var save_data_dict = JSON.parse_string(json)
+	
+	var save_data = SaveData.new()
+	save_data.load_data(save_data_dict)
 	
 	PlayerManager.player.player_data = save_data.player_data
 	
@@ -20,6 +27,7 @@ func load_game():
 	HotBarManager.bracelet = save_data.bracelet
 	HotBarManager.necklace = save_data.necklace
 	HotBarManager.wings = save_data.wings
+	HotBarManager.key_quantity = save_data.key_quantity
 	
 	WorldManager.current_level_data = save_data.current_level_data
 	WorldManager.levels = save_data.levels 

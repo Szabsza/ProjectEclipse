@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://dwp7u37ibxbmv"]
 
 [ext_resource type="PackedScene" uid="uid://c7grwh74qfedn" path="res://interface/hotbar/items/potions/HealthPotion.tscn" id="2_m5csh"]
-[ext_resource type="Resource" uid="uid://2ps16yjy4fpn" path="res://items/resources/potions/health_potion.tres" id="3_gx11h"]
+[ext_resource type="Resource" uid="uid://2ps16yjy4fpn" path="res://resources/health_potion.tres" id="3_gx11h"]
 [ext_resource type="PackedScene" uid="uid://cu71y3gmg2l6e" path="res://interface/hotbar/items/potions/ManaPotion.tscn" id="3_rb67n"]
 [ext_resource type="PackedScene" uid="uid://c4ui31xluef3v" path="res://interface/hotbar/items/bracelets/BraceletPlaceholder.tscn" id="4_eapjo"]
-[ext_resource type="Resource" uid="uid://d4fvgn6tw51yv" path="res://items/resources/potions/mana_potion.tres" id="5_iqvc5"]
+[ext_resource type="Resource" uid="uid://d4fvgn6tw51yv" path="res://resources/mana_potion.tres" id="5_iqvc5"]
 [ext_resource type="PackedScene" uid="uid://cyjtdfak80s8q" path="res://interface/hotbar/items/wings/WingsPlaceholder.tscn" id="6_jiqo3"]
 [ext_resource type="PackedScene" uid="uid://crtx1nogyrlu8" path="res://interface/hotbar/items/bracelets/Bracelet.tscn" id="9_kvlno"]
 [ext_resource type="PackedScene" uid="uid://k2mrn0mb3kdg" path="res://interface/hotbar/items/necklaces/Necklace.tscn" id="9_vuae7"]

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Status" load_steps=2 format=3 uid="uid://2iok5redapdj"]
+
+[ext_resource type="Script" path="res://model/Status.gd" id="1_3bd7x"]
+
+[resource]
+script = ExtResource("1_3bd7x")
+health = 0
+mana = 0
+stamina = 0
+attack_power = 0
+level = 0
+runes_needed = 50
