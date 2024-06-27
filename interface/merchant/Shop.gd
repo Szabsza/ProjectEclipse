@@ -44,8 +44,8 @@ func _on_right_button_pressed():
 	
 
 func _on_buy_button_pressed():           
-	if (PlayerManager.player.runes_held.amount >= shop_items[current_item_index].cost):
-		PlayerManager.player.runes_held.decrease_runes(shop_items[current_item_index].cost)
+	if (PlayerManager.player_data.runes_held.amount >= shop_items[current_item_index].cost):
+		PlayerManager.player_data.runes_held.decrease_runes(shop_items[current_item_index].cost)
 		shop_items[current_item_index].on_buy()
 		var index_to_delete = current_item_index
 		_on_right_button_pressed()

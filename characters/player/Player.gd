@@ -7,8 +7,7 @@ class_name Player extends CharacterBody2D
 @onready var hurtbox : HurtBox = $Sprite2D/HurtBox
 @onready var stamina_regen_timer : Timer = $StaminaRegenerationTimer
 
-@export var player_data : PlayerData
-
+var player_data : PlayerData
 var health : Health
 var mana : Mana
 var stamina : Stamina
@@ -20,45 +19,16 @@ var is_facing_right : bool = true
 var facing_direction_locked : bool = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var direction : Vector2
-
-
-func resources_loaded():
-	if player_data == null:
-		OS.alert("player data has not been set!")
-		return false
-		
-	status = player_data.status	
-	if status == null:
-		OS.alert("player status has not been set!")
-		return false
-		
-		
-	runes_held = player_data.runes_held
-	if runes_held == null:
-		OS.alert("player runes has not been set!")
-		return false
-		
-	health = player_data.health
-	if health == null:
-		OS.alert("player health has not been set!")
-		return false
-		
-	mana = player_data.mana
-	if mana == null:
-		OS.alert("player mana has not been set!")
-		return false	
-	
-	stamina = player_data.stamina
-	if stamina == null:
-		OS.alert("player stamina has not been set!")
-		return false
-	
-	return true
 	
 
 func _ready():
-	if not resources_loaded():
-		return
+	player_data = PlayerManager.player_data
+	
+	health = player_data.health
+	mana = player_data.mana
+	stamina = player_data.stamina
+	runes_held = player_data.runes_held
+	status = player_data.status
 	
 	collision_layer = 4
 	collision_mask = 1
@@ -70,8 +40,9 @@ func _ready():
 	for child in sprite.get_children():
 		if child is HitBox:
 			child.setup(player_data.attack_damage, 2, 0)
-
-	PlayerManager.setup(self)
+			
+	InteractionManager.connect("interacted", _interacted)
+	InteractionManager.connect("interaction_finished", _interaction_finished)
 
 
 func _physics_process(delta):
@@ -106,3 +77,12 @@ func take_damage(amount):
 
 func _on_stamina_regeneration_timer_timeout():
 	stamina.regen_stamina()
+
+
+func _interaction_finished():
+	state_machine.switch_state(state_machine.states["Idling"])
+
+
+func _interacted():
+	state_machine.switch_state(state_machine.states["Idling"])
+	state_machine.switch_state(state_machine.states["Interacting"])

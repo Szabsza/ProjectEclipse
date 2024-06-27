@@ -10,27 +10,26 @@ class_name Hud extends CanvasLayer
 @onready var keys_held_label : Label = $Keys/KeysHeldLabel
 
 
-
 func update_stamina_bar():
-	stamina_points.text = str(PlayerManager.player.stamina.current_stamina) + "/" + str(PlayerManager.player.stamina.max_stamina)
-	stamina_bar.max_value = PlayerManager.player.stamina.max_stamina
-	stamina_bar.value = PlayerManager.player.stamina.current_stamina
+	stamina_points.text = str(PlayerManager.player_data.stamina.current_stamina) + "/" + str(PlayerManager.player_data.stamina.max_stamina)
+	stamina_bar.max_value = PlayerManager.player_data.stamina.max_stamina
+	stamina_bar.value = PlayerManager.player_data.stamina.current_stamina
 
 
 func update_health_bar():
-	health_points.text = str(PlayerManager.player.health.current_health) + "/" + str(PlayerManager.player.health.max_health)
-	health_bar.max_value = PlayerManager.player.health.max_health
-	health_bar.value = PlayerManager.player.health.current_health
+	health_points.text = str(PlayerManager.player_data.health.current_health) + "/" + str(PlayerManager.player_data.health.max_health)
+	health_bar.max_value = PlayerManager.player_data.health.max_health
+	health_bar.value = PlayerManager.player_data.health.current_health
 
 
 func update_mana_bar():
-	mana_points.text = str(PlayerManager.player.mana.current_mana) + "/" + str(PlayerManager.player.mana.max_mana)
-	mana_bar.max_value = PlayerManager.player.mana.max_mana
-	mana_bar.value = PlayerManager.player.mana.current_mana
+	mana_points.text = str(PlayerManager.player_data.mana.current_mana) + "/" + str(PlayerManager.player_data.mana.max_mana)
+	mana_bar.max_value = PlayerManager.player_data.mana.max_mana
+	mana_bar.value = PlayerManager.player_data.mana.current_mana
 
 
 func update_runes_held():
-	runes_held_label.text = str(PlayerManager.player.runes_held.amount)	
+	runes_held_label.text = str(PlayerManager.player_data.runes_held.amount)	
 
 
 func update_keys_held():
@@ -38,7 +37,7 @@ func update_keys_held():
 
 
 func _process(delta):
-	if PlayerManager.player != null:
+	if PlayerManager.is_loaded_player():
 		update_health_bar()
 		update_mana_bar()
 		update_stamina_bar()

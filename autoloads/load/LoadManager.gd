@@ -20,7 +20,8 @@ func load_game():
 	var save_data = SaveData.new()
 	save_data.load_data(save_data_dict)
 	
-	PlayerManager.player.player_data = save_data.player_data
+	ResourceSaver.save(save_data.player_data, PlayerManager.PLAYER_RESOURCE_PATH)
+	PlayerManager.load_player_data_from_resource()
 	
 	HotBarManager.health_potion = save_data.health_potions 
 	HotBarManager.mana_potion = save_data.mana_potion

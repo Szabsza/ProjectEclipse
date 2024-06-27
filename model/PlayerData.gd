@@ -2,9 +2,6 @@ class_name PlayerData extends CharacterData
 
 @export var keys_held : int = 0
 
-@export var died : bool = false
-@export var position_where_died : Vector2
-
 @export var attack_stamina_cost : int = 25
 @export var jump_stamina_cost : int = 25
 @export var roll_stamina_cost : int = 25
@@ -30,6 +27,13 @@ class_name PlayerData extends CharacterData
 @export var stamina : Stamina
 @export var runes_held : RunesHeld
 @export var status : Status
+
+# save not included yet
+@export var last_interacted_checkpoint : CheckpointData = null
+@export var died : bool = false
+@export var position_where_died : Vector2
+@export var scene_path_where_died : String
+@export var lost_runes_amount : int
 
 
 func load_data(player_data : Dictionary):

@@ -10,7 +10,7 @@ func _on_continue_pressed():
 	
 
 func _on_new_game_pressed():
-	SceneManager.change_scene_to(RUINS_LEVEL_PATH)
+	SceneManager.change_scene_to("res://level/arena/Arena.tscn")
 
 
 func _on_how_to_play_pressed():

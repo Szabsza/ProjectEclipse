@@ -1,11 +1,16 @@
 extends Node2D
 
+signal interacted()
+signal interaction_finished()
+
 @onready var label : Label = $Label 
 
 const BASE_TEXT : String = "[E] to "
 
 var active_areas : Array = []
 var is_interactable : bool = true
+
+
 
 func _ready():
 	label.z_index = 20
@@ -41,15 +46,13 @@ func _process(delta):
 		
 		
 func _input(event : InputEvent):
-	if event.is_action_pressed("interact") && is_interactable && PlayerManager.player.state_machine.current_state == PlayerManager.player.state_machine.states["Idling"]:
+	if event.is_action_pressed("interact") && is_interactable:
 		if active_areas.size() != 0:
 			is_interactable = false
 			label.hide()
 			
-			PlayerManager.player.state_machine.switch_state(PlayerManager.player.state_machine.states["Interacting"])
+			interacted.emit()
 			await active_areas[0].interact.call()
-			PlayerManager.player.state_machine.switch_state(PlayerManager.player.state_machine.states["Idling"])
+			interaction_finished.emit()
 			
 			is_interactable = true
-		
-		

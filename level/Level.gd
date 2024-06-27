@@ -56,17 +56,17 @@ func load_level() -> void:
 	load_level_data()
 	WorldManager.set_current_level(level_data)
 	
-	if PlayerManager.died and level_scene_path == PlayerManager.scene_path_where_died:
-		spawn_remains(PlayerManager.scene_path_where_died, PlayerManager.position_where_died, PlayerManager.lost_runes_amount)
+	if PlayerManager.died() and PlayerManager.died_on_the_same_scene(level_scene_path):
+		spawn_remains(PlayerManager.player_data.scene_path_where_died, PlayerManager.player_data.position_where_died, PlayerManager.player_data.lost_runes_amount)
 	
 	if TravelManager.teleported_to_checkpoint:
-		if PlayerManager.died:
+		if PlayerManager.died():
 			if PlayerManager.last_interacted_checkpoint == null:
 				spawn_player(level_entry_point.global_position)
-				PlayerManager.died = false
+				PlayerManager.player_data.died = false
 			else:
 				spawn_player(TravelManager.checkpoint_teleported_to.global_position)
-				PlayerManager.died = false
+				PlayerManager.player_data.died = false
 		else:
 			spawn_player(TravelManager.checkpoint_teleported_to.global_position)
 		TravelManager.clear()

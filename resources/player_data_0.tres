@@ -9,7 +9,7 @@
 
 [resource]
 script = ExtResource("1_wilhu")
-keys_held = 0
+keys_held = 5
 died = false
 position_where_died = Vector2(0, 0)
 attack_stamina_cost = 25
