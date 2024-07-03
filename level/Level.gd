@@ -38,9 +38,9 @@ func load_level_data():
 			checkpoint.checkpoint_data.set_parent_scene_path(level_data.level_scene_path)
 			level_data.add_checkpoint(checkpoint.checkpoint_data)
 			
-		for merchant in merchants as Array[GhostMerchant]:
-			merchant.merchant_data.set_parent_scene_path(level_data.level_scene_path)
-			level_data.add_merchant(merchant.merchant_data)
+		#for merchant in merchants as Array[GhostMerchant]:
+			#merchant.merchant_data.set_parent_scene_path(level_data.level_scene_path)
+			#level_data.add_merchant(merchant.merchant_data)
 		
 		for chest_loot in chest_loots as Array[ChestLootItem]:
 			level_data.add_chest_loot(chest_loot.loot_item)

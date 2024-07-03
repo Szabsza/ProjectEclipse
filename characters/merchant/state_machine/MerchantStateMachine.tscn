@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://blipfvpimlnpx"]
+
+[ext_resource type="Script" path="res://characters/merchant/state_machine/MerchantStateMachine.gd" id="1_utmsa"]
+[ext_resource type="Script" path="res://characters/merchant/state_machine/states/MerchantAppearingState.gd" id="2_5i246"]
+[ext_resource type="Script" path="res://characters/merchant/state_machine/states/MerchantHidingState.gd" id="3_0l5da"]
+[ext_resource type="Script" path="res://characters/merchant/state_machine/states/MerchantIdlingState.gd" id="4_5qmj3"]
+[ext_resource type="Script" path="res://characters/merchant/state_machine/states/MerchantVanishingState.gd" id="5_4230v"]
+
+[node name="MerchantStateMachine" type="Node"]
+script = ExtResource("1_utmsa")
+
+[node name="Appearing" type="Node" parent="."]
+script = ExtResource("2_5i246")
+
+[node name="Hiding" type="Node" parent="."]
+script = ExtResource("3_0l5da")
+
+[node name="Idling" type="Node" parent="."]
+script = ExtResource("4_5qmj3")
+
+[node name="Vanishing" type="Node" parent="."]
+script = ExtResource("5_4230v")

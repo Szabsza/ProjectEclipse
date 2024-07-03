@@ -1,0 +1,106 @@
+[gd_scene load_steps=15 format=3 uid="uid://dsyv15tkktorh"]
+
+[ext_resource type="Texture2D" uid="uid://ceoqmbdfndw0c" path="res://Assets/Golem/arm_projectile_glowing.png" id="1_i67sj"]
+[ext_resource type="Script" path="res://characters/enemies/golem/ArmProjectile.gd" id="2_4xmxo"]
+[ext_resource type="Script" path="res://characters/enemies/monk/PlayerDetectionArea.gd" id="3_obe68"]
+[ext_resource type="Script" path="res://characters/common/HitBox.gd" id="4_ebulu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gporr"]
+atlas = ExtResource("1_i67sj")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6v3gw"]
+atlas = ExtResource("1_i67sj")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34fvu"]
+atlas = ExtResource("1_i67sj")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxkf8"]
+atlas = ExtResource("1_i67sj")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cyxuc"]
+atlas = ExtResource("1_i67sj")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xf33s"]
+atlas = ExtResource("1_i67sj")
+region = Rect2(200, 100, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_juia1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gporr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6v3gw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34fvu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxkf8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cyxuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xf33s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2g3v4"]
+radius = 240.262
+height = 614.483
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eqayb"]
+radius = 4.80365
+height = 28.9695
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5qsc3"]
+radius = 5.32853
+
+[node name="ArmProjectile" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_juia1")
+autoplay = "default"
+frame_progress = 0.213186
+script = ExtResource("2_4xmxo")
+
+[node name="PlayerDetectionArea" type="Area2D" parent="."]
+visible = false
+script = ExtResource("3_obe68")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetectionArea"]
+position = Vector2(307.452, -13.435)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_2g3v4")
+
+[node name="ImpactArea" type="Area2D" parent="."]
+visible = false
+script = ExtResource("3_obe68")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ImpactArea"]
+position = Vector2(29.4992, -12.9638)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_eqayb")
+
+[node name="HitBox" type="Area2D" parent="."]
+script = ExtResource("4_ebulu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(29.5481, -12.9923)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_5qsc3")
+
+[node name="FuseTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[connection signal="timeout" from="FuseTimer" to="." method="_on_fuse_timer_timeout"]

@@ -5,7 +5,7 @@ class_name Remains extends RigidBody2D
 @export var remains_data : RemainsData
 
 
-func setup(scene_path : String, runes_amount: int, position : Vector2):
+func setup(scene_path : String, runes_amount: int, position : Vector2) -> void:
 	if remains_data == null:
 		return
 	
@@ -22,10 +22,10 @@ func _ready():
 	interactable_area.interact = Callable(self, "_on_interact")
 	
 
-func _on_interact():
+func _on_interact() -> void:
 	if remains_data == null:
 		return
-	
+
 	PlayerManager.player_data.runes_held.increase_runes(remains_data.runes_amount)
 	remains_data.scene_path = ""
 	remains_data.runes_amount = 0

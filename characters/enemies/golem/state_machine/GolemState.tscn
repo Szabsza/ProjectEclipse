@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr20qtsa210cq"]
+
+[ext_resource type="Script" path="res://characters/enemies/golem/state_machine/GolemState.gd" id="1_lbdf0"]
+
+[node name="GolemState" type="Node"]
+script = ExtResource("1_lbdf0")

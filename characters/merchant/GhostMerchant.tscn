@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dcgcpbp1np8l5"]
+[gd_scene load_steps=30 format=3 uid="uid://dcgcpbp1np8l5"]
 
 [ext_resource type="Script" path="res://characters/merchant/GhostMerchant.gd" id="1_4rjv5"]
 [ext_resource type="Texture2D" uid="uid://c636v88if3x54" path="res://Assets/Ghost-Files/PNG/ghost-vanish.png" id="2_wll0m"]
@@ -6,11 +6,7 @@
 [ext_resource type="Script" path="res://common/interactable_area/InteractableArea.gd" id="4_42hcv"]
 [ext_resource type="Texture2D" uid="uid://pyg2g4i3vvs0" path="res://Assets/Ghost-Files/PNG/ghost-appears.png" id="5_c88i8"]
 [ext_resource type="Texture2D" uid="uid://bnu44qb35jrc4" path="res://Assets/Ghost-Files/PNG/ghost-idle.png" id="6_sdvft"]
-[ext_resource type="Script" path="res://characters/merchant/state/IdlingState.gd" id="8_jupnl"]
-[ext_resource type="Script" path="res://characters/merchant/state/ApearingState.gd" id="9_jyw8j"]
-[ext_resource type="Script" path="res://characters/merchant/state/VanishingState.gd" id="10_wgu84"]
-[ext_resource type="Script" path="res://characters/common/CharacterStateMachine.gd" id="11_hkbg0"]
-[ext_resource type="Script" path="res://characters/merchant/state/HidingState.gd" id="11_s2ldt"]
+[ext_resource type="PackedScene" uid="uid://blipfvpimlnpx" path="res://characters/merchant/state_machine/MerchantStateMachine.tscn" id="7_1om4a"]
 [ext_resource type="PackedScene" uid="uid://phd5qyfq0ak2" path="res://interface/merchant/Shop.tscn" id="12_rn8wu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bmbn"]
@@ -223,7 +219,7 @@ animation = &"idle"
 animation = &"vanish"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_70i4a"]
-advance_mode = 2
+advance_mode = 0
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rx6dj"]
 
@@ -265,11 +261,9 @@ texture = ExtResource("2_wll0m")
 hframes = 7
 
 [node name="PlayerDetectionArea" type="Area2D" parent="Sprite2D"]
-visible = false
 script = ExtResource("3_u3oe5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/PlayerDetectionArea"]
-visible = false
 position = Vector2(0, -58)
 shape = SubResource("RectangleShape2D_8bmbn")
 
@@ -305,20 +299,7 @@ color = Color(0, 1, 1, 1)
 range_z_max = 200
 texture = SubResource("GradientTexture2D_nqw8p")
 
-[node name="CharacterStateMachine" type="Node" parent="."]
-script = ExtResource("11_hkbg0")
-
-[node name="Idling" type="Node" parent="CharacterStateMachine"]
-script = ExtResource("8_jupnl")
-
-[node name="Apearing" type="Node" parent="CharacterStateMachine"]
-script = ExtResource("9_jyw8j")
-
-[node name="Vanishing" type="Node" parent="CharacterStateMachine"]
-script = ExtResource("10_wgu84")
-
-[node name="Hiding" type="Node" parent="CharacterStateMachine"]
-script = ExtResource("11_s2ldt")
+[node name="MerchantStateMachine" parent="." instance=ExtResource("7_1om4a")]
 
 [node name="Shop" parent="." instance=ExtResource("12_rn8wu")]
 anchors_preset = 5
@@ -329,6 +310,3 @@ offset_top = -285.0
 offset_right = 101.0
 offset_bottom = -50.0
 grow_horizontal = 2
-
-[connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Apearing" method="_on_animation_tree_animation_finished"]
-[connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Vanishing" method="_on_animation_tree_animation_finished"]

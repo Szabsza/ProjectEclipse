@@ -4,6 +4,11 @@ class_name Health extends Resource
 @export var current_health : int = 0
 
 
+func _init(_max_health = 0, _current_health = 0):
+	max_health = _max_health
+	current_health = _current_health
+
+
 func increase_max_health(amount : int):
 	max_health += amount
 
@@ -21,8 +26,9 @@ func increase_current_health(amount : int):
 
 
 func decrease_current_health(amount : int):
-	if current_health - amount >= 0:
-		current_health -= amount
+	current_health -= amount
+	if current_health - amount < 0:
+		current_health = 0
 
 
 func load_data(health_data : Dictionary):

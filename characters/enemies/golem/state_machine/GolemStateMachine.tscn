@@ -1,0 +1,51 @@
+[gd_scene load_steps=11 format=3 uid="uid://crqax8ktwb41y"]
+
+[ext_resource type="Script" path="res://characters/enemies/golem/state_machine/GolemStateMachine.gd" id="1_4rpyn"]
+[ext_resource type="Script" path="res://characters/enemies/golem/state_machine/states/GolemSleepingState.gd" id="2_jvjev"]
+[ext_resource type="Script" path="res://characters/enemies/golem/state_machine/states/GolemChasingState.gd" id="3_3iu7m"]
+[ext_resource type="Script" path="res://characters/enemies/golem/state_machine/states/GolemAttackingState.gd" id="4_hfhid"]
+[ext_resource type="Script" path="res://characters/enemies/golem/state_machine/states/GolemDyingState.gd" id="5_o5sf0"]
+[ext_resource type="Script" path="res://characters/enemies/golem/state_machine/states/GolemWakeupState.gd" id="6_n7syu"]
+[ext_resource type="Script" path="res://characters/enemies/golem/state_machine/states/GolemRangeAttackingState.gd" id="7_v7hkq"]
+[ext_resource type="Script" path="res://characters/enemies/golem/state_machine/states/GolemLaserAttackingState.gd" id="8_mllly"]
+[ext_resource type="Script" path="res://characters/enemies/golem/state_machine/states/GolemSpecialAttackingState.gd" id="9_3lsj6"]
+[ext_resource type="Script" path="res://characters/enemies/golem/state_machine/states/GolemDashingState.gd" id="10_nu5ns"]
+
+[node name="GolemStateMachine" type="Node"]
+script = ExtResource("1_4rpyn")
+
+[node name="Sleeping" type="Node" parent="."]
+script = ExtResource("2_jvjev")
+
+[node name="Chasing" type="Node" parent="."]
+script = ExtResource("3_3iu7m")
+
+[node name="MeleeAttacking" type="Node" parent="."]
+script = ExtResource("4_hfhid")
+
+[node name="Dying" type="Node" parent="."]
+script = ExtResource("5_o5sf0")
+
+[node name="WakingUp" type="Node" parent="."]
+script = ExtResource("6_n7syu")
+
+[node name="RangeAttacking" type="Node" parent="."]
+script = ExtResource("7_v7hkq")
+
+[node name="LaserAttacking" type="Node" parent="."]
+script = ExtResource("8_mllly")
+
+[node name="SpecialAttacking" type="Node" parent="."]
+script = ExtResource("9_3lsj6")
+
+[node name="TopTargetingTimer" type="Timer" parent="SpecialAttacking"]
+one_shot = true
+
+[node name="LeftRightTargetingTimer" type="Timer" parent="SpecialAttacking"]
+one_shot = true
+
+[node name="Dashing" type="Node" parent="."]
+script = ExtResource("10_nu5ns")
+
+[connection signal="timeout" from="SpecialAttacking/TopTargetingTimer" to="SpecialAttacking" method="_on_top_targeting_timer_timeout"]
+[connection signal="timeout" from="SpecialAttacking/LeftRightTargetingTimer" to="SpecialAttacking" method="_on_left_right_targeting_timer_timeout"]

@@ -2,8 +2,20 @@
 
 [ext_resource type="Texture2D" uid="uid://cnxhuubhimvna" path="res://Assets/Golem/Laser_sheet.png" id="1_q18vs"]
 
-[sub_resource type="Animation" id="Animation_pmaio"]
-resource_name = "innactive"
+[sub_resource type="Animation" id="Animation_rp1f7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_vlq0l"]
 resource_name = "active"
@@ -57,20 +69,8 @@ tracks/3/keys = {
 "values": [15]
 }
 
-[sub_resource type="Animation" id="Animation_rp1f7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
+[sub_resource type="Animation" id="Animation_pmaio"]
+resource_name = "innactive"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ykfkn"]
 _data = {

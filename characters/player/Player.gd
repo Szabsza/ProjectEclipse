@@ -2,7 +2,7 @@ class_name Player extends CharacterBody2D
 
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var wings_sprite : WingsSprite = $Wings
-@onready var animation_tree : AnimationTree = $AnimationTree
+@onready var animation_player : AnimationPlayer = $AnimationPlayer
 @onready var state_machine : PlayerStateMachine = $PlayerStateMachine
 @onready var hurtbox : HurtBox = $Sprite2D/HurtBox
 @onready var stamina_regen_timer : Timer = $StaminaRegenerationTimer
@@ -17,6 +17,7 @@ var status : Status
 var is_facing_left : bool = false
 var is_facing_right : bool = true
 var facing_direction_locked : bool = false
+var is_able_to_move : bool = true
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var direction : Vector2
 	
@@ -32,9 +33,8 @@ func _ready():
 	
 	collision_layer = 4
 	collision_mask = 1
-	animation_tree.active = true
-	state_machine.setup(self)
-	
+
+	state_machine.setup(self)	 
 	hurtbox.setup(0, 2)
 	
 	for child in sprite.get_children():
@@ -72,7 +72,7 @@ func update_facing_direction():
 func take_damage(amount):
 	health.decrease_current_health(amount)
 	if health.current_health <= 0:
-		state_machine.switch_state(state_machine.states["Dying"])
+		state_machine.switch_state(state_machine.player_states["Dying"])
 
 
 func _on_stamina_regeneration_timer_timeout():
@@ -80,9 +80,9 @@ func _on_stamina_regeneration_timer_timeout():
 
 
 func _interaction_finished():
-	state_machine.switch_state(state_machine.states["Idling"])
+	state_machine.switch_state(state_machine.player_states["Idling"])
 
 
 func _interacted():
-	state_machine.switch_state(state_machine.states["Idling"])
-	state_machine.switch_state(state_machine.states["Interacting"])
+	state_machine.switch_state(state_machine.player_states["Idling"])
+	state_machine.switch_state(state_machine.player_states["Interacting"])

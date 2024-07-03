@@ -1,0 +1,61 @@
+[gd_scene load_steps=12 format=3 uid="uid://bubw632oqm65o"]
+
+[ext_resource type="Script" path="res://characters/player/state_machine/PlayerStateMachine.gd" id="1_nwkh2"]
+[ext_resource type="Script" path="res://characters/player/state_machine/states/PlayerJumpingState.gd" id="1_ulsxc"]
+[ext_resource type="Script" path="res://characters/player/state_machine/states/PlayerFallingState.gd" id="2_6uvad"]
+[ext_resource type="Script" path="res://characters/player/state_machine/states/PlayerRollingState.gd" id="3_kq1bv"]
+[ext_resource type="Script" path="res://characters/player/state_machine/states/PlayerRunningState.gd" id="4_ywyfe"]
+[ext_resource type="Script" path="res://characters/player/state_machine/states/PlayerJumpAttackingState.gd" id="5_im31y"]
+[ext_resource type="Script" path="res://characters/player/state_machine/states/PlayerIdlingState.gd" id="6_1mmwo"]
+[ext_resource type="Script" path="res://characters/player/state_machine/states/PlayerAttackingState.gd" id="7_grsfm"]
+[ext_resource type="Script" path="res://characters/player/state_machine/states/PlayerInteractingState.gd" id="8_patoj"]
+[ext_resource type="Script" path="res://characters/player/state_machine/states/PlayerDyingState.gd" id="9_3b7bd"]
+[ext_resource type="Script" path="res://characters/player/state_machine/states/PlayerFlyingState.gd" id="10_ss0uf"]
+
+[node name="PlayerStateMachine" type="Node"]
+script = ExtResource("1_nwkh2")
+
+[node name="Jumping" type="Node" parent="."]
+script = ExtResource("1_ulsxc")
+
+[node name="Falling" type="Node" parent="."]
+script = ExtResource("2_6uvad")
+
+[node name="Rolling" type="Node" parent="."]
+script = ExtResource("3_kq1bv")
+
+[node name="Running" type="Node" parent="."]
+script = ExtResource("4_ywyfe")
+
+[node name="JumpAttacking" type="Node" parent="."]
+script = ExtResource("5_im31y")
+
+[node name="Idling" type="Node" parent="."]
+script = ExtResource("6_1mmwo")
+
+[node name="Attacking" type="Node" parent="."]
+script = ExtResource("7_grsfm")
+
+[node name="Timer" type="Timer" parent="Attacking"]
+wait_time = 0.3
+one_shot = true
+
+[node name="IdlingTimer" type="Timer" parent="Attacking"]
+wait_time = 0.15
+
+[node name="Interacting" type="Node" parent="."]
+script = ExtResource("8_patoj")
+
+[node name="Dying" type="Node" parent="."]
+script = ExtResource("9_3b7bd")
+
+[node name="Flying" type="Node" parent="."]
+script = ExtResource("10_ss0uf")
+
+[node name="LaunchTimer" type="Timer" parent="Flying"]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="Attacking/Timer" to="Attacking" method="_on_timer_timeout"]
+[connection signal="timeout" from="Attacking/IdlingTimer" to="Attacking" method="_on_idling_timer_timeout"]
+[connection signal="timeout" from="Flying/LaunchTimer" to="Flying" method="_on_launch_timer_timeout"]

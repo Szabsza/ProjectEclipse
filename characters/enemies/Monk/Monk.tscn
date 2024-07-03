@@ -16,13 +16,13 @@
 [ext_resource type="Texture2D" uid="uid://ccdw08h2gdul1" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/take_hit/take_hit_3.png" id="12_adxyl"]
 [ext_resource type="Texture2D" uid="uid://bturmfbk1pv1f" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/take_hit/take_hit_4.png" id="13_gctn8"]
 [ext_resource type="Texture2D" uid="uid://8wkn0wat4rrj" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/take_hit/take_hit_5.png" id="14_8e3cv"]
-[ext_resource type="Script" path="res://characters/player/player_state_machine/PlayerStateMachine.gd" id="15_afh3l"]
+[ext_resource type="Script" path="res://characters/player/state_machine/PlayerStateMachine.gd" id="15_afh3l"]
 [ext_resource type="Texture2D" uid="uid://bftgg6ij5sd5y" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/run/run_1.png" id="16_2ncvb"]
 [ext_resource type="Script" path="res://characters/enemies/monk/state/IdlingState.gd" id="16_dvk46"]
 [ext_resource type="Script" path="res://characters/enemies/monk/state/ChasingState.gd" id="17_j1b61"]
 [ext_resource type="Texture2D" uid="uid://c1wbofjaoey64" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/run/run_2.png" id="17_wcoqv"]
 [ext_resource type="Texture2D" uid="uid://bnstwm27ac36a" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/run/run_3.png" id="18_1ppqx"]
-[ext_resource type="Script" path="res://characters/player/player_state_machine/StateLabel.gd" id="19_cqdes"]
+[ext_resource type="Script" path="res://characters/player/state_machine/StateLabel.gd" id="19_cqdes"]
 [ext_resource type="Texture2D" uid="uid://b857xcatonwa5" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/run/run_4.png" id="19_jksip"]
 [ext_resource type="Texture2D" uid="uid://dg2wk31beak8i" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/run/run_5.png" id="20_3sa65"]
 [ext_resource type="Texture2D" uid="uid://bw5w5bm0t4e5w" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/run/run_6.png" id="21_mo8ge"]
@@ -243,7 +243,7 @@ script = ExtResource("1_a8mv2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -40)
-texture = ExtResource("5_voruv")
+texture = ExtResource("3_33crn")
 
 [node name="HurtBox" type="Area2D" parent="Sprite2D"]
 script = ExtResource("3_f6ga6")

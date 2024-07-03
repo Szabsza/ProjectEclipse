@@ -1,4 +1,4 @@
-[gd_scene load_steps=211 format=3 uid="uid://dd5mun2t82eqq"]
+[gd_scene load_steps=200 format=3 uid="uid://dd5mun2t82eqq"]
 
 [ext_resource type="Script" path="res://characters/player/Player.gd" id="1_g55oj"]
 [ext_resource type="Texture2D" uid="uid://bwhad7r4eo0b7" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/roll/roll_1.png" id="8_etpxa"]
@@ -120,22 +120,11 @@
 [ext_resource type="Texture2D" uid="uid://cfoql0fs5sfrd" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/run/run_7.png" id="123_nkh38"]
 [ext_resource type="Texture2D" uid="uid://cfs6rgklgfc0g" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/run/run_8.png" id="124_vwm5w"]
 [ext_resource type="Texture2D" uid="uid://gc6ciriiiwn1" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/take_hit/take_hit_2.png" id="125_3luyc"]
+[ext_resource type="PackedScene" uid="uid://bubw632oqm65o" path="res://characters/player/state_machine/PlayerStateMachine.tscn" id="125_ceol5"]
 [ext_resource type="Texture2D" uid="uid://b6fihnmkllnx6" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/take_hit/take_hit_3.png" id="126_tbf8x"]
 [ext_resource type="Texture2D" uid="uid://df37wsnhc0amd" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/take_hit/take_hit_4.png" id="127_c41u5"]
 [ext_resource type="Texture2D" uid="uid://bendmybgr2bks" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/take_hit/take_hit_5.png" id="128_a2hgd"]
 [ext_resource type="Texture2D" uid="uid://bctac216wv3nk" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/take_hit/take_hit_6.png" id="129_k5h0c"]
-[ext_resource type="Script" path="res://characters/player/player_state_machine/PlayerStateMachine.gd" id="130_svf30"]
-[ext_resource type="Script" path="res://characters/player/player_state_machine/states/JumpingState.gd" id="131_hsp6c"]
-[ext_resource type="Script" path="res://characters/player/player_state_machine/states/FallingState.gd" id="132_1ai1t"]
-[ext_resource type="Script" path="res://characters/player/player_state_machine/states/IdlingState.gd" id="133_jpeyf"]
-[ext_resource type="Script" path="res://characters/player/player_state_machine/states/RollingState.gd" id="134_uy6us"]
-[ext_resource type="Script" path="res://characters/player/player_state_machine/states/RunningState.gd" id="135_2dqwu"]
-[ext_resource type="Script" path="res://characters/player/player_state_machine/states/AttackingState.gd" id="136_g43ca"]
-[ext_resource type="Script" path="res://characters/player/player_state_machine/states/JumpAttackingState.gd" id="137_esr4u"]
-[ext_resource type="Script" path="res://characters/player/player_state_machine/states/InteractingState.gd" id="137_u22pn"]
-[ext_resource type="Script" path="res://characters/player/player_state_machine/states/DyingState.gd" id="138_xvkkw"]
-[ext_resource type="Script" path="res://characters/player/player_state_machine/StateLabel.gd" id="139_yxtuw"]
-[ext_resource type="Script" path="res://characters/player/player_state_machine/FlyingState.gd" id="140_3tp3a"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tm3yw"]
 radius = 11.0
@@ -954,7 +943,7 @@ script = ExtResource("1_g55oj")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
 position = Vector2(-1, -45)
-texture = ExtResource("98_0u2t8")
+texture = ExtResource("11_yye60")
 
 [node name="HurtBox" type="Area2D" parent="Sprite2D"]
 visible = false
@@ -1066,58 +1055,15 @@ anim_player = NodePath("../AnimationPlayer")
 wait_time = 0.2
 autostart = true
 
-[node name="PlayerStateMachine" type="Node" parent="."]
-script = ExtResource("130_svf30")
+[node name="PlayerStateMachine" parent="." instance=ExtResource("125_ceol5")]
 
-[node name="Jumping" type="Node" parent="PlayerStateMachine"]
-script = ExtResource("131_hsp6c")
-
-[node name="Falling" type="Node" parent="PlayerStateMachine"]
-script = ExtResource("132_1ai1t")
-
-[node name="Idling" type="Node" parent="PlayerStateMachine"]
-script = ExtResource("133_jpeyf")
-
-[node name="Rolling" type="Node" parent="PlayerStateMachine"]
-script = ExtResource("134_uy6us")
-
-[node name="Running" type="Node" parent="PlayerStateMachine"]
-script = ExtResource("135_2dqwu")
-
-[node name="JumpAttacking" type="Node" parent="PlayerStateMachine"]
-script = ExtResource("137_esr4u")
-
-[node name="Attacking" type="Node" parent="PlayerStateMachine"]
-script = ExtResource("136_g43ca")
-
-[node name="Timer" type="Timer" parent="PlayerStateMachine/Attacking"]
-wait_time = 0.3
-one_shot = true
-
-[node name="IdlingTimer" type="Timer" parent="PlayerStateMachine/Attacking"]
-wait_time = 0.15
-
-[node name="Interacting" type="Node" parent="PlayerStateMachine"]
-script = ExtResource("137_u22pn")
-
-[node name="Dying" type="Node" parent="PlayerStateMachine"]
-script = ExtResource("138_xvkkw")
-
-[node name="Flying" type="Node" parent="PlayerStateMachine"]
-script = ExtResource("140_3tp3a")
-
-[node name="LaunchTimer" type="Timer" parent="PlayerStateMachine/Flying"]
-wait_time = 0.5
-one_shot = true
-
-[node name="StateLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
+[node name="StateLabel" type="Label" parent="."]
+visible = false
 offset_left = -40.0
 offset_top = -55.0
 offset_right = 42.0
 offset_bottom = -32.0
 text = "State: "
-script = ExtResource("139_yxtuw")
-state_machine = NodePath("../PlayerStateMachine")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -99)
@@ -1130,8 +1076,4 @@ color = Color(0.352941, 0.262745, 0.188235, 1)
 energy = 0.5
 texture = SubResource("GradientTexture2D_afbri")
 
-[connection signal="animation_finished" from="AnimationTree" to="PlayerStateMachine/JumpAttacking" method="_on_animation_tree_animation_finished"]
-[connection signal="animation_finished" from="AnimationTree" to="PlayerStateMachine/Attacking" method="_on_animation_tree_animation_finished"]
-[connection signal="animation_finished" from="AnimationTree" to="PlayerStateMachine/Dying" method="_on_animation_tree_animation_finished"]
 [connection signal="timeout" from="StaminaRegenerationTimer" to="." method="_on_stamina_regeneration_timer_timeout"]
-[connection signal="timeout" from="PlayerStateMachine/Flying/LaunchTimer" to="PlayerStateMachine/Flying" method="_on_launch_timer_timeout"]

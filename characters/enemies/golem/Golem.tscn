@@ -1,69 +1,43 @@
-[gd_scene load_steps=36 format=3 uid="uid://cm43yocpfco6r"]
+[gd_scene load_steps=48 format=3 uid="uid://cm43yocpfco6r"]
 
-[ext_resource type="Texture2D" uid="uid://cnxhuubhimvna" path="res://Assets/Golem/Laser_sheet.png" id="1_asmu1"]
+[ext_resource type="Script" path="res://characters/enemies/golem/Golem.gd" id="1_nmh52"]
 [ext_resource type="Script" path="res://characters/common/HurtBox.gd" id="1_x30iq"]
+[ext_resource type="PackedScene" uid="uid://crqax8ktwb41y" path="res://characters/enemies/golem/state_machine/GolemStateMachine.tscn" id="2_e5yjq"]
+[ext_resource type="Script" path="res://characters/enemies/monk/PlayerDetectionArea.gd" id="2_pepyy"]
 [ext_resource type="Texture2D" uid="uid://bh05taj43k5b8" path="res://Assets/Golem/Character_sheet.png" id="2_s6i06"]
+[ext_resource type="Texture2D" uid="uid://dit8egsv1abjl" path="res://Assets/Golem/laser.png" id="3_kxpcv"]
+[ext_resource type="Script" path="res://characters/common/HitBox.gd" id="4_c38ke"]
+[ext_resource type="PackedScene" uid="uid://dsyv15tkktorh" path="res://characters/enemies/golem/ArmProjectile.tscn" id="6_lwucg"]
+[ext_resource type="PackedScene" uid="uid://bf8wtpw6gm7kd" path="res://interface/hud/BossHud.tscn" id="8_qc80f"]
 
-[sub_resource type="Animation" id="Animation_2j1nx"]
-resource_name = "idle"
-length = 0.8
-loop_mode = 1
-step = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Golem:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_s6i06")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Golem:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Golem:hframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [10]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Golem:vframes")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [10]
-}
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mnc2f"]
+radius = 8.75813
+height = 860.377
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h1q77"]
+radius = 24.9909
+height = 49.9817
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbgs7"]
+size = Vector2(432.512, 356.333)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_te17x"]
+radius = 18.2838
+height = 60.3241
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6w033"]
+radius = 26.3753
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sjpuo"]
+radius = 23.5516
+height = 64.9978
 
 [sub_resource type="Animation" id="Animation_84gag"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Golem:frame")
+tracks/0/path = NodePath("GolemSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -75,7 +49,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Golem/HeadPivot/HeadLaser:frame")
+tracks/1/path = NodePath("GolemSprite/HeadPivot/HeadLaser:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -87,7 +61,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Golem/PivotTop/TopLaser:frame")
+tracks/2/path = NodePath("GolemSprite/PivotTop/TopLaser:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -99,7 +73,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Golem/PivotLeft/LeftLaser:frame")
+tracks/3/path = NodePath("GolemSprite/PivotLeft/LeftLaser:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -111,7 +85,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Golem/PivotRight/RightLaser:frame")
+tracks/4/path = NodePath("GolemSprite/PivotRight/RightLaser:frame")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -119,209 +93,138 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_uxue4"]
-resource_name = "melee_attack"
-length = 1.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Golem:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_s6i06")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Golem:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 0.8, 0.9, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [41, 42, 43, 44, 45, 46, 45, 44, 43, 42]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Golem:hframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [10]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Golem:vframes")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [10]
-}
-
-[sub_resource type="Animation" id="Animation_bvv5x"]
-resource_name = "range_attack"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Golem:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_s6i06")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Golem:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [21, 22, 23, 24, 25, 26, 27, 28]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Golem:hframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [10]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Golem:vframes")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [10]
-}
-
-[sub_resource type="Animation" id="Animation_8aib1"]
-resource_name = "laser_attack"
-length = 4.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Golem:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_s6i06")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Golem:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 3.8, 3.9, 4, 4.1, 4.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [51, 52, 53, 54, 55, 56, 55, 54, 53, 52, 51]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Golem:hframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [10]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Golem:vframes")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [10]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Golem/HeadPivot/HeadLaser:texture")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("1_asmu1")]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Golem/HeadPivot/HeadLaser:frame")
+tracks/5/path = NodePath("GolemSprite/PivotRight/RightLaser:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0.5, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 13, 14, 13, 14, 13, 14, 13, 14, 13, 14, 13, 14, 13, 14, 13, 14, 0]
+"values": [false]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Golem/HeadPivot/HeadLaser:hframes")
+tracks/6/path = NodePath("GolemSprite/HeadPivot/HeadLaser:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1]
+"values": [false]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Golem/HeadPivot/HeadLaser:vframes")
+tracks/7/path = NodePath("GolemSprite/PivotLeft/LeftLaser:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [15]
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("GolemSprite/PivotTop/TopLaser:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("GolemSprite/HeadPivot/HeadLaser/HitBox/CollisionShape2D:disabled")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("GolemSprite/PivotLeft/LeftLaser/HitBox/CollisionShape2D:disabled")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("GolemSprite/PivotTop/TopLaser/HitBox/CollisionShape2D:disabled")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("GolemSprite/PivotRight/RightLaser/HitBox/CollisionShape2D:disabled")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("GolemSprite/MeleeHitBox/CollisionShape2D:disabled")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("GolemSprite/DashHitbox/CollisionShape2D:disabled")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("GolemSprite/HurtBox/CollisionShape2D:disabled")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_4ymp2"]
@@ -330,7 +233,7 @@ length = 1.7
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Golem:texture")
+tracks/0/path = NodePath("GolemSprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -342,7 +245,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Golem:frame")
+tracks/1/path = NodePath("GolemSprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -354,7 +257,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Golem:hframes")
+tracks/2/path = NodePath("GolemSprite:hframes")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -366,7 +269,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Golem:vframes")
+tracks/3/path = NodePath("GolemSprite:vframes")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -376,13 +279,12 @@ tracks/3/keys = {
 "values": [10]
 }
 
-[sub_resource type="Animation" id="Animation_nn65w"]
-resource_name = "sleeping"
-loop_mode = 1
+[sub_resource type="Animation" id="Animation_xucc1"]
+resource_name = "buffed"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Golem:texture")
+tracks/0/path = NodePath("GolemSprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -394,19 +296,19 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Golem:frame")
+tracks/1/path = NodePath("GolemSprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [83]
+"values": [10, 11, 12, 13, 14, 15, 16, 17]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Golem:hframes")
+tracks/2/path = NodePath("GolemSprite:hframes")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -418,7 +320,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Golem:vframes")
+tracks/3/path = NodePath("GolemSprite:vframes")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -426,6 +328,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [10]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GolemSprite/DashHitbox/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true, false, true, false, true]
 }
 
 [sub_resource type="Animation" id="Animation_ylwv6"]
@@ -434,7 +348,7 @@ length = 1.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Golem:texture")
+tracks/0/path = NodePath("GolemSprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -446,7 +360,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Golem:frame")
+tracks/1/path = NodePath("GolemSprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -458,7 +372,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Golem:hframes")
+tracks/2/path = NodePath("GolemSprite:hframes")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -470,7 +384,61 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Golem:vframes")
+tracks/3/path = NodePath("GolemSprite:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+
+[sub_resource type="Animation" id="Animation_2j1nx"]
+resource_name = "idle"
+length = 0.8
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GolemSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_s6i06")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GolemSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GolemSprite:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GolemSprite:vframes")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -486,7 +454,7 @@ length = 4.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Golem:texture")
+tracks/0/path = NodePath("GolemSprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -498,7 +466,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Golem:frame")
+tracks/1/path = NodePath("GolemSprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -510,7 +478,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Golem:hframes")
+tracks/2/path = NodePath("GolemSprite:hframes")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -522,7 +490,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Golem:vframes")
+tracks/3/path = NodePath("GolemSprite:vframes")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -534,43 +502,43 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Golem/PivotLeft/LeftLaser:texture")
+tracks/4/path = NodePath("GolemSprite/PivotLeft/LeftLaser:texture")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_asmu1")]
+"values": [ExtResource("3_kxpcv")]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Golem/PivotTop/TopLaser:texture")
+tracks/5/path = NodePath("GolemSprite/PivotTop/TopLaser:texture")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_asmu1")]
+"values": [ExtResource("3_kxpcv")]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Golem/PivotRight/RightLaser:texture")
+tracks/6/path = NodePath("GolemSprite/PivotRight/RightLaser:texture")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_asmu1")]
+"values": [ExtResource("3_kxpcv")]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Golem/PivotLeft/LeftLaser:frame")
+tracks/7/path = NodePath("GolemSprite/PivotLeft/LeftLaser:frame")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -582,7 +550,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Golem/PivotLeft/LeftLaser:hframes")
+tracks/8/path = NodePath("GolemSprite/PivotLeft/LeftLaser:hframes")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -594,19 +562,19 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Golem/PivotLeft/LeftLaser:vframes")
+tracks/9/path = NodePath("GolemSprite/PivotLeft/LeftLaser:vframes")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [15]
+"values": [14]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("Golem/PivotTop/TopLaser:frame")
+tracks/10/path = NodePath("GolemSprite/PivotTop/TopLaser:frame")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -618,7 +586,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("Golem/PivotTop/TopLaser:hframes")
+tracks/11/path = NodePath("GolemSprite/PivotTop/TopLaser:hframes")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -630,19 +598,19 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("Golem/PivotTop/TopLaser:vframes")
+tracks/12/path = NodePath("GolemSprite/PivotTop/TopLaser:vframes")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [15]
+"values": [14]
 }
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("Golem/PivotRight/RightLaser:frame")
+tracks/13/path = NodePath("GolemSprite/PivotRight/RightLaser:frame")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -654,7 +622,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("Golem/PivotRight/RightLaser:hframes")
+tracks/14/path = NodePath("GolemSprite/PivotRight/RightLaser:hframes")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -666,23 +634,119 @@ tracks/14/keys = {
 tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("Golem/PivotRight/RightLaser:vframes")
+tracks/15/path = NodePath("GolemSprite/PivotRight/RightLaser:vframes")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [15]
+"values": [14]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("GolemSprite/HeadPivot/HeadLaser:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("GolemSprite/PivotLeft/LeftLaser:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(2.3, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("GolemSprite/PivotTop/TopLaser:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0.6, 2.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("GolemSprite/PivotRight/RightLaser:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(2.3, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("GolemSprite/PivotLeft/LeftLaser/HitBox/CollisionShape2D:disabled")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 3.1, 3.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("GolemSprite/PivotRight/RightLaser/HitBox/CollisionShape2D:disabled")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0, 3.1, 3.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("GolemSprite/PivotTop/TopLaser/HitBox/CollisionShape2D:disabled")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 1.4, 2.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("GolemSprite/HurtBox/CollisionShape2D:disabled")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0, 0.4, 4.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
 }
 
-[sub_resource type="Animation" id="Animation_xucc1"]
-resource_name = "buffed"
-loop_mode = 1
+[sub_resource type="Animation" id="Animation_8aib1"]
+resource_name = "laser_attack"
+length = 4.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Golem:texture")
+tracks/0/path = NodePath("GolemSprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -694,19 +758,19 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Golem:frame")
+tracks/1/path = NodePath("GolemSprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 3.8, 3.9, 4, 4.1, 4.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [10, 11, 12, 13, 14, 15, 16, 17]
+"values": [51, 52, 53, 54, 55, 56, 55, 54, 53, 52, 51]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Golem:hframes")
+tracks/2/path = NodePath("GolemSprite:hframes")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -718,7 +782,247 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Golem:vframes")
+tracks/3/path = NodePath("GolemSprite:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GolemSprite/HeadPivot/HeadLaser:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_kxpcv")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GolemSprite/HeadPivot/HeadLaser:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 12, 13, 12, 13, 12, 13, 12, 13, 12, 13, 12, 13, 12, 13, 12, 13, 12, 13, 12]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GolemSprite/HeadPivot/HeadLaser:hframes")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("GolemSprite/HeadPivot/HeadLaser:vframes")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [14]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("GolemSprite/HeadPivot/HeadLaser:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.5, 3.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("GolemSprite/HeadPivot/HeadLaser/HitBox/CollisionShape2D:disabled")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1.3, 3.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_uxue4"]
+resource_name = "melee_attack"
+length = 1.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GolemSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_s6i06")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GolemSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [41, 42, 43, 44, 45, 46, 45, 44, 43, 42]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GolemSprite:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GolemSprite:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GolemSprite/MeleeHitBox/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_bvv5x"]
+resource_name = "range_attack"
+length = 0.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GolemSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_s6i06")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GolemSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [21, 22, 23, 24, 25, 26, 27, 28]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GolemSprite:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GolemSprite:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+
+[sub_resource type="Animation" id="Animation_nn65w"]
+resource_name = "sleeping"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GolemSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_s6i06")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GolemSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [83]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GolemSprite:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GolemSprite:vframes")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -812,54 +1116,135 @@ states/sleeping/position = Vector2(170, 356.889)
 transitions = ["Start", "sleeping", SubResource("AnimationNodeStateMachineTransition_m5yr1"), "sleeping", "appearance", SubResource("AnimationNodeStateMachineTransition_se7v6"), "appearance", "idle", SubResource("AnimationNodeStateMachineTransition_u0fki"), "idle", "death", SubResource("AnimationNodeStateMachineTransition_ttk5n"), "idle", "melee_attack", SubResource("AnimationNodeStateMachineTransition_wfsir"), "idle", "range_attack", SubResource("AnimationNodeStateMachineTransition_356qf"), "idle", "laser_attack", SubResource("AnimationNodeStateMachineTransition_b6nnj"), "range_attack", "idle", SubResource("AnimationNodeStateMachineTransition_griwt"), "melee_attack", "idle", SubResource("AnimationNodeStateMachineTransition_422rr"), "laser_attack", "idle", SubResource("AnimationNodeStateMachineTransition_8oonf"), "idle", "immune", SubResource("AnimationNodeStateMachineTransition_r2lax"), "immune", "idle", SubResource("AnimationNodeStateMachineTransition_8xk3m")]
 graph_offset = Vector2(0, 215.121)
 
-[node name="Golem" type="Node2D"]
+[node name="Golem" type="CharacterBody2D"]
 texture_filter = 1
+scale = Vector2(1.2, 1.2)
+script = ExtResource("1_nmh52")
 
-[node name="Golem" type="Sprite2D" parent="."]
+[node name="GolemSprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_s6i06")
 hframes = 10
 vframes = 10
 
-[node name="HeadPivot" type="Node2D" parent="Golem"]
+[node name="HeadPivot" type="Node2D" parent="GolemSprite"]
 z_index = 1
 position = Vector2(2, -18)
 
-[node name="HeadLaser" type="Sprite2D" parent="Golem/HeadPivot"]
-position = Vector2(97.5612, 16.3742)
-texture = ExtResource("1_asmu1")
-vframes = 15
+[node name="HeadLaser" type="Sprite2D" parent="GolemSprite/HeadPivot"]
+visible = false
+position = Vector2(397.561, 16.3742)
+texture = ExtResource("3_kxpcv")
+vframes = 14
 
-[node name="PivotLeft" type="Node2D" parent="Golem"]
+[node name="HitBox" type="Area2D" parent="GolemSprite/HeadPivot/HeadLaser"]
+position = Vector2(-397.561, -16.3742)
+script = ExtResource("4_c38ke")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GolemSprite/HeadPivot/HeadLaser/HitBox"]
+position = Vector2(418.697, -0.204423)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_mnc2f")
+disabled = true
+
+[node name="PivotLeft" type="Node2D" parent="GolemSprite"]
 z_index = 1
 position = Vector2(-50, -87.0921)
 
-[node name="LeftLaser" type="Sprite2D" parent="Golem/PivotLeft"]
-position = Vector2(97.515, 16.346)
-texture = ExtResource("1_asmu1")
-vframes = 15
+[node name="LeftLaser" type="Sprite2D" parent="GolemSprite/PivotLeft"]
+visible = false
+position = Vector2(397.839, 16.8663)
+texture = ExtResource("3_kxpcv")
+vframes = 14
 
-[node name="PivotTop" type="Node2D" parent="Golem"]
+[node name="HitBox" type="Area2D" parent="GolemSprite/PivotLeft/LeftLaser"]
+script = ExtResource("4_c38ke")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GolemSprite/PivotLeft/LeftLaser/HitBox"]
+position = Vector2(20.3941, -16.5297)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_mnc2f")
+disabled = true
+
+[node name="PivotTop" type="Node2D" parent="GolemSprite"]
 z_index = 1
 position = Vector2(0, -54)
 
-[node name="TopLaser" type="Sprite2D" parent="Golem/PivotTop"]
-position = Vector2(97.0224, 16.9079)
-texture = ExtResource("1_asmu1")
-vframes = 15
+[node name="TopLaser" type="Sprite2D" parent="GolemSprite/PivotTop"]
+visible = false
+position = Vector2(397.935, 16.9945)
+texture = ExtResource("3_kxpcv")
+vframes = 14
 
-[node name="PivotRight" type="Node2D" parent="Golem"]
+[node name="HitBox" type="Area2D" parent="GolemSprite/PivotTop/TopLaser"]
+rotation = -6.28319
+script = ExtResource("4_c38ke")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GolemSprite/PivotTop/TopLaser/HitBox"]
+position = Vector2(20.6345, -16.4643)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_mnc2f")
+disabled = true
+
+[node name="PivotRight" type="Node2D" parent="GolemSprite"]
 z_index = 1
 position = Vector2(50, -87.0921)
 
-[node name="RightLaser" type="Sprite2D" parent="Golem/PivotRight"]
-position = Vector2(97.4445, 16.3878)
-texture = ExtResource("1_asmu1")
-vframes = 15
+[node name="RightLaser" type="Sprite2D" parent="GolemSprite/PivotRight"]
+visible = false
+position = Vector2(397.906, 17.0381)
+texture = ExtResource("3_kxpcv")
+vframes = 14
 
-[node name="HurtBox" type="Area2D" parent="Golem"]
+[node name="HitBox" type="Area2D" parent="GolemSprite/PivotRight/RightLaser"]
+script = ExtResource("4_c38ke")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GolemSprite/PivotRight/RightLaser/HitBox"]
+position = Vector2(20.3277, -16.4598)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_mnc2f")
+disabled = true
+
+[node name="HurtBox" type="Area2D" parent="GolemSprite"]
 script = ExtResource("1_x30iq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Golem/HurtBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GolemSprite/HurtBox"]
+shape = SubResource("CapsuleShape2D_h1q77")
+
+[node name="PlayerDetectionArea" type="Area2D" parent="GolemSprite"]
+visible = false
+script = ExtResource("2_pepyy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GolemSprite/PlayerDetectionArea"]
+position = Vector2(-0.136673, 0.167656)
+shape = SubResource("RectangleShape2D_qbgs7")
+
+[node name="Projectile" type="Node2D" parent="GolemSprite"]
+
+[node name="ArmProjectile" parent="GolemSprite/Projectile" instance=ExtResource("6_lwucg")]
+
+[node name="MeleeHitBox" type="Area2D" parent="GolemSprite"]
+script = ExtResource("4_c38ke")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GolemSprite/MeleeHitBox"]
+position = Vector2(20.1689, 0.74241)
+rotation = -0.335103
+shape = SubResource("CapsuleShape2D_te17x")
+disabled = true
+
+[node name="DashHitbox" type="Area2D" parent="GolemSprite"]
+script = ExtResource("4_c38ke")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GolemSprite/DashHitbox"]
+position = Vector2(-0.866152, 15.2195)
+shape = SubResource("CircleShape2D_6w033")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-0.956025, 6.755)
+shape = SubResource("CapsuleShape2D_sjpuo")
+
+[node name="GolemStateMachine" parent="." instance=ExtResource("2_e5yjq")]
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 libraries = {
@@ -872,3 +1257,14 @@ anim_player = NodePath("../AnimationPlayer")
 libraries = {
 "": SubResource("AnimationLibrary_qiivm")
 }
+
+[node name="StateLabel" type="Label" parent="."]
+visible = false
+offset_left = -20.8111
+offset_top = -51.0368
+offset_right = 19.1889
+offset_bottom = -28.0368
+
+[node name="BossHud" parent="." instance=ExtResource("8_qc80f")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
