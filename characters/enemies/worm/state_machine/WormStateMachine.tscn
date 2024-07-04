@@ -1,0 +1,34 @@
+[gd_scene load_steps=9 format=3 uid="uid://doqhcm76agv7d"]
+
+[ext_resource type="Script" path="res://characters/enemies/worm/state_machine/WormStateMachine.gd" id="1_ik4vv"]
+[ext_resource type="Script" path="res://characters/enemies/worm/state_machine/states/WormAttackingState.gd" id="2_0ui1t"]
+[ext_resource type="Script" path="res://characters/enemies/worm/state_machine/states/WormDyingState.gd" id="3_kcyq6"]
+[ext_resource type="Script" path="res://characters/enemies/worm/state_machine/states/WormHurtingState.gd" id="4_yj1j6"]
+[ext_resource type="Script" path="res://characters/enemies/worm/state_machine/states/WormIdlingState.gd" id="5_us04l"]
+[ext_resource type="Script" path="res://characters/enemies/worm/state_machine/states/WormPatrollingState.gd" id="6_mc7r6"]
+[ext_resource type="Script" path="res://characters/enemies/worm/state_machine/states/WormChasingState.gd" id="7_036eu"]
+[ext_resource type="Script" path="res://characters/enemies/worm/state_machine/states/WormDashingState.gd" id="8_t71ob"]
+
+[node name="WormStateMachine" type="Node"]
+script = ExtResource("1_ik4vv")
+
+[node name="Attacking" type="Node" parent="."]
+script = ExtResource("2_0ui1t")
+
+[node name="Dying" type="Node" parent="."]
+script = ExtResource("3_kcyq6")
+
+[node name="Hurting" type="Node" parent="."]
+script = ExtResource("4_yj1j6")
+
+[node name="Idling" type="Node" parent="."]
+script = ExtResource("5_us04l")
+
+[node name="Patrolling" type="Node" parent="."]
+script = ExtResource("6_mc7r6")
+
+[node name="Chasing" type="Node" parent="."]
+script = ExtResource("7_036eu")
+
+[node name="Dashing" type="Node" parent="."]
+script = ExtResource("8_t71ob")

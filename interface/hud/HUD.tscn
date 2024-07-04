@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cxdepm6ksokn3" path="res://interface/hud/StaminaBar.tscn" id="2_xsdn5"]
 [ext_resource type="Texture2D" uid="uid://gac2lwmm34sf" path="res://Assets/GUI/GUI_2x.png" id="4_wtn24"]
 [ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://Assets/DungeonFont.ttf" id="5_d23xu"]
-[ext_resource type="PackedScene" uid="uid://dwp7u37ibxbmv" path="res://interface/hotbar/Hotbar.tscn" id="6_wlgjf"]
+[ext_resource type="PackedScene" uid="uid://dwp7u37ibxbmv" path="res://interface/hotbar/HotBar.tscn" id="6_wlgjf"]
 [ext_resource type="PackedScene" uid="uid://6c0nmw03t3c7" path="res://interface/hud/ManaBar.tscn" id="7_cjy4l"]
 [ext_resource type="Texture2D" uid="uid://crgdx5iqxvvjn" path="res://Assets/GUI/GUI_1x.png" id="8_2jtxr"]
 
@@ -123,6 +123,7 @@ offset_top = 80.0
 offset_right = 36.0
 offset_bottom = 98.0
 texture = SubResource("AtlasTexture_e6q1y")
+metadata/_edit_use_anchors_ = true
 
 [node name="KeysHeldLabel" type="Label" parent="Keys"]
 texture_filter = 1
@@ -134,3 +135,4 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_d23xu")
 text = "1"
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

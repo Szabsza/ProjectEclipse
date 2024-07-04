@@ -1,19 +1,19 @@
-[gd_scene load_steps=37 format=3 uid="uid://bjd2nk7e3tyjp"]
+[gd_scene load_steps=20 format=3 uid="uid://bjd2nk7e3tyjp"]
 
 [ext_resource type="Script" path="res://characters/enemies/worm/Worm.gd" id="1_g7fdi"]
 [ext_resource type="Texture2D" uid="uid://b3h5aho41a3j3" path="res://Assets/assets/Worm/Walk.png" id="1_xla78"]
 [ext_resource type="Texture2D" uid="uid://b633nq67v2gpn" path="res://Assets/assets/Worm/Idle.png" id="2_0ygro"]
 [ext_resource type="Texture2D" uid="uid://cfpcuai2gk08h" path="res://Assets/assets/Worm/Attack.png" id="3_mqepv"]
+[ext_resource type="Script" path="res://characters/enemies/monk/PlayerDetectionArea.gd" id="3_um0vv"]
 [ext_resource type="Texture2D" uid="uid://c75mo4risugl2" path="res://Assets/assets/Worm/Get Hit.png" id="4_hrcs7"]
 [ext_resource type="Texture2D" uid="uid://d0fehqbqkfbw5" path="res://Assets/assets/Worm/Death.png" id="5_3tmv4"]
-[ext_resource type="Script" path="res://characters/player/state_machine/PlayerStateMachine.gd" id="6_0lj6w"]
-[ext_resource type="Script" path="res://model/Health.gd" id="7_4iesb"]
-[ext_resource type="Script" path="res://characters/enemies/worm/AttackingState.gd" id="8_s6cmq"]
-[ext_resource type="Script" path="res://model/Stamina.gd" id="8_tpwds"]
-[ext_resource type="Script" path="res://characters/enemies/worm/WalkingState.gd" id="9_jhvqt"]
-[ext_resource type="Script" path="res://characters/enemies/worm/DyingState.gd" id="10_o4mpa"]
-[ext_resource type="Script" path="res://characters/enemies/worm/IdlingState.gd" id="11_y26sl"]
-[ext_resource type="Script" path="res://characters/enemies/worm/HurtingState.gd" id="12_1kqpp"]
+[ext_resource type="PackedScene" uid="uid://doqhcm76agv7d" path="res://characters/enemies/worm/state_machine/WormStateMachine.tscn" id="7_t53sg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72c5u"]
+size = Vector2(282.5, 220)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_frxam"]
+size = Vector2(563, 348)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u720d"]
 radius = 9.99122
@@ -237,108 +237,90 @@ tracks/2/keys = {
 "values": [9]
 }
 
+[sub_resource type="Animation" id="Animation_wauaw"]
+resource_name = "dash"
+length = 0.89
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_xla78")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mp0un"]
 _data = {
 "RESET": SubResource("Animation_kb5wm"),
 "attack": SubResource("Animation_3lkw6"),
+"dash": SubResource("Animation_wauaw"),
 "death": SubResource("Animation_um7y0"),
 "hit": SubResource("Animation_kk426"),
 "idle": SubResource("Animation_gx484"),
 "walk": SubResource("Animation_vf5v3")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lrqre"]
-animation = &"attack"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3j42b"]
-animation = &"death"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pvqum"]
-animation = &"hit"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v1tai"]
-animation = &"idle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lwgev"]
-animation = &"walk"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_a6tbe"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fi6jy"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kiyxf"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_10wti"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pod2e"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_q1n07"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_41bkj"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lns4j"]
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_5eqel"]
-states/End/position = Vector2(876, 294)
-states/Start/position = Vector2(77, 279)
-states/attack/node = SubResource("AnimationNodeAnimation_lrqre")
-states/attack/position = Vector2(411, 167)
-states/death/node = SubResource("AnimationNodeAnimation_3j42b")
-states/death/position = Vector2(754, 390)
-states/hit/node = SubResource("AnimationNodeAnimation_pvqum")
-states/hit/position = Vector2(629, 390)
-states/idle/node = SubResource("AnimationNodeAnimation_v1tai")
-states/idle/position = Vector2(229, 273)
-states/walk/node = SubResource("AnimationNodeAnimation_lwgev")
-states/walk/position = Vector2(411, 273)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_a6tbe"), "idle", "attack", SubResource("AnimationNodeStateMachineTransition_fi6jy"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_kiyxf"), "walk", "attack", SubResource("AnimationNodeStateMachineTransition_10wti"), "idle", "hit", SubResource("AnimationNodeStateMachineTransition_pod2e"), "walk", "hit", SubResource("AnimationNodeStateMachineTransition_q1n07"), "attack", "hit", SubResource("AnimationNodeStateMachineTransition_41bkj"), "hit", "death", SubResource("AnimationNodeStateMachineTransition_lns4j")]
-
 [node name="Worm" type="CharacterBody2D"]
+texture_filter = 1
 script = ExtResource("1_g7fdi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_xla78")
 hframes = 9
 
+[node name="PlayerDetectionAreaIdle" type="Area2D" parent="Sprite2D"]
+visible = false
+script = ExtResource("3_um0vv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/PlayerDetectionAreaIdle"]
+position = Vector2(140.75, 0)
+shape = SubResource("RectangleShape2D_72c5u")
+
+[node name="PlayerDetectionAreaAlerted" type="Area2D" parent="Sprite2D"]
+visible = false
+script = ExtResource("3_um0vv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/PlayerDetectionAreaAlerted"]
+shape = SubResource("RectangleShape2D_frxam")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-4, -1)
 rotation = 1.5708
 scale = Vector2(1.40123, 1.0641)
 shape = SubResource("CapsuleShape2D_u720d")
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_mp0un")
-}
-tree_root = SubResource("AnimationNodeStateMachine_5eqel")
-anim_player = NodePath("../AnimationPlayer")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_mp0un")
 }
 
-[node name="Health" type="Node" parent="."]
-script = ExtResource("7_4iesb")
-
-[node name="Stamina" type="Node" parent="."]
-script = ExtResource("8_tpwds")
-
-[node name="CharacterStateMachine" type="Node" parent="."]
-script = ExtResource("6_0lj6w")
-
-[node name="Attacking" type="Node" parent="CharacterStateMachine"]
-script = ExtResource("8_s6cmq")
-
-[node name="Chasing" type="Node" parent="CharacterStateMachine"]
-script = ExtResource("9_jhvqt")
-
-[node name="Dying" type="Node" parent="CharacterStateMachine"]
-script = ExtResource("10_o4mpa")
-
-[node name="Idling" type="Node" parent="CharacterStateMachine"]
-script = ExtResource("11_y26sl")
-
-[node name="Hurting" type="Node" parent="CharacterStateMachine"]
-script = ExtResource("12_1kqpp")
+[node name="WormStateMachine" parent="." instance=ExtResource("7_t53sg")]

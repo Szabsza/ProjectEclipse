@@ -6,6 +6,7 @@ class_name Player extends CharacterBody2D
 @onready var state_machine : PlayerStateMachine = $PlayerStateMachine
 @onready var hurtbox : HurtBox = $Sprite2D/HurtBox
 @onready var stamina_regen_timer : Timer = $StaminaRegenerationTimer
+@onready var hud : PlayerHud = $PlayerHud
 
 var player_data : PlayerData
 var health : Health
@@ -40,6 +41,8 @@ func _ready():
 	for child in sprite.get_children():
 		if child is HitBox:
 			child.setup(player_data.attack_damage, 2, 0)
+			
+	hud.setup(self)
 			
 	InteractionManager.connect("interacted", _interacted)
 	InteractionManager.connect("interaction_finished", _interaction_finished)

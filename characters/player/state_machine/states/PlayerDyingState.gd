@@ -24,5 +24,6 @@ func state_input(event: InputEvent):
 
 func _on_animation_finished(anim_name):
 	if anim_name == DEATH_ANIMATION:
+		await player.hud.show_death_toast()
 		PlayerManager.die_and_respawn(player.global_position)
 		next_state = states["Idling"]

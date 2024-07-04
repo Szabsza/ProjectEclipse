@@ -1,10 +1,10 @@
 class_name Worm extends CharacterBody2D
 
 @onready var sprite : Sprite2D = $Sprite2D
-@onready var animation_tree : AnimationTree = $AnimationTree
-@onready var state_machine : CharacterStateMachine = $CharacterStateMachine
-@onready var health : Health = $Health
-@onready var stamina : Stamina = $Stamina
+@onready var state_machine: Node = $WormStateMachine
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var player_detection_area_idle: PlayerDetectionArea = $Sprite2D/PlayerDetectionAreaIdle
+@onready var player_detection_area_alerted: PlayerDetectionArea = $Sprite2D/PlayerDetectionAreaAlerted
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var pushback_force : Vector2 = Vector2.ZERO
@@ -12,24 +12,13 @@ var is_facing_left : bool = false
 var is_facing_right : bool = true
 var is_facing_direction_locked : bool = false
 
-const ATTACK_POWER = 10
-const MAX_HEALTH = 100
-const MAX_MANA = 20
-
-const MAX_STAMINA = 100
-const STAMINA_REGENERATION_RATE = 5
-
-const ATTACK_STAMINA_COST : int = 25
-const ROLL_STAMINA_COST : int = 25
+#var worm_data : WormData
 
 
 func _ready():
 	collision_layer = 4
 	collision_mask = 1
-	animation_tree.active = true
-	state_machine.setup(self, animation_tree)
-	health.setup(MAX_HEALTH)
-	stamina.setup(MAX_STAMINA, STAMINA_REGENERATION_RATE)
+	state_machine.setup(self)
 
 
 func _physics_process(delta):
@@ -43,9 +32,10 @@ func _physics_process(delta):
 
 
 func take_damage(amount : float):
-	health.decrease_current_health(amount)
-	if health.current_health <= 0:
-		state_machine.switch_state(state_machine.states["Dying"])
+#	health.decrease_current_health(amount)
+#	if health.current_health <= 0:
+#		state_machine.switch_state(state_machine.states["Dying"])
+	pass
 
 
 func knock_back(source_position : Vector2):
@@ -58,3 +48,15 @@ func knock_back(source_position : Vector2):
 		sprite.scale.x = -1
 		is_facing_left = true
 		is_facing_right = false
+
+
+func can_see_player() -> bool:
+	return player_detection_area_idle.is_able_to_see_player()
+
+
+func player_position() -> Vector2:
+	return player_detection_area_alerted.player_position()
+
+
+func scale_up_player_detection():
+	player_detection_area

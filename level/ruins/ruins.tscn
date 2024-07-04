@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bqaipc210dp67"]
+[gd_scene load_steps=35 format=3 uid="uid://bqaipc210dp67"]
 
 [ext_resource type="Script" path="res://level/ruins/Ruins.gd" id="1_pwxno"]
 [ext_resource type="Texture2D" uid="uid://behak76asms1i" path="res://Assets/toRecolor/finalNight.PNG" id="2_gvf1a"]
@@ -25,7 +25,6 @@
 [ext_resource type="Resource" uid="uid://dsowukkicykrv" path="res://resources/golden_necklace.tres" id="23_aav0j"]
 [ext_resource type="Resource" uid="uid://c8ebcsjx0kv8e" path="res://resources/ruins_dungeon_door.tres" id="24_jce1e"]
 [ext_resource type="Resource" uid="uid://2xh3dfje280g" path="res://resources/dungeon_ruins_door.tres" id="25_0evj3"]
-[ext_resource type="PackedScene" uid="uid://ciycxun4i5wvu" path="res://interface/hud/HUD.tscn" id="25_g3xad"]
 
 [sub_resource type="Resource" id="Resource_ys603"]
 script = ExtResource("11_57ri2")
@@ -276,6 +275,7 @@ scale = Vector2(1, -1)
 chest_data = SubResource("Resource_kpcef")
 
 [node name="Traps" type="Node2D" parent="."]
+visible = false
 
 [node name="FireTrap" parent="Traps" instance=ExtResource("11_1kxfo")]
 position = Vector2(1366, 807)
@@ -306,6 +306,7 @@ position = Vector2(10709, 938)
 scale = Vector2(0.993459, 0.974318)
 
 [node name="Merchants" type="Node2D" parent="."]
+visible = false
 
 [node name="GhostMerchant" parent="Merchants" instance=ExtResource("13_2r631")]
 position = Vector2(928, 870)
@@ -318,7 +319,7 @@ position = Vector2(4217, 932)
 door_data = ExtResource("24_jce1e")
 destination_door_data = ExtResource("25_0evj3")
 
+[node name="Enemies" type="Node2D" parent="."]
+
 [node name="LevelEntryPoint" type="Marker2D" parent="."]
 position = Vector2(138, 738)
-
-[node name="Hud" parent="." instance=ExtResource("25_g3xad")]
