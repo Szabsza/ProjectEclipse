@@ -27,13 +27,13 @@ func unregister_interactable_area(area : InteractableArea):
 		
 		
 func _sort_by_distance_to_player(area_a : InteractableArea, area_b : InteractableArea):
-	var area_a_to_player = PlayerManager.player.gleeobal_position.direction_to(area_a.global_position)
+	var area_a_to_player = PlayerManager.player.global_position.direction_to(area_a.global_position)
 	var area_b_to_player = PlayerManager.player.global_position.direction_to(area_b.global_position)
 	
 	return area_a_to_player < area_b_to_player
 		
 		
-func _process(delta):
+func _process(delta): 
 	if active_areas.size() > 0 && is_interactable:
 		active_areas.sort_custom(_sort_by_distance_to_player)
 		label.text = BASE_TEXT + active_areas[0].action_name

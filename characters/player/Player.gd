@@ -36,7 +36,7 @@ func _ready():
 	collision_mask = 1
 
 	state_machine.setup(self)	 
-	hurtbox.setup(0, 2)
+	#hurtbox.setup(0, 2)
 	
 	for child in sprite.get_children():
 		if child is HitBox:
