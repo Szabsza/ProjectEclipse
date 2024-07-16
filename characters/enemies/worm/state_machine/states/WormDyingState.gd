@@ -1,7 +1,7 @@
-class_name WormDyingState extends State
+class_name WormDyingState extends WormState
 
 const DEATH_ANIMATION : String = "death"
 
 
 func on_enter():
-	playback.travel(DEATH_ANIMATION)
+	pass

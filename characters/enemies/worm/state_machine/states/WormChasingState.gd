@@ -12,7 +12,15 @@ func on_exit():
 
 
 func state_process(delta):
-	if worm.player_position().x < 100:
+	var direction: Vector2 = (worm.player_position() - worm.global_position).normalized()
+	worm.velocity.x = direction.x * 100
+	if direction.x < 0:
+		worm.sprite.scale.x = -1
+	else:
+		worm.sprite.scale.x = 1
+	
+	var distance_from_player = abs(worm.player_position().x - worm.position.x)
+	if distance_from_player < 200:
 		next_state = states["Attacking"]
 
 	if not worm.player_detection_area_alerted.is_able_to_see_player:

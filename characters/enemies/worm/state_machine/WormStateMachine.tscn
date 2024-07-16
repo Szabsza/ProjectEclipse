@@ -24,6 +24,10 @@ script = ExtResource("4_yj1j6")
 [node name="Idling" type="Node" parent="."]
 script = ExtResource("5_us04l")
 
+[node name="PatrollingTimer" type="Timer" parent="Idling"]
+wait_time = 2.0
+one_shot = true
+
 [node name="Patrolling" type="Node" parent="."]
 script = ExtResource("6_mc7r6")
 
@@ -32,3 +36,5 @@ script = ExtResource("7_036eu")
 
 [node name="Dashing" type="Node" parent="."]
 script = ExtResource("8_t71ob")
+
+[connection signal="timeout" from="Idling/PatrollingTimer" to="Idling" method="_on_patrolling_timer_timeout"]

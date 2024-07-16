@@ -15,9 +15,9 @@ size = Vector2(282.5, 220)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frxam"]
 size = Vector2(563, 348)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u720d"]
-radius = 9.99122
-height = 50.747
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tm0eb"]
+radius = 7.0
+height = 37.0
 
 [sub_resource type="Animation" id="Animation_kb5wm"]
 length = 0.001
@@ -36,7 +36,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_3lkw6"]
 resource_name = "attack"
-length = 0.8
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -293,8 +292,8 @@ texture_filter = 1
 script = ExtResource("1_g7fdi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_xla78")
-hframes = 9
+texture = ExtResource("3_mqepv")
+hframes = 16
 
 [node name="PlayerDetectionAreaIdle" type="Area2D" parent="Sprite2D"]
 visible = false
@@ -311,12 +310,12 @@ script = ExtResource("3_um0vv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/PlayerDetectionAreaAlerted"]
 shape = SubResource("RectangleShape2D_frxam")
 
+[node name="HeadPivot" type="Node2D" parent="Sprite2D"]
+position = Vector2(28, -7)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-4, -1)
-rotation = 1.5708
-scale = Vector2(1.40123, 1.0641)
-shape = SubResource("CapsuleShape2D_u720d")
+position = Vector2(0, -4)
+shape = SubResource("CapsuleShape2D_tm0eb")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -324,3 +323,9 @@ libraries = {
 }
 
 [node name="WormStateMachine" parent="." instance=ExtResource("7_t53sg")]
+
+[node name="StateLabel" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -51.0
+offset_right = 20.0
+offset_bottom = -28.0

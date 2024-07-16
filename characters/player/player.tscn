@@ -1030,7 +1030,6 @@ shape = SubResource("CapsuleShape2D_b2om6")
 disabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0, -0.5)
 shape = SubResource("CapsuleShape2D_af6o4")
 

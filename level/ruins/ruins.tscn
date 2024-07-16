@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bqaipc210dp67"]
+[gd_scene load_steps=36 format=3 uid="uid://bqaipc210dp67"]
 
 [ext_resource type="Script" path="res://level/ruins/Ruins.gd" id="1_pwxno"]
 [ext_resource type="Texture2D" uid="uid://behak76asms1i" path="res://Assets/toRecolor/finalNight.PNG" id="2_gvf1a"]
@@ -25,6 +25,7 @@
 [ext_resource type="Resource" uid="uid://dsowukkicykrv" path="res://resources/golden_necklace.tres" id="23_aav0j"]
 [ext_resource type="Resource" uid="uid://c8ebcsjx0kv8e" path="res://resources/ruins_dungeon_door.tres" id="24_jce1e"]
 [ext_resource type="Resource" uid="uid://2xh3dfje280g" path="res://resources/dungeon_ruins_door.tres" id="25_0evj3"]
+[ext_resource type="PackedScene" uid="uid://bjd2nk7e3tyjp" path="res://characters/enemies/worm/Worm.tscn" id="26_n13q1"]
 
 [sub_resource type="Resource" id="Resource_ys603"]
 script = ExtResource("11_57ri2")
@@ -306,10 +307,9 @@ position = Vector2(10709, 938)
 scale = Vector2(0.993459, 0.974318)
 
 [node name="Merchants" type="Node2D" parent="."]
-visible = false
 
 [node name="GhostMerchant" parent="Merchants" instance=ExtResource("13_2r631")]
-position = Vector2(928, 870)
+position = Vector2(582, 750)
 merchant_data = SubResource("Resource_hrsvw")
 
 [node name="Doors" type="Node2D" parent="."]
@@ -320,6 +320,57 @@ door_data = ExtResource("24_jce1e")
 destination_door_data = ExtResource("25_0evj3")
 
 [node name="Enemies" type="Node2D" parent="."]
+
+[node name="Worm" parent="Enemies" instance=ExtResource("26_n13q1")]
+position = Vector2(1266, 819)
+end_waypoint_index = 2
+
+[node name="Waypoints" type="Node2D" parent="."]
+
+[node name="Point1" type="Node2D" parent="Waypoints"]
+position = Vector2(867, 897)
+
+[node name="Point2" type="Node2D" parent="Waypoints"]
+position = Vector2(1063, 897)
+
+[node name="Point3" type="Node2D" parent="Waypoints"]
+position = Vector2(1268, 813)
+
+[node name="Point4" type="Node2D" parent="Waypoints"]
+position = Vector2(1612, 806)
+
+[node name="Point5" type="Node2D" parent="Waypoints"]
+position = Vector2(1905, 955)
+
+[node name="Point6" type="Node2D" parent="Waypoints"]
+position = Vector2(2173, 964)
+
+[node name="Point7" type="Node2D" parent="Waypoints"]
+position = Vector2(2376, 859)
+
+[node name="Point8" type="Node2D" parent="Waypoints"]
+position = Vector2(2533, 860)
+
+[node name="Point9" type="Node2D" parent="Waypoints"]
+position = Vector2(2834, 941)
+
+[node name="Point10" type="Node2D" parent="Waypoints"]
+position = Vector2(3148, 940)
+
+[node name="Point11" type="Node2D" parent="Waypoints"]
+position = Vector2(3463, 942)
+
+[node name="Point12" type="Node2D" parent="Waypoints"]
+position = Vector2(3818, 947)
+
+[node name="Point13" type="Node2D" parent="Waypoints"]
+position = Vector2(4392, 941)
+
+[node name="Point14" type="Node2D" parent="Waypoints"]
+position = Vector2(4893, 945)
+
+[node name="Point15" type="Node2D" parent="Waypoints"]
+position = Vector2(5152, 946)
 
 [node name="LevelEntryPoint" type="Marker2D" parent="."]
 position = Vector2(138, 738)

@@ -4,7 +4,7 @@ var worm : Worm
 
 @onready var worm_states: Dictionary = {
 	"Attacking" : $Attacking,
-	"Walking" : $Walking,
+	"Idling" : $Idling,
 	"Chasing" : $Chasing,
 	"Patrolling" : $Patrolling,
 	"Hurting" : $Hurting,
