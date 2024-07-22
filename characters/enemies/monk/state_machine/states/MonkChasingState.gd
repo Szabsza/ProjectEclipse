@@ -1,0 +1,35 @@
+class_name MonkChasingState extends MonkState
+
+const RUN_ANIMATION : String = "run"
+
+var monk_info : MonkData
+
+
+func on_enter():
+	monk_info = monk.monk_data
+	monk.animation_player.play(RUN_ANIMATION)
+
+
+func on_exit():
+	pass
+
+
+func state_process(delta):
+	var direction: Vector2 = (monk.player_position() - monk.global_position).normalized()
+	monk.velocity.x = direction.x * monk_info.CHASING_SPEED
+	if direction.x < 0:
+		monk.sprite.scale.x = -1
+	else:
+		monk.sprite.scale.x = 1
+
+	var distance_from_player = abs(monk.player_position().x - monk.position.x)
+	if distance_from_player < monk_info.MIN_RANGE_MELEE_ATTACKS:
+		next_state = states["Attacking"]
+
+
+	if not monk.player_detection_area_alerted.is_able_to_see_player:
+		next_state = states["Patrolling"]
+
+
+func state_input(event: InputEvent):
+	pass

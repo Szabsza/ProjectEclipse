@@ -24,4 +24,3 @@ func state_input(input : InputEvent):
 func _on_animation_finished(anim_name : String):
 	if anim_name == DEATH_ANIMATION:
 		worm.visible = false
-		

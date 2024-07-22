@@ -330,7 +330,6 @@ texture = ExtResource("4_hrcs7")
 hframes = 3
 
 [node name="PlayerDetectionAreaIdle" type="Area2D" parent="Sprite2D"]
-visible = false
 script = ExtResource("3_um0vv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/PlayerDetectionAreaIdle"]
@@ -338,7 +337,6 @@ position = Vector2(140.75, 0)
 shape = SubResource("RectangleShape2D_72c5u")
 
 [node name="PlayerDetectionAreaAlerted" type="Area2D" parent="Sprite2D"]
-visible = false
 script = ExtResource("3_um0vv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/PlayerDetectionAreaAlerted"]

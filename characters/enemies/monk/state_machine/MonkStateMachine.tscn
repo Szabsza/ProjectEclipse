@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://bgtihpepvkq2j"]
+
+[ext_resource type="Script" path="res://characters/enemies/monk/state_machine/MonkStateMachine.gd" id="1_ilyim"]
+[ext_resource type="Script" path="res://characters/enemies/monk/state_machine/states/MonkIdlingState.gd" id="2_cj6lq"]
+[ext_resource type="Script" path="res://characters/enemies/monk/state_machine/states/MonkPatrollingState.gd" id="3_tv6ry"]
+[ext_resource type="Script" path="res://characters/enemies/monk/state_machine/states/MonkChasingState.gd" id="4_l6tml"]
+[ext_resource type="Script" path="res://characters/enemies/monk/state_machine/states/MonkAttackingState.gd" id="5_th3ur"]
+[ext_resource type="Script" path="res://characters/enemies/monk/state_machine/states/MonkHurtingState.gd" id="6_0bxmi"]
+[ext_resource type="Script" path="res://characters/enemies/monk/state_machine/states/MonkDyingState.gd" id="7_f600p"]
+
+[node name="MonkStateMachine" type="Node"]
+script = ExtResource("1_ilyim")
+
+[node name="Idling" type="Node" parent="."]
+script = ExtResource("2_cj6lq")
+
+[node name="PatrollingTimer" type="Timer" parent="Idling"]
+wait_time = 1.5
+one_shot = true
+
+[node name="Patrolling" type="Node" parent="."]
+script = ExtResource("3_tv6ry")
+
+[node name="Chasing" type="Node" parent="."]
+script = ExtResource("4_l6tml")
+
+[node name="Attacking" type="Node" parent="."]
+script = ExtResource("5_th3ur")
+
+[node name="Hurting" type="Node" parent="."]
+script = ExtResource("6_0bxmi")
+
+[node name="Dying" type="Node" parent="."]
+script = ExtResource("7_f600p")
+
+[connection signal="timeout" from="Idling/PatrollingTimer" to="Idling" method="_on_patrolling_timer_timeout"]

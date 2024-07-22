@@ -87,5 +87,5 @@ func player_position() -> Vector2:
 
 
 func random_destination_waypoint() -> Node2D:
-	var rng = start_waypoint_index + randi() % (end_waypoint_index - start_waypoint_index + 1)
+	var rng: int = start_waypoint_index + randi() % (end_waypoint_index - start_waypoint_index + 1)
 	return waypoints[rng]

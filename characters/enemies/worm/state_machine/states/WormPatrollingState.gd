@@ -9,7 +9,7 @@ var worm_info : WormData
 func on_enter():
 	worm_info = worm.worm_data
 	worm.animation_player.play(WALKING_ANIMATION)
-	var new_destination_waypoint = worm.random_destination_waypoint()
+	var new_destination_waypoint: Node2D = worm.random_destination_waypoint()
 	if new_destination_waypoint != destination_waypoint:
 		destination_waypoint = new_destination_waypoint
 	
@@ -19,8 +19,8 @@ func on_exit():
 
 
 func state_process(delta):
-	var direction: Vector2 = (destination_waypoint.global_position - worm.global_position).normalized()
-	var distance_to_destination = worm.global_position.distance_to(destination_waypoint.global_position)
+	var direction: Vector2             = (destination_waypoint.global_position - worm.global_position).normalized()
+	var distance_to_destination: float = worm.global_position.distance_to(destination_waypoint.global_position)
 	
 	if distance_to_destination > worm_info.MIN_WAYPOINT_DISTANCE:
 		worm.velocity.x = direction.x * worm_info.WALKING_SPEED
@@ -37,4 +37,3 @@ func state_process(delta):
 
 func state_input(event: InputEvent):
 	pass
-

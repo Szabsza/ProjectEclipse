@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bqaipc210dp67"]
+[gd_scene load_steps=37 format=3 uid="uid://bqaipc210dp67"]
 
 [ext_resource type="Script" path="res://level/ruins/Ruins.gd" id="1_pwxno"]
 [ext_resource type="Texture2D" uid="uid://behak76asms1i" path="res://Assets/toRecolor/finalNight.PNG" id="2_gvf1a"]
@@ -26,6 +26,7 @@
 [ext_resource type="Resource" uid="uid://c8ebcsjx0kv8e" path="res://resources/ruins_dungeon_door.tres" id="24_jce1e"]
 [ext_resource type="Resource" uid="uid://2xh3dfje280g" path="res://resources/dungeon_ruins_door.tres" id="25_0evj3"]
 [ext_resource type="PackedScene" uid="uid://bjd2nk7e3tyjp" path="res://characters/enemies/worm/Worm.tscn" id="26_n13q1"]
+[ext_resource type="PackedScene" uid="uid://dse50ogb1ndlt" path="res://characters/enemies/monk/Monk.tscn" id="27_lfi61"]
 
 [sub_resource type="Resource" id="Resource_ys603"]
 script = ExtResource("11_57ri2")
@@ -319,6 +320,10 @@ door_data = ExtResource("24_jce1e")
 destination_door_data = ExtResource("25_0evj3")
 
 [node name="Enemies" type="Node2D" parent="."]
+
+[node name="Monk" parent="Enemies" instance=ExtResource("27_lfi61")]
+position = Vector2(837, 899)
+end_waypoint_index = 2
 
 [node name="Worm" parent="Enemies" instance=ExtResource("26_n13q1")]
 position = Vector2(1266, 819)

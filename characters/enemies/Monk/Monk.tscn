@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=3 uid="uid://dse50ogb1ndlt"]
+[gd_scene load_steps=72 format=3 uid="uid://dse50ogb1ndlt"]
 
 [ext_resource type="Texture2D" uid="uid://c28n3av3fly8c" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/idle/idle_2.png" id="1_6otmi"]
 [ext_resource type="Script" path="res://characters/enemies/monk/Monk.gd" id="1_a8mv2"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://characters/common/HurtBox.gd" id="3_f6ga6"]
 [ext_resource type="Texture2D" uid="uid://bxocmfve6bxgo" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/idle/idle_4.png" id="4_31w2m"]
 [ext_resource type="Script" path="res://characters/enemies/monk/PlayerDetectionArea.gd" id="4_qtx4k"]
+[ext_resource type="Script" path="res://characters/common/HitBox.gd" id="5_6odpr"]
 [ext_resource type="Texture2D" uid="uid://oesgrml0toxs" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/idle/idle_5.png" id="5_voruv"]
 [ext_resource type="Texture2D" uid="uid://fe0whk3jrytg" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/idle/idle_6.png" id="6_dc30h"]
 [ext_resource type="Texture2D" uid="uid://cxcqxy8rj833i" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/take_hit/take_hit_1.png" id="10_gdlob"]
@@ -16,13 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://ccdw08h2gdul1" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/take_hit/take_hit_3.png" id="12_adxyl"]
 [ext_resource type="Texture2D" uid="uid://bturmfbk1pv1f" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/take_hit/take_hit_4.png" id="13_gctn8"]
 [ext_resource type="Texture2D" uid="uid://8wkn0wat4rrj" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/take_hit/take_hit_5.png" id="14_8e3cv"]
-[ext_resource type="Script" path="res://characters/player/state_machine/PlayerStateMachine.gd" id="15_afh3l"]
 [ext_resource type="Texture2D" uid="uid://bftgg6ij5sd5y" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/run/run_1.png" id="16_2ncvb"]
-[ext_resource type="Script" path="res://characters/enemies/monk/state/IdlingState.gd" id="16_dvk46"]
-[ext_resource type="Script" path="res://characters/enemies/monk/state/ChasingState.gd" id="17_j1b61"]
 [ext_resource type="Texture2D" uid="uid://c1wbofjaoey64" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/run/run_2.png" id="17_wcoqv"]
 [ext_resource type="Texture2D" uid="uid://bnstwm27ac36a" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/run/run_3.png" id="18_1ppqx"]
-[ext_resource type="Script" path="res://characters/player/state_machine/StateLabel.gd" id="19_cqdes"]
 [ext_resource type="Texture2D" uid="uid://b857xcatonwa5" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/run/run_4.png" id="19_jksip"]
 [ext_resource type="Texture2D" uid="uid://dg2wk31beak8i" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/run/run_5.png" id="20_3sa65"]
 [ext_resource type="Texture2D" uid="uid://bw5w5bm0t4e5w" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/run/run_6.png" id="21_mo8ge"]
@@ -37,11 +34,8 @@
 [ext_resource type="Texture2D" uid="uid://ephs2808vi3l" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/death/death_2.png" id="31_knjh6"]
 [ext_resource type="Texture2D" uid="uid://3dm41m11dv81" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/death/death_3.png" id="32_6df4g"]
 [ext_resource type="Texture2D" uid="uid://bujj8ymsqrj68" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/death/death_4.png" id="33_k1npe"]
-[ext_resource type="Script" path="res://characters/enemies/monk/state/AttackingState.gd" id="33_pc7c1"]
-[ext_resource type="Script" path="res://characters/enemies/monk/state/HurtingState.gd" id="34_kwqbv"]
 [ext_resource type="Texture2D" uid="uid://b5g2ssqke8wmr" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/death/death_5.png" id="34_nfiwd"]
 [ext_resource type="Texture2D" uid="uid://pv8wupjrbpm5" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/death/death_6.png" id="35_0t66r"]
-[ext_resource type="Script" path="res://characters/enemies/monk/state/DyingState.gd" id="35_ywkh8"]
 [ext_resource type="Texture2D" uid="uid://bvkuj1ngcinrk" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/death/death_7.png" id="36_6t88t"]
 [ext_resource type="Texture2D" uid="uid://ccwx7vlqm5fqa" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/death/death_8.png" id="37_0146x"]
 [ext_resource type="Texture2D" uid="uid://bhl107seja0jm" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/death/death_9.png" id="38_4oboh"]
@@ -54,20 +48,46 @@
 [ext_resource type="Texture2D" uid="uid://cxxmt4mc85ml7" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/death/death_16.png" id="45_kor6o"]
 [ext_resource type="Texture2D" uid="uid://bn0iin02e7n7b" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/death/death_17.png" id="46_5uh1h"]
 [ext_resource type="Texture2D" uid="uid://b0pvmxb250i6k" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/death/death_18.png" id="47_n26ts"]
+[ext_resource type="PackedScene" uid="uid://bgtihpepvkq2j" path="res://characters/enemies/monk/state_machine/MonkStateMachine.tscn" id="49_0biid"]
+[ext_resource type="Texture2D" uid="uid://mvexfgxqv65m" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/air_atk/air_atk_1.png" id="49_5sooo"]
+[ext_resource type="Texture2D" uid="uid://byl0lqehdnor8" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/air_atk/air_atk_2.png" id="50_2na7u"]
+[ext_resource type="PackedScene" uid="uid://biu3xvae7hxfd" path="res://interface/hud/HealthBar.tscn" id="50_bfo76"]
+[ext_resource type="Texture2D" uid="uid://4xfpwwye53kb" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/air_atk/air_atk_3.png" id="51_lbh7d"]
+[ext_resource type="Texture2D" uid="uid://y5w2u0v5um2p" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/air_atk/air_atk_4.png" id="52_docmk"]
+[ext_resource type="Texture2D" uid="uid://y5hur86p3egx" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/air_atk/air_atk_5.png" id="53_jp6si"]
+[ext_resource type="Texture2D" uid="uid://pnkrce1xncfp" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/air_atk/air_atk_6.png" id="54_bb3oo"]
+[ext_resource type="Texture2D" uid="uid://c0lt34yhh5u06" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/air_atk/air_atk_7.png" id="55_og511"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vtans"]
 radius = 6.0
 height = 36.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eng4h"]
-size = Vector2(168, 70)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_thp25"]
+size = Vector2(282.5, 220)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xjb2"]
+size = Vector2(563, 348)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xfemh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8buvg"]
 radius = 9.0
-height = 34.0
+height = 36.0
 
 [sub_resource type="Animation" id="Animation_lb1d5"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/MeleeHitbox/CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_hwwju"]
 resource_name = "attack_chain_a"
@@ -85,10 +105,22 @@ tracks/0/keys = {
 "update": 1,
 "values": [ExtResource("24_qlr7f"), ExtResource("25_s788g"), ExtResource("26_tssdr"), ExtResource("27_ueks7")]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/MeleeHitbox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
 
 [sub_resource type="Animation" id="Animation_wkxqf"]
 resource_name = "attack_chain_a_finish"
-length = 0.1
+length = 0.3
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -171,6 +203,22 @@ tracks/0/keys = {
 "values": [ExtResource("16_2ncvb"), ExtResource("6_dc30h"), ExtResource("17_wcoqv"), ExtResource("18_1ppqx"), ExtResource("19_jksip"), ExtResource("20_3sa65"), ExtResource("21_mo8ge"), ExtResource("22_v6qvj"), ExtResource("23_bki21")]
 }
 
+[sub_resource type="Animation" id="Animation_3y71f"]
+resource_name = "special_attack"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 0.1, 0.15, 0.2, 0.25, 0.35, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("49_5sooo"), ExtResource("27_ueks7"), ExtResource("50_2na7u"), ExtResource("51_lbh7d"), ExtResource("52_docmk"), ExtResource("53_jp6si"), ExtResource("54_bb3oo"), ExtResource("55_og511")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nrws0"]
 _data = {
 "RESET": SubResource("Animation_lb1d5"),
@@ -179,85 +227,50 @@ _data = {
 "death": SubResource("Animation_ccs8v"),
 "hit": SubResource("Animation_holji"),
 "idle": SubResource("Animation_d44i7"),
-"run": SubResource("Animation_xd4ji")
+"run": SubResource("Animation_xd4ji"),
+"special_attack": SubResource("Animation_3y71f")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3dsqd"]
-animation = &"attack_chain_a"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yxn25"]
-animation = &"attack_chain_a_finish"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vphas"]
-animation = &"death"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oa7oj"]
-animation = &"hit"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2qvqu"]
-animation = &"idle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dmi5s"]
-animation = &"run"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pf1o3"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4r3a6"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qyfkg"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_r8jje"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tth37"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_okwm1"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ygg7i"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rsfey"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gjf7e"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_slvfd"]
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_okbl2"]
-states/Start/position = Vector2(187.333, 404)
-states/attack_chain_a/node = SubResource("AnimationNodeAnimation_3dsqd")
-states/attack_chain_a/position = Vector2(386.445, 238.607)
-states/attack_chain_a_finish/node = SubResource("AnimationNodeAnimation_yxn25")
-states/attack_chain_a_finish/position = Vector2(160.667, 239.496)
-states/death/node = SubResource("AnimationNodeAnimation_vphas")
-states/death/position = Vector2(668.667, 538.869)
-states/hit/node = SubResource("AnimationNodeAnimation_oa7oj")
-states/hit/position = Vector2(476, 539.333)
-states/idle/node = SubResource("AnimationNodeAnimation_2qvqu")
-states/idle/position = Vector2(385.334, 405.111)
-states/run/node = SubResource("AnimationNodeAnimation_dmi5s")
-states/run/position = Vector2(556.667, 404.074)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_pf1o3"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_4r3a6"), "run", "hit", SubResource("AnimationNodeStateMachineTransition_qyfkg"), "idle", "hit", SubResource("AnimationNodeStateMachineTransition_r8jje"), "hit", "idle", SubResource("AnimationNodeStateMachineTransition_tth37"), "idle", "attack_chain_a", SubResource("AnimationNodeStateMachineTransition_okwm1"), "run", "attack_chain_a", SubResource("AnimationNodeStateMachineTransition_ygg7i"), "attack_chain_a", "attack_chain_a_finish", SubResource("AnimationNodeStateMachineTransition_rsfey"), "attack_chain_a_finish", "idle", SubResource("AnimationNodeStateMachineTransition_gjf7e"), "hit", "death", SubResource("AnimationNodeStateMachineTransition_slvfd")]
-graph_offset = Vector2(0, 140.607)
-
 [node name="Monk" type="CharacterBody2D"]
+texture_filter = 1
 script = ExtResource("1_a8mv2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -40)
-texture = ExtResource("3_33crn")
+texture = ExtResource("55_og511")
 
 [node name="HurtBox" type="Area2D" parent="Sprite2D"]
+visible = false
 script = ExtResource("3_f6ga6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HurtBox"]
 position = Vector2(0, 40)
 shape = SubResource("CapsuleShape2D_vtans")
 
-[node name="PlayerDetectionArea" type="Area2D" parent="Sprite2D"]
+[node name="PlayerDetectionAreaIdle" type="Area2D" parent="Sprite2D"]
+visible = false
 script = ExtResource("4_qtx4k")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/PlayerDetectionArea"]
-position = Vector2(45, 23)
-shape = SubResource("RectangleShape2D_eng4h")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/PlayerDetectionAreaIdle"]
+position = Vector2(141, 40)
+shape = SubResource("RectangleShape2D_thp25")
+
+[node name="PlayerDetectionAreaAlerted" type="Area2D" parent="Sprite2D"]
+visible = false
+script = ExtResource("4_qtx4k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/PlayerDetectionAreaAlerted"]
+position = Vector2(0, 40)
+shape = SubResource("RectangleShape2D_1xjb2")
+
+[node name="MeleeHitbox" type="Area2D" parent="Sprite2D"]
+visible = false
+script = ExtResource("5_6odpr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/MeleeHitbox"]
+position = Vector2(17, 38)
+shape = SubResource("CircleShape2D_xfemh")
+disabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -268,40 +281,16 @@ libraries = {
 "": SubResource("AnimationLibrary_nrws0")
 }
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_nrws0")
-}
-tree_root = SubResource("AnimationNodeStateMachine_okbl2")
-anim_player = NodePath("../AnimationPlayer")
+[node name="MonkStateMachine" parent="." instance=ExtResource("49_0biid")]
 
-[node name="CharacterStateMachine" type="Node" parent="."]
-script = ExtResource("15_afh3l")
+[node name="HealthBar" parent="." instance=ExtResource("50_bfo76")]
+offset_left = -11.0
+offset_top = -38.0
+offset_right = 11.0
+offset_bottom = -30.0
 
-[node name="Idling" type="Node" parent="CharacterStateMachine"]
-script = ExtResource("16_dvk46")
-
-[node name="Chasing" type="Node" parent="CharacterStateMachine"]
-script = ExtResource("17_j1b61")
-
-[node name="Attacking" type="Node" parent="CharacterStateMachine"]
-script = ExtResource("33_pc7c1")
-
-[node name="Hurting" type="Node" parent="CharacterStateMachine"]
-script = ExtResource("34_kwqbv")
-
-[node name="Dying" type="Node" parent="CharacterStateMachine"]
-script = ExtResource("35_ywkh8")
-
-[node name="StateLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
-offset_left = -40.0
-offset_top = -55.0
-offset_right = 42.0
-offset_bottom = -32.0
-text = "State: "
-script = ExtResource("19_cqdes")
-state_machine = NodePath("../CharacterStateMachine")
-
-[connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Attacking" method="_on_animation_tree_animation_finished"]
-[connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Hurting" method="_on_animation_tree_animation_finished"]
-[connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Dying" method="_on_animation_tree_animation_finished"]
+[node name="StateLabel" type="Label" parent="."]
+offset_left = -41.0
+offset_top = -79.0
+offset_right = 41.0
+offset_bottom = -56.0

@@ -46,8 +46,8 @@ func _on_animation_finished(anim_name : String):
 func launch_fireball():
 	launched = true
 	
-	var fireball_scene = load(FIREBALL_SCENE)
-	var fireball = fireball_scene.instantiate() as FireBall
+	var fireball_scene     = load(FIREBALL_SCENE)
+	var fireball: FireBall = fireball_scene.instantiate() as FireBall
 	
 	get_parent().add_child(fireball)
 	
