@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c1hkahgruw7kp"]
+[gd_scene load_steps=21 format=3 uid="uid://c1hkahgruw7kp"]
 
 [ext_resource type="Texture2D" uid="uid://da0qr5qbwnsll" path="res://Assets/assets/Fire Ball/Explosion.png" id="1_888rc"]
 [ext_resource type="Texture2D" uid="uid://bmknmufnpcnjj" path="res://Assets/assets/Fire Ball/Move.png" id="1_rvup0"]
@@ -112,6 +112,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_slpur"]
 radius = 5.79912
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_v8ofr"]
+radius = 6.54636
+
 [node name="FireBall" type="AnimatedSprite2D"]
 texture_filter = 1
 scale = Vector2(1.46975, 1.29608)
@@ -130,5 +133,12 @@ position = Vector2(1.36078, 0)
 scale = Vector2(1.17326, 1.26702)
 shape = SubResource("CircleShape2D_slpur")
 
+[node name="CollisionDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionDetection"]
+position = Vector2(1.36078, 0)
+shape = SubResource("CircleShape2D_v8ofr")
+
 [connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
+[connection signal="body_entered" from="CollisionDetection" to="." method="_on_collision_detection_body_entered"]

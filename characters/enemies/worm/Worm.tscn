@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bjd2nk7e3tyjp"]
+[gd_scene load_steps=25 format=3 uid="uid://bjd2nk7e3tyjp"]
 
 [ext_resource type="Script" path="res://characters/enemies/worm/Worm.gd" id="1_g7fdi"]
 [ext_resource type="Texture2D" uid="uid://b3h5aho41a3j3" path="res://Assets/assets/Worm/Walk.png" id="1_xla78"]
@@ -6,14 +6,24 @@
 [ext_resource type="Texture2D" uid="uid://cfpcuai2gk08h" path="res://Assets/assets/Worm/Attack.png" id="3_mqepv"]
 [ext_resource type="Script" path="res://characters/enemies/monk/PlayerDetectionArea.gd" id="3_um0vv"]
 [ext_resource type="Texture2D" uid="uid://c75mo4risugl2" path="res://Assets/assets/Worm/Get Hit.png" id="4_hrcs7"]
+[ext_resource type="Script" path="res://characters/common/HurtBox.gd" id="4_qht7r"]
 [ext_resource type="Texture2D" uid="uid://d0fehqbqkfbw5" path="res://Assets/assets/Worm/Death.png" id="5_3tmv4"]
+[ext_resource type="Script" path="res://characters/common/HitBox.gd" id="5_toy4h"]
 [ext_resource type="PackedScene" uid="uid://doqhcm76agv7d" path="res://characters/enemies/worm/state_machine/WormStateMachine.tscn" id="7_t53sg"]
+[ext_resource type="PackedScene" uid="uid://biu3xvae7hxfd" path="res://interface/hud/HealthBar.tscn" id="11_gon16"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_72c5u"]
 size = Vector2(282.5, 220)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frxam"]
 size = Vector2(563, 348)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ijf73"]
+radius = 15.0
+height = 44.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sh4o4"]
+size = Vector2(20, 31.5)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tm0eb"]
 radius = 7.0
@@ -32,6 +42,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/DashHitbox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_3lkw6"]
@@ -76,7 +98,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_wauaw"]
 resource_name = "dash"
-length = 0.89
+length = 0.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -112,6 +134,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [9]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/DashHitbox/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="Animation" id="Animation_um7y0"]
@@ -156,7 +190,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_kk426"]
 resource_name = "hit"
-length = 0.25
+length = 0.75
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -292,8 +326,8 @@ texture_filter = 1
 script = ExtResource("1_g7fdi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("3_mqepv")
-hframes = 16
+texture = ExtResource("4_hrcs7")
+hframes = 3
 
 [node name="PlayerDetectionAreaIdle" type="Area2D" parent="Sprite2D"]
 visible = false
@@ -310,6 +344,23 @@ script = ExtResource("3_um0vv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/PlayerDetectionAreaAlerted"]
 shape = SubResource("RectangleShape2D_frxam")
 
+[node name="HurtBox" type="Area2D" parent="Sprite2D"]
+visible = false
+script = ExtResource("4_qht7r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HurtBox"]
+position = Vector2(2, -1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ijf73")
+
+[node name="DashHitbox" type="Area2D" parent="Sprite2D"]
+script = ExtResource("5_toy4h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/DashHitbox"]
+position = Vector2(11, -1.75)
+shape = SubResource("RectangleShape2D_sh4o4")
+disabled = true
+
 [node name="HeadPivot" type="Node2D" parent="Sprite2D"]
 position = Vector2(28, -7)
 
@@ -325,7 +376,14 @@ libraries = {
 [node name="WormStateMachine" parent="." instance=ExtResource("7_t53sg")]
 
 [node name="StateLabel" type="Label" parent="."]
+visible = false
 offset_left = -20.0
 offset_top = -51.0
 offset_right = 20.0
 offset_bottom = -28.0
+
+[node name="HealthBar" parent="." instance=ExtResource("11_gon16")]
+offset_left = -11.0
+offset_top = -38.0
+offset_right = 11.0
+offset_bottom = -30.0

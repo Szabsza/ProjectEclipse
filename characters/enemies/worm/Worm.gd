@@ -7,6 +7,10 @@ class_name Worm extends CharacterBody2D
 @onready var player_detection_area_alerted: PlayerDetectionArea = $Sprite2D/PlayerDetectionAreaAlerted
 @onready var state_label : Label = $StateLabel
 @onready var head_pivot : Node2D = $Sprite2D/HeadPivot
+@onready var health_bar : TextureProgressBar = $HealthBar
+
+@onready var dash_hitbox : HitBox = $Sprite2D/DashHitbox
+@onready var hurtbox : HurtBox = $Sprite2D/HurtBox
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var pushback_force : Vector2 = Vector2.ZERO
@@ -14,7 +18,7 @@ var is_facing_left : bool = false
 var is_facing_right : bool = true
 var is_facing_direction_locked : bool = false
 
-#var worm_data : WormData
+var worm_data : WormData
 
 var waypoints : Array
 
@@ -26,13 +30,23 @@ func setup(_waypoints : Array):
 	waypoints = _waypoints
 
 
+func _init():
+	worm_data = WormData.new()
+
+
 func _ready():
 	collision_layer = 4
 	collision_mask = 1
+	
 	state_machine.setup(self)
+	dash_hitbox.setup(worm_data.DASH_ATTACK_DMG, 8, 0)
+	hurtbox.setup(0, 2)
+	health_bar.max_value = worm_data.health.max_health
 
 
 func _physics_process(delta):
+	health_bar.visible = not worm_data.health.current_health == worm_data.health.max_health
+	health_bar.value = worm_data.health.current_health
 	state_label.text = state_machine.current_state.name
 	
 	if not is_on_floor():
@@ -45,10 +59,11 @@ func _physics_process(delta):
 
 
 func take_damage(amount : float):
-	#health.decrease_current_health(amount)
-	#if health.current_health <= 0:
-		#state_machine.switch_state(state_machine.states["Dying"])
-	pass
+	worm_data.health.decrease_current_health(amount)
+	if worm_data.health.current_health <= 0:
+		state_machine.switch_state(state_machine.worm_states["Dying"])
+	else:
+		state_machine.switch_state(state_machine.worm_states["Hurting"])	
 
 
 func knock_back(source_position : Vector2):
@@ -72,8 +87,5 @@ func player_position() -> Vector2:
 
 
 func random_destination_waypoint() -> Node2D:
-	return waypoints[start_waypoint_index + randi() % (end_waypoint_index + 1)]
-
-
-#func scale_up_player_detection():
-	#player_detection_area
+	var rng = start_waypoint_index + randi() % (end_waypoint_index - start_waypoint_index + 1)
+	return waypoints[rng]

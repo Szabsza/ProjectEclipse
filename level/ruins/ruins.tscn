@@ -276,7 +276,6 @@ scale = Vector2(1, -1)
 chest_data = SubResource("Resource_kpcef")
 
 [node name="Traps" type="Node2D" parent="."]
-visible = false
 
 [node name="FireTrap" parent="Traps" instance=ExtResource("11_1kxfo")]
 position = Vector2(1366, 807)
@@ -325,6 +324,16 @@ destination_door_data = ExtResource("25_0evj3")
 position = Vector2(1266, 819)
 end_waypoint_index = 2
 
+[node name="Worm2" parent="Enemies" instance=ExtResource("26_n13q1")]
+position = Vector2(2478, 872)
+start_waypoint_index = 6
+end_waypoint_index = 7
+
+[node name="Worm3" parent="Enemies" instance=ExtResource("26_n13q1")]
+position = Vector2(3432, 959)
+start_waypoint_index = 10
+end_waypoint_index = 12
+
 [node name="Waypoints" type="Node2D" parent="."]
 
 [node name="Point1" type="Node2D" parent="Waypoints"]
@@ -346,10 +355,10 @@ position = Vector2(1905, 955)
 position = Vector2(2173, 964)
 
 [node name="Point7" type="Node2D" parent="Waypoints"]
-position = Vector2(2376, 859)
+position = Vector2(2386, 873)
 
 [node name="Point8" type="Node2D" parent="Waypoints"]
-position = Vector2(2533, 860)
+position = Vector2(2536, 874)
 
 [node name="Point9" type="Node2D" parent="Waypoints"]
 position = Vector2(2834, 941)
@@ -358,13 +367,13 @@ position = Vector2(2834, 941)
 position = Vector2(3148, 940)
 
 [node name="Point11" type="Node2D" parent="Waypoints"]
-position = Vector2(3463, 942)
+position = Vector2(3464, 959)
 
 [node name="Point12" type="Node2D" parent="Waypoints"]
-position = Vector2(3818, 947)
+position = Vector2(3816, 959)
 
 [node name="Point13" type="Node2D" parent="Waypoints"]
-position = Vector2(4392, 941)
+position = Vector2(4384, 958)
 
 [node name="Point14" type="Node2D" parent="Waypoints"]
 position = Vector2(4893, 945)

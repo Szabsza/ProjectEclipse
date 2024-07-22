@@ -8,6 +8,7 @@ const IDLE_ANIMATION : String = "idle"
 func on_enter():
 	worm.animation_player.play(IDLE_ANIMATION)
 	patrolling_timer.start()
+	worm.velocity.x = 0
 
 
 func on_exit():

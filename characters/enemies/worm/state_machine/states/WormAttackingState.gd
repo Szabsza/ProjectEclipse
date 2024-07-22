@@ -4,9 +4,11 @@ const ATTACK_ANIMATION : String = "attack"
 const FIREBALL_SCENE : String = "res://characters/enemies/worm/FireBall.tscn"
 
 var launched : bool = false
+var worm_info : WormData
 
 
 func on_enter():
+	worm_info = worm.worm_data
 	worm.animation_player.connect("animation_finished", _on_animation_finished)
 	worm.animation_player.play(ATTACK_ANIMATION)
 	worm.velocity.x = 0
@@ -38,16 +40,19 @@ func perform_dash():
 	
 func _on_animation_finished(anim_name : String):
 	if anim_name == ATTACK_ANIMATION:
-		next_state = states["Chasing"]
+		next_state = states["Idling"]
 		
 		
 func launch_fireball():
 	launched = true
+	
 	var fireball_scene = load(FIREBALL_SCENE)
 	var fireball = fireball_scene.instantiate() as FireBall
+	
 	get_parent().add_child(fireball)
+	
 	fireball.global_position = worm.head_pivot.global_position
 	fireball.setup(worm, worm.player_position())
 	fireball.launch()
 	
-	worm.velocity.x = -1 * worm.sprite.scale.x * 100
+	worm.velocity.x = -1 * worm.sprite.scale.x * worm_info.DASHBACK_SPEED

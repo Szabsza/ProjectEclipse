@@ -3,9 +3,11 @@ class_name WormPatrollingState extends WormState
 const WALKING_ANIMATION : String = "walk"
 
 var destination_waypoint : Node2D
+var worm_info : WormData 
 
 
 func on_enter():
+	worm_info = worm.worm_data
 	worm.animation_player.play(WALKING_ANIMATION)
 	var new_destination_waypoint = worm.random_destination_waypoint()
 	if new_destination_waypoint != destination_waypoint:
@@ -20,14 +22,13 @@ func state_process(delta):
 	var direction: Vector2 = (destination_waypoint.global_position - worm.global_position).normalized()
 	var distance_to_destination = worm.global_position.distance_to(destination_waypoint.global_position)
 	
-	if distance_to_destination > 10:
-		worm.velocity.x = direction.x * 100
+	if distance_to_destination > worm_info.MIN_WAYPOINT_DISTANCE:
+		worm.velocity.x = direction.x * worm_info.WALKING_SPEED
 		if direction.x < 0:
 			worm.sprite.scale.x = -1
 		else:
 			worm.sprite.scale.x = 1
 	else:
-		print("asd")
 		next_state = states["Idling"]
 		
 	if worm.can_see_player():
