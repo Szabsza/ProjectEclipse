@@ -29,6 +29,7 @@ TransitionManager="*res://autoloads/transition/TransitionManager.tscn"
 BuffManager="*res://autoloads/buff/BuffManager.tscn"
 SceneManager="*res://autoloads/scene/SceneManager.tscn"
 RemainsManager="*res://autoloads/remains/RemainsManager.tscn"
+AudioManager="*res://autoloads/audio/AudioManager.tscn"
 
 [display]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://dse50ogb1ndlt"]
+[gd_scene load_steps=73 format=3 uid="uid://dse50ogb1ndlt"]
 
 [ext_resource type="Texture2D" uid="uid://c28n3av3fly8c" path="res://Assets/Elementals_ground_monk_FREE_v1.3/png/idle/idle_2.png" id="1_6otmi"]
 [ext_resource type="Script" path="res://characters/enemies/monk/Monk.gd" id="1_a8mv2"]
@@ -70,6 +70,10 @@ size = Vector2(563, 348)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xfemh"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x8uqt"]
+radius = 27.0
+height = 102.0
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8buvg"]
 radius = 9.0
 height = 36.0
@@ -83,6 +87,18 @@ tracks/0/path = NodePath("Sprite2D/MeleeHitbox/CollisionShape2D:disabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/SpecialAttackHitbox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -151,6 +167,30 @@ tracks/0/keys = {
 "update": 1,
 "values": [ExtResource("16_2ncvb"), ExtResource("16_2ncvb"), ExtResource("16_2ncvb"), ExtResource("30_251ow"), ExtResource("31_knjh6"), ExtResource("32_6df4g"), ExtResource("33_k1npe"), ExtResource("34_nfiwd"), ExtResource("35_0t66r"), ExtResource("36_6t88t"), ExtResource("37_0146x"), ExtResource("38_4oboh"), ExtResource("39_ypt3l"), ExtResource("40_qwdhr"), ExtResource("41_eqhki"), ExtResource("42_21ojb"), ExtResource("43_n7ema"), ExtResource("44_thnnf"), ExtResource("45_kor6o"), ExtResource("46_5uh1h"), ExtResource("47_n26ts")]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/SpecialAttackHitbox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/MeleeHitbox/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_holji"]
 resource_name = "hit"
@@ -206,6 +246,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_3y71f"]
 resource_name = "special_attack"
 length = 0.5
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -217,6 +258,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("49_5sooo"), ExtResource("27_ueks7"), ExtResource("50_2na7u"), ExtResource("51_lbh7d"), ExtResource("52_docmk"), ExtResource("53_jp6si"), ExtResource("54_bb3oo"), ExtResource("55_og511")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/SpecialAttackHitbox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nrws0"]
@@ -237,7 +290,7 @@ script = ExtResource("1_a8mv2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -40)
-texture = ExtResource("55_og511")
+texture = ExtResource("38_4oboh")
 
 [node name="HurtBox" type="Area2D" parent="Sprite2D"]
 visible = false
@@ -270,6 +323,15 @@ script = ExtResource("5_6odpr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/MeleeHitbox"]
 position = Vector2(17, 38)
 shape = SubResource("CircleShape2D_xfemh")
+disabled = true
+
+[node name="SpecialAttackHitbox" type="Area2D" parent="Sprite2D"]
+script = ExtResource("5_6odpr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/SpecialAttackHitbox"]
+position = Vector2(0, 25)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_x8uqt")
 disabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

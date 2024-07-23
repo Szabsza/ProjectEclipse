@@ -15,5 +15,6 @@ func set_waypoints_for_enemies():
 
 
 func _ready() -> void:
+	AudioManager.play_ingame_standard_theme()
 	set_waypoints_for_enemies()
 	load_level()

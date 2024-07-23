@@ -7,7 +7,7 @@ var monk : Monk
 	"Patrolling" : $Patrolling,
 	"Chasing" : $Chasing,
 	"Attacking" : $Attacking,
-	#"SpecialAttacking" : $SpecialAttacking,
+	"SpecialAttacking" : $SpecialAttacking,
 	"Hurting" : $Hurting,
 	"Dying" : $Dying
 }

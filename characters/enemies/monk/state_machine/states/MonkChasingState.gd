@@ -3,9 +3,11 @@ class_name MonkChasingState extends MonkState
 const RUN_ANIMATION : String = "run"
 
 var monk_info : MonkData
+var rng = RandomNumberGenerator.new()
 
 
 func on_enter():
+	monk.alerted = true
 	monk_info = monk.monk_data
 	monk.animation_player.play(RUN_ANIMATION)
 
@@ -24,7 +26,13 @@ func state_process(delta):
 
 	var distance_from_player = abs(monk.player_position().x - monk.position.x)
 	if distance_from_player < monk_info.MIN_RANGE_MELEE_ATTACKS:
-		next_state = states["Attacking"]
+		var choice = rng.randf()
+		if not monk.player_detection_area_alerted.player.is_on_floor():
+			next_state = states["SpecialAttacking"]
+		elif choice < monk_info.P_SPECIAL_ATTACK:
+			next_state = states["SpecialAttacking"]
+		else:
+			next_state = states["Attacking"]
 
 
 	if not monk.player_detection_area_alerted.is_able_to_see_player:

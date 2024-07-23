@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bgtihpepvkq2j"]
+[gd_scene load_steps=9 format=3 uid="uid://bgtihpepvkq2j"]
 
 [ext_resource type="Script" path="res://characters/enemies/monk/state_machine/MonkStateMachine.gd" id="1_ilyim"]
 [ext_resource type="Script" path="res://characters/enemies/monk/state_machine/states/MonkIdlingState.gd" id="2_cj6lq"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://characters/enemies/monk/state_machine/states/MonkChasingState.gd" id="4_l6tml"]
 [ext_resource type="Script" path="res://characters/enemies/monk/state_machine/states/MonkAttackingState.gd" id="5_th3ur"]
 [ext_resource type="Script" path="res://characters/enemies/monk/state_machine/states/MonkHurtingState.gd" id="6_0bxmi"]
+[ext_resource type="Script" path="res://characters/enemies/monk/state_machine/states/MonkSpecialAttackingState.gd" id="6_703wq"]
 [ext_resource type="Script" path="res://characters/enemies/monk/state_machine/states/MonkDyingState.gd" id="7_f600p"]
 
 [node name="MonkStateMachine" type="Node"]
@@ -26,6 +27,9 @@ script = ExtResource("4_l6tml")
 
 [node name="Attacking" type="Node" parent="."]
 script = ExtResource("5_th3ur")
+
+[node name="SpecialAttacking" type="Node" parent="."]
+script = ExtResource("6_703wq")
 
 [node name="Hurting" type="Node" parent="."]
 script = ExtResource("6_0bxmi")

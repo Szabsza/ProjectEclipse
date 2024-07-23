@@ -24,4 +24,7 @@ func state_input(event: InputEvent):
 
 
 func _on_patrolling_timer_timeout() -> void:
-	next_state = states["Patrolling"]
+	if monk.alerted:
+		next_state = states["Chasing"]
+	else:
+		next_state = states["Patrolling"]

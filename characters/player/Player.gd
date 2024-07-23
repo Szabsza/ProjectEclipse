@@ -6,6 +6,7 @@ class_name Player extends CharacterBody2D
 @onready var state_machine : PlayerStateMachine = $PlayerStateMachine
 @onready var hurtbox : HurtBox = $Sprite2D/HurtBox
 @onready var stamina_regen_timer : Timer = $StaminaRegenerationTimer
+@onready var audio_player : PlayerAudioStreamPlayer = $PlayerAudioStreamPlayer
 @onready var hud : PlayerHud = $PlayerHud
 
 var player_data : PlayerData

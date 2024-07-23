@@ -11,6 +11,7 @@ func on_enter():
 	player_info = player.player_data
 	player.animation_player.connect("animation_finished", _on_animation_finished)
 	player.animation_player.play(JUMP_ATTACK_ANIMATION)
+	player.audio_player.play_sword_fx_b()
 
 	player.facing_direction_locked = true
 	if player.is_facing_right:

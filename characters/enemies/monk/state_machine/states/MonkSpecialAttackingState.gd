@@ -1,15 +1,15 @@
-class_name MonkAttackingState extends MonkState
+class_name MonkSpecialAttackingState extends MonkState
 
-const ATTACK_A_ANIMATION : String = "attack_chain_a"
-const ATTACK_A_ANIMATION_FINISH : String = "attack_chain_a_finish"
+const SPECIAL_ATTACK_ANIMATION : String = "special_attack"
 
 var monk_info : MonkData
 var rng = RandomNumberGenerator.new()
 
+
 func on_enter():
 	monk_info = monk.monk_data
 	monk.animation_player.connect("animation_finished", _on_animation_finished)
-	monk.animation_player.play(ATTACK_A_ANIMATION)
+	monk.animation_player.play(SPECIAL_ATTACK_ANIMATION)
 	monk.velocity.x = 0
 
 
@@ -26,12 +26,9 @@ func state_process(delta):
 
 
 func _on_animation_finished(anim_name):
-	if anim_name == ATTACK_A_ANIMATION:
-		monk.animation_player.play(ATTACK_A_ANIMATION_FINISH)
-
-	if anim_name == ATTACK_A_ANIMATION_FINISH:
+	if anim_name == SPECIAL_ATTACK_ANIMATION:
 		var choice = rng.randf()
 		if choice < monk_info.P_FOLLOW_UP_ATTACK:
-			next_state = states["SpecialAttacking"]
+			next_state = states["Attacking"]
 		else:
 			next_state = states["Idling"]

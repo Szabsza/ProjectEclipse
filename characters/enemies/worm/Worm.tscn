@@ -187,6 +187,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [8]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/DashHitbox/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_kk426"]
 resource_name = "hit"
@@ -326,8 +338,8 @@ texture_filter = 1
 script = ExtResource("1_g7fdi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("4_hrcs7")
-hframes = 3
+texture = ExtResource("5_3tmv4")
+hframes = 8
 
 [node name="PlayerDetectionAreaIdle" type="Area2D" parent="Sprite2D"]
 script = ExtResource("3_um0vv")

@@ -9,6 +9,7 @@ class_name Monk extends CharacterBody2D
 @onready var state_label : Label = $StateLabel
 
 @onready var melee_hitbox : HitBox = $Sprite2D/MeleeHitbox
+@onready var special_attack_hitbox : HitBox = $Sprite2D/SpecialAttackHitbox
 @onready var hurtbox : HurtBox = $Sprite2D/HurtBox
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -17,6 +18,7 @@ var pushback_force : Vector2 = Vector2.ZERO
 var is_facing_left : bool = false
 var is_facing_right : bool = true
 var is_facing_direction_locked : bool = false
+var alerted : bool = false
 
 var monk_data : MonkData
 
@@ -39,6 +41,8 @@ func _ready():
 	collision_mask = 1
 
 	state_machine.setup(self)
+	melee_hitbox.setup(monk_data.MELEE_ATTACK_DAMAGE, 8, 0)
+	special_attack_hitbox.setup(monk_data.SPECIAL_ATTACK_DAMAGE, 8, 0)
 	hurtbox.setup(0, 2)
 	health_bar.max_value = monk_data.health.max_health
 

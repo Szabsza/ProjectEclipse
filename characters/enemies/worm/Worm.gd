@@ -17,6 +17,7 @@ var pushback_force : Vector2 = Vector2.ZERO
 var is_facing_left : bool = false
 var is_facing_right : bool = true
 var is_facing_direction_locked : bool = false
+var alerted : bool = false
 
 var worm_data : WormData
 

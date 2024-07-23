@@ -17,8 +17,10 @@ func on_exit():
 func state_process(delta):
 	if player.is_on_floor() and player.velocity.x != 0:
 		next_state = states["Running"]
+		player.audio_player.play_land_fx()
 	elif player.is_on_floor():
 		next_state = states["Idling"]
+		player.audio_player.play_land_fx()
 		
 	player.velocity.x = player.direction.x * player_info.speed
 

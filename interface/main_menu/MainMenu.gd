@@ -5,6 +5,10 @@ const LOADING_SCENE : String = "res://level/loading/Loading.tscn"
 const ARENA_LEVEL_PATH : String = "res://level/arena/Arena.tscn"
 
 
+func _ready():
+	AudioManager.play_main_menu_theme()
+
+
 func _on_continue_pressed():
 	LoadManager.load_game()
 	SceneManager.change_scene_to(WorldManager.current_level_data.level_scene_path)

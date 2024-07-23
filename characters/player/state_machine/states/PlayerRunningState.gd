@@ -8,11 +8,12 @@ var player_info : PlayerData
 func on_enter():
 	player_info = player.player_data
 	player.animation_player.play(RUN_ANIMATION)
+	player.audio_player.play_walk_fx()
 	player_info.has_double_jumped = false
 
 
 func on_exit():
-	pass
+	player.audio_player.clear()
 
 
 func state_process(delta):

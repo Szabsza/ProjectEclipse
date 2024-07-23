@@ -7,6 +7,7 @@ var monk_info : MonkData
 
 
 func on_enter():
+	monk.alerted = false
 	monk_info = monk.monk_data
 	monk.animation_player.play(RUNING_ANIMATION)
 	var new_destination_waypoint: Node2D = monk.random_destination_waypoint()

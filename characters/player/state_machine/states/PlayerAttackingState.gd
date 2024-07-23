@@ -17,6 +17,7 @@ func on_enter():
 	player_info = player.player_data
 	player.animation_player.connect("animation_finished", _on_animation_finished)
 	player.animation_player.play(ATTACK_A_ANIMATION)
+	player.audio_player.play_sword_fx_a()
 
 	player.facing_direction_locked = true
 
@@ -53,6 +54,7 @@ func _on_animation_finished(anim_name):
 		else:
 			player.velocity.x = 0
 			player.animation_player.play(ATTACK_B_ANIMATION)
+			player.audio_player.play_sword_fx_b()
 	
 	if anim_name == ATTACK_A_FINISH_ANIMATION:
 		player.velocity.x = 0
@@ -66,6 +68,7 @@ func _on_animation_finished(anim_name):
 		else:
 			player.velocity.x = attacking_direction * 10
 			player.animation_player.play(ATTACK_C_ANIMATION)
+			player.audio_player.play_sword_fx_a()
 	
 	if anim_name == ATTACK_B_FINISH_ANIMATION:
 		if idlling_timer.is_stopped():
