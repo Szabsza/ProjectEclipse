@@ -4,6 +4,7 @@ class_name Chest extends Node2D
 @onready var interactable_area : InteractableArea = $InteractableArea
 @onready var point_light : PointLight2D = $PointLight2D
 @onready var chest_loot_item : ChestLootItem = $ChestLootItem
+@onready var audio_player : ChestAudioStreamPlayer = $ChestAudioStreamPlayer
 
 @export var chest_data : ChestData
 
@@ -42,6 +43,7 @@ func _ready():
 func _on_interact():
 	if not chest_data.is_opened:
 		animated_sprite.play(OPEN_ANIMATION)
+		audio_player.play_open_fx_a()
 		chest_data.is_opened = true
 		point_light.energy = 0
 		InteractionManager.unregister_interactable_area(interactable_area)

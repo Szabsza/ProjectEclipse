@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv6xgpd1irty3"]
+
+[ext_resource type="Script" path="res://common/chest/audio/ChestAudioStreamPlayer.gd" id="1_4tr3d"]
+
+[node name="ChestAudioStreamPlayer" type="AudioStreamPlayer2D"]
+script = ExtResource("1_4tr3d")

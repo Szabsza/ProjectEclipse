@@ -3,6 +3,7 @@ class_name Checkpoint extends Node2D
 @onready var interactable_area : InteractableArea = $InteractableArea
 @onready var animation_tree : AnimationTree = $AnimationTree
 @onready var checkpoint_menu : CheckpointMenu = $CheckpointMenu
+@onready var audio_player : CheckpointAudioStreamPlayer = $CheckpointAudioStreamPlayer
 
 @export var checkpoint_data : CheckpointData
 
@@ -39,6 +40,9 @@ func _on_interact():
 		TravelManager.add_to_available_checkpoints(checkpoint_data)
 		checkpoint_data.is_activated = true
 		playback.travel(ACTIVATED_ANIMATION)
+		audio_player.play_activate_fx()
+		await audio_player.finished
+		audio_player.play_active_fx()
 	else:
 		checkpoint_menu.visible = true
 		await checkpoint_menu.exited

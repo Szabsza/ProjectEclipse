@@ -10,6 +10,7 @@ func on_enter():
 	monk.alerted = false
 	monk_info = monk.monk_data
 	monk.animation_player.play(RUNING_ANIMATION)
+	monk.audio_player.play_walk_fx()
 	var new_destination_waypoint: Node2D = monk.random_destination_waypoint()
 	if new_destination_waypoint != destination_waypoint:
 		destination_waypoint = new_destination_waypoint
@@ -17,6 +18,7 @@ func on_enter():
 
 func on_exit():
 	monk.velocity.x = 0
+	monk.audio_player.clear()
 
 
 func state_process(delta):

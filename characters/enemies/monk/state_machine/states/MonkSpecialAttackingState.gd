@@ -10,6 +10,7 @@ func on_enter():
 	monk_info = monk.monk_data
 	monk.animation_player.connect("animation_finished", _on_animation_finished)
 	monk.animation_player.play(SPECIAL_ATTACK_ANIMATION)
+	monk.audio_player.play_special_attack_fx()
 	monk.velocity.x = 0
 
 

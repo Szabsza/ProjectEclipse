@@ -5,6 +5,7 @@ class_name GhostMerchant extends CharacterBody2D
 @onready var player_detection_area : PlayerDetectionArea = $Sprite2D/PlayerDetectionArea
 @onready var interactable_area : InteractableArea = $InteractableArea
 @onready var shop : Shop = $Shop
+@onready var audio_player : MerchantAudioStreamPlayer = $MerchantAudioStreamPlayer
 
 @export var merchant_data : MerchantData
 

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://de2hwv02ke3xt"]
+
+[ext_resource type="Script" path="res://common/trap/fire_breather/audio/FireBreatherAudioStreamPlayer.gd" id="1_s0x2n"]
+
+[node name="FireBreatherAudioStreamPlayer" type="AudioStreamPlayer2D"]
+script = ExtResource("1_s0x2n")

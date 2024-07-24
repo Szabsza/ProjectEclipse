@@ -1,6 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://d26deo5pjs12u"]
+[gd_scene load_steps=15 format=3 uid="uid://d26deo5pjs12u"]
 
 [ext_resource type="Texture2D" uid="uid://dym4xmctkmh8m" path="res://Assets/toRecolor/Torch Sprite Sheet 32x64.png" id="1_byl84"]
+[ext_resource type="Script" path="res://common/torch/Torch.gd" id="1_sl8h3"]
+[ext_resource type="PackedScene" uid="uid://de6xdxtr3k6ah" path="res://common/torch/audio/TorchAudioStreamPlayer.tscn" id="3_dxm1g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hxe47"]
 atlas = ExtResource("1_byl84")
@@ -78,6 +80,7 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 
 [node name="Torch" type="Node2D"]
+script = ExtResource("1_sl8h3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -3)
@@ -91,3 +94,5 @@ color = Color(0.666667, 0.360784, 0.223529, 1)
 energy = 2.0
 range_z_max = 150
 texture = SubResource("GradientTexture2D_da6kd")
+
+[node name="TorchAudioStreamPlayer" parent="." instance=ExtResource("3_dxm1g")]

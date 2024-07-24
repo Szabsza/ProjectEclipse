@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://y8i53dbxrgoy"]
+[gd_scene load_steps=33 format=3 uid="uid://y8i53dbxrgoy"]
 
 [ext_resource type="Texture2D" uid="uid://b3tnox2fbaaqn" path="res://Assets/assets/Fire Trap/PNGs/Fire Trap - Level 3.png" id="1_80bmd"]
 [ext_resource type="Texture2D" uid="uid://2r46v6kjtqn8" path="res://Assets/assets/Fire Trap/Transition/PNGs/Fire Trap - Level 3 - Transition.png" id="1_g73fy"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://common/trap/fire_trap/state/ActiveState.gd" id="8_1sy8y"]
 [ext_resource type="Script" path="res://common/trap/fire_trap/state/ActivatingState.gd" id="9_vww16"]
 [ext_resource type="Script" path="res://common/trap/fire_trap/state/DeactivatingState.gd" id="10_so8la"]
+[ext_resource type="PackedScene" uid="uid://nla7a1vmkxyr" path="res://common/trap/fire_trap/audio/FireTrapAudioStreamPlayer.tscn" id="11_mopfp"]
 [ext_resource type="Script" path="res://common/trap/StateLabel.gd" id="11_tyl1d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cme0t"]
@@ -104,6 +105,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_p8tm0"]
 resource_name = "attack"
+length = 1.1
 loop_mode = 1
 step = 0.05
 tracks/0/type = "value"
@@ -125,7 +127,7 @@ tracks/1/path = NodePath("Sprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 0.85, 0.95),
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.25, 0.4, 0.55, 0.7, 0.85, 1, 1.15, 1.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
@@ -149,10 +151,27 @@ tracks/3/path = NodePath("Sprite2D/HitBox/CollisionShape2D:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.85),
+"times": PackedFloat32Array(0, 0.25, 1.15),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FireTrapAudioStreamPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.25, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"play_flame_fx"
+}, {
+"args": [],
+"method": &"play_flame_fx"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_qtruq"]
@@ -361,6 +380,10 @@ script = ExtResource("9_vww16")
 
 [node name="Deactivating" type="Node" parent="TrapStateMachine"]
 script = ExtResource("10_so8la")
+
+[node name="FireTrapAudioStreamPlayer" parent="." instance=ExtResource("11_mopfp")]
+max_distance = 500.0
+attenuation = 4.92458
 
 [node name="StateLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
 visible = false

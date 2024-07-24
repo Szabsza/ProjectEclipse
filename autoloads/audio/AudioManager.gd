@@ -17,5 +17,6 @@ func play_main_menu_theme():
 	_play_music(MAIN_MENU_THEME)
 	
 
+# TODO: SFX AND SOUND VOLUME TO OPTIONS
 func play_ingame_standard_theme():
-	_play_music(INGAME_STANDARD_THEME)
+	_play_music(INGAME_STANDARD_THEME, -15.0)

@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://c1hkahgruw7kp"]
+[gd_scene load_steps=22 format=3 uid="uid://c1hkahgruw7kp"]
 
 [ext_resource type="Texture2D" uid="uid://da0qr5qbwnsll" path="res://Assets/assets/Fire Ball/Explosion.png" id="1_888rc"]
 [ext_resource type="Texture2D" uid="uid://bmknmufnpcnjj" path="res://Assets/assets/Fire Ball/Move.png" id="1_rvup0"]
 [ext_resource type="Script" path="res://characters/enemies/worm/FireBall.gd" id="1_u5smf"]
 [ext_resource type="Script" path="res://characters/common/HitBox.gd" id="3_esnl7"]
+[ext_resource type="PackedScene" uid="uid://cf5omucvjp3s5" path="res://characters/enemies/worm/audio/FireBallAudioStreamPlayer.tscn" id="5_w2uo2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jv8kl"]
 atlas = ExtResource("1_888rc")
@@ -138,6 +139,8 @@ shape = SubResource("CircleShape2D_slpur")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionDetection"]
 position = Vector2(1.36078, 0)
 shape = SubResource("CircleShape2D_v8ofr")
+
+[node name="FireBallAudioStreamPlayer" parent="." instance=ExtResource("5_w2uo2")]
 
 [connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]

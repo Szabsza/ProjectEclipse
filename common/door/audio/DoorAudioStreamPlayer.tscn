@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqr1gg7xrx0f7"]
+
+[ext_resource type="Script" path="res://common/door/audio/DoorAudioStreamPlayer.gd" id="1_b03mr"]
+
+[node name="DoorAudioStreamPlayer" type="AudioStreamPlayer2D"]
+script = ExtResource("1_b03mr")

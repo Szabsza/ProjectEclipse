@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ck062krmfpo70"]
+
+[ext_resource type="Script" path="res://characters/enemies/monk/audio/MonkAudioStreamPlayer.gd" id="1_bv7fs"]
+
+[node name="MonkAudioStreamPlayer" type="AudioStreamPlayer2D"]
+script = ExtResource("1_bv7fs")

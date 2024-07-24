@@ -9,12 +9,14 @@ var worm_info : WormData
 func on_enter():
 	worm_info = worm.worm_data
 	worm.animation_player.play(WALKING_ANIMATION)
+	worm.audio_player.play_walk_fx()
 	var new_destination_waypoint: Node2D = worm.random_destination_waypoint()
 	if new_destination_waypoint != destination_waypoint:
 		destination_waypoint = new_destination_waypoint
 	
 
 func on_exit():
+	worm.audio_player.clear()
 	worm.velocity.x = 0
 
 

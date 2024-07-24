@@ -10,10 +10,11 @@ func on_enter():
 	monk.alerted = true
 	monk_info = monk.monk_data
 	monk.animation_player.play(RUN_ANIMATION)
+	monk.audio_player.play_walk_fx()
 
 
 func on_exit():
-	pass
+	monk.audio_player.clear()
 
 
 func state_process(delta):

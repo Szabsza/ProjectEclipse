@@ -8,10 +8,11 @@ var worm_info : WormData
 func on_enter():
 	worm_info = worm.worm_data
 	worm.animation_player.play(WALKING_ANIMATION)
+	worm.audio_player.play_walk_fx()
 
 
 func on_exit():
-	pass
+	worm.audio_player.clear()
 
 
 func state_process(delta):

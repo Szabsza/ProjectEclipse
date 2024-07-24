@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dcgcpbp1np8l5"]
+[gd_scene load_steps=31 format=3 uid="uid://dcgcpbp1np8l5"]
 
 [ext_resource type="Script" path="res://characters/merchant/GhostMerchant.gd" id="1_4rjv5"]
 [ext_resource type="Texture2D" uid="uid://c636v88if3x54" path="res://Assets/Ghost-Files/PNG/ghost-vanish.png" id="2_wll0m"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://pyg2g4i3vvs0" path="res://Assets/Ghost-Files/PNG/ghost-appears.png" id="5_c88i8"]
 [ext_resource type="Texture2D" uid="uid://bnu44qb35jrc4" path="res://Assets/Ghost-Files/PNG/ghost-idle.png" id="6_sdvft"]
 [ext_resource type="PackedScene" uid="uid://blipfvpimlnpx" path="res://characters/merchant/state_machine/MerchantStateMachine.tscn" id="7_1om4a"]
+[ext_resource type="PackedScene" uid="uid://bu54bgf8dqg3p" path="res://characters/merchant/audio/MerchantAudioStreamPlayer.tscn" id="9_q0xq0"]
 [ext_resource type="PackedScene" uid="uid://phd5qyfq0ak2" path="res://interface/merchant/Shop.tscn" id="12_rn8wu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bmbn"]
@@ -310,3 +311,5 @@ offset_top = -285.0
 offset_right = 101.0
 offset_bottom = -50.0
 grow_horizontal = 2
+
+[node name="MerchantAudioStreamPlayer" parent="." instance=ExtResource("9_q0xq0")]

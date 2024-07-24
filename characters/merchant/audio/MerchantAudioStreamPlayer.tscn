@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bu54bgf8dqg3p"]
+
+[ext_resource type="Script" path="res://characters/merchant/audio/MerchantAudioStreamPlayer.gd" id="1_ot0ka"]
+
+[node name="MerchantAudioStreamPlayer" type="AudioStreamPlayer2D"]
+script = ExtResource("1_ot0ka")

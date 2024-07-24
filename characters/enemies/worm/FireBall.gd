@@ -2,6 +2,7 @@ class_name FireBall extends AnimatedSprite2D
 
 @onready var hitbox : HitBox = $HitBox
 @onready var collision_detection_area : Area2D = $CollisionDetection
+@onready var audio_player : FireBallAudioStreamPlayer = $FireBallAudioStreamPlayer
 
 const EXPLOSION_ANIMATION : String = "explosion"
 const GRAVITY : Vector2 = Vector2(0, 100)
@@ -38,6 +39,7 @@ func _physics_process(delta: float) -> void:
 
 func launch():	
 	visible = true
+	audio_player.play_launch_fx()
 	
 	
 func _on_animation_finished():
@@ -49,3 +51,4 @@ func _on_collision_detection_body_entered(body: Node2D) -> void:
 	hit = true
 	velocity = Vector2.ZERO
 	animation = EXPLOSION_ANIMATION
+	audio_player.play_impact_fx()

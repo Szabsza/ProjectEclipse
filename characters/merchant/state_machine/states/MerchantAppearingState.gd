@@ -6,6 +6,7 @@ const APPEAR_ANIMATION : String = "apear"
 func on_enter():
 	merchant.animation_player.connect("animation_finished", _on_animation_finished)
 	merchant.animation_player.play(APPEAR_ANIMATION)
+	merchant.audio_player.play_appear_fx()
 
 
 func on_exit():

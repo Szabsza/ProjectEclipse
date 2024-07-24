@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://d3jjqw47s8tmf"]
+[gd_scene load_steps=33 format=3 uid="uid://d3jjqw47s8tmf"]
 
 [ext_resource type="Script" path="res://common/trap/fire_breather/FireBreather.gd" id="1_uvgh7"]
 [ext_resource type="Script" path="res://characters/common/HitBox.gd" id="2_j3tu2"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://common/trap/fire_breather/state/InactiveState.gd" id="5_b3gv1"]
 [ext_resource type="Script" path="res://common/trap/fire_breather/state/ActivatingState.gd" id="6_4q80b"]
 [ext_resource type="Script" path="res://common/trap/fire_breather/state/DeactivatingState.gd" id="7_ga7wr"]
+[ext_resource type="PackedScene" uid="uid://de2hwv02ke3xt" path="res://common/trap/fire_breather/audio/FireBreatherAudioStreamPlayer.tscn" id="11_ony7p"]
 [ext_resource type="Script" path="res://common/trap/StateLabel.gd" id="11_rrjs1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxoxu"]
@@ -225,6 +226,46 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("FireBreatherAudioStreamPlayerLaunch")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.45, 0.85, 1.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"play_launch_fx"
+}, {
+"args": [],
+"method": &"play_launch_fx"
+}, {
+"args": [],
+"method": &"play_launch_fx"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("FireBreatherAudioStreamPlayerImpact")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.95, 1.35, 1.75),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"play_impact_fx"
+}, {
+"args": [],
+"method": &"play_impact_fx"
+}, {
+"args": [],
+"method": &"play_impact_fx"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_aakqg"]
@@ -497,6 +538,10 @@ script = ExtResource("6_4q80b")
 
 [node name="Deactivating" type="Node" parent="TrapStateMachine"]
 script = ExtResource("7_ga7wr")
+
+[node name="FireBreatherAudioStreamPlayerLaunch" parent="." instance=ExtResource("11_ony7p")]
+
+[node name="FireBreatherAudioStreamPlayerImpact" parent="." instance=ExtResource("11_ony7p")]
 
 [node name="StateLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
 visible = false

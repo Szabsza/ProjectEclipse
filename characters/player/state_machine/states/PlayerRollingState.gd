@@ -8,6 +8,7 @@ var player_info : PlayerData
 func on_enter():
 	player_info = player.player_data
 	player.animation_player.play(ROLL_ANIMATION)
+	player.audio_player.play_land_fx()
 	player.stamina.decrease_current_stamina(player_info.roll_stamina_cost)
 
 

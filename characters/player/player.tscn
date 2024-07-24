@@ -121,7 +121,7 @@
 [ext_resource type="Texture2D" uid="uid://cfs6rgklgfc0g" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/run/run_8.png" id="124_vwm5w"]
 [ext_resource type="Texture2D" uid="uid://gc6ciriiiwn1" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/take_hit/take_hit_2.png" id="125_3luyc"]
 [ext_resource type="PackedScene" uid="uid://bubw632oqm65o" path="res://characters/player/state_machine/PlayerStateMachine.tscn" id="125_ceol5"]
-[ext_resource type="PackedScene" uid="uid://cpsrnsxwa8dty" path="res://characters/player/PlayerAudioStreamPlayer.tscn" id="126_3vpvo"]
+[ext_resource type="PackedScene" uid="uid://cpsrnsxwa8dty" path="res://characters/player/audio/PlayerAudioStreamPlayer.tscn" id="126_3vpvo"]
 [ext_resource type="PackedScene" uid="uid://2pxswwi7gs3c" path="res://interface/hud/PlayerHud.tscn" id="126_ioj2p"]
 [ext_resource type="Texture2D" uid="uid://b6fihnmkllnx6" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/take_hit/take_hit_3.png" id="126_tbf8x"]
 [ext_resource type="Texture2D" uid="uid://df37wsnhc0amd" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/take_hit/take_hit_4.png" id="127_c41u5"]

@@ -8,6 +8,7 @@ class_name Worm extends CharacterBody2D
 @onready var state_label : Label = $StateLabel
 @onready var head_pivot : Node2D = $Sprite2D/HeadPivot
 @onready var health_bar : TextureProgressBar = $HealthBar
+@onready var audio_player : WormAudioStreamPlayer = $WormAudioStreamPlayer
 
 @onready var dash_hitbox : HitBox = $Sprite2D/DashHitbox
 @onready var hurtbox : HurtBox = $Sprite2D/HurtBox
@@ -60,11 +61,13 @@ func _physics_process(delta):
 
 
 func take_damage(amount : float):
-	worm_data.health.decrease_current_health(amount)
-	if worm_data.health.current_health <= 0:
-		state_machine.switch_state(state_machine.worm_states["Dying"])
-	else:
-		state_machine.switch_state(state_machine.worm_states["Hurting"])	
+	if not worm_data.is_dead:
+		audio_player.play_get_hit_fx()
+		worm_data.health.decrease_current_health(amount)
+		if worm_data.health.current_health <= 0:
+			state_machine.switch_state(state_machine.worm_states["Dying"])
+		else:
+			state_machine.switch_state(state_machine.worm_states["Hurting"])	
 
 
 func knock_back(source_position : Vector2):

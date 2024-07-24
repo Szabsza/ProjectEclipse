@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cstt1jct5l3dv"]
+
+[ext_resource type="Script" path="res://characters/enemies/worm/audio/WormAudioStreamPlayer.gd" id="1_0r4ji"]
+
+[node name="WormAudioStreamPlayer" type="AudioStreamPlayer2D"]
+script = ExtResource("1_0r4ji")

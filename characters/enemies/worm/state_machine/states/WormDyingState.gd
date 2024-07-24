@@ -7,6 +7,7 @@ func on_enter():
 	worm.animation_player.connect("animation_finished", _on_animation_finished)
 	worm.animation_player.play(DEATH_ANIMATION)
 	worm.velocity = Vector2.ZERO
+	worm.worm_data.is_dead = true
 
 
 func on_exit():

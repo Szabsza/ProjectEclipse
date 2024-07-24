@@ -83,6 +83,7 @@ merchant_name = "Ghost Merchant"
 shop_items = Array[Resource("res://model/ShopItem.gd")]([ExtResource("20_bg6kq"), ExtResource("21_inwrh"), ExtResource("22_box57"), ExtResource("23_aav0j")])
 
 [node name="Ruins" type="Node2D" groups=["level"]]
+texture_filter = 1
 script = ExtResource("1_pwxno")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]

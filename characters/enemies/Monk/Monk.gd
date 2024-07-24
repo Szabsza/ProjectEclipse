@@ -7,6 +7,7 @@ class_name Monk extends CharacterBody2D
 @onready var player_detection_area_alerted: PlayerDetectionArea = $Sprite2D/PlayerDetectionAreaAlerted
 @onready var health_bar : TextureProgressBar = $HealthBar
 @onready var state_label : Label = $StateLabel
+@onready var audio_player : MonkAudioStreamPlayer = $MonkAudioStreamPlayer
 
 @onready var melee_hitbox : HitBox = $Sprite2D/MeleeHitbox
 @onready var special_attack_hitbox : HitBox = $Sprite2D/SpecialAttackHitbox
@@ -62,11 +63,13 @@ func _physics_process(delta):
 
 
 func take_damage(amount : float):
-	monk_data.health.decrease_current_health(amount)
-	if monk_data.health.current_health <= 0:
-		state_machine.switch_state(state_machine.monk_states["Dying"])
-	else:
-		state_machine.switch_state(state_machine.monk_states["Hurting"])
+	if not monk_data.is_dead:
+		audio_player.play_get_hit_fx()
+		monk_data.health.decrease_current_health(amount)
+		if monk_data.health.current_health <= 0:
+			state_machine.switch_state(state_machine.monk_states["Dying"])
+		else:
+			state_machine.switch_state(state_machine.monk_states["Hurting"])
 
 
 func knock_back(source_position : Vector2):

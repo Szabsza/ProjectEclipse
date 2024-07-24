@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cf5omucvjp3s5"]
+
+[ext_resource type="Script" path="res://characters/enemies/worm/audio/FireBallAudioStreamPlayer.gd" id="1_ydkkw"]
+
+[node name="FireBallAudioStreamPlayer" type="AudioStreamPlayer2D"]
+script = ExtResource("1_ydkkw")
