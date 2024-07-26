@@ -470,8 +470,8 @@ texture_filter = 1
 script = ExtResource("1_uvgh7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_vtm1k")
-hframes = 13
+texture = ExtResource("3_8pi6v")
+hframes = 25
 
 [node name="HitBox" type="Area2D" parent="Sprite2D"]
 position = Vector2(-3, 7)
