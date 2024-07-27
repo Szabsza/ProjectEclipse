@@ -6,6 +6,7 @@ const PLAYER_SCENE_PATH : String = "res://characters/player/Player.tscn"
 const PLAYER_RESOURCE_PATH : String = "res://resources/player_data_0.tres" 
 
 var player_data : PlayerData = null
+var player : Player = null
 
 
 func load_player_data_from_resource():
@@ -14,6 +15,10 @@ func load_player_data_from_resource():
 
 func _ready():
 	load_player_data_from_resource()
+
+
+func setup(_player : Player):
+	player = _player
 
 
 func rest():

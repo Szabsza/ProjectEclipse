@@ -47,6 +47,8 @@ func _ready():
 			
 	InteractionManager.connect("interacted", _interacted)
 	InteractionManager.connect("interaction_finished", _interaction_finished)
+	
+	PlayerManager.setup(self)
 
 
 func _physics_process(delta):

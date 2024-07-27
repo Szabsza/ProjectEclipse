@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://df7y28j0pm76k"]
+
+[ext_resource type="Script" path="res://characters/common/EnemyLootItem.gd" id="1_l8ujo"]
+[ext_resource type="Texture2D" uid="uid://crgdx5iqxvvjn" path="res://Assets/GUI/GUI_1x.png" id="2_mss2g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6tkh"]
+atlas = ExtResource("2_mss2g")
+region = Rect2(73, 72, 6, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yofpa"]
+size = Vector2(6, 15)
+
+[node name="EnemyLootItem" type="RigidBody2D"]
+texture_filter = 1
+script = ExtResource("1_l8ujo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_u6tkh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_yofpa")

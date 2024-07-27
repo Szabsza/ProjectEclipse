@@ -27,6 +27,7 @@ var waypoints : Array
 
 @export var start_waypoint_index : int
 @export var end_waypoint_index : int
+@export var dropped_runes_amount : int
 
 
 func setup(_waypoints : Array):
