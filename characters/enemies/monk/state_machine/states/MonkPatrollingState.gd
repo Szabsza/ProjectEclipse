@@ -11,9 +11,15 @@ func on_enter():
 	monk_info = monk.monk_data
 	monk.animation_player.play(RUNING_ANIMATION)
 	monk.audio_player.play_walk_fx()
-	var new_destination_waypoint: Node2D = monk.random_destination_waypoint()
-	if new_destination_waypoint != destination_waypoint:
-		destination_waypoint = new_destination_waypoint
+	
+	var res : Dictionary = monk.random_destination_waypoint()
+	if res["waypoint"] == destination_waypoint:
+		if res["waypoint_index"] - 1 >= monk.start_waypoint_index:
+			destination_waypoint = monk.waypoints[res["waypoint_index"] - 1]
+		else:
+			destination_waypoint = monk.waypoints[res["waypoint_index"] + 1]
+	else:
+		destination_waypoint = res["waypoint"]
 
 
 func on_exit():

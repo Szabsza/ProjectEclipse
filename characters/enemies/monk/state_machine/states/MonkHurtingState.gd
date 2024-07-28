@@ -6,6 +6,7 @@ const HURT_ANIMATION : String = "hit"
 func on_enter():
 	monk.animation_player.connect("animation_finished", _on_animation_finished)
 	monk.animation_player.play(HURT_ANIMATION)
+	monk.velocity.x = 0
 
 
 func on_exit():

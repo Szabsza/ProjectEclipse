@@ -67,7 +67,7 @@ height = 36.0
 size = Vector2(282.5, 220)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1xjb2"]
-size = Vector2(563, 348)
+size = Vector2(564, 220)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xfemh"]
 
@@ -302,7 +302,6 @@ position = Vector2(0, 40)
 shape = SubResource("CapsuleShape2D_vtans")
 
 [node name="PlayerDetectionAreaIdle" type="Area2D" parent="Sprite2D"]
-visible = false
 script = ExtResource("4_qtx4k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/PlayerDetectionAreaIdle"]
@@ -327,6 +326,7 @@ shape = SubResource("CircleShape2D_xfemh")
 disabled = true
 
 [node name="SpecialAttackHitbox" type="Area2D" parent="Sprite2D"]
+visible = false
 script = ExtResource("5_6odpr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/SpecialAttackHitbox"]
@@ -357,6 +357,7 @@ offset_right = 11.0
 offset_bottom = -30.0
 
 [node name="StateLabel" type="Label" parent="."]
+visible = false
 offset_left = -41.0
 offset_top = -79.0
 offset_right = 41.0

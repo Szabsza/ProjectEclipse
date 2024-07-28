@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bjd2nk7e3tyjp"]
+[gd_scene load_steps=26 format=3 uid="uid://bjd2nk7e3tyjp"]
 
 [ext_resource type="Script" path="res://characters/enemies/worm/Worm.gd" id="1_g7fdi"]
 [ext_resource type="Texture2D" uid="uid://b3h5aho41a3j3" path="res://Assets/assets/Worm/Walk.png" id="1_xla78"]
@@ -12,13 +12,12 @@
 [ext_resource type="PackedScene" uid="uid://doqhcm76agv7d" path="res://characters/enemies/worm/state_machine/WormStateMachine.tscn" id="7_t53sg"]
 [ext_resource type="PackedScene" uid="uid://cstt1jct5l3dv" path="res://characters/enemies/worm/audio/WormAudioStreamPlayer.tscn" id="11_8dfbv"]
 [ext_resource type="PackedScene" uid="uid://biu3xvae7hxfd" path="res://interface/hud/HealthBar.tscn" id="11_gon16"]
-[ext_resource type="PackedScene" uid="uid://df7y28j0pm76k" path="res://characters/common/EnemyLootItem.tscn" id="13_yp4yx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_72c5u"]
 size = Vector2(282.5, 220)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frxam"]
-size = Vector2(563, 348)
+size = Vector2(564, 220)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ijf73"]
 radius = 15.0
@@ -351,6 +350,7 @@ position = Vector2(140.75, 0)
 shape = SubResource("RectangleShape2D_72c5u")
 
 [node name="PlayerDetectionAreaAlerted" type="Area2D" parent="Sprite2D"]
+visible = false
 script = ExtResource("3_um0vv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/PlayerDetectionAreaAlerted"]
@@ -366,6 +366,7 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_ijf73")
 
 [node name="DashHitbox" type="Area2D" parent="Sprite2D"]
+visible = false
 script = ExtResource("5_toy4h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/DashHitbox"]
@@ -403,5 +404,3 @@ offset_left = -20.0
 offset_top = -51.0
 offset_right = 20.0
 offset_bottom = -28.0
-
-[node name="EnemyLootItem" parent="." instance=ExtResource("13_yp4yx")]

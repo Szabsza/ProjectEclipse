@@ -9,10 +9,11 @@ class_name Worm extends CharacterBody2D
 @onready var head_pivot : Node2D = $Sprite2D/HeadPivot
 @onready var health_bar : TextureProgressBar = $HealthBar
 @onready var audio_player : WormAudioStreamPlayer = $WormAudioStreamPlayer
-@onready var enemy_loot_item : EnemyLootItem = $EnemyLootItem
 
 @onready var dash_hitbox : HitBox = $Sprite2D/DashHitbox
 @onready var hurtbox : HurtBox = $Sprite2D/HurtBox
+
+const RUNE_DROP_SCENE_PATH : String = "res://characters/common/RuneDrop.tscn"
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var pushback_force : Vector2 = Vector2.ZERO
@@ -20,13 +21,12 @@ var is_facing_left : bool = false
 var is_facing_right : bool = true
 var is_facing_direction_locked : bool = false
 var alerted : bool = false
-
 var worm_data : WormData
-
 var waypoints : Array
 
 @export var start_waypoint_index : int 
 @export var end_waypoint_index : int 
+@export var dropped_runes_amount : int
 
 
 func setup(_waypoints : Array):
@@ -61,14 +61,25 @@ func _physics_process(delta):
 	move_and_slide()
 
 
+func drop_runes():
+	var rune_drop_scene = load(RUNE_DROP_SCENE_PATH)
+	var rune_drop: RuneDrop = rune_drop_scene.instantiate() as RuneDrop
+	
+	get_parent().add_child(rune_drop)
+	
+	rune_drop.global_position = global_position
+	rune_drop.setup(dropped_runes_amount)
+	rune_drop.launch()
+	
+
 func take_damage(amount : float):
 	if not worm_data.is_dead:
 		audio_player.play_get_hit_fx()
 		worm_data.health.decrease_current_health(amount)
 		if worm_data.health.current_health <= 0:
 			state_machine.switch_state(state_machine.worm_states["Dying"])
-			enemy_loot_item.toss_randomly()
-		else:
+			drop_runes()
+		else:	
 			state_machine.switch_state(state_machine.worm_states["Hurting"])	
 
 
@@ -92,6 +103,9 @@ func player_position() -> Vector2:
 	return player_detection_area_alerted.player_position()
 
 
-func random_destination_waypoint() -> Node2D:
+func random_destination_waypoint() -> Dictionary:
 	var rng: int = start_waypoint_index + randi() % (end_waypoint_index - start_waypoint_index + 1)
-	return waypoints[rng]
+	return {
+		"waypoint" : waypoints[rng],
+		"waypoint_index": rng,
+	}

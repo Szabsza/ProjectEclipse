@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://bjccdb758g47f"]
+
+[ext_resource type="Texture2D" uid="uid://gac2lwmm34sf" path="res://Assets/GUI/GUI_2x.png" id="1_87t6p"]
+[ext_resource type="Script" path="res://characters/enemies/monk/PlayerDetectionArea.gd" id="2_ibjpl"]
+[ext_resource type="Script" path="res://characters/common/RuneDrop.gd" id="2_q4cco"]
+[ext_resource type="AudioStream" uid="uid://duod725x7e0g8" path="res://Assets/Sound/FX/coin.mp3" id="4_sa6xh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxj13"]
+atlas = ExtResource("1_87t6p")
+region = Rect2(146, 144, 12, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_riti2"]
+size = Vector2(1496, 1330)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pt1kb"]
+
+[node name="RuneDrop" type="Sprite2D"]
+texture_filter = 1
+texture = SubResource("AtlasTexture_pxj13")
+script = ExtResource("2_q4cco")
+
+[node name="PlayerDetectionArea" type="Area2D" parent="."]
+script = ExtResource("2_ibjpl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetectionArea"]
+shape = SubResource("RectangleShape2D_riti2")
+
+[node name="ImpactDetectionArea" type="Area2D" parent="."]
+script = ExtResource("2_ibjpl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ImpactDetectionArea"]
+shape = SubResource("CircleShape2D_pt1kb")
+
+[node name="TimeUntilHomming" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="CoinSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_sa6xh")
+
+[connection signal="timeout" from="TimeUntilHomming" to="." method="_on_time_until_homming_timeout"]
