@@ -77,5 +77,5 @@ func load_level() -> void:
 		TravelManager.clear()
 		return
 		
-	spawn_player(level_entry_point.global_position)
+	spawn_player(Vector2.ZERO)
 	

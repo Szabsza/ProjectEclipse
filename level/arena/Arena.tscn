@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://p1fq1yq4lhab"]
+[gd_scene load_steps=5 format=3 uid="uid://p1fq1yq4lhab"]
 
 [ext_resource type="Script" path="res://level/arena/Arena.gd" id="1_fmk8k"]
 [ext_resource type="Texture2D" uid="uid://behak76asms1i" path="res://Assets/toRecolor/finalNight.PNG" id="2_7hb4x"]
 [ext_resource type="TileSet" uid="uid://b0fx4w3bh6fvg" path="res://resources/tileset.tres" id="3_ijdcv"]
 [ext_resource type="PackedScene" uid="uid://d26deo5pjs12u" path="res://common/torch/Torch.tscn" id="4_nu760"]
-[ext_resource type="PackedScene" uid="uid://cm43yocpfco6r" path="res://characters/enemies/golem/Golem.tscn" id="5_f66rc"]
 
 [node name="Arena" type="Node2D" groups=["level"]]
 script = ExtResource("1_fmk8k")
@@ -97,8 +96,10 @@ position = Vector2(1520, 888)
 [node name="Torch9" parent="Torches" instance=ExtResource("4_nu760")]
 position = Vector2(1688, 888)
 
-[node name="Golem" parent="." instance=ExtResource("5_f66rc")]
-position = Vector2(934, 692)
+[node name="PlayerSpawns" type="Node2D" parent="."]
 
-[node name="LevelEntryPoint" type="Marker2D" parent="."]
-position = Vector2(74, 876)
+[node name="0" type="Node2D" parent="PlayerSpawns"]
+position = Vector2(90, 881)
+
+[node name="1" type="Node2D" parent="PlayerSpawns"]
+position = Vector2(2096, 931)

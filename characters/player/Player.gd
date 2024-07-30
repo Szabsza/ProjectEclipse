@@ -8,6 +8,10 @@ class_name Player extends CharacterBody2D
 @onready var stamina_regen_timer : Timer = $StaminaRegenerationTimer
 @onready var audio_player : PlayerAudioStreamPlayer = $PlayerAudioStreamPlayer
 @onready var hud : PlayerHud = $PlayerHud
+@onready var multiplayer_syncvhronizer : MultiplayerSynchronizer = $MultiplayerSynchronizer
+@onready var camera : Camera2D = $Camera2D
+
+var authority_id : int
 
 var player_data : PlayerData
 var health : Health
@@ -51,7 +55,17 @@ func _ready():
 	PlayerManager.setup(self)
 
 
+func set_authority_id(id : int):
+	authority_id = id
+	multiplayer_syncvhronizer.set_multiplayer_authority(authority_id)
+
+
 func _physics_process(delta):
+	if not is_multiplayer_authority():
+		return
+	
+	camera.make_current()
+	
 	direction = Input.get_vector("left", "right", "up", "down")
 			
 	if not is_on_floor():

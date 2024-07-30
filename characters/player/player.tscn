@@ -1081,4 +1081,6 @@ texture = SubResource("GradientTexture2D_afbri")
 
 [node name="PlayerHud" parent="." instance=ExtResource("126_ioj2p")]
 
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+
 [connection signal="timeout" from="StaminaRegenerationTimer" to="." method="_on_stamina_regeneration_timer_timeout"]
