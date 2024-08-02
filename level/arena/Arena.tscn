@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://p1fq1yq4lhab"]
+[gd_scene load_steps=7 format=3 uid="uid://p1fq1yq4lhab"]
 
 [ext_resource type="Script" path="res://level/arena/Arena.gd" id="1_fmk8k"]
 [ext_resource type="Texture2D" uid="uid://behak76asms1i" path="res://Assets/toRecolor/finalNight.PNG" id="2_7hb4x"]
+[ext_resource type="PackedScene" uid="uid://dd5mun2t82eqq" path="res://characters/player/Player.tscn" id="2_ul4n8"]
 [ext_resource type="TileSet" uid="uid://b0fx4w3bh6fvg" path="res://resources/tileset.tres" id="3_ijdcv"]
 [ext_resource type="PackedScene" uid="uid://d26deo5pjs12u" path="res://common/torch/Torch.tscn" id="4_nu760"]
+[ext_resource type="PackedScene" uid="uid://gkotr27mgc3j" path="res://interface/hud/ArenaHud.tscn" id="5_8p0yx"]
 
 [node name="Arena" type="Node2D" groups=["level"]]
 script = ExtResource("1_fmk8k")
@@ -67,6 +69,9 @@ blend_mode = 1
 range_z_max = 150
 shadow_enabled = true
 
+[node name="Player" parent="." instance=ExtResource("2_ul4n8")]
+position = Vector2(935, 725)
+
 [node name="Torches" type="Node2D" parent="."]
 
 [node name="Torch" parent="Torches" instance=ExtResource("4_nu760")]
@@ -97,9 +102,17 @@ position = Vector2(1520, 888)
 position = Vector2(1688, 888)
 
 [node name="PlayerSpawns" type="Node2D" parent="."]
+position = Vector2(939, 710)
 
-[node name="0" type="Node2D" parent="PlayerSpawns"]
-position = Vector2(90, 881)
+[node name="StartingPointA" type="Node2D" parent="."]
+position = Vector2(92, 891)
 
-[node name="1" type="Node2D" parent="PlayerSpawns"]
-position = Vector2(2096, 931)
+[node name="StartingPointB" type="Node2D" parent="."]
+position = Vector2(2104, 932)
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://characters/player/Player.tscn")
+spawn_path = NodePath("../PlayerSpawns")
+spawn_limit = 2
+
+[node name="ArenaHud" parent="." instance=ExtResource("5_8p0yx")]

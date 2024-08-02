@@ -1,4 +1,4 @@
-[gd_scene load_steps=202 format=3 uid="uid://dd5mun2t82eqq"]
+[gd_scene load_steps=203 format=3 uid="uid://dd5mun2t82eqq"]
 
 [ext_resource type="Script" path="res://characters/player/Player.gd" id="1_g55oj"]
 [ext_resource type="Texture2D" uid="uid://bwhad7r4eo0b7" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/roll/roll_1.png" id="8_etpxa"]
@@ -127,6 +127,23 @@
 [ext_resource type="Texture2D" uid="uid://df37wsnhc0amd" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/take_hit/take_hit_4.png" id="127_c41u5"]
 [ext_resource type="Texture2D" uid="uid://bendmybgr2bks" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/take_hit/take_hit_5.png" id="128_a2hgd"]
 [ext_resource type="Texture2D" uid="uid://bctac216wv3nk" path="res://Assets/elementals_wind_hashashin_FREE_v1.1/PNG/take_hit/take_hit_6.png" id="129_k5h0c"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_qk68k"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath("Sprite2D:flip_h")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath(".:scale")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+properties/3/path = NodePath("Sprite2D:scale")
+properties/3/spawn = true
+properties/3/replication_mode = 1
+properties/4/path = NodePath("AnimationPlayer:current_animation")
+properties/4/spawn = true
+properties/4/replication_mode = 1
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tm3yw"]
 radius = 11.0
@@ -942,13 +959,15 @@ fill_from = Vector2(0.5, 0.5)
 texture_filter = 1
 script = ExtResource("1_g55oj")
 
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_qk68k")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
 position = Vector2(-1, -45)
 texture = ExtResource("11_yye60")
 
 [node name="HurtBox" type="Area2D" parent="Sprite2D"]
-visible = false
 script = ExtResource("9_xsymh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HurtBox"]
@@ -956,7 +975,6 @@ position = Vector2(0, 45)
 shape = SubResource("CapsuleShape2D_tm3yw")
 
 [node name="HitBoxA" type="Area2D" parent="Sprite2D"]
-visible = false
 script = ExtResource("10_kxtqt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HitBoxA"]
@@ -966,7 +984,6 @@ shape = SubResource("CapsuleShape2D_8a71d")
 disabled = true
 
 [node name="HitBoxB" type="Area2D" parent="Sprite2D"]
-visible = false
 script = ExtResource("10_kxtqt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HitBoxB"]
@@ -976,7 +993,6 @@ shape = SubResource("CapsuleShape2D_y201i")
 disabled = true
 
 [node name="HitBoxC" type="Area2D" parent="Sprite2D"]
-visible = false
 script = ExtResource("10_kxtqt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HitBoxC"]
@@ -986,7 +1002,6 @@ shape = SubResource("CapsuleShape2D_1d4gm")
 disabled = true
 
 [node name="HitBoxD" type="Area2D" parent="Sprite2D"]
-visible = false
 script = ExtResource("10_kxtqt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HitBoxD"]
@@ -995,7 +1010,6 @@ shape = SubResource("CapsuleShape2D_cx6hb")
 disabled = true
 
 [node name="HitBoxE" type="Area2D" parent="Sprite2D"]
-visible = false
 script = ExtResource("10_kxtqt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HitBoxE"]
@@ -1004,7 +1018,6 @@ shape = SubResource("CapsuleShape2D_l4kyc")
 disabled = true
 
 [node name="HitBoxF" type="Area2D" parent="Sprite2D"]
-visible = false
 script = ExtResource("10_kxtqt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HitBoxF"]
@@ -1013,7 +1026,6 @@ shape = SubResource("CapsuleShape2D_16fug")
 disabled = true
 
 [node name="HitBoxG" type="Area2D" parent="Sprite2D"]
-visible = false
 script = ExtResource("10_kxtqt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HitBoxG"]
@@ -1022,7 +1034,6 @@ shape = SubResource("CapsuleShape2D_7usyr")
 disabled = true
 
 [node name="HitBoxH" type="Area2D" parent="Sprite2D"]
-visible = false
 script = ExtResource("10_kxtqt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HitBoxH"]
@@ -1080,7 +1091,5 @@ texture = SubResource("GradientTexture2D_afbri")
 [node name="PlayerAudioStreamPlayer" parent="." instance=ExtResource("126_3vpvo")]
 
 [node name="PlayerHud" parent="." instance=ExtResource("126_ioj2p")]
-
-[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 
 [connection signal="timeout" from="StaminaRegenerationTimer" to="." method="_on_stamina_regeneration_timer_timeout"]

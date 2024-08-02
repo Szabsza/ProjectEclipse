@@ -1,0 +1,302 @@
+[gd_scene load_steps=7 format=3 uid="uid://gkotr27mgc3j"]
+
+[ext_resource type="Script" path="res://interface/hud/ArenaHud.gd" id="1_6kuyo"]
+[ext_resource type="PackedScene" uid="uid://biu3xvae7hxfd" path="res://interface/hud/HealthBar.tscn" id="2_wwkh5"]
+[ext_resource type="PackedScene" uid="uid://cxdepm6ksokn3" path="res://interface/hud/StaminaBar.tscn" id="3_yhqkx"]
+[ext_resource type="FontFile" uid="uid://cccv1lbg55ags" path="res://Assets/DungeonFont.ttf" id="4_ns1ax"]
+
+[sub_resource type="Animation" id="Animation_6eyqm"]
+resource_name = "countdown"
+length = 10.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CountDown/Countdown:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["10", "9", "8", "7", "6", "5", "4", "3", "2", "1", "Fight!"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CountDown/Countdown:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7, 0.9, 1, 1.7, 1.95, 2, 2.7, 2.95, 3, 3.7, 3.95, 4, 4.7, 4.95, 5, 5.7, 5.95, 6, 6.7, 6.95, 7, 7.7, 7.95, 8, 8.7, 8.95, 9, 9.7, 9.95, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i0i5c"]
+_data = {
+"countdown": SubResource("Animation_6eyqm")
+}
+
+[node name="ArenaHud" type="CanvasLayer"]
+script = ExtResource("1_6kuyo")
+
+[node name="MultiplayerControlPanel" type="Control" parent="."]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="MultiplayerControlPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -231.0
+offset_top = 37.0
+offset_right = 231.0
+offset_bottom = 258.0
+grow_horizontal = 2
+
+[node name="PlayerName" type="LineEdit" parent="MultiplayerControlPanel/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -161.0
+offset_top = 20.0
+offset_right = 161.0
+offset_bottom = 90.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ns1ax")
+theme_override_font_sizes/font_size = 30
+placeholder_text = "Enter your name..."
+alignment = 1
+flat = true
+caret_blink = true
+
+[node name="HostGame" type="Button" parent="MultiplayerControlPanel/Panel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -70.0
+offset_right = 200.0
+grow_vertical = 0
+focus_mode = 0
+theme_override_colors/font_pressed_color = Color(0.694118, 0.262745, 0.129412, 1)
+theme_override_colors/font_hover_color = Color(0.568627, 0.254902, 0.129412, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_ns1ax")
+theme_override_font_sizes/font_size = 30
+text = "Host Game"
+flat = true
+
+[node name="JoinGame" type="Button" parent="MultiplayerControlPanel/Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -70.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 0
+theme_override_colors/font_pressed_color = Color(0.694118, 0.262745, 0.129412, 1)
+theme_override_colors/font_hover_color = Color(0.568627, 0.254902, 0.129412, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_ns1ax")
+theme_override_font_sizes/font_size = 30
+text = "Join Game"
+flat = true
+
+[node name="HostInfo" type="Label" parent="MultiplayerControlPanel/Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.5
+offset_top = -49.5
+offset_right = 221.5
+offset_bottom = 49.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.635294, 0.635294, 0.635294, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_ns1ax")
+theme_override_font_sizes/font_size = 30
+text = "Waiting for an opponent..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerInfoA" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="PlayerName" type="Label" parent="PlayerInfoA"]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 44.0
+offset_right = 170.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("4_ns1ax")
+theme_override_font_sizes/font_size = 20
+text = "asdasd"
+vertical_alignment = 1
+
+[node name="HealthBar" parent="PlayerInfoA" instance=ExtResource("2_wwkh5")]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 320.0
+offset_bottom = 26.0
+
+[node name="StaminaBar" parent="PlayerInfoA" instance=ExtResource("3_yhqkx")]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 31.0
+offset_right = 320.0
+offset_bottom = 41.0
+
+[node name="PlayerInfoB" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+
+[node name="PlayerName" type="Label" parent="PlayerInfoB"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -170.0
+offset_top = 45.0
+offset_right = -20.0
+offset_bottom = 75.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ns1ax")
+theme_override_font_sizes/font_size = 20
+text = "sadasd "
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HealthBar" parent="PlayerInfoB" instance=ExtResource("2_wwkh5")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -320.0
+offset_top = 16.0
+offset_right = -20.0
+offset_bottom = 26.0
+grow_horizontal = 0
+
+[node name="StaminaBar" parent="PlayerInfoB" instance=ExtResource("3_yhqkx")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -320.0
+offset_top = 31.0
+offset_right = -20.0
+offset_bottom = 41.0
+grow_horizontal = 0
+
+[node name="Score" type="Control" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScorePoints" type="Label" parent="Score"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 15.0
+offset_right = 20.0
+offset_bottom = 38.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_ns1ax")
+theme_override_font_sizes/font_size = 30
+text = "0 : 1"
+
+[node name="CountDown" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CountDown"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Countdown" type="Label" parent="CountDown"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_ns1ax")
+theme_override_font_sizes/font_size = 30
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CountDownAnimationPlayer" type="AnimationPlayer" parent="CountDown"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_i0i5c")
+}
+
+[connection signal="pressed" from="MultiplayerControlPanel/Panel/HostGame" to="." method="_on_host_game_pressed"]
+[connection signal="pressed" from="MultiplayerControlPanel/Panel/JoinGame" to="." method="_on_join_game_pressed"]
+[connection signal="animation_finished" from="CountDown/CountDownAnimationPlayer" to="." method="_on_count_down_animation_player_animation_finished"]

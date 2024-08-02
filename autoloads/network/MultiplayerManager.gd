@@ -1,15 +1,18 @@
 extends Node2D
 
-const ARENA_SCENE : String = "res://level/arena/Arena.tscn"
+signal on_player_joined()
+
 const MAX_PLAYER = 2
+
+var player_scene : PackedScene = preload("res://characters/player/Player.tscn")
+var player_spawn_node : Node2D
+var single_player : Player
 
 @export var address = "127.0.0.1"
 @export var port = 8080
 
-var peer
-
+var peer : ENetMultiplayerPeer
 var player_name : String = "Player"
-var players = {}
 
 
 func _ready() -> void:
@@ -17,61 +20,77 @@ func _ready() -> void:
 	multiplayer.peer_disconnected.connect(on_peer_disconnected)
 	multiplayer.connected_to_server.connect(on_connected_to_server)
 	multiplayer.connection_failed.connect(on_connection_failed)
+	multiplayer.server_disconnected.connect(on_server_disconected)
+
+
+func remove_single_player():
+	if not single_player:
+		print("Single player not set!")
+		return
+		
+	single_player.queue_free()
 
 
 func host_game() -> void:
+	print("Starting host!")
+	
 	peer = ENetMultiplayerPeer.new()
 	var error = peer.create_server(port, MAX_PLAYER)
 	if error != OK:
-		print('cannot host: ' + error)
+		print('Cannot host!')
 		return
 	
 	peer.get_host().compress(ENetConnection.COMPRESS_RANGE_CODER)
-	
 	multiplayer.set_multiplayer_peer(peer)
-	print("waiting for players")
-	send_player_info(player_name, multiplayer.get_unique_id())
+	
+	remove_single_player()
+	on_peer_connected(1)
 
 
 func join_game() -> void:
+	print("Joining host!")
 	peer = ENetMultiplayerPeer.new()
 	peer.create_client(address, port)
 	peer.get_host().compress(ENetConnection.COMPRESS_RANGE_CODER)
 	multiplayer.set_multiplayer_peer(peer)
 	
-
-@rpc("any_peer", "call_local")
-func start_game():
-	SceneManager.change_scene_to(ARENA_SCENE)
+	remove_single_player()
 	
-
-@rpc("any_peer")
-func send_player_info(name, id) -> void:
-	if not players.has(id):
-		players[id] = {
-			"name": name,
-			"id": id,
-			"score": 0
-		}
-	
-	if multiplayer.is_server():
-		for i in players:
-			send_player_info.rpc(players[i].name, i)
-			
 			
 func on_peer_connected(id):
-	print('Player connected ' + str(id))
-	
+	if multiplayer.is_server():
+		print('Player %s connected to the game!' % str(id))
+		
+		if not player_spawn_node:
+			print("Error : Player spawn node not set!")
+			return 
+		
+		var player_to_add : Player = player_scene.instantiate() as Player
+		player_to_add.name = str(id)
+		player_spawn_node.add_child(player_to_add, true)
+		
+		if player_spawn_node.get_child_count() == 2:
+			on_player_joined.emit()
+		
 	
 func on_peer_disconnected(id):
-	print('Player disconnected ' + str(id))
-
+	if multiplayer.is_server():
+		print('Player %s disconnected from the game!' % str(id))
+		
+		if not player_spawn_node.has_node(str(id)):
+			return
+			
+		player_spawn_node.get_node(str(id)).queue_free()
+	
 
 func on_connected_to_server():
-	print('Connected to server')
-	send_player_info.rpc_id(1, player_name, multiplayer.get_unique_id())
+	print('Connected to server!')
+	
+
+func on_server_disconected():
+	print('Server disconnected!')
 	
 	
 func on_connection_failed():
-	print('Couldnt connect')
+	print('Couldn`t connect!')
 	

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://coh8xsw7c0xvy"]
+
+[ext_resource type="Script" path="res://characters/dummy/Dummy.gd" id="1_klge0"]
+[ext_resource type="Texture2D" uid="uid://ocsp2l41qy52" path="res://icon.svg" id="2_yk78f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cbxu3"]
+size = Vector2(130, 130)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_8xvxk"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[node name="Dummy" type="CharacterBody2D"]
+script = ExtResource("1_klge0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_yk78f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cbxu3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_8xvxk")

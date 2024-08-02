@@ -43,7 +43,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="StandardMenu" type="VBoxContainer" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -119,89 +118,8 @@ theme_override_font_sizes/font_size = 30
 text = "Exit"
 flat = true
 
-[node name="ArenaMenu" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -930.0
-offset_top = -130.5
-offset_right = 930.0
-offset_bottom = 130.5
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 4
-theme_override_constants/separation = 35
-
-[node name="PlayerName" type="LineEdit" parent="ArenaMenu"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_jk8n6")
-theme_override_font_sizes/font_size = 30
-placeholder_text = "Player"
-alignment = 1
-flat = true
-caret_blink = true
-
-[node name="HostGame" type="Button" parent="ArenaMenu"]
-layout_mode = 2
-focus_mode = 0
-theme_override_colors/font_pressed_color = Color(0.694118, 0.262745, 0.129412, 1)
-theme_override_colors/font_hover_color = Color(0.568627, 0.254902, 0.129412, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("2_jk8n6")
-theme_override_font_sizes/font_size = 30
-text = "Host Game"
-flat = true
-
-[node name="JoinGame" type="Button" parent="ArenaMenu"]
-layout_mode = 2
-focus_mode = 0
-theme_override_colors/font_pressed_color = Color(0.694118, 0.262745, 0.129412, 1)
-theme_override_colors/font_hover_color = Color(0.568627, 0.254902, 0.129412, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("2_jk8n6")
-theme_override_font_sizes/font_size = 30
-text = "Join Game"
-flat = true
-
-[node name="StartGame" type="Button" parent="ArenaMenu"]
-layout_mode = 2
-focus_mode = 0
-theme_override_colors/font_pressed_color = Color(0.694118, 0.262745, 0.129412, 1)
-theme_override_colors/font_hover_color = Color(0.568627, 0.254902, 0.129412, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("2_jk8n6")
-theme_override_font_sizes/font_size = 30
-text = "Join Game"
-flat = true
-
-[node name="Back" type="Button" parent="ArenaMenu"]
-layout_mode = 2
-focus_mode = 0
-theme_override_colors/font_pressed_color = Color(0.694118, 0.262745, 0.129412, 1)
-theme_override_colors/font_hover_color = Color(0.568627, 0.254902, 0.129412, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("2_jk8n6")
-theme_override_font_sizes/font_size = 30
-text = "Back"
-flat = true
-
 [connection signal="pressed" from="StandardMenu/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="StandardMenu/NewGame" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="StandardMenu/Arena" to="." method="_on_arena_pressed"]
 [connection signal="pressed" from="StandardMenu/HowToPlay" to="." method="_on_how_to_play_pressed"]
 [connection signal="pressed" from="StandardMenu/Exit" to="." method="_on_exit_pressed"]
-[connection signal="text_changed" from="ArenaMenu/PlayerName" to="." method="_on_player_name_text_changed"]
-[connection signal="pressed" from="ArenaMenu/HostGame" to="." method="_on_host_game_pressed"]
-[connection signal="pressed" from="ArenaMenu/JoinGame" to="." method="_on_join_game_pressed"]
-[connection signal="pressed" from="ArenaMenu/StartGame" to="." method="_on_start_game_pressed"]
-[connection signal="pressed" from="ArenaMenu/Back" to="." method="_on_back_pressed"]
