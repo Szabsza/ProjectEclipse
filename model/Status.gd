@@ -1,12 +1,28 @@
 class_name Status extends Resource
 
-@export var health : int = 0
-@export var mana : int = 0
-@export var stamina : int = 0
-@export var attack_power : int = 0
+@export var health : int
+@export var mana : int
+@export var stamina : int
+@export var attack_power : int
 
-@export var level : int = 0
-@export var runes_needed : int = 50
+@export var level : int
+@export var runes_needed : int
+
+
+func _init(
+	_health : int = 0,
+	_mana : int = 0,
+	_stamina : int = 0,
+	_attack_power : int = 0,
+	_level : int = 0,
+	_runes_needed : int = 50
+) -> void:
+	health = _health
+	mana = _mana
+	stamina = _stamina
+	attack_power = _attack_power
+	level = _level
+	runes_needed = _runes_needed
 
 
 func load_data(status_data : Dictionary):

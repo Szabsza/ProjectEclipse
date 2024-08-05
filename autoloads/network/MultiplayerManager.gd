@@ -14,6 +14,8 @@ var single_player : Player
 var peer : ENetMultiplayerPeer
 var player_name : String = "Player"
 
+var players = {}
+
 
 func _ready() -> void:
 	multiplayer.peer_connected.connect(on_peer_connected)
@@ -68,6 +70,8 @@ func on_peer_connected(id):
 		var player_to_add : Player = player_scene.instantiate() as Player
 		player_to_add.name = str(id)
 		player_spawn_node.add_child(player_to_add, true)
+		
+		players[id] = { "id" : id, "name" : "DefaultName", "score" : 0, "player_data" : player_to_add.player_data }
 		
 		if player_spawn_node.get_child_count() == 2:
 			on_player_joined.emit()

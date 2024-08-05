@@ -1,5 +1,7 @@
 class_name Player extends CharacterBody2D
 
+signal on_death()
+
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var wings_sprite : WingsSprite = $Wings
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
@@ -11,7 +13,7 @@ class_name Player extends CharacterBody2D
 @onready var multiplayer_synchronizer : MultiplayerSynchronizer = $MultiplayerSynchronizer
 @onready var camera : Camera2D = $Camera2D
 
-var player_data : PlayerData
+@export var player_data : PlayerData
 
 var health : Health
 var mana : Mana
@@ -23,17 +25,20 @@ var is_facing_left : bool = false
 var is_facing_right : bool = true
 var facing_direction_locked : bool = false
 var is_able_to_move : bool = true
+var multiplayer_mode : bool = false
+
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var direction : Vector2
-	
 
 func _enter_tree() -> void:
 	set_multiplayer_authority(name.to_int())
 
 
+func _init() -> void:
+	player_data = PlayerData.new()
+
+
 func _ready():
-	player_data = PlayerManager.player_data
-	
 	health = player_data.health
 	mana = player_data.mana
 	stamina = player_data.stamina
@@ -44,19 +49,25 @@ func _ready():
 	collision_mask = 1
 
 	state_machine.setup(self)	 
-	hurtbox.setup(0, 8)
 	
-	for child in sprite.get_children():
-		if child is HitBox:
-			child.setup(player_data.attack_damage, 2, 0)
+	setup_hurtbox()
+	setup_hitboxes()
 			
 	hud.setup(self)
 			
 	InteractionManager.connect("interacted", _interacted)
 	InteractionManager.connect("interaction_finished", _interaction_finished)
-	
-	PlayerManager.setup(self)
 
+
+func setup_hurtbox(layer = 0, mask = 8):
+	hurtbox.setup(layer, mask)
+
+
+func setup_hitboxes(layer = 2, mask = 0):
+	for child in sprite.get_children():
+		if child is HitBox:
+			child.setup(player_data.attack_damage, layer, mask)
+	
 
 func _physics_process(delta):
 	if is_multiplayer_authority():
@@ -87,7 +98,8 @@ func update_facing_direction():
 
 func take_damage(amount):
 	health.decrease_current_health(amount)
-	if health.current_health <= 0:
+	if health.current_health <= 0 and not player_data.died:
+		on_death.emit()
 		state_machine.switch_state(state_machine.player_states["Dying"])
 
 

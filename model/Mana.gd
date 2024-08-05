@@ -4,6 +4,11 @@ class_name Mana extends Resource
 @export var current_mana : int = 0
 
 
+func _init(_max_mana = 0, _current_mana = 0):
+	max_mana = _max_mana
+	current_mana = _current_mana
+
+
 func increase_max_mana(amount : int):
 	max_mana += amount
 

@@ -5,6 +5,12 @@ class_name Stamina extends Resource
 @export var stamina_regeneration_rate : int = 0
 
 
+func _init(_max_stamina = 0, _current_stamina = 0, _stamina_regeneration_rate = 0):
+	max_stamina = _max_stamina
+	current_stamina = _current_stamina
+	stamina_regeneration_rate = _stamina_regeneration_rate
+
+
 func increase_max_stamina(amount : int):
 	max_stamina += amount
 

@@ -1,6 +1,10 @@
 class_name RunesHeld extends Resource
 
-@export var amount : int = 2000
+@export var amount : int
+
+
+func _init(_amount : int = 500) -> void:
+	amount = _amount
 
 
 func increase_runes(amount : int):

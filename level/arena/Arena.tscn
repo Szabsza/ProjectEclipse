@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://gkotr27mgc3j" path="res://interface/hud/ArenaHud.tscn" id="5_8p0yx"]
 
 [node name="Arena" type="Node2D" groups=["level"]]
+texture_filter = 1
 script = ExtResource("1_fmk8k")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]

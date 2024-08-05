@@ -28,12 +28,57 @@ class_name PlayerData extends CharacterData
 @export var runes_held : RunesHeld
 @export var status : Status
 
-# save not included yet
 @export var last_interacted_checkpoint : CheckpointData = null
 @export var died : bool = false
 @export var position_where_died : Vector2
 @export var scene_path_where_died : String
 @export var lost_runes_amount : int
+
+
+func init_from_player_data(_player_data : PlayerData):
+	pass
+
+
+func init_default():
+	keys_held = 0
+	
+	attack_stamina_cost = 25
+	jump_stamina_cost = 25
+	roll_stamina_cost = 25
+	
+	attack_damage = 10
+	has_double_jumped = false
+	facing_direction_locked = false
+	
+	jump_velocity = -300.0
+	run_speed = 200.0
+	dash_speed = 1.0
+	dash_velocity = 500
+	run_acceleration = 0.25
+	attack_move_speed = 10.0
+	minimum_run_speed = 0.005
+	roll_frames = 20
+	speed = 200.0
+	fall_acceleration = 0.25
+	
+	health = Health.new(100, 100)
+	mana = Mana.new(20, 20)
+	stamina = Stamina.new(100, 100, 5)
+	runes_held = RunesHeld.new()
+	status = Status.new()
+	
+	last_interacted_checkpoint = null
+	died = false
+	position_where_died = Vector2.ZERO
+	scene_path_where_died = ""
+	lost_runes_amount = 0
+	
+
+func _init(_player_data : PlayerData = null) -> void:
+	if _player_data:
+		init_from_player_data(_player_data)
+	else:
+		init_default()
 
 
 func load_data(player_data : Dictionary):

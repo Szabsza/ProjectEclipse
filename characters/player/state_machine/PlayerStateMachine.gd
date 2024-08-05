@@ -16,6 +16,11 @@ var player : Player
 }
 
 
+func reset_to_default_state():
+	player.player_data.died = false
+	switch_state(player_states["Idling"])
+
+
 func setup(_player : Player):
 	player = _player
 	for state in player_states.values():

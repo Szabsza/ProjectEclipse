@@ -2,23 +2,16 @@ extends Node2D
 
 signal init()
 
-const PLAYER_SCENE_PATH : String = "res://characters/player/Player.tscn"
-const PLAYER_RESOURCE_PATH : String = "res://resources/player_data_0.tres" 
+var player_scene : PackedScene = preload("res://characters/player/Player.tscn")
 
 var player_data : PlayerData = null
 var player : Player = null
 
 
-func load_player_data_from_resource():
-	player_data = ResourceLoader.load(PLAYER_RESOURCE_PATH)
-
-
-func _ready():
-	load_player_data_from_resource()
-
-
-func setup(_player : Player):
-	player = _player
+func _ready() -> void:
+	player = player_scene.instantiate() as Player
+	player.name = "1"
+	player_data = player.player_data
 
 
 func rest():
