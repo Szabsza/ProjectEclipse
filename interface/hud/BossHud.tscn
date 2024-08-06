@@ -95,6 +95,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Panel" type="Panel" parent="Toast"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -104,6 +105,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Label" type="Label" parent="Toast"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -116,7 +118,7 @@ offset_right = 200.0
 offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.955671, 0.955671)
+scale = Vector2(0.85, 0.85)
 pivot_offset = Vector2(200, 21)
 theme_override_colors/font_color = Color(0.905882, 0.662745, 0.403922, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)

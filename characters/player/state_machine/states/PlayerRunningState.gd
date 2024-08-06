@@ -27,6 +27,9 @@ func state_process(delta):
 
 
 func state_input(event: InputEvent):
+	if not player.is_able_to_move:
+		return 
+		
 	if event.is_action_pressed("jump") \
 	and player.stamina.current_stamina - player_info.jump_stamina_cost >= 0:
 		perform_jump()

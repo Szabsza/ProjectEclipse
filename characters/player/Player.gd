@@ -1,7 +1,5 @@
 class_name Player extends CharacterBody2D
 
-signal on_death()
-
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var wings_sprite : WingsSprite = $Wings
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
@@ -99,7 +97,6 @@ func update_facing_direction():
 func take_damage(amount):
 	health.decrease_current_health(amount)
 	if health.current_health <= 0 and not player_data.died:
-		on_death.emit()
 		state_machine.switch_state(state_machine.player_states["Dying"])
 
 

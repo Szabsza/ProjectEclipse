@@ -3,6 +3,7 @@ extends Node2D
 signal on_player_joined()
 
 const MAX_PLAYER = 2
+const MENU_SCENE = "res://interface/main_menu/MainMenu.tscn"
 
 var player_scene : PackedScene = preload("res://characters/player/Player.tscn")
 var player_spawn_node : Node2D
@@ -12,9 +13,9 @@ var single_player : Player
 @export var port = 8080
 
 var peer : ENetMultiplayerPeer
-var player_name : String = "Player"
 
-var players = {}
+var host_name : String = "Player"
+var client_name : String = "Player"
 
 
 func _ready() -> void:
@@ -33,8 +34,9 @@ func remove_single_player():
 	single_player.queue_free()
 
 
-func host_game() -> void:
+func host_game(_host_name : String) -> void:
 	print("Starting host!")
+	host_name = _host_name
 	
 	peer = ENetMultiplayerPeer.new()
 	var error = peer.create_server(port, MAX_PLAYER)
@@ -49,8 +51,10 @@ func host_game() -> void:
 	on_peer_connected(1)
 
 
-func join_game() -> void:
+func join_game(_client_name : String) -> void:
 	print("Joining host!")
+	client_name = _client_name
+	
 	peer = ENetMultiplayerPeer.new()
 	peer.create_client(address, port)
 	peer.get_host().compress(ENetConnection.COMPRESS_RANGE_CODER)
@@ -71,8 +75,6 @@ func on_peer_connected(id):
 		player_to_add.name = str(id)
 		player_spawn_node.add_child(player_to_add, true)
 		
-		players[id] = { "id" : id, "name" : "DefaultName", "score" : 0, "player_data" : player_to_add.player_data }
-		
 		if player_spawn_node.get_child_count() == 2:
 			on_player_joined.emit()
 		
@@ -85,6 +87,12 @@ func on_peer_disconnected(id):
 			return
 			
 		player_spawn_node.get_node(str(id)).queue_free()
+		
+		host_name = "Player"
+		client_name = "Player"
+		
+		peer.close()
+		SceneManager.change_scene_to(MENU_SCENE)
 	
 
 func on_connected_to_server():
@@ -93,6 +101,12 @@ func on_connected_to_server():
 
 func on_server_disconected():
 	print('Server disconnected!')
+	if not multiplayer.is_server():
+		host_name = "Player"
+		client_name = "Player"
+		
+		peer.close()
+		SceneManager.change_scene_to(MENU_SCENE)
 	
 	
 func on_connection_failed():

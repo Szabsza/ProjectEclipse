@@ -8,7 +8,6 @@ func on_enter():
 	player.animation_player.play(DEATH_ANIMATION)
 	player.velocity.x = 0
 	player.facing_direction_locked = true
-	player.player_data.died = true
 
 
 func on_exit():
@@ -26,6 +25,7 @@ func state_input(event: InputEvent):
 
 func _on_animation_finished(anim_name):
 	if anim_name == DEATH_ANIMATION:
+		player.player_data.died = true
 		if not player.multiplayer_mode:
 			await player.hud.show_death_toast()
 			PlayerManager.die_and_respawn(player.global_position)

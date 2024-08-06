@@ -14,7 +14,6 @@ var level_scene_path : String
 
 func spawn_player(position : Vector2):
 	PlayerManager.player.global_position = position
-	add_child(PlayerManager.player)
 
 
 func spawn_remains(scene_path : String, position : Vector2, runes_amount : int):

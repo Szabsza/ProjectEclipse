@@ -42,6 +42,9 @@ func state_process(delta):
 
 
 func state_input(event: InputEvent):
+	if not player.is_able_to_move:
+		return 
+		
 	if event.is_action_pressed("attack"):
 		timer.start()
 
