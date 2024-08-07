@@ -23,7 +23,6 @@ func refresh_labels():
 
 func _ready(): 
 	visible = false
-	PlayerManager.connect("init", _on_player_initialized)
 	
 
 func _on_decrease_health_pressed():
@@ -66,5 +65,5 @@ func _on_increase_power_pressed():
 	refresh_labels()
 
 
-func _on_player_initialized():
+func _process(delta: float) -> void:
 	refresh_labels()

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf37afcwx0rjr"]
+
+[ext_resource type="Script" path="res://characters/enemies/golem/audio/GolemAudioStreamPlayer.gd" id="1_gl8dc"]
+
+[node name="GolemAudioStreamPlayer" type="AudioStreamPlayer2D"]
+script = ExtResource("1_gl8dc")

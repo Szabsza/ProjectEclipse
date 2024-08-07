@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cidkippym4b3q"]
-
-[ext_resource type="Script" path="res://autoloads/buff/BuffManager.gd" id="1_t7lij"]
-
-[node name="BuffManager" type="Node"]
-script = ExtResource("1_t7lij")

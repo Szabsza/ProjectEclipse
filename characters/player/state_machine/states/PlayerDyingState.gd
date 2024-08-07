@@ -4,6 +4,8 @@ const DEATH_ANIMATION : String = "death"
 
 
 func on_enter():
+	player.refresh_hitboxes()
+	player.refresh_hurtbox()
 	player.animation_player.connect("animation_finished", _on_animation_finished)
 	player.animation_player.play(DEATH_ANIMATION)
 	player.velocity.x = 0

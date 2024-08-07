@@ -2,6 +2,8 @@ class_name PlayerInteractingState extends PlayerState
 
 
 func on_enter():
+	player.refresh_hitboxes()
+	player.refresh_hurtbox()
 	player.facing_direction_locked = true	
 	player.velocity = Vector2.ZERO
 

@@ -16,6 +16,6 @@ func _ready():
 	collision_mask = 1
 	lock_rotation = true
 	state_machine.setup(self, animation_tree)
-	hitbox.setup(attack_damage, 2, 0)
-	hitbox2.setup(attack_damage, 2, 0)
-	hitbox3.setup(attack_damage, 2, 0)
+	hitbox.setup(attack_damage, 8, 0)
+	hitbox2.setup(attack_damage, 8, 0)
+	hitbox3.setup(attack_damage, 8, 0)

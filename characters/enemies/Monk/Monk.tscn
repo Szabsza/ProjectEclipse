@@ -70,6 +70,7 @@ size = Vector2(282.5, 220)
 size = Vector2(564, 220)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xfemh"]
+radius = 17.0294
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x8uqt"]
 radius = 27.0
@@ -291,7 +292,7 @@ script = ExtResource("1_a8mv2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -40)
-texture = ExtResource("2_3mip6")
+texture = ExtResource("27_ueks7")
 
 [node name="HurtBox" type="Area2D" parent="Sprite2D"]
 visible = false
@@ -317,11 +318,10 @@ position = Vector2(0, 40)
 shape = SubResource("RectangleShape2D_1xjb2")
 
 [node name="MeleeHitbox" type="Area2D" parent="Sprite2D"]
-visible = false
 script = ExtResource("5_6odpr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/MeleeHitbox"]
-position = Vector2(17, 38)
+position = Vector2(24, 32)
 shape = SubResource("CircleShape2D_xfemh")
 disabled = true
 

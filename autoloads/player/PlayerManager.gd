@@ -12,7 +12,14 @@ func _ready() -> void:
 	player = player_scene.instantiate() as Player
 	player.name = "1"
 	player_data = player.player_data
+	
+
+func spawn_player():
 	add_child(player)
+
+
+func remove_player():
+	remove_child(player)
 
 
 func rest():

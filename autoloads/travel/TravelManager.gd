@@ -2,6 +2,7 @@ extends Node2D
 
 var STARTING_LEVEL : String = "res://level/ruins/Ruins.tscn"
 var available_checkpoints : Array[CheckpointData] = []
+
 var checkpoint_teleported_to : CheckpointData
 var teleported_to_checkpoint : bool = false
 

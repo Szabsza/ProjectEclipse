@@ -14,6 +14,8 @@ var player_info : PlayerData
 
 
 func on_enter():
+	player.refresh_hitboxes()
+	player.refresh_hurtbox()
 	player_info = player.player_data
 	player.animation_player.connect("animation_finished", _on_animation_finished)
 	player.animation_player.play(ATTACK_A_ANIMATION)

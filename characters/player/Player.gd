@@ -65,7 +65,21 @@ func setup_hitboxes(layer = 2, mask = 0):
 	for child in sprite.get_children():
 		if child is HitBox:
 			child.setup(player_data.attack_damage, layer, mask)
-	
+
+
+func refresh_hurtbox():
+	for child in hurtbox.get_children():
+		if child is CollisionShape2D:
+			child.disabled = false
+
+
+func refresh_hitboxes():
+	for child in sprite.get_children():
+		if child is HitBox:
+			for child_of_child in child.get_children():
+				if child_of_child is CollisionShape2D:
+					child_of_child.disabled = true
+
 
 func _physics_process(delta):
 	if is_multiplayer_authority():

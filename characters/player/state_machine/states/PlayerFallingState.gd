@@ -6,9 +6,11 @@ var player_info : PlayerData
 
 
 func on_enter():
+	player.refresh_hitboxes()
+	player.refresh_hurtbox()
 	player_info = player.player_data
 	player.animation_player.play(FALL_ANIMATION)
-
+	
 
 func on_exit():
 	pass

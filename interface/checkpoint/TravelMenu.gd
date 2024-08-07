@@ -1,6 +1,6 @@
 class_name TravelMenu extends Control
 
-@onready var container : VBoxContainer = $MarginContainer/ScrollContainer/VBoxContainer
+@onready var container : VBoxContainer = $VBoxContainer
 
 var available_checkpoints : Array = []
 var checkpoint_menu : CheckpointMenu = null

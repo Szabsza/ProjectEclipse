@@ -3,6 +3,7 @@ extends Node2D
 const HEALTH_UPGRADE : int = 20
 const MANA_UPGRADE : int = 5
 const STAMINA_UPGRADE : int = 20
+const ATTACK_POWER_UPGRADE : int = 2
 
 
 func increase_needed_runes():
@@ -14,7 +15,11 @@ func decrease_needed_runes():
 		PlayerManager.player.status.runes_needed -= 100
 
 
-func increase_health():
+func increase_health(force : bool = false, amount : int = 0):
+	if force:
+		PlayerManager.player.health.increase_max_health(HEALTH_UPGRADE * amount)
+		return
+	
 	if PlayerManager.player.status.runes_needed <= PlayerManager.player.runes_held.amount:
 		PlayerManager.player.status.health += 1
 		PlayerManager.player.status.level += 1
@@ -23,7 +28,11 @@ func increase_health():
 		increase_needed_runes()
 	
 
-func increase_stamina():
+func increase_stamina(force : bool = false, amount : int = 0):
+	if force:
+		PlayerManager.player.stamina.increase_max_stamina(STAMINA_UPGRADE * amount)
+		return
+	
 	if PlayerManager.player.status.runes_needed <= PlayerManager.player.runes_held.amount:
 		PlayerManager.player.status.stamina += 1
 		PlayerManager.player.status.level += 1
@@ -32,7 +41,11 @@ func increase_stamina():
 		increase_needed_runes()
 
 
-func increase_mana():
+func increase_mana(force : bool = false, amount : int = 0):
+	if force:
+		PlayerManager.player.mana.increase_max_mana(MANA_UPGRADE * amount)
+		return
+	
 	if PlayerManager.player.status.runes_needed <= PlayerManager.player.runes_held.amount:
 		PlayerManager.player.status.mana += 1
 		PlayerManager.player.status.level += 1
@@ -41,7 +54,11 @@ func increase_mana():
 		increase_needed_runes()
 
 
-func increase_attack_power():
+func increase_attack_power(force : bool = false, amount : int = 0):
+	if force:
+		#PlayerManager.player.attack_power.increase_attack_power(ATTACK_POWER_UPGRADE * amount)
+		return
+	
 	if PlayerManager.player.status.runes_needed <= PlayerManager.player.runes_held.amount:
 		PlayerManager.player.status.attack_power += 1
 		PlayerManager.player.status.level += 1

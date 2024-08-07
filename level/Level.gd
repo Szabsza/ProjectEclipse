@@ -14,6 +14,7 @@ var level_scene_path : String
 
 func spawn_player(position : Vector2):
 	PlayerManager.player.global_position = position
+	PlayerManager.spawn_player()
 
 
 func spawn_remains(scene_path : String, position : Vector2, runes_amount : int):
@@ -36,9 +37,9 @@ func load_level_data():
 			checkpoint.checkpoint_data.set_parent_scene_path(level_data.level_scene_path)
 			level_data.add_checkpoint(checkpoint.checkpoint_data)
 			
-		#for merchant in merchants as Array[GhostMerchant]:
-			#merchant.merchant_data.set_parent_scene_path(level_data.level_scene_path)
-			#level_data.add_merchant(merchant.merchant_data)
+		for merchant in merchants as Array[GhostMerchant]:
+			merchant.merchant_data.set_parent_scene_path(level_data.level_scene_path)
+			level_data.add_merchant(merchant.merchant_data)
 		
 		for chest_loot in chest_loots as Array[ChestLootItem]:
 			level_data.add_chest_loot(chest_loot.loot_item)
@@ -59,7 +60,7 @@ func load_level() -> void:
 	
 	if TravelManager.teleported_to_checkpoint:
 		if PlayerManager.died():
-			if PlayerManager.last_interacted_checkpoint == null:
+			if PlayerManager.player_data.last_interacted_checkpoint == null:
 				spawn_player(level_entry_point.global_position)
 				PlayerManager.player_data.died = false
 			else:
@@ -75,5 +76,5 @@ func load_level() -> void:
 		TravelManager.clear()
 		return
 		
-	spawn_player(Vector2.ZERO)
+	spawn_player(level_entry_point.global_position)
 	

@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="Mana" load_steps=2 format=3 uid="uid://bxwxpfadwdkh6"]
-
-[ext_resource type="Script" path="res://model/Mana.gd" id="1_jwdw1"]
-
-[resource]
-script = ExtResource("1_jwdw1")
-max_mana = 20
-current_mana = 20

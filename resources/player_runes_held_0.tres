@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="RunesHeld" load_steps=2 format=3 uid="uid://cywpkj8mx48o7"]
-
-[ext_resource type="Script" path="res://model/RunesHeld.gd" id="1_go4kx"]
-
-[resource]
-script = ExtResource("1_go4kx")
-amount = 2000

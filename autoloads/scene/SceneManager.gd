@@ -11,5 +11,6 @@ var scene_loading_status : int = 0
 
 
 func change_scene_to(scene_path : String):
+	PlayerManager.remove_player()
 	LoadManager.scene_to_load = scene_path
 	get_tree().change_scene_to_packed(load(LOADING_SCENE_PATH))

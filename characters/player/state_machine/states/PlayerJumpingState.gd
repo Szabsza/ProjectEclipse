@@ -6,10 +6,13 @@ var player_info : PlayerData
 
 
 func on_enter():
+	player.refresh_hitboxes()
+	player.refresh_hurtbox()
 	player_info = player.player_data
 	player.animation_player.play(JUMP_ANIMATION)
 	player.audio_player.play_jump_fx()
 	player.stamina.decrease_current_stamina(player_info.jump_stamina_cost)
+	
 
 
 func on_exit():

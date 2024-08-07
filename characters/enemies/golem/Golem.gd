@@ -12,7 +12,7 @@ class_name Golem extends CharacterBody2D
 @onready var right_pivot : Node2D = $GolemSprite/PivotRight
 @onready var hud : BossHud = $BossHud
 @onready var state_label : Label = $StateLabel
-
+@onready var audio_player : GolemAudioStreamPlayer = $GolemAudioStreamPlayer
 @onready var hurt_box : HurtBox = $GolemSprite/HurtBox
 @onready var melee_hitbox : HitBox = $GolemSprite/MeleeHitBox
 @onready var dash_hitbox : HitBox = $GolemSprite/DashHitbox
@@ -42,12 +42,12 @@ func _ready():
 	collision_layer = golem_data.collision_layer
 	collision_mask = golem_data.collision_mask
 	
-	melee_hitbox.setup(golem_data.MELEE_ATTACK_DMG, 2, 0)
-	dash_hitbox.setup(golem_data.DASH_ATTACK_DMG, 2, 0)
-	head_laser_hitbox.setup(golem_data.LASER_ATTACK_DMG, 2, 0)
-	top_laser_hitbox.setup(golem_data.LASER_ATTACK_DMG, 2, 0)
-	left_laser_hitbox.setup(golem_data.LASER_ATTACK_DMG, 2, 0)
-	right_laser_hitbox.setup(golem_data.LASER_ATTACK_DMG, 2, 0)
+	melee_hitbox.setup(golem_data.MELEE_ATTACK_DMG, 8, 0)
+	dash_hitbox.setup(golem_data.DASH_ATTACK_DMG, 8, 0)
+	head_laser_hitbox.setup(golem_data.LASER_ATTACK_DMG, 8, 0)
+	top_laser_hitbox.setup(golem_data.LASER_ATTACK_DMG, 8, 0)
+	left_laser_hitbox.setup(golem_data.LASER_ATTACK_DMG, 8, 0)
+	right_laser_hitbox.setup(golem_data.LASER_ATTACK_DMG, 8, 0)
 	hurt_box.setup(0, 2)
 	
 	state_machine.setup(self)

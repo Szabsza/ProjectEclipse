@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="Stamina" load_steps=2 format=3 uid="uid://c1lf5qevxryre"]
-
-[ext_resource type="Script" path="res://model/Stamina.gd" id="1_uqr4v"]
-
-[resource]
-script = ExtResource("1_uqr4v")
-max_stamina = 100
-current_stamina = 100
-stamina_regeneration_rate = 5

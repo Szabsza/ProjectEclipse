@@ -3,7 +3,7 @@ class_name RunesHeld extends Resource
 @export var amount : int
 
 
-func _init(_amount : int = 500) -> void:
+func _init(_amount : int = 6000) -> void:
 	amount = _amount
 
 

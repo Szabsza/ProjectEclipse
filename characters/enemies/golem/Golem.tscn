@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://cm43yocpfco6r"]
+[gd_scene load_steps=49 format=3 uid="uid://cm43yocpfco6r"]
 
 [ext_resource type="Script" path="res://characters/enemies/golem/Golem.gd" id="1_nmh52"]
 [ext_resource type="Script" path="res://characters/common/HurtBox.gd" id="1_x30iq"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://characters/common/HitBox.gd" id="4_c38ke"]
 [ext_resource type="PackedScene" uid="uid://dsyv15tkktorh" path="res://characters/enemies/golem/ArmProjectile.tscn" id="6_lwucg"]
 [ext_resource type="PackedScene" uid="uid://bf8wtpw6gm7kd" path="res://interface/hud/BossHud.tscn" id="8_qc80f"]
+[ext_resource type="PackedScene" uid="uid://bf37afcwx0rjr" path="res://characters/enemies/golem/audio/GolemAudioStreamPlayer.tscn" id="10_14nml"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mnc2f"]
 radius = 8.75813
@@ -739,6 +740,23 @@ tracks/23/keys = {
 "update": 1,
 "values": [false, true, false]
 }
+tracks/24/type = "method"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("GolemAudioStreamPlayer")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(1.3, 3),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"play_laser_fx"
+}, {
+"args": [],
+"method": &"play_laser_fx"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_8aib1"]
 resource_name = "laser_attack"
@@ -863,6 +881,20 @@ tracks/9/keys = {
 "update": 1,
 "values": [true, false, true]
 }
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("GolemAudioStreamPlayer")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(1.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_laser_fx"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_uxue4"]
 resource_name = "melee_attack"
@@ -927,6 +959,20 @@ tracks/4/keys = {
 "update": 1,
 "values": [true, false, true]
 }
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GolemAudioStreamPlayer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_get_hit_fx"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_bvv5x"]
 resource_name = "range_attack"
@@ -978,6 +1024,20 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [10]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GolemAudioStreamPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_shoot_fx"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_nn65w"]
@@ -1266,4 +1326,4 @@ offset_bottom = -28.0368
 
 [node name="BossHud" parent="." instance=ExtResource("8_qc80f")]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="GolemAudioStreamPlayer" parent="." instance=ExtResource("10_14nml")]

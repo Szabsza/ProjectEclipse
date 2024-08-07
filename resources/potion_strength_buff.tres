@@ -1,18 +1,16 @@
-[gd_resource type="Resource" script_class="Buff" load_steps=5 format=3 uid="uid://dlffu5sfmctoa"]
+[gd_resource type="Resource" script_class="PotionStrengthBuff" load_steps=4 format=3 uid="uid://dlffu5sfmctoa"]
 
-[ext_resource type="Script" path="res://model/Buff.gd" id="1_os81x"]
-[ext_resource type="Resource" uid="uid://ciau74y0nxvr4" path="res://resources/potion_strength_buff_behavior.tres" id="1_y8dyg"]
+[ext_resource type="Script" path="res://model/PotionStrengthBuff.gd" id="1_mwv1o"]
 [ext_resource type="Texture2D" uid="uid://cunrhg6i0xue4" path="res://Assets/shop_icons/Free_Skills.png" id="2_5qwwa"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oub6y"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1boyr"]
 atlas = ExtResource("2_5qwwa")
 region = Rect2(127, 288, 32, 32)
 
 [resource]
-script = ExtResource("1_os81x")
-behaviors = Array[Resource("res://model/BuffBehavior.gd")]([ExtResource("1_y8dyg")])
+script = ExtResource("1_mwv1o")
 cost = 1200
 item_name = "Potion Strength Buff"
 description = "Increases the the potion's regeneration"
 quantity = 1
-texture = SubResource("AtlasTexture_oub6y")
+texture = SubResource("AtlasTexture_1boyr")
