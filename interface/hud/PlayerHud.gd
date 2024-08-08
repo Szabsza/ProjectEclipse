@@ -50,7 +50,7 @@ func update_runes_held():
 
 
 func update_keys_held():
-	keys_held_label.text = str(player_info.keys_held)
+	keys_held_label.text = str(HotBarManager.key_quantity)
 
 
 func _process(delta):

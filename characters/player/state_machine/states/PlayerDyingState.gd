@@ -30,5 +30,6 @@ func _on_animation_finished(anim_name):
 		player.player_data.died = true
 		if not player.multiplayer_mode:
 			await player.hud.show_death_toast()
+			PlayerManager.remains.setup(WorldManager.current_level_data.level_scene_path, player.runes_held.amount, player.global_position)
 			PlayerManager.die_and_respawn(player.global_position)
 		next_state = states["Idling"]

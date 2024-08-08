@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bqaipc210dp67"]
+[gd_scene load_steps=37 format=3 uid="uid://bqaipc210dp67"]
 
 [ext_resource type="Script" path="res://level/ruins/Ruins.gd" id="1_q3fep"]
 [ext_resource type="Texture2D" uid="uid://behak76asms1i" path="res://Assets/toRecolor/finalNight.PNG" id="2_0wl0i"]
@@ -13,7 +13,6 @@
 [ext_resource type="Script" path="res://model/ChestData.gd" id="11_1t0no"]
 [ext_resource type="Resource" uid="uid://d1s2ten4xv6p" path="res://resources/low_amount_of_runes.tres" id="12_aa83x"]
 [ext_resource type="Resource" uid="uid://b0x35dlc12hro" path="res://resources/medium_amount_of_runes.tres" id="13_mq74a"]
-[ext_resource type="Resource" uid="uid://dxam46a5mb53t" path="res://resources/large_amount_of_runes.tres" id="14_cy7vc"]
 [ext_resource type="Resource" uid="uid://cw5jb6kcm0rwc" path="res://resources/wings.tres" id="15_dqv40"]
 [ext_resource type="PackedScene" uid="uid://y8i53dbxrgoy" path="res://common/trap/fire_trap/FireTrap.tscn" id="15_ethjy"]
 [ext_resource type="PackedScene" uid="uid://d3jjqw47s8tmf" path="res://common/trap/fire_breather/FireBreather.tscn" id="16_ewnpy"]
@@ -32,7 +31,7 @@
 [sub_resource type="Resource" id="Resource_ys603"]
 script = ExtResource("11_1t0no")
 parent_scene_path = ""
-loot_item = ExtResource("14_cy7vc")
+loot_item = ExtResource("10_5ghp3")
 is_opened = false
 
 [sub_resource type="Resource" id="Resource_hp1t1"]

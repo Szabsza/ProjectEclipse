@@ -56,13 +56,13 @@ func increase_mana(force : bool = false, amount : int = 0):
 
 func increase_attack_power(force : bool = false, amount : int = 0):
 	if force:
-		#PlayerManager.player.attack_power.increase_attack_power(ATTACK_POWER_UPGRADE * amount)
+		PlayerManager.player.attack_power.increase_attack_power(ATTACK_POWER_UPGRADE * amount)
 		return
 	
 	if PlayerManager.player.status.runes_needed <= PlayerManager.player.runes_held.amount:
 		PlayerManager.player.status.attack_power += 1
 		PlayerManager.player.status.level += 1
-		#player.attack_power.increase_attack_power(ATTACK_POWER_UPGRADE)
+		PlayerManager.player.power.increase_attack_power(ATTACK_POWER_UPGRADE)
 		PlayerManager.player.runes_held.decrease_runes(PlayerManager.player.status.runes_needed)
 		increase_needed_runes()
 
@@ -98,6 +98,6 @@ func decrease_attack_power():
 	if PlayerManager.player.status.attack_power - 1 >= 0: 
 		PlayerManager.player.status.attack_power -= 1
 		PlayerManager.player.status.level -= 1
-		#player.attack_power.decrease_attack_power(ATTACK_POWER_UPGRADE)
+		PlayerManager.player.power.decrease_attack_power(ATTACK_POWER_UPGRADE)
 		PlayerManager.player.runes_held.increase_runes(PlayerManager.player.status.runes_needed)
 		decrease_needed_runes()

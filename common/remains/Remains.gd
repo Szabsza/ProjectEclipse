@@ -2,17 +2,15 @@ class_name Remains extends RigidBody2D
 
 @onready var interactable_area : InteractableArea = $InteractableArea
 
-@export var remains_data : RemainsData
+var runes_amount : int = 0
+var scene_path : String = ""
+var position_to_place : Vector2 = Vector2.ZERO
 
 
-func setup(scene_path : String, runes_amount: int, position : Vector2) -> void:
-	if remains_data == null:
-		return
-	
-	remains_data.scene_path = scene_path
-	remains_data.runes_amount = runes_amount
-	remains_data.position = position
-	global_position = position
+func setup(_scene_path : String, _runes_amount: int, _position : Vector2) -> void:
+	scene_path = _scene_path
+	runes_amount = _runes_amount
+	position_to_place = _position
 
 
 func _ready():
@@ -23,12 +21,5 @@ func _ready():
 	
 
 func _on_interact() -> void:
-	if remains_data == null:
-		return
-
-	PlayerManager.player_data.runes_held.increase_runes(remains_data.runes_amount)
-	remains_data.scene_path = ""
-	remains_data.runes_amount = 0
-	remains_data.picked_up = true
-	
-	queue_free()
+	PlayerManager.player_data.runes_held.increase_runes(runes_amount)
+	PlayerManager.remove_remains()

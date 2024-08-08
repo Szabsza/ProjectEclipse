@@ -25,6 +25,7 @@ class_name PlayerData extends CharacterData
 @export var health : Health
 @export var mana : Mana 
 @export var stamina : Stamina
+@export var power : Power
 @export var runes_held : RunesHeld
 @export var status : Status
 
@@ -63,6 +64,7 @@ func init_default():
 	
 	health = Health.new(100, 100)
 	mana = Mana.new(20, 20)
+	power = Power.new(0)
 	stamina = Stamina.new(100, 100, 5)
 	runes_held = RunesHeld.new()
 	status = Status.new()

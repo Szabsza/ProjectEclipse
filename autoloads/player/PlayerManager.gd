@@ -3,9 +3,13 @@ extends Node2D
 signal init()
 
 var player_scene : PackedScene = preload("res://characters/player/Player.tscn")
+var remains_scene : PackedScene = preload("res://common/remains/Remains.tscn")
 
 var player_data : PlayerData = null
 var player : Player = null
+
+var remains : Remains = null
+var remains_data : RemainsData = null
 
 
 func _ready() -> void:
@@ -13,13 +17,27 @@ func _ready() -> void:
 	player.name = "1"
 	player_data = player.player_data
 	
+	remains = remains_scene.instantiate() as Remains
+	
 
-func spawn_player():
+func spawn_player(_position : Vector2):
+	player.player_data.died = false
+	player.global_position = _position
 	add_child(player)
 
 
 func remove_player():
 	remove_child(player)
+
+
+func spawn_remains():
+	remains.global_position = remains.position_to_place
+	remains.z_index = 20
+	add_child(remains)
+
+
+func remove_remains():
+	remove_child(remains)
 
 
 func rest():
@@ -38,6 +56,8 @@ func die_and_respawn(position_where_died : Vector2):
 	player_data.health.current_health = player_data.health.max_health
 	player_data.mana.current_mana = player_data.mana.max_mana
 	player_data.stamina.current_stamina = player_data.stamina.max_stamina
+	
+	HotBarManager.reset_potions()
 	
 	if player_data.last_interacted_checkpoint != null:
 		TravelManager.travel_to_checkpoint(player_data.last_interacted_checkpoint)

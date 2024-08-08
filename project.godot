@@ -13,7 +13,9 @@ config_version=5
 config/name="Project Eclipse"
 run/main_scene="res://interface/main_menu/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/image="res://Assets/elementals_wind_hashashin_FREE_v1.1/wind_hashashin.png"
+boot_splash/fullsize=false
+config/icon="res://Assets/elementals_wind_hashashin_FREE_v1.1/wind_hashashin.png"
 
 [autoload]
 

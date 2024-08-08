@@ -16,6 +16,7 @@ class_name Player extends CharacterBody2D
 var health : Health
 var mana : Mana
 var stamina : Stamina
+var power : Power
 var runes_held : RunesHeld
 var status : Status
 
@@ -27,6 +28,7 @@ var multiplayer_mode : bool = false
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var direction : Vector2
+
 
 func _enter_tree() -> void:
 	set_multiplayer_authority(name.to_int())
@@ -40,6 +42,7 @@ func _ready():
 	health = player_data.health
 	mana = player_data.mana
 	stamina = player_data.stamina
+	power = player_data.power
 	runes_held = player_data.runes_held
 	status = player_data.status
 	
@@ -53,6 +56,8 @@ func _ready():
 			
 	hud.setup(self)
 			
+	power.on_power_changed.connect(setup_hitboxes)
+			
 	InteractionManager.connect("interacted", _interacted)
 	InteractionManager.connect("interaction_finished", _interaction_finished)
 
@@ -64,7 +69,7 @@ func setup_hurtbox(layer = 0, mask = 8):
 func setup_hitboxes(layer = 2, mask = 0):
 	for child in sprite.get_children():
 		if child is HitBox:
-			child.setup(player_data.attack_damage, layer, mask)
+			child.setup(power.current_power + player_data.attack_damage, layer, mask)
 
 
 func refresh_hurtbox():
